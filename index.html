@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observatório da Resiliência Climática - Rio Grande do Sul</title>
+    
+    <!-- Tailwind CSS para Estilização Avançada -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fontes Google para Design de Alta Qualidade -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&family=Space+Grotesk:wght=400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons para Iconografia Consistente -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Parser de Markdown Seguro e Veloz -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script>
+        // Configuração de cores personalizadas baseadas nos parâmetros RGB solicitados
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        climate: {
+                            base: '#97383e',       // 151, 56, 62 (Vinho)
+                            sec1: '#e5a359',       // 229, 163, 89 (Âmbar/Dourado)
+                            sec2: '#c75044',       // 199, 80, 68 (Terracota)
+                            sec3: '#df6966',       // 223, 105, 102 (Coral)
+                            alt: '#9b5d7b',        // 155, 93, 123 (Ameixa)
+                            dark: '#1e1113',       
+                            card: '#2a1a1c',       
+                            lightBg: '#fcfafb',    
+                            lightCard: '#ffffff'   
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .transition-all-300 {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(30, 17, 19, 0.05);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #97383e;
+            border-radius: 4px;
+        }
+        @keyframes pulse-gold {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: .7; transform: scale(1.02); }
+        }
+        .anim-pulse-gold {
+            animation: pulse-gold 2s infinite ease-in-out;
+        }
+
+        /* Estilização Manual de Elementos Markdown (Evita os resets agressivos do Tailwind CDN) */
+        .markdown-rendered h1 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #97383e;
+            margin-top: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Space Grotesk', sans-serif;
+            border-bottom: 1px solid #f1f1f1;
+            padding-bottom: 0.25rem;
+        }
+        .markdown-rendered h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #c75044;
+            margin-top: 1.125rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .markdown-rendered h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #1e1113;
+            margin-top: 1rem;
+            margin-bottom: 0.35rem;
+        }
+        .markdown-rendered p {
+            margin-bottom: 0.75rem;
+            line-height: 1.625;
+        }
+        .markdown-rendered ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .markdown-rendered ol {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .markdown-rendered li {
+            margin-bottom: 0.35rem;
+        }
+        .markdown-rendered strong {
+            font-weight: 700;
+            color: #1e1113;
+        }
+        .markdown-rendered em {
+            font-style: italic;
+        }
+        .markdown-rendered blockquote {
+            border-left: 4px solid #e5a359;
+            padding-left: 1rem;
+            color: #6b7280;
+            font-style: italic;
+            margin: 1rem 0;
+        }
+        .markdown-rendered code {
+            font-family: monospace;
+            background-color: #f3f4f6;
+            color: #97383e;
+            padding: 0.15rem 0.35rem;
+            border-radius: 0.375rem;
+            font-size: 0.875em;
+        }
+        .markdown-rendered pre {
+            background-color: #1e1113;
+            color: #fcfafb;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            overflow-x: auto;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .markdown-rendered pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+            font-size: inherit;
+        }
+    </style>
+</head>
+<body class="bg-climate-lightBg text-stone-800 font-sans min-h-screen flex flex-col transition-colors duration-300">
+
+    <!-- Cabeçalho Principal (Header) -->
+    <header class="border-b border-stone-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="p-2.5 rounded-xl bg-climate-base text-white shadow-md shadow-climate-base/20">
+                    <i data-lucide="shield-alert" class="w-7 h-7"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-bold font-display text-climate-base tracking-tight leading-none">
+                        Observatório da Resiliência Climática
+                    </h1>
+                    <p class="text-xs text-stone-500 mt-1 font-medium">
+                        Rio Grande do Sul — Powered by CoalizãoRS
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-2 bg-climate-sec1/10 px-4 py-2 rounded-full border border-climate-sec1/30">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-climate-sec1 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-climate-sec1"></span>
+                </span>
+                <span class="text-xs font-semibold text-climate-base">Canal de Ajuda Ativo</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 flex flex-col lg:flex-row gap-8">
+        
+        <!-- Secção Lateral (Esquerda) -->
+        <section class="w-full lg:w-1/3 flex flex-col gap-6">
+            <div class="bg-gradient-to-br from-climate-base to-climate-sec2 p-6 rounded-2xl text-white shadow-xl relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 opacity-10">
+                    <i data-lucide="droplet" class="w-48 h-48"></i>
+                </div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-2 mb-4 bg-white/10 w-fit px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-md">
+                        <i data-lucide="shield" class="w-3.5 h-3.5"></i> Conexão e Proteção
+                    </div>
+                    <h2 class="text-2xl font-bold font-display leading-tight mb-2">Prevenção e Proteção ao Cidadão</h2>
+                    <p class="text-sm text-stone-100 leading-relaxed">
+                        Esta plataforma foi criada para facilitar o acesso de todos os cidadãos às diretrizes de segurança, localização de abrigos oficiais e planos de contingência estabelecidos pelas prefeituras do Rio Grande do Sul.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sugestões de Perguntas Rápidas -->
+            <div class="bg-white border border-stone-200 rounded-2xl p-5 shadow-sm">
+                <h3 class="text-sm font-bold text-stone-800 uppercase tracking-wider mb-4 flex items-center gap-2">
+                    <i data-lucide="help-circle" class="w-4 h-4 text-climate-sec2"></i> Perguntas Frequentes
+                </h3>
+                
+                <div class="space-y-3">
+                    <button onclick="definirPerguntaSugerida('Canoas', 'Quais são os abrigos existentes na cidade de Canoas?')" class="w-full text-left p-3 rounded-xl border border-stone-100 hover:border-climate-sec1 hover:bg-stone-50 transition-all-300 flex items-start gap-3 group">
+                        <span class="w-2 h-2 mt-2 rounded-full bg-climate-base shrink-0"></span>
+                        <div class="overflow-hidden">
+                            <p class="text-xs font-semibold text-stone-800 group-hover:text-climate-base transition-colors">Abrigos em Canoas</p>
+                            <p class="text-[10px] text-stone-400 truncate">Descubra os pontos de acolhimento e Ginásios oficiais.</p>
+                        </div>
+                    </button>
+
+                    <button onclick="definirPerguntaSugerida('Taquara', 'Qual o tamanho da população em áreas de risco na cidade de Taquara?')" class="w-full text-left p-3 rounded-xl border border-stone-100 hover:border-climate-sec1 hover:bg-stone-50 transition-all-300 flex items-start gap-3 group">
+                        <span class="w-2 h-2 mt-2 rounded-full bg-climate-sec1 shrink-0"></span>
+                        <div class="overflow-hidden">
+                            <p class="text-xs font-semibold text-stone-800 group-hover:text-climate-base transition-colors">Áreas de Risco em Taquara</p>
+                            <p class="text-[10px] text-stone-400 truncate">Consulte a estimativa da população exposta a riscos.</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secção da Interface de Busca e Resposta (Direita) -->
+        <section class="w-full lg:w-2/3 flex flex-col gap-6">
+            
+            <!-- Entrada de Consulta -->
+            <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm flex flex-col gap-6">
+                <div class="flex items-start justify-between gap-4">
+                    <div>
+                        <h3 class="text-lg font-bold font-display text-stone-800 mb-1 flex items-center gap-2">
+                            <i data-lucide="search" class="w-5 h-5 text-climate-sec1"></i> Consulte os planos de contingência
+                        </h3>
+                        <p class="text-xs text-stone-500">
+                            Selecione o município de interesse e faça perguntas para aprofundar a sua pesquisa de forma contínua.
+                        </p>
+                    </div>
+                    
+                    <!-- Botão de Limpeza Rápida do Formulário Superior -->
+                    <button 
+                        type="button" 
+                        id="resetBtnTop" 
+                        onclick="limparConversaCompleta()" 
+                        class="hidden px-3.5 py-2 text-xs font-bold text-climate-base hover:text-white border border-climate-base hover:bg-climate-base rounded-xl transition-all-300 flex items-center gap-1.5 shrink-0 shadow-sm"
+                        title="Iniciar um novo tema de conversa do zero"
+                    >
+                        <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+                        <span>Nova Pesquisa</span>
+                    </button>
+                </div>
+
+                <!-- Formulário de Busca -->
+                <form id="searchForm" class="flex flex-col gap-5">
+                    
+                    <!-- MENU SELETOR DE MUNICÍPIOS -->
+                    <div class="flex flex-col gap-1.5">
+                        <label for="municipioSelect" class="text-xs font-bold text-stone-600 uppercase tracking-wider flex items-center gap-1.5">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-climate-base"></i> Município de Referência:
+                        </label>
+                        <div class="relative">
+                            <select 
+                                id="municipioSelect" 
+                                class="block w-full pl-4 pr-10 py-3.5 border border-stone-200 rounded-xl bg-stone-50 focus:bg-white focus:ring-2 focus:ring-climate-base focus:border-climate-base text-stone-800 font-semibold shadow-inner text-sm appearance-none cursor-pointer"
+                                required
+                            >
+                                <option value="" disabled selected>Escolha um município da lista...</option>
+                                <!-- Gerado dinamicamente via JS -->
+                            </select>
+                            <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-stone-500">
+                                <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CAIXA DE TEXTO DA CONSULTA -->
+                    <div class="flex flex-col gap-1.5">
+                        <label for="queryInput" id="queryInputLabel" class="text-xs font-bold text-stone-600 uppercase tracking-wider flex items-center gap-1.5">
+                            <i data-lucide="help-circle" class="w-4 h-4 text-climate-base"></i> O que deseja saber?
+                        </label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <i data-lucide="terminal" class="w-5 h-5 text-stone-400"></i>
+                            </div>
+                            <input 
+                                type="text" 
+                                id="queryInput" 
+                                placeholder="Escreva a sua dúvida (ex: Quais os locais de abrigo?)..." 
+                                class="block w-full pl-12 pr-4 py-4 border border-stone-200 rounded-xl bg-stone-50 focus:bg-white focus:ring-2 focus:ring-climate-base focus:border-climate-base text-stone-800 font-medium shadow-inner text-sm"
+                                required
+                            >
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-stone-400 font-mono" id="modeIndicatorLabel">Pesquisa direta em documentos oficiais</span>
+                        <div class="flex items-center gap-2">
+                            <button 
+                                type="submit" 
+                                id="submitBtn"
+                                class="px-6 py-3 bg-climate-base hover:bg-climate-sec2 text-white font-semibold rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-climate-base/15 transition-all-300 text-sm"
+                            >
+                                <span id="submitBtnText">Pesquisar</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Area de Resultados Dinâmica -->
+            <div id="resultsContainer" class="hidden">
+                
+                <!-- Carregamento -->
+                <div id="loadingState" class="hidden flex flex-col items-center justify-center py-16 bg-white border border-stone-200 rounded-2xl shadow-sm gap-4">
+                    <div class="relative flex items-center justify-center">
+                        <div class="animate-spin rounded-full h-12 w-12 border-4 border-climate-sec3 border-t-climate-base"></div>
+                        <i data-lucide="server-cog" class="absolute w-5 h-5 text-climate-base anim-pulse-gold"></i>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-sm font-semibold text-stone-700" id="loadingTitle">A analisar os registos oficiais...</p>
+                        <p class="text-[11px] text-stone-400 mt-1" id="loadingSubtitle">A processar a sua pergunta com base no histórico da conversa.</p>
+                    </div>
+                </div>
+
+                <!-- Painel de Erro Amigável -->
+                <div id="apiErrorCard" class="hidden bg-red-50 border border-red-200 rounded-2xl p-6 text-red-800 shadow-sm animate-fade-in">
+                    <div class="flex items-start gap-4">
+                        <div class="p-2 rounded-xl bg-red-100 text-red-600 shrink-0">
+                            <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                        </div>
+                        <div class="w-full overflow-hidden">
+                            <h4 class="font-bold text-sm text-red-900 flex items-center gap-2">
+                                Não foi possível completar a sua pesquisa
+                            </h4>
+                            <p class="text-xs text-red-700 mt-1">
+                                Pedimos desculpa, mas ocorreu uma falha temporária ao comunicar com o nosso serviço de dados. Por favor, verifique a sua ligação à internet ou tente novamente dentro de alguns minutos.
+                            </p>
+                            <!-- Dados técnicos apenas para depuração discreta se necessário -->
+                            <pre id="errorDetails" class="hidden text-[10px] font-mono bg-white border border-red-150 p-3 rounded-xl mt-3 text-red-900 overflow-x-auto whitespace-pre-wrap"></pre>
+                            <span id="errorHttpStatus" class="hidden">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resposta de Maior Probabilidade -->
+                <div id="answerCard" class="hidden bg-white border border-stone-200 rounded-2xl shadow-md overflow-hidden transition-all duration-300">
+                    
+                    <!-- Cabeçalho (Metadados Limpos e Amigáveis) -->
+                    <div class="bg-gradient-to-r from-stone-900 to-climate-dark p-5 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-stone-700">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2 rounded-lg bg-climate-sec1/20 text-climate-sec1">
+                                <i data-lucide="file-check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span id="categoryLabel" class="text-[10px] uppercase font-bold tracking-widest text-climate-sec1 block">Documentação Oficial</span>
+                                <h4 id="docTitle" class="text-sm font-bold font-display truncate max-w-xs sm:max-w-md">Painel de Respostas</h4>
+                            </div>
+                        </div>
+
+                        <!-- Info do município selecionado -->
+                        <div class="flex items-center gap-1.5 bg-stone-800/80 text-stone-200 px-3.5 py-1.5 rounded-lg border border-stone-700 text-xs font-bold">
+                            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-climate-sec1"></i>
+                            <span id="municipioEcho">n/a</span>
+                        </div>
+                        <span id="scoreLabel" class="hidden">Score</span>
+                        <span id="docScore" class="hidden">0.0000</span>
+                    </div>
+
+                    <!-- Caixa de Conversa (Histórico de Perguntas e Respostas Dinâmico) -->
+                    <div class="p-6 sm:p-8">
+                        <div class="prose max-w-none">
+                            
+                            <!-- Toda a conversa cumulativa será impressa aqui dentro de forma organizada -->
+                            <div id="conversationThread" class="space-y-6">
+                                <!-- Turnos de conversa injetados via JS -->
+                            </div>
+                            
+                        </div>
+
+                        <!-- Painel de Documentos Citados como Referências Rápidas (Gerado Dinamicamente do acumulado das respostas) -->
+                        <div id="sourcesContainer" class="mt-8 border-t border-stone-200 pt-6 hidden">
+                            <h5 class="text-xs font-bold text-stone-500 uppercase tracking-wider mb-4 flex items-center gap-1.5">
+                                <i data-lucide="library" class="w-4.5 h-4.5 text-climate-base"></i> Documentos Oficiais Disponibilizados nesta Conversa
+                            </h5>
+                            <div id="sourcesList" class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                                <!-- Links gerados vão aqui -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rodapé da Resposta -->
+                    <div class="bg-stone-50 px-6 py-4 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-stone-500">
+                        <span class="flex items-center gap-1.5 font-medium text-climate-base">
+                            <i data-lucide="info" class="w-3.5 h-3.5 text-climate-sec1"></i>
+                            Informações extraídas diretamente das diretrizes e relatórios de proteção civil.
+                        </span>
+                        
+                        <!-- Ações do rodapé do card -->
+                        <div class="flex items-center gap-3">
+                            <button onclick="copiarUltimaResposta()" class="flex items-center gap-1 hover:text-climate-base transition-colors font-bold" title="Copiar o texto da última resposta recebida">
+                                <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copiar Última
+                            </button>
+                            <span class="text-stone-300">|</span>
+                            <button onclick="limparConversaCompleta()" class="flex items-center gap-1 text-climate-base hover:text-climate-sec2 transition-colors font-bold" title="Reiniciar a conversa e limpar todo o histórico">
+                                <i data-lucide="trash-2" class="w-3.5 h-3.5"></i> Iniciar Nova Pesquisa
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Sem Resultados -->
+                <div id="noResultsState" class="hidden flex flex-col items-center justify-center py-16 bg-white border border-stone-200 rounded-2xl shadow-sm gap-4">
+                    <div class="p-3 bg-amber-50 rounded-full text-amber-500">
+                        <i data-lucide="alert-circle" class="w-8 h-8"></i>
+                    </div>
+                    <div class="text-center max-w-sm px-4">
+                        <h4 class="text-sm font-bold text-stone-800">Sem correspondência nos registos climáticos</h4>
+                        <p class="text-[11px] text-stone-400 mt-1">O sistema não localizou nenhum documento oficial que responda diretamente à sua pergunta para este município. Por favor, tente reescrever de forma mais simples.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Boas-vindas -->
+            <div id="welcomeState" class="bg-white border border-stone-200 rounded-2xl p-8 shadow-sm text-center flex flex-col items-center gap-4">
+                <div class="p-4 bg-climate-base/5 rounded-full text-climate-base">
+                    <i data-lucide="shield-check" class="w-10 h-10"></i>
+                </div>
+                <div class="max-w-md">
+                    <h3 class="text-base font-bold text-stone-800">Central de Informações Ativa</h3>
+                    <p class="text-xs text-stone-500 mt-1 leading-relaxed">
+                        Selecione um município e faça uma pergunta na caixa de texto acima para procurar de forma simples e imediata nos planos de contingência locais.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="bg-stone-900 text-stone-400 py-8 border-t border-stone-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span class="font-bold text-white">Observatório da Resiliência Climática — Rio Grande do Sul</span>
+            <span class="text-stone-500">Comprometidos com a segurança e acesso transparente a dados públicos.</span>
+        </div>
+    </footer>
+
+    <script>
+        // Lista oficial de municípios gaúchos disponíveis para pesquisa
+        const MUNICIPIOS_DISPONIVEIS = [
+            "Alto Feliz", "Alvorada", "Arambaré", "Araricá", "Arroio dos Ratos", "Barão",
+            "Barão do Triunfo", "Barra do Ribeiro", "Bom Princípio", "Brochier", "Butiá",
+            "Cachoeirinha", "Camaquã", "Campo Bom", "Canoas", "Capela de Santana",
+            "Cerro Grande do Sul", "Charqueadas", "Chuvisca", "Cristal", "Dois Irmãos",
+            "Dom Feliciano", "Eldorado do Sul", "Estância Velha", "Esteio", "Feliz",
+            "Glorinha", "Gravataí", "Guaíba", "Harmonia", "Igrejinha", "Ivoti",
+            "Lindolfo Collor", "Linha Nova", "Maratá", "Mariana Pimentel", "Montenegro",
+            "Morro Reuter", "Nova Hartz", "Nova Santa Rita", "Novo Hamburgo", "Pareci Novo",
+            "Parobé", "Portão", "Porto Alegre", "Presidente Lucena", "Riozinho", "Rolante",
+            "Salvador do Sul", "Santa Maria do Herval", "Santo Antônio da Patrulha",
+            "São Jerônimo", "São José do Hortêncio", "São José do Sul", "São Leopoldo",
+            "São Pedro da Serra", "São Sebastião do Caí", "São Vendelino", "Sapiranga",
+            "Sapucaia do Sul", "Sentinela do Sul", "Sertão Santana", "Tapes", "Taquara",
+            "Triunfo", "Três Coroas", "Tupandi", "Vale Real", "Viamão"
+        ];
+
+        // Configuração do Endpoint de Consulta Seguro
+        const proxyConfig = { 
+            endpoint: "https://observatorio-backend.blacksand-ccf12c68.westus2.azurecontainerapps.io/api/retrieve"
+        };
+
+        // HISTÓRICO DE CONVERSAÇÃO ATIVO (Array com a estrutura {"role": "user"|"assistant", "text": "..."})
+        let conversationHistory = [];
+        let accumulatedReferences = []; // Armazena todas as referências trazidas ao longo da conversa (deduplicadas)
+
+        // Inicializa e popula o seletor de municípios de forma dinâmica
+        function inicializarSeletorMunicipios() {
+            const select = document.getElementById("municipioSelect");
+            const ordenados = [...MUNICIPIOS_DISPONIVEIS].sort((a, b) => a.localeCompare(b, 'pt'));
+            
+            ordenados.forEach(muni => {
+                const opt = document.createElement("option");
+                opt.value = muni;
+                opt.textContent = muni;
+                select.appendChild(opt);
+            });
+        }
+
+        // Configuração opcional para o marked.js (evitar quebras de linha estritas em locais como listas)
+        if (window.marked) {
+            marked.setOptions({
+                breaks: true,
+                gfm: true
+            });
+        }
+
+        // Função para extrair o nome limpo do arquivo PDF/Doc de forma amigável
+        function extrairNomeFicheiro(url) {
+            if (!url) return "Documento de Referência";
+            try {
+                const descodificado = decodeURIComponent(url);
+                let nome = descodificado.substring(descodificado.lastIndexOf('/') + 1);
+                // Remove extensões comuns e limpa hífens ou traços para o utilizador final ler com clareza
+                nome = nome.replace(/\.[^/.]+$/, "");
+                nome = nome.replace(/%20/g, " ");
+                nome = nome.replace(/_/g, " ");
+                nome = nome.replace(/-/g, " ");
+                return nome.trim();
+            } catch (e) {
+                return "Plano de Contingência";
+            }
+        }
+
+        // Substitui os códigos [ref_id:X] inline pelos nomes reais dos documentos oficiais, formatados como links de download
+        function formatarCitacoesInline(texto, references) {
+            if (!references || !Array.isArray(references)) return texto;
+            
+            // Mapeia referências pelo ID
+            const refMap = {};
+            references.forEach(ref => {
+                refMap[ref.id] = ref;
+            });
+
+            // Procura por marcações como [ref_id:0]
+            const regex = /\[ref_id:\s*(\d+)\]/g;
+            const urlCitadasNoTexto = new Set();
+            
+            let resultado = texto.replace(regex, (match, id) => {
+                const ref = refMap[id];
+                if (ref && ref.blobUrl) {
+                    // Impede múltiplos links inline consecutivos ou dispersos para o mesmo documento no corpo do texto
+                    if (urlCitadasNoTexto.has(ref.blobUrl)) {
+                        return ""; // Substitui por vazio se já foi inserido um link para este documento
+                    }
+                    urlCitadasNoTexto.add(ref.blobUrl);
+                    
+                    const nomeCompleto = extrairNomeFicheiro(ref.blobUrl);
+                    // Formata um link inline bonito utilizando o nome amigável do ficheiro
+                    return `<a href="${ref.blobUrl}" target="_blank" class="inline-flex items-center gap-1 text-climate-base hover:text-climate-sec2 font-extrabold bg-climate-sec1/10 hover:bg-climate-sec1/25 px-2 py-0.5 rounded transition-all-300 text-xs shadow-sm" title="Descarregar Plano Oficial: ${nomeCompleto}"><i data-lucide="file-text" class="w-3.5 h-3.5 inline"></i> ${nomeCompleto}</a>`;
+                }
+                return ""; // Limpa a citação se ela não possuir documento correspondente
+            });
+
+            // Limpa múltiplos espaços em branco resultantes de remoções de links duplicados
+            resultado = resultado.replace(/[ \t]+/g, " ");
+            // Trata espaços em excesso antes de pontuações de fim de frase ou fecho de parênteses
+            resultado = resultado.replace(/\s+([.,;!?\)])/g, "$1");
+            
+            return resultado;
+        }
+
+        // Gera o painel de fontes consultadas de forma limpa, unificada e sem duplicados ou scores
+        function renderizarFontesConsultadas() {
+            const sourcesContainer = document.getElementById("sourcesContainer");
+            const sourcesList = document.getElementById("sourcesList");
+            sourcesList.innerHTML = "";
+            
+            if (accumulatedReferences.length === 0) {
+                sourcesContainer.classList.add("hidden");
+                return;
+            }
+            
+            sourcesContainer.classList.remove("hidden");
+            
+            const seenUrls = new Set();
+            
+            accumulatedReferences.forEach(ref => {
+                if (ref.blobUrl && !seenUrls.has(ref.blobUrl)) {
+                    seenUrls.add(ref.blobUrl); // Garante que cada arquivo só aparece uma única vez
+                    const nome = extrairNomeFicheiro(ref.blobUrl);
+                    
+                    const item = document.createElement("a");
+                    item.href = ref.blobUrl;
+                    item.target = "_blank";
+                    item.className = "flex items-center justify-between p-3.5 bg-stone-50 hover:bg-climate-sec1/5 rounded-xl border border-stone-200/50 hover:border-climate-sec1/30 transition-all-300 group shadow-sm";
+                    
+                    item.innerHTML = `
+                        <div class="flex items-center gap-2.5 overflow-hidden w-full">
+                            <i data-lucide="file-text" class="w-4.5 h-4.5 text-climate-base shrink-0 group-hover:scale-110 transition-transform"></i>
+                            <span class="font-bold text-stone-700 group-hover:text-climate-base truncate block max-w-[200px] sm:max-w-[280px]" title="${nome}">${nome}</span>
+                        </div>
+                        <div class="flex items-center gap-2 shrink-0">
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-stone-400 group-hover:text-climate-base transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+                        </div>
+                    `;
+                    sourcesList.appendChild(item);
+                }
+            });
+            
+            lucide.createIcons();
+        }
+
+        // Função para preencher e enviar a query a partir dos botões de sugestões rápidas
+        function definirPerguntaSugerida(municipio, pergunta) {
+            document.getElementById("municipioSelect").value = municipio;
+            document.getElementById("queryInput").value = pergunta;
+            executarPesquisa(municipio, pergunta);
+        }
+
+        // Evento de submissão do formulário
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const selectedMuni = document.getElementById("municipioSelect").value;
+            const queryText = document.getElementById("queryInput").value.trim();
+            
+            if (selectedMuni && queryText) {
+                executarPesquisa(selectedMuni, queryText);
+            }
+        });
+
+        // Gerenciamento de fluxo de pesquisa
+        function executarPesquisa(municipio, query) {
+            document.getElementById("welcomeState").classList.add("hidden");
+            document.getElementById("resultsContainer").classList.remove("hidden");
+            
+            // Muda as etiquetas de carregamento para refletir se é seguimento ou primeira consulta
+            if (conversationHistory.length > 0) {
+                document.getElementById("loadingTitle").innerText = "A elaborar seguimento da conversa...";
+                document.getElementById("loadingSubtitle").innerText = "A analisar a nova pergunta com base nas diretrizes anteriores.";
+            } else {
+                document.getElementById("loadingTitle").innerText = "A analisar os registos oficiais...";
+                document.getElementById("loadingSubtitle").innerText = "A procurar informações e planos de contingência do município.";
+            }
+
+            mostrarCarregamento();
+
+            // Adiciona temporariamente a pergunta do utilizador ao histórico de dados antes do fetch (para ser enviada no payload)
+            conversationHistory.push({
+                "role": "user",
+                "text": query
+            });
+
+            // Executa a chamada segura para o seu backend de produção passando o município e o histórico de conversação
+            pesquisarNoProxyBackend(municipio);
+        }
+
+        // Executa uma chamada HTTP segura diretamente para o seu Servidor Proxy em Azure Container Apps
+        async function pesquisarNoProxyBackend(municipio) {
+            const url = proxyConfig.endpoint;
+
+            // FORMATO REESTRUTURADO MULTI-TURN: Envia o histórico completo e a trava opcional do município
+            const payload = {
+                "messages": conversationHistory,
+                "municipio": municipio
+            };
+
+            try {
+                console.log(`A enviar requisição protegida para o gateway de produção com ${conversationHistory.length} turnos de mensagens...`);
+                
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    
+                    // Exibição integral do payload recebido na Consola
+                    console.log("PAYLOAD COMPLETO TRANSMITIDO PELO PROXY (RAW):", data);
+                    
+                    processarRespostaKB(data, municipio);
+                } else {
+                    // Remove a pergunta pendente do histórico caso tenha ocorrido erro de rede
+                    conversationHistory.pop();
+                    const errPayload = await response.json().catch(() => ({}));
+                    console.warn("Erro retornado pelo servidor de produção:", errPayload);
+                    mostrarErroAzure(response.status, errPayload);
+                }
+            } catch (error) {
+                // Remove a pergunta pendente do histórico caso tenha ocorrido erro de rede
+                conversationHistory.pop();
+                console.warn("Falha de rede ao tentar ligar ao Servidor.");
+                mostrarErroAzure("GATEWAY INDISPONÍVEL", { 
+                    message: "Não foi possível conectar ao servidor de dados. Por favor, certifique-se de que a sua ligação de internet está ativa ou tente novamente mais tarde." 
+                });
+            }
+        }
+
+        // Função robusta e agnóstica para processar e analisar qualquer formato de resposta retornado pela API da KB
+        function processarRespostaKB(data, municipio) {
+            console.log("A processar dados no parser de respostas...");
+            
+            let answerText = "";
+            let referencesList = [];
+
+            if (data.response && data.response.length > 0 && data.response[0].content && data.response[0].content.length > 0) {
+                const contentItem = data.response[0].content[0];
+                if (contentItem.type === "text") {
+                    answerText = contentItem.text;
+                }
+                
+                // Extrai as referências do novo formato de dados
+                if (data.references && Array.isArray(data.references)) {
+                    referencesList = data.references;
+                }
+            }
+            else if (data.choices && data.choices.length > 0) {
+                const topChoice = data.choices[0];
+                answerText = topChoice.message?.content || "";
+            }
+            else if (data.answers && data.answers.length > 0) {
+                const topAnswer = data.answers[0];
+                answerText = topAnswer.answer || "";
+            }
+            else if (typeof data === "string") {
+                answerText = data;
+            }
+
+            if (answerText) {
+                // Guarda com sucesso a resposta da IA no nosso histórico em memória
+                conversationHistory.push({
+                    "role": "assistant",
+                    "text": answerText
+                });
+
+                // Se houver referências, guarda-as no acumulador global (deduplicando no processo de renderização das fontes)
+                if (referencesList.length > 0) {
+                    accumulatedReferences = [...accumulatedReferences, ...referencesList];
+                }
+
+                renderizarConversaCompleta(municipio);
+            } else {
+                // Se não há texto, remove a pergunta do utilizador correspondente para não poluir o histórico
+                conversationHistory.pop();
+                mostrarSemResultados();
+            }
+        }
+
+        // Renderiza todo o histórico de conversação de forma encadeada no ecrã (mantenha o texto na área de caixa, abaixo da resposta anterior)
+        function renderizarConversaCompleta(municipio) {
+            document.getElementById("loadingState").classList.add("hidden");
+            document.getElementById("noResultsState").classList.add("hidden");
+            document.getElementById("apiErrorCard").classList.add("hidden");
+            
+            const card = document.getElementById("answerCard");
+            card.classList.remove("hidden");
+
+            // Ativa o botão de reinício/nova pesquisa no topo da página
+            document.getElementById("resetBtnTop").classList.remove("hidden");
+
+            // Atualiza o indicador do município do cabeçalho
+            document.getElementById("municipioEcho").innerText = municipio;
+            // Tranca o seletor de municípios durante a conversa ativa para não misturar contextos geográficos no histórico
+            document.getElementById("municipioSelect").disabled = true;
+
+            const threadContainer = document.getElementById("conversationThread");
+            threadContainer.innerHTML = ""; // Limpa para redesenhar todo o encadeamento atualizado
+
+            // Variável temporária para rastrear URLs citadas de forma cumulativa e evitar duplicar links por parágrafo
+            const globalCitedUrls = new Set();
+
+            // Percorre todo o histórico de mensagens e desenha as caixas sequencialmente
+            for (let i = 0; i < conversationHistory.length; i += 2) {
+                const userMsg = conversationHistory[i];
+                const assistantMsg = conversationHistory[i + 1]; // Pode ser indefinido caso a chamada esteja em curso, mas aqui já terminou
+
+                if (userMsg && userMsg.role === "user") {
+                    const userDiv = document.createElement("div");
+                    userDiv.className = "bg-stone-50 border border-stone-200/60 p-4.5 rounded-2xl mb-4 text-stone-800 animate-fade-in";
+                    userDiv.innerHTML = `
+                        <div class="flex items-center gap-2 mb-1.5">
+                            <div class="p-1 rounded-md bg-stone-200 text-stone-600">
+                                <i data-lucide="user" class="w-3.5 h-3.5"></i>
+                            </div>
+                            <span class="text-[10px] text-stone-400 font-mono uppercase tracking-wider font-bold">Sua Dúvida</span>
+                        </div>
+                        <p class="text-sm sm:text-base font-semibold leading-relaxed pl-1">"${userMsg.text}"</p>
+                    `;
+                    threadContainer.appendChild(userDiv);
+                }
+
+                if (assistantMsg && assistantMsg.role === "assistant") {
+                    // Substitui citações [ref_id:X] para este assistente respeitando o acumulado de referências
+                    let textoFormatado = formatarCitacoesInline(assistantMsg.text, accumulatedReferences);
+
+                    const assistantDiv = document.createElement("div");
+                    assistantDiv.className = "bg-white border border-stone-150 p-5 sm:p-6 rounded-2xl mb-6 shadow-sm animate-fade-in";
+                    
+                    const markdownId = `msg-markdown-${i}`;
+                    assistantDiv.innerHTML = `
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="p-1 rounded-md bg-climate-base/10 text-climate-base">
+                                <i data-lucide="heart-handshake" class="w-3.5 h-3.5 animate-pulse"></i>
+                            </div>
+                            <span class="text-[10px] text-climate-base font-mono uppercase tracking-wider font-bold">Orientações Consolidadas</span>
+                        </div>
+                        <div id="${markdownId}" class="markdown-rendered text-stone-700 text-sm sm:text-base leading-relaxed pl-1">
+                            <!-- Injetado dinamicamente em Markdown abaixo -->
+                        </div>
+                    `;
+                    threadContainer.appendChild(assistantDiv);
+
+                    // Renderiza o Markdown na div específica com segurança utilizando o marked.js
+                    if (window.marked) {
+                        document.getElementById(markdownId).innerHTML = marked.parse(textoFormatado);
+                    } else {
+                        document.getElementById(markdownId).innerText = textoFormatado;
+                    }
+                }
+            }
+
+            // Atualiza o painel unificado de fontes no rodapé do ecrã
+            renderizarFontesConsultadas();
+
+            // Atualiza os indicadores de interface de multi-turn
+            document.getElementById("queryInput").placeholder = "Faça uma nova pergunta para aprofundar sobre este município...";
+            document.getElementById("queryInputLabel").innerHTML = `<i data-lucide="messages-square" class="w-4 h-4 text-climate-base"></i> Continuar conversa sobre ${municipio}`;
+            document.getElementById("submitBtnText").innerText = "Enviar Seguimento";
+            document.getElementById("modeIndicatorLabel").innerText = `Modo Conversa Ativo: ${conversationHistory.length / 2} Turno(s)`;
+
+            // Limpa o campo de texto para o utilizador poder introduzir facilmente a próxima pergunta
+            document.getElementById("queryInput").value = "";
+            
+            // Re-instancia os ícones Lucide recém-criados
+            lucide.createIcons();
+
+            // Desloca suavemente a página até à última resposta adicionada
+            setTimeout(() => {
+                threadContainer.lastElementChild?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 300);
+        }
+
+        // Limpa todo o histórico de conversação ativa e redefine a aplicação para o estado inicial de boas-vindas
+        function limparConversaCompleta() {
+            conversationHistory = [];
+            accumulatedReferences = [];
+            
+            // Libera e limpa os seletores
+            document.getElementById("municipioSelect").disabled = false;
+            document.getElementById("municipioSelect").value = "";
+            document.getElementById("queryInput").value = "";
+            document.getElementById("queryInput").placeholder = "Escreva a sua dúvida (ex: Quais os locais de abrigo?)...";
+            document.getElementById("queryInputLabel").innerHTML = `<i data-lucide="help-circle" class="w-4 h-4 text-climate-base"></i> O que deseja saber?`;
+            
+            // Redefine etiquetas e botões do formulário
+            document.getElementById("submitBtnText").innerText = "Pesquisar";
+            document.getElementById("modeIndicatorLabel").innerText = "Pesquisa direta em documentos oficiais";
+            document.getElementById("resetBtnTop").classList.add("hidden");
+
+            // Esconde resultados e re-exibe boas vindas
+            document.getElementById("resultsContainer").classList.add("hidden");
+            document.getElementById("welcomeState").classList.remove("hidden");
+
+            console.log("Histórico de conversação totalmente redefinido.");
+            lucide.createIcons();
+        }
+
+        // Copia para a área de transferência do sistema o texto da última resposta da IA
+        function copiarUltimaResposta() {
+            if (conversationHistory.length < 2) return;
+            // Procura pela última mensagem enviada pelo assistente
+            const ultimaMsg = conversationHistory[conversationHistory.length - 1];
+            if (!ultimaMsg || ultimaMsg.role !== "assistant") return;
+
+            const temp = document.createElement("textarea");
+            temp.value = ultimaMsg.text;
+            document.body.appendChild(temp);
+            temp.select();
+            try {
+                document.execCommand('copy');
+                // Alerta temporário amigável no botão de cópia
+                const copyBtn = document.querySelector("button[onclick='copiarUltimaResposta()']");
+                const text = copyBtn.innerHTML;
+                copyBtn.innerHTML = "<i data-lucide='check' class='w-3.5 h-3.5 inline text-emerald-500'></i> Copiado!";
+                lucide.createIcons();
+                setTimeout(() => { copyBtn.innerHTML = text; lucide.createIcons(); }, 2000);
+            } catch (e) {
+                console.error(e);
+            } finally {
+                document.body.removeChild(temp);
+            }
+        }
+
+        // Exibe um erro detalhado caso a API do Azure rejeite a chamada
+        function mostrarErroAzure(status, errPayload) {
+            document.getElementById("loadingState").classList.add("hidden");
+            document.getElementById("answerCard").classList.add("hidden");
+            document.getElementById("noResultsState").classList.add("hidden");
+            
+            const errorCard = document.getElementById("apiErrorCard");
+            errorCard.classList.remove("hidden");
+            
+            document.getElementById("errorHttpStatus").innerText = status;
+            
+            const parsedMessage = "Pedimos desculpa, mas não foi possível carregar a informação de momento. Por favor, recarregue a página ou aguarde alguns minutos.";
+            document.getElementById("errorDetails").innerText = parsedMessage;
+            lucide.createIcons();
+        }
+
+        function mostrarCarregamento() {
+            document.getElementById("loadingState").classList.remove("hidden");
+            document.getElementById("answerCard").classList.add("hidden");
+            document.getElementById("noResultsState").classList.add("hidden");
+            document.getElementById("apiErrorCard").classList.add("hidden");
+        }
+
+        function mostrarSemResultados() {
+            document.getElementById("loadingState").classList.add("hidden");
+            document.getElementById("answerCard").classList.add("hidden");
+            document.getElementById("apiErrorCard").classList.add("hidden");
+            document.getElementById("noResultsState").classList.remove("hidden");
+        }
+
+        // Executado assim que o documento é carregado
+        window.onload = function() {
+            inicializarSeletorMunicipios();
+            lucide.createIcons();
+        };
+    </script>
+</body>
+</html>

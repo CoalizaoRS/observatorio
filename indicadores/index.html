@@ -51,6 +51,9 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #4b5563;
         }
+        #municipality-list {
+            -webkit-overflow-scrolling: touch;
+        }
         .map-tooltip {
             background: #111827 !important;
             border: 1px solid #374151 !important;
@@ -149,36 +152,50 @@
         </div>
     </div>
 
-    <!-- HEADER PRINCIPAL -->
-    <header class="bg-gray-900 border-b border-gray-800 px-6 py-4 flex flex-col sm:flex-row justify-between items-center shrink-0 gap-4">
-        <div class="flex items-center space-x-3">
-            <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-white p-1 border border-white shrink-0 shadow-md overflow-hidden">
-                <img src="logo_icone_colorida.png" alt="Logo Observatório da Resiliência" class="w-full h-full object-contain">
+    <!-- HEADER PRINCIPAL COM SELETOR RESPONSIVO DE VISÃO -->
+    <header class="bg-gray-900 border-b border-gray-800 px-4 md:px-6 py-3 md:py-4 flex flex-col shrink-0 gap-3">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-white p-1 border border-white shrink-0 shadow-md overflow-hidden">
+                    <img src="logo_icone_colorida.jpg" alt="Logo Observatório da Resiliência" class="w-full h-full object-contain">
+                </div>
+                <div>
+                    <h1 class="text-base sm:text-lg font-bold tracking-tight text-white flex items-center gap-2">
+                        Observatório da Resiliência
+                    </h1>
+                    <p class="text-[11px] text-gray-400 hidden sm:block">Plataforma Multicritério de Gestão de Risco e Prevenção de Desastres Climáticos</p>
+                    <p class="text-[10px] text-gray-500 mt-0.5"><i class="fa-solid fa-circle-info mr-1"></i>Dados obtidos dos planos de contingência do RS.</p>
+                </div>
             </div>
-            <div>
-                <h1 class="text-lg font-bold tracking-tight text-white flex items-center gap-2">
-                    Observatório da Resiliência
-                </h1>
-                <p class="text-[11px] text-gray-400">Plataforma Multicritério de Gestão de Risco e Prevenção de Desastres Climáticos</p>
-                <p class="text-[10px] text-gray-500 mt-0.5"><i class="fa-solid fa-circle-info mr-1"></i>Dados obtidos dos planos de contingência dos municípios do Rio Grande do Sul.</p>
+            <div class="hidden sm:flex items-center space-x-4">
+                <span class="text-xs text-gray-400 flex items-center gap-1.5 bg-gray-950 px-3 py-1.5 rounded-full border border-gray-800">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#f09f48] opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-[#f09f48]"></span>
+                    </span>
+                    Conexão ativa
+                </span>
             </div>
         </div>
-        <div class="flex items-center space-x-4">
-            <span class="text-xs text-gray-400 flex items-center gap-1.5 bg-gray-950 px-3 py-1.5 rounded-full border border-gray-800">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#f09f48] opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-[#f09f48]"></span>
-                </span>
-                Conexão ativa
-            </span>
+
+        <!-- SELETOR DE VISÃO EXCLUSIVO PARA DISPOSITIVOS MÓVEIS (< md) -->
+        <div class="flex md:hidden w-full items-center justify-center p-1 bg-gray-950 rounded-xl border border-gray-800">
+            <button id="view-tab-indicators" onclick="switchMobileView('indicators')" 
+                    class="flex-1 py-1.5 text-xs font-semibold rounded-lg text-white bg-[#a5597c] transition-all flex items-center justify-center gap-2 shadow-sm">
+                <i class="fa-solid fa-list-check text-xs"></i> Indicadores & Lista
+            </button>
+            <button id="view-tab-map" onclick="switchMobileView('map')" 
+                    class="flex-1 py-1.5 text-xs font-semibold rounded-lg text-gray-400 hover:text-white transition-all flex items-center justify-center gap-2">
+                <i class="fa-solid fa-map-location-dot text-xs"></i> Mapa interativo
+            </button>
         </div>
     </header>
 
     <!-- CONTAINER DA APLICAÇÃO -->
     <main class="flex-1 flex flex-col md:flex-row overflow-hidden relative">
         
-        <!-- SIDEBAR UNIFICADA À ESQUERDA (SELECT + PAINEL DE CONTROLE) -->
-        <aside id="main-sidebar" class="w-full md:w-[380px] bg-gray-900 border-r border-gray-800 flex flex-col overflow-hidden shrink-0 z-10 relative">
+        <!-- SIDEBAR UNIFICADA À ESQUERDA (NO MOBILE VISÍVEL APENAS NA ABA INDICADORES) -->
+        <aside id="main-sidebar" class="w-full md:w-[380px] h-full bg-gray-900 border-b md:border-b-0 md:border-r border-gray-800 flex flex-col overflow-hidden shrink-0 z-10 relative">
             
             <!-- GRUPO CONDENSADO DE CONTROLES (SELETOR, METODOLOGIA, BUSCA E ESTATÍSTICAS) -->
             <div class="p-3 bg-gray-900 border-b border-gray-800 space-y-2.5 shrink-0">
@@ -255,7 +272,7 @@
             </div>
 
             <!-- Lista de Municípios / Ranking (Área com Maior Espaço de Rolagem) -->
-            <div class="flex-1 overflow-y-auto" id="municipality-list">
+            <div class="flex-1 overflow-y-auto touch-pan-y overscroll-contain" id="municipality-list">
                 <!-- Inserido dinamicamente -->
             </div>
 
@@ -305,8 +322,8 @@
             </div>
         </aside>
 
-        <!-- CONTAINER DO MAPA (EXPANDIDO À DIREITA) -->
-        <section class="flex-1 h-full relative" id="map-container">
+        <!-- CONTAINER DO MAPA (NO MOBILE OCULTADO QUANDO A ABA INDICADORES ESTÁ ATIVA) -->
+        <section class="hidden md:flex flex-1 h-full relative" id="map-container">
             <div id="map" class="w-full h-full bg-gray-950 z-0"></div>
 
             <!-- LEGENDA FLUTUANTE DO MAPA -->
@@ -355,7 +372,7 @@
     </button>
 
     <!-- CAIXA DE MENSAGENS DO CHATBOT -->
-    <div id="chat-window" class="hidden fixed bottom-24 right-4 sm:right-6 w-[calc(100vw-2rem)] sm:w-[420px] h-[520px] max-h-[80vh] bg-gray-900 border border-gray-800 rounded-2xl shadow-2xl z-[1000] flex-col overflow-hidden transition-all duration-300">
+    <div id="chat-window" class="hidden fixed inset-0 sm:inset-auto sm:bottom-24 sm:right-6 w-full sm:w-[420px] h-full sm:h-[520px] sm:max-h-[80vh] bg-gray-900 border-0 sm:border border-gray-800 rounded-none sm:rounded-2xl shadow-2xl z-[1000] flex-col overflow-hidden transition-all duration-300">
         
         <!-- Cabeçalho do Chat -->
         <div class="p-3.5 bg-gradient-to-r from-gray-900 via-[#a5597c]/30 to-gray-900 border-b border-gray-800 flex items-center justify-between shrink-0">
@@ -383,7 +400,6 @@
 
         <!-- Área de Histórico de Mensagens -->
         <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3.5 bg-gray-950/90 text-xs">
-            <!-- Mensagem de Saudação Obrigatória Inicial -->
             <div class="bg-[#a5597c]/15 border border-[#a5597c]/30 p-3.5 rounded-xl space-y-2 text-gray-300 leading-relaxed shadow-sm">
                 <div class="flex items-center space-x-2 text-[#f05f61] font-semibold text-xs">
                     <i class="fa-solid fa-circle-info"></i>
@@ -457,9 +473,9 @@
 
         let map;
         let geojsonLayer;
-        let activeIndicator = 'consolidado'; // Consolidado por padrão
+        let activeIndicator = 'consolidado';
+        let currentMobileView = 'indicators'; // 'indicators' ou 'map'
         
-        // Estrutura de dados multidimensional: csvData['P1'] = { 'portoalegre': {...} }
         let csvData = {
             'P1': {}, 'P2': {}, 'P3': {}, 'P4': {},
             'P5': {}, 'P6': {}, 'P7': {}, 'P8': {},
@@ -470,15 +486,62 @@
         let activeFilter = null;
         let searchTerm = '';
         let selectedMunicipality = null;
-        let conversationHistory = []; // Historic of conversation turns [{ role: "user"|"assistant", text: "" }]
+        let conversationHistory = [];
 
-        // Utilitário para normalizar os nomes dos municípios de forma tolerante
+        // Alternador de Visão no Celular
+        function switchMobileView(view) {
+            currentMobileView = view;
+            const sidebar = document.getElementById('main-sidebar');
+            const mapContainer = document.getElementById('map-container');
+            const tabIndicators = document.getElementById('view-tab-indicators');
+            const tabMap = document.getElementById('view-tab-map');
+
+            if (window.innerWidth < 768) {
+                if (view === 'indicators') {
+                    sidebar.classList.remove('hidden');
+                    sidebar.classList.add('flex');
+                    mapContainer.classList.add('hidden');
+                    mapContainer.classList.remove('flex');
+                    
+                    tabIndicators.className = "flex-1 py-1.5 text-xs font-semibold rounded-lg text-white bg-[#a5597c] transition-all flex items-center justify-center gap-2 shadow-sm";
+                    tabMap.className = "flex-1 py-1.5 text-xs font-semibold rounded-lg text-gray-400 hover:text-white transition-all flex items-center justify-center gap-2";
+                } else {
+                    sidebar.classList.add('hidden');
+                    sidebar.classList.remove('flex');
+                    mapContainer.classList.remove('hidden');
+                    mapContainer.classList.add('flex');
+                    
+                    tabMap.className = "flex-1 py-1.5 text-xs font-semibold rounded-lg text-white bg-[#a5597c] transition-all flex items-center justify-center gap-2 shadow-sm";
+                    tabIndicators.className = "flex-1 py-1.5 text-xs font-semibold rounded-lg text-gray-400 hover:text-white transition-all flex items-center justify-center gap-2";
+
+                    if (map) {
+                        setTimeout(() => {
+                            map.invalidateSize();
+                        }, 100);
+                    }
+                }
+            }
+        }
+
+        window.addEventListener('resize', () => {
+            const sidebar = document.getElementById('main-sidebar');
+            const mapContainer = document.getElementById('map-container');
+            if (window.innerWidth >= 768) {
+                sidebar.classList.remove('hidden');
+                sidebar.classList.add('flex');
+                mapContainer.classList.remove('hidden');
+                mapContainer.classList.add('flex');
+            } else {
+                switchMobileView(currentMobileView);
+            }
+        });
+
+        // Utilitário para normalizar os nomes dos municípios
         const normalizeString = (str) => {
             if (!str) return '';
             return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
         };
 
-        // Cores semafóricas
         const COLORS = {
             vermelho: '#EF4444', 
             amarelo: '#F59E0B',  
@@ -487,7 +550,6 @@
             default: '#4B5563'   
         };
 
-        // Função para alternar a exibição da caixa de metodologia/descrição
         function toggleIndicatorDesc() {
             const box = document.getElementById('indicator-desc-box');
             if (box) {
@@ -495,7 +557,6 @@
             }
         }
 
-        // Atualização Visual do Loader
         function updateLoader(percentage, statusText) {
             const bar = document.getElementById('loader-bar');
             const status = document.getElementById('loader-status');
@@ -503,7 +564,6 @@
             if (status) status.textContent = statusText;
         }
 
-        // Define explicitamente N/A para municípios sem registros informados
         function generateFallbackDataForIndicator(indicatorId, geojson) {
             geojson.features.forEach(feature => {
                 const cityName = feature.properties.name;
@@ -533,14 +593,11 @@
             document.getElementById('loader-status').classList.add('hidden');
         }
 
-        // Inicializador do Mapa
         function initMap() {
             map = L.map('map', { zoomControl: false }).setView([-30.2, -53.5], 7);
             
-            // Adiciona o controle de zoom (+ / -)
             const zoomControl = L.control.zoom({ position: 'topright' }).addTo(map);
 
-            // Anexa o botão de Visão 100% diretamente ao grupo de controles de zoom
             const zoomContainer = zoomControl.getContainer();
             if (zoomContainer) {
                 const resetBtn = L.DomUtil.create('a', 'leaflet-control-zoom-reset', zoomContainer);
@@ -564,7 +621,6 @@
             }).addTo(map);
         }
 
-        // Parseador e validador de dados CSV
         function parseIndicatorCSV(csvText, indicatorId) {
             const parsed = Papa.parse(csvText, {
                 header: true,
@@ -588,7 +644,6 @@
             });
         }
 
-        // Função de inteligência para consolidar os 8 indicadores por município
         function getConsolidatedValue(municipalityKey) {
             let sum = 0;
             let count = 0;
@@ -611,13 +666,11 @@
             return 'vermelho';
         }
 
-        // Retorna o objeto unificado do indicador ativo para um município específico
         function getActiveIndicatorData(municipalityKey, geoName) {
             if (activeIndicator === 'consolidado') {
                 const matched = csvData['consolidado'][municipalityKey];
                 if (matched && matched.valor && matched.valor !== 'N/A' && matched.valor !== 'default') return matched;
 
-                // Fallback de cálculo dinâmico caso _resumo.csv não tenha a entrada do município
                 const consValue = getConsolidatedValue(municipalityKey);
                 let evidences = [];
                 for (let i = 1; i <= 8; i++) {
@@ -648,7 +701,6 @@
             }
         }
 
-        // Cruza a modelagem de dados geográficos do GeoJSON com o estado dos indicadores
         function joinDataWithGeoJSON() {
             geojsonData.features.forEach(feature => {
                 const geoName = feature.properties.name;
@@ -657,7 +709,6 @@
             });
         }
 
-        // Recalcula contadores rápidos da barra lateral
         function updateMetricsSummary() {
             let redCount = 0;
             let yellowCount = 0;
@@ -675,7 +726,6 @@
             document.getElementById('stat-green').textContent = greenCount;
         }
 
-        // Estilização dinâmica dos polígonos no Leaflet
         function getFeatureStyle(feature) {
             const val = feature.properties.indicator ? feature.properties.indicator.valor.toLowerCase() : 'n/a';
             const color = COLORS[val] || COLORS['n/a'];
@@ -688,7 +738,6 @@
             };
         }
 
-        // Interação para cada município no mapa
         function onEachFeature(feature, layer) {
             const indicator = feature.properties.indicator;
             const valKey = indicator.valor ? indicator.valor.toLowerCase() : 'n/a';
@@ -727,7 +776,6 @@
             });
         }
 
-        // Renderiza e atualiza os limites geográficos no Leaflet
         function renderGeoJsonLayer() {
             if (geojsonLayer) {
                 map.removeLayer(geojsonLayer);
@@ -753,12 +801,10 @@
             }).addTo(map);
         }
 
-        // Renderiza e ordena os municípios da maior nota (Verde -> Amarelo -> Vermelho -> N/A)
         function renderMunicipalityList() {
             const listContainer = document.getElementById('municipality-list');
             listContainer.innerHTML = '';
 
-            // Compila todas as cidades associadas a partir do GeoJSON processado
             const items = geojsonData.features.map(f => f.properties.indicator)
                 .filter(item => {
                     if (activeFilter && item.valor !== activeFilter) return false;
@@ -766,7 +812,6 @@
                     return true;
                 });
 
-            // Ordenação estrita: Verde (3) > Amarelo (2) > Vermelho (1) > N/A (0)
             const getPriority = (val) => {
                 const v = val ? val.toLowerCase() : 'n/a';
                 if (v === 'verde') return 3;
@@ -824,7 +869,6 @@
             });
         }
 
-        // Seleção pontual de um município para focar e detalhar
         function selectMunicipality(indicator, layer) {
             selectedMunicipality = indicator;
             
@@ -832,7 +876,6 @@
             panel.classList.remove('hidden');
             panel.classList.add('flex');
 
-            // Vincula o nome do indicador que gerou esta classificação de forma visível
             const metaActive = INDICATORS_METADATA[activeIndicator];
             document.getElementById('detail-indicator-name').textContent = metaActive ? metaActive.title : 'Consolidado Geral';
 
@@ -847,7 +890,6 @@
             badge.style.backgroundColor = `${badgeColor}15`;
             badge.style.border = `1px solid ${badgeColor}30`;
 
-            // Renderiza o breakdown completo dos 8 indicadores na lateral direita
             const grid = document.getElementById('detail-indicators-grid');
             grid.innerHTML = '';
             
@@ -908,24 +950,20 @@
             renderMunicipalityList();
         }
 
-        // Alternador dinâmico de indicadores
         function switchIndicator(indicatorId, keepDetailsOpen = false) {
             activeIndicator = indicatorId;
             
-            // Sincroniza o valor do elemento select dropdown
             const selectEl = document.getElementById('indicator-select');
             if (selectEl && selectEl.value !== indicatorId) {
                 selectEl.value = indicatorId;
             }
 
-            // Atualizar Descrição do Indicador Selecionado
             const meta = INDICATORS_METADATA[indicatorId];
             if (meta) {
                 document.getElementById('active-indicator-title').textContent = meta.title;
                 document.getElementById('active-indicator-desc').textContent = meta.desc;
             }
 
-            // Recarregar os dados integrados do mapa e as tabelas de ranking
             if (geojsonData) {
                 joinDataWithGeoJSON();
                 updateMetricsSummary();
@@ -951,7 +989,6 @@
             }
         }
 
-        // Filtro rápido por criticidade semafórica
         function setRiskFilter(color) {
             if (activeFilter === color) {
                 clearFilter();
@@ -972,14 +1009,12 @@
             renderMunicipalityList();
         }
 
-        // Monitoramento da busca de municípios
         document.getElementById('search-input').addEventListener('input', (e) => {
             searchTerm = e.target.value;
             renderGeoJsonLayer();
             renderMunicipalityList();
         });
 
-        // Pipeline assíncrono para download múltiplo e resiliente de dados da Azure
         async function fetchAllData() {
             try {
                 updateLoader(10, "Inicializando motor de renderização cartográfica...");
@@ -991,11 +1026,9 @@
                 const geojsonRaw = await geojsonResponse.json();
                 geojsonData = geojsonRaw;
 
-                // Download resiliente em lote dos arquivos P1 a P8 e do _resumo.csv do Azure
                 updateLoader(40, "Baixando indicadores de prevenção e resumo consolidado do Azure...");
                 const loadPromises = [];
 
-                // Requisição para _resumo.csv (Consolidado Geral)
                 const resumoUrl = `${BASE_AZURE_URL}/_resumo.csv`;
                 const resumoPromise = fetch(resumoUrl)
                     .then(async (res) => {
@@ -1027,12 +1060,10 @@
                     loadPromises.push(loadPromise);
                 }
 
-                // Aguarda todos os downloads finalizarem (independente de falharem ou não)
                 await Promise.all(loadPromises);
 
                 updateLoader(95, "Cruzando malhas geográficas com os indicadores de prevenção...");
                 
-                // Força a renderização inicial do "Consolidado"
                 switchIndicator('consolidado');
 
                 updateLoader(100, "Dados integrados com sucesso!");
@@ -1044,7 +1075,6 @@
             }
         }
 
-        // Recarrega o fluxo
         function retryFetch() {
             document.getElementById('error-container').classList.add('hidden');
             document.getElementById('loader-bar').parentElement.classList.remove('hidden');
@@ -1058,7 +1088,6 @@
             fetchAllData();
         }
 
-        // Função para restaurar a visão 100% do mapa (Visão Geral do RS)
         function resetMapView() {
             if (map) {
                 if (geojsonLayer) {
@@ -1069,7 +1098,6 @@
             }
         }
 
-        // Mecanismo de simulação total em contingência / arquivos locais
         async function loadLocalFallback() {
             document.getElementById('error-container').classList.add('hidden');
             document.getElementById('loader-bar').parentElement.classList.remove('hidden');
@@ -1086,13 +1114,11 @@
 
                 updateLoader(65, "Calculando e simulando séries temporais locais...");
 
-                // Semeia o consolidado e todos os indicadores (P1 a P8) de forma determinística
                 generateFallbackDataForIndicator('consolidado', geojsonData);
                 for (let i = 1; i <= 8; i++) {
                     generateFallbackDataForIndicator(`P${i}`, geojsonData);
                 }
 
-                // Tenta opcionalmente buscar os arquivos _resumo.csv e P1.csv locais se estiverem disponíveis
                 try {
                     const resumoLocal = await fetch('_resumo.csv');
                     if (resumoLocal.ok) {
@@ -1128,9 +1154,9 @@
 
         window.onload = function() {
             fetchAllData();
+            switchMobileView('indicators');
         };
 
-        // Alternar janela do Chatbot
         function toggleChatWindow() {
             const chatWin = document.getElementById('chat-window');
             const icon = document.getElementById('chat-btn-icon');
@@ -1146,7 +1172,6 @@
             }
         }
 
-        // Adicionar balão de mensagem ao chat
         function appendChatMessage(sender, text, isError = false, references = []) {
             const container = document.getElementById('chat-messages');
             const msgDiv = document.createElement('div');
@@ -1175,7 +1200,6 @@
             container.scrollTop = container.scrollHeight;
         }
 
-        // Indicador de digitação
         function appendChatLoader() {
             const container = document.getElementById('chat-messages');
             const id = 'loader-' + Date.now();
@@ -1203,22 +1227,16 @@
             if (el) el.remove();
         }
 
-        // Formatação simples e segura do texto retornado pela IA
         function formatBotResponse(text, references = []) {
             if (!text) return '';
             
-            // 1. Escapa HTML do texto bruto da resposta para prevenir XSS
             let formatted = escapeHtml(text);
-
-            // 2. Converte URLs normais soltas em links clicáveis
             formatted = formatted.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-emerald-400 underline hover:text-emerald-300">$1</a>');
 
-            // 3. Substitui os códigos [ref_id: X] pelos links formatados dos documentos
             if (references && references.length > 0) {
                 formatted = formatarCitacoesInline(formatted, references);
             }
 
-            // 4. Converte sintaxe de negrito markdown (**texto**)
             formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
             return formatted;
@@ -1246,7 +1264,6 @@
             `;
         }
 
-        // Função principal de envio e consulta à API
         async function sendChatMessage(event) {
             if (event) event.preventDefault();
             const inputEl = document.getElementById('chat-input');
@@ -1256,7 +1273,6 @@
             appendChatMessage('user', queryText);
             inputEl.value = '';
 
-            // Adiciona a pergunta atual ao histórico da conversa
             conversationHistory.push({ role: "user", text: queryText });
 
             const loaderId = appendChatLoader();
@@ -1264,12 +1280,10 @@
             sendBtn.disabled = true;
 
             try {
-                // Prepara a carga útil contendo os últimos 12 turnos da conversa
                 const payload = {
                     messages: conversationHistory.slice(-12)
                 };
 
-                // Anexa o município selecionado se houver localidade ativa
                 if (selectedMunicipality && selectedMunicipality.municipio) {
                     payload.municipio = selectedMunicipality.municipio;
                 }
@@ -1299,7 +1313,6 @@
                         answerText = contentItem.text;
                     }
                     
-                    // Extrai as referências do novo formato de dados
                     if (data.references && Array.isArray(data.references)) {
                         referencesList = data.references;
                     }
@@ -1316,14 +1329,12 @@
                     answerText = data;
                 }
 
-                // Salva a resposta do assistente no histórico
                 if (answerText) {
                     conversationHistory.push({ role: "assistant", text: answerText });
                 }
 
                 appendChatMessage('bot', answerText, false, referencesList);
             } catch (err) {
-                // Remove a mensagem do usuário em caso de erro para não poluir o histórico
                 conversationHistory.pop();
                 removeChatLoader(loaderId);
                 console.error("Erro na requisição ao chatbot:", err);
@@ -1333,17 +1344,14 @@
             }
         }
 
-        // Substitui os códigos [ref_id:X] inline pelos nomes reais dos documentos oficiais, formatados como links de download
         function formatarCitacoesInline(texto, references) {
             if (!references || !Array.isArray(references) || references.length === 0) return texto;
             
-            // Mapeia referências pelo ID
             const refMap = {};
             references.forEach(ref => {
                 refMap[ref.id] = ref;
             });
 
-            // Procura por marcações como [ref_id: 0] ou [ref_id:0]
             const regex = /\[ref_id:\s*(\d+)\]/g;
             const urlCitadasNoTexto = new Set();
             
@@ -1351,7 +1359,7 @@
                 const ref = refMap[id];
                 if (ref && ref.blob_url) {
                     if (urlCitadasNoTexto.has(ref.blob_url)) {
-                        return ""; // Evita duplicar o mesmo link várias vezes seguidas
+                        return "";
                     }
                     urlCitadasNoTexto.add(ref.blob_url);
                     
@@ -1362,20 +1370,17 @@
                 return "";
             });
 
-            // Limpa múltiplos espaços em branco resultantes de remoções de links duplicados
             resultado = resultado.replace(/[ \t]+/g, " ");
             resultado = resultado.replace(/\s+([.,;!?\)])/g, "$1");
             
             return resultado;
         }
 
-        // Função para extrair o nome limpo do arquivo PDF/Doc de forma amigável
         function extrairNomeArquivo(url) {
             if (!url) return "Documento de Referência";
             try {
                 const descodificado = decodeURIComponent(url);
                 let nome = descodificado.substring(descodificado.lastIndexOf('/') + 1);
-                // Remove extensões comuns e limpa hífens ou traços para o utilizador final ler com clareza
                 nome = nome.replace(/\.[^/.]+$/, "");
                 nome = nome.replace(/%20/g, " ");
                 nome = nome.replace(/_/g, " ");

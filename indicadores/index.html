@@ -64,6 +64,33 @@
         .map-tooltip::before {
             border-right-color: #111827 !important;
         }
+        /* Estilização unificada dos botões de zoom (+, - e 100%) */
+        .leaflet-bar {
+            border: 1px solid #374151 !important;
+            border-radius: 0.75rem !important;
+            overflow: hidden;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+        }
+        .leaflet-bar a {
+            background-color: #111827 !important;
+            color: #d1d5db !important;
+            border-bottom: 1px solid #1f2937 !important;
+            width: 34px !important;
+            height: 34px !important;
+            line-height: 34px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            transition: all 0.2s ease;
+            text-decoration: none !important;
+        }
+        .leaflet-bar a:hover {
+            background-color: #1f2937 !important;
+            color: #f09f48 !important;
+        }
+        .leaflet-bar a:last-child {
+            border-bottom: none !important;
+        }
         .active-indicator-item {
             background-color: rgba(165, 89, 124, 0.22) !important; /* #a5597c */
             border-color: rgba(240, 95, 97, 0.5) !important; /* #f05f61 */
@@ -125,8 +152,8 @@
     <!-- HEADER PRINCIPAL -->
     <header class="bg-gray-900 border-b border-gray-800 px-6 py-4 flex flex-col sm:flex-row justify-between items-center shrink-0 gap-4">
         <div class="flex items-center space-x-3">
-            <div class="bg-[#a5597c]/15 p-2.5 rounded-lg border border-[#a5597c]/30 text-[#f05f61]">
-                <i class="fa-solid fa-map-location-dot text-xl"></i>
+            <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-white p-1 border border-white shrink-0 shadow-md overflow-hidden">
+                <img src="logo_icone_colorida.jpg" alt="Logo Observatório da Resiliência" class="w-full h-full object-contain">
             </div>
             <div>
                 <h1 class="text-lg font-bold tracking-tight text-white flex items-center gap-2">
@@ -150,190 +177,89 @@
     <!-- CONTAINER DA APLICAÇÃO -->
     <main class="flex-1 flex flex-col md:flex-row overflow-hidden relative">
         
-        <!-- SIDEBAR ESQUERDA: APENAS O SELETOR DE INDICADORES (DIV PRÓPRIA) -->
-        <aside id="selector-sidebar" class="w-full md:w-[320px] bg-gray-900 border-r border-gray-800 flex flex-col overflow-hidden shrink-0 z-10">
-            <!-- Painel Seletor de Indicadores P1 - P8 (Formato de Lista Amigável) -->
-            <div class="p-4 flex-1 flex flex-col overflow-hidden">
-                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 flex justify-between pb-3 border-b border-gray-800 shrink-0">
-                    <span>Métricas de Avaliação</span>
-                    <span class="text-[10px] text-[#f09f48] font-semibold">Selecione o critério</span>
-                </label>
-                
-                <!-- Lista de rolagem vertical de indicadores -->
-                <div class="flex-1 space-y-1.5 overflow-y-auto pt-3 pr-1">
-                    <!-- Consolidado Geral -->
-                    <button onclick="switchIndicator('consolidado')" id="btn-consolidado" 
-                            class="w-full text-left p-2.5 rounded-lg text-xs flex items-center gap-3 bg-gray-850 hover:bg-gray-800 border border-gray-800/80 transition-all duration-200">
-                        <span id="badge-consolidado" class="w-8 h-8 rounded-md flex items-center justify-center bg-[#a5597c]/20 border border-[#a5597c]/40 font-bold text-[11px] text-[#f05f61] shrink-0">
-                            <i class="fa-solid fa-chart-pie"></i>
-                        </span>
-                        <div class="overflow-hidden">
-                            <p class="font-bold text-gray-200 text-[11px] uppercase tracking-wide">Consolidado Geral</p>
-                            <p class="text-[10px] text-gray-400 truncate">Visão consolidada por município</p>
-                        </div>
-                    </button>
-
-                    <!-- P1 -->
-                    <button onclick="switchIndicator('P1')" id="btn-P1" 
-                            class="w-full text-left p-2.5 rounded-lg text-xs flex items-center gap-3 bg-gray-850 hover:bg-gray-800 border border-gray-800/80 transition-all duration-200">
-                        <span id="badge-P1" class="w-8 h-8 rounded-md flex items-center justify-center bg-gray-900 border border-gray-800 font-bold text-[11px] text-[#f05f61] shrink-0">P1</span>
-                        <div class="overflow-hidden">
-                            <p class="font-bold text-gray-200 text-[11px]">Mapeamento de Áreas de Risco</p>
-                            <p class="text-[10px] text-gray-400 truncate">O município sabe quantas pessoas vivem em áreas de risco?</p>
-                        </div>
-                    </button>
-
-                    <!-- P2 -->
-                    <button onclick="switchIndicator('P2')" id="btn-P2" 
-                            class="w-full text-left p-2.5 rounded-lg text-xs flex items-center gap-3 bg-gray-850 hover:bg-gray-800 border border-gray-800/80 transition-all duration-200">
-                        <span id="badge-P2" class="w-8 h-8 rounded-md flex items-center justify-center bg-gray-900 border border-gray-800 font-bold text-[11px] text-[#f05f61] shrink-0">P2</span>
-                        <div class="overflow-hidden">
-                            <p class="font-bold text-gray-200 text-[11px]">Disponibilidade de Abrigos</p>
-                            <p class="text-[10px] text-gray-400 truncate">Há abrigos disponíveis e capacidade estrutural de acolhimento?</p>
-                        </div>
-                    </button>
-
-                    <!-- P3 -->
-                    <button onclick="switchIndicator('P3')" id="btn-P3" 
-                            class="w-full text-left p-2.5 rounded-lg text-xs flex items-center gap-3 bg-gray-850 hover:bg-gray-800 border border-gray-800/80 transition-all duration-200">
-                        <span id="badge-P3" class="w-8 h-8 rounded-md flex items-center justify-center bg-gray-900 border border-gray-800 font-bold text-[11px] text-[#f05f61] shrink-0">P3</span>
-                        <div class="overflow-hidden">
-                            <p class="font-bold text-gray-200 text-[11px]">Treinamento de Evacuação</p>
-                            <p class="text-[10px] text-gray-400 truncate">A população pratica exercícios e protocolos de evacuação?</p>
-                        </div>
-                    </button>
-
-                    <!-- P4 -->
-                    <button onclick="switchIndicator('P4')" id="btn-P4" 
-                            class="w-full text-left p-2.5 rounded-lg text-xs flex items-center gap-3 bg-gray-850 hover:bg-gray-800 border border-gray-800/80 transition-all duration-200">
-                        <span id="badge-P4" class="w-8 h-8 rounded-md flex items-center justify-center bg-gray-900 border border-gray-800 font-bold text-[11px] text-[#f05f61] shrink-0">P4</span>
-                        <div class="overflow-hidden">
-                            <p class="font-bold text-gray-200 text-[11px]">Rotas de Fuga Sinalizadas</p>
-                            <p class="text-[10px] text-gray-400 truncate">Sinalização de escape e facilidade para deixar áreas de risco</p>
-                        </div>
-                    </button>
-
-                    <!-- P5 -->
-                    <button onclick="switchIndicator('P5')" id="btn-P5" 
-                            class="w-full text-left p-2.5 rounded-lg text-xs flex items-center gap-3 bg-gray-850 hover:bg-gray-800 border border-gray-800/80 transition-all duration-200">
-                        <span id="badge-P5" class="w-8 h-8 rounded-md flex items-center justify-center bg-gray-900 border border-gray-800 font-bold text-[11px] text-[#f05f61] shrink-0">P5</span>
-                        <div class="overflow-hidden">
-                            <p class="font-bold text-gray-200 text-[11px]">Sistemas de Alerta Precoce</p>
-                            <p class="text-[10px] text-gray-400 truncate">O município emite alertas efetivos antes do desastre ocorrer?</p>
-                        </div>
-                    </button>
-
-                    <!-- P6 -->
-                    <button onclick="switchIndicator('P6')" id="btn-P6" 
-                            class="w-full text-left p-2.5 rounded-lg text-xs flex items-center gap-3 bg-gray-850 hover:bg-gray-800 border border-gray-800/80 transition-all duration-200">
-                        <span id="badge-P6" class="w-8 h-8 rounded-md flex items-center justify-center bg-gray-900 border border-gray-800 font-bold text-[11px] text-[#f05f61] shrink-0">P6</span>
-                        <div class="overflow-hidden">
-                            <p class="font-bold text-gray-200 text-[11px]">Atualização do PlanCon</p>
-                            <p class="text-[10px] text-gray-400 truncate">O plano de contingência municipal está atualizado?</p>
-                        </div>
-                    </button>
-
-                    <!-- P7 -->
-                    <button onclick="switchIndicator('P7')" id="btn-P7" 
-                            class="w-full text-left p-2.5 rounded-lg text-xs flex items-center gap-3 bg-gray-850 hover:bg-gray-800 border border-gray-800/80 transition-all duration-200">
-                        <span id="badge-P7" class="w-8 h-8 rounded-md flex items-center justify-center bg-gray-900 border border-gray-800 font-bold text-[11px] text-[#f05f61] shrink-0">P7</span>
-                        <div class="overflow-hidden">
-                            <p class="font-bold text-gray-200 text-[11px]">Mobilização Comunitária</p>
-                            <p class="text-[10px] text-gray-400 truncate">Há grupos comunitários e núcleos de Defesa Civil ativos?</p>
-                        </div>
-                    </button>
-
-                    <!-- P8 -->
-                    <button onclick="switchIndicator('P8')" id="btn-P8" 
-                            class="w-full text-left p-2.5 rounded-lg text-xs flex items-center gap-3 bg-gray-850 hover:bg-gray-800 border border-gray-800/80 transition-all duration-200">
-                        <span id="badge-P8" class="w-8 h-8 rounded-md flex items-center justify-center bg-gray-900 border border-gray-800 font-bold text-[11px] text-[#f05f61] shrink-0">P8</span>
-                        <div class="overflow-hidden">
-                            <p class="font-bold text-gray-200 text-[11px]">Investimento em Proteção Civil</p>
-                            <p class="text-[10px] text-gray-400 truncate">O município investe financeiramente em preparação e mitigação?</p>
-                        </div>
-                    </button>
-                </div>
-            </div>
-        </aside>
-
-        <!-- CONTAINER DO MAPA (CENTRO) -->
-        <section class="flex-1 h-full relative" id="map-container">
-            <div id="map" class="w-full h-full bg-gray-950 z-0"></div>
-
-            <!-- LEGENDA FLUTUANTE DO MAPA -->
-            <div class="absolute bottom-6 right-6 z-[400] bg-gray-900/95 backdrop-blur-md border border-gray-800 p-4 rounded-xl shadow-2xl max-w-xs space-y-3">
-                <h4 class="text-xs font-bold uppercase tracking-wider text-gray-200" id="legend-title">Sinalização Semafórica</h4>
-                <div class="space-y-2">
-                    <div class="flex items-center space-x-2.5">
-                        <span class="w-3.5 h-3.5 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.5)]"></span>
-                        <span class="text-xs text-gray-300">Vermelho</span>
-                    </div>
-                    <div class="flex items-center space-x-2.5">
-                        <span class="w-3.5 h-3.5 rounded-full bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.5)]"></span>
-                        <span class="text-xs text-gray-300">Amarelo</span>
-                    </div>
-                    <div class="flex items-center space-x-2.5">
-                        <span class="w-3.5 h-3.5 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]"></span>
-                        <span class="text-xs text-gray-300">Verde</span>
-                    </div>
-                    <div class="flex items-center space-x-2.5 border-t border-gray-800/60 pt-2 mt-1">
-                        <span class="w-3.5 h-3.5 rounded-full bg-gray-600"></span>
-                        <span class="text-xs text-gray-400">Dado Indisponível</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SIDEBAR DIREITA: CONTROLES, RANKING E DETALHES DO INDICADOR -->
-        <aside class="w-full md:w-[380px] bg-gray-900 border-l border-gray-800 flex flex-col overflow-hidden shrink-0 z-10 relative">
+        <!-- SIDEBAR UNIFICADA À ESQUERDA (SELECT + PAINEL DE CONTROLE) -->
+        <aside id="main-sidebar" class="w-full md:w-[380px] bg-gray-900 border-r border-gray-800 flex flex-col overflow-hidden shrink-0 z-10 relative">
             
-            <!-- Descrição Dinâmica do Indicador Selecionado -->
-            <div class="p-4 bg-gray-900 border-b border-gray-800 space-y-2 shrink-0">
-                <span class="text-[10px] font-bold text-[#f09f48] uppercase tracking-widest block">Metodologia / Pergunta Base</span>
-                <h2 id="active-indicator-title" class="text-sm font-bold text-white leading-tight">Carregando indicador...</h2>
-                <p id="active-indicator-desc" class="text-xs text-gray-400 leading-relaxed italic">Aguardando dados...</p>
+            <!-- GRUPO CONDENSADO DE CONTROLES (SELETOR, METODOLOGIA, BUSCA E ESTATÍSTICAS) -->
+            <div class="p-3 bg-gray-900 border-b border-gray-800 space-y-2.5 shrink-0">
+                
+                <!-- Seletor de Indicadores + Botão de Metodologia -->
+                <div class="space-y-1">
+                    <div class="flex justify-between items-center">
+                        <label for="indicator-select" class="text-[10px] font-bold uppercase tracking-wider text-gray-400">
+                            Métrica de Avaliação
+                        </label>
+                        <button type="button" onclick="toggleIndicatorDesc()" class="text-[10px] text-[#f09f48] hover:text-[#f05f61] font-semibold flex items-center gap-1 focus:outline-none transition-colors">
+                            <i class="fa-solid fa-circle-info"></i> Metodologia
+                        </button>
+                    </div>
+                    <div class="relative">
+                        <select id="indicator-select" onchange="switchIndicator(this.value)" 
+                                class="w-full bg-gray-950 border border-gray-800 rounded-lg px-3 py-2 text-xs text-gray-100 font-medium focus:outline-none focus:border-[#a5597c] transition-colors appearance-none cursor-pointer pr-8 shadow-sm">
+                            <option value="consolidado">Consolidado Geral (Visão Geral)</option>
+                            <option value="P1">P1 - Mapeamento de Áreas de Risco</option>
+                            <option value="P2">P2 - Disponibilidade de Abrigos</option>
+                            <option value="P3">P3 - Treinamento de Evacuação</option>
+                            <option value="P4">P4 - Rotas de Fuga Sinalizadas</option>
+                            <option value="P5">P5 - Sistemas de Alerta Precoce</option>
+                            <option value="P6">P6 - Atualização do PlanCon</option>
+                            <option value="P7">P7 - Mobilização Comunitária</option>
+                            <option value="P8">P8 - Investimento em Proteção Civil</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2.5 text-gray-400">
+                            <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Descrição Dinâmica do Indicador Selecionado (Expansível / Compacta) -->
+                <div id="indicator-desc-box" class="bg-gray-950/60 p-2.5 rounded-lg border border-gray-800/80 space-y-1">
+                    <h2 id="active-indicator-title" class="text-xs font-bold text-white leading-tight">Carregando indicador...</h2>
+                    <p id="active-indicator-desc" class="text-[10px] text-gray-400 leading-relaxed italic">Aguardando dados...</p>
+                </div>
+
+                <!-- Linha Unificada: Campo de Busca + Contadores de Risco -->
+                <div class="flex items-center gap-2 pt-0.5">
+                    <!-- Campo de Busca de Município -->
+                    <div class="relative flex-1">
+                        <i class="fa-solid fa-magnifying-glass absolute left-2.5 top-2.5 text-gray-500 text-xs"></i>
+                        <input type="text" id="search-input" placeholder="Buscar município..." 
+                               class="w-full bg-gray-950 border border-gray-800 rounded-lg pl-8 pr-2.5 py-1.5 text-xs text-gray-100 placeholder-gray-500 focus:outline-none focus:border-[#a5597c] transition-colors">
+                    </div>
+
+                    <!-- Contadores / Filtros Rápidos Semafóricos Compactos -->
+                    <div class="flex items-center gap-0.5 bg-gray-950 p-1 rounded-lg border border-gray-800 shrink-0">
+                        <button onclick="setRiskFilter('vermelho')" class="px-2 py-0.5 rounded hover:bg-gray-800/60 transition flex items-center gap-1.5" title="Filtrar por Vermelho">
+                            <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                            <span class="text-xs font-bold text-red-500" id="stat-red">0</span>
+                        </button>
+                        <button onclick="setRiskFilter('amarelo')" class="px-2 py-0.5 rounded hover:bg-gray-800/60 transition flex items-center gap-1.5 border-l border-r border-gray-800/80" title="Filtrar por Amarelo">
+                            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                            <span class="text-xs font-bold text-amber-500" id="stat-yellow">0</span>
+                        </button>
+                        <button onclick="setRiskFilter('verde')" class="px-2 py-0.5 rounded hover:bg-gray-800/60 transition flex items-center gap-1.5" title="Filtrar por Verde">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                            <span class="text-xs font-bold text-emerald-500" id="stat-green">0</span>
+                        </button>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Pesquisa e Busca -->
-            <div class="p-4 bg-gray-900 border-b border-gray-800 space-y-3 shrink-0">
-                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400">Buscar Município</label>
-                <div class="relative">
-                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-3.5 text-gray-500 text-sm"></i>
-                    <input type="text" id="search-input" placeholder="Digite o nome da cidade..." 
-                           class="w-full bg-gray-950 border border-gray-800 rounded-xl pl-9 pr-4 py-2.5 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-[#a5597c] transition-colors">
-                </div>
-            </div>
-
-            <!-- Estatísticas Rápidas -->
-            <div class="grid grid-cols-3 border-b border-gray-800 text-center shrink-0">
-                <div class="p-3 border-r border-gray-800 cursor-pointer hover:bg-gray-800/40 transition" onclick="setRiskFilter('vermelho')">
-                    <div class="text-red-500 text-lg font-bold" id="stat-red">0</div>
-                    <div class="text-[10px] text-gray-400 font-medium uppercase tracking-wider">Vermelho</div>
-                </div>
-                <div class="p-3 border-r border-gray-800 cursor-pointer hover:bg-gray-800/40 transition" onclick="setRiskFilter('amarelo')">
-                    <div class="text-amber-500 text-lg font-bold" id="stat-yellow">0</div>
-                    <div class="text-[10px] text-gray-400 font-medium uppercase tracking-wider">Amarelo</div>
-                </div>
-                <div class="p-3 cursor-pointer hover:bg-gray-800/40 transition" onclick="setRiskFilter('verde')">
-                    <div class="text-emerald-500 text-lg font-bold" id="stat-green">0</div>
-                    <div class="text-[10px] text-gray-400 font-medium uppercase tracking-wider">Verde</div>
-                </div>
-            </div>
-
-            <!-- Seletor de visualização ativa -->
-            <div class="p-3 bg-gray-950/60 flex items-center justify-between border-b border-gray-800 px-4 shrink-0">
-                <span class="text-xs font-semibold text-gray-400" id="filter-label">Filtro: Todos os Municípios</span>
-                <button onclick="clearFilter()" id="clear-filter-btn" class="hidden text-[11px] text-[#f05f61] hover:text-[#f09f48] font-semibold flex items-center gap-1">
+            <!-- Seletor de visualização ativa / Rótulo do Filtro -->
+            <div class="py-1.5 px-3 bg-gray-950/80 flex items-center justify-between border-b border-gray-800 shrink-0">
+                <span class="text-[10px] font-semibold text-gray-400" id="filter-label">Filtro: Todos os Municípios</span>
+                <button onclick="clearFilter()" id="clear-filter-btn" class="hidden text-[10px] text-[#f05f61] hover:text-[#f09f48] font-semibold flex items-center gap-1">
                     Limpar <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
 
-            <!-- Lista de Municípios / Ranking -->
+            <!-- Lista de Municípios / Ranking (Área com Maior Espaço de Rolagem) -->
             <div class="flex-1 overflow-y-auto" id="municipality-list">
                 <!-- Inserido dinamicamente -->
             </div>
 
-            <!-- DETALHES DO MUNICÍPIO SELECIONADO (Sobrepõe temporariamente o painel direito ao selecionar uma cidade) -->
+            <!-- DETALHES DO MUNICÍPIO SELECIONADO -->
             <div id="details-panel" class="hidden absolute inset-0 bg-gray-950 z-[500] flex-col overflow-hidden transition-all duration-300 shadow-2xl">
                 <!-- Cabeçalho do Detalhe -->
                 <div class="p-4 border-b border-gray-800 shrink-0 flex justify-between items-center bg-gray-950/40">
@@ -358,13 +284,13 @@
                             <span class="text-xs text-gray-400">Classificação</span>
                             <span id="detail-badge" class="px-2.5 py-0.5 rounded font-bold uppercase tracking-wider text-[10px]"></span>
                         </div>
-                        <div class="flex justify-between items-center py-0.5 border-t border-gray-800/40 pt-2">
-                            <span class="text-xs text-gray-400">População Estimada</span>
-                            <span class="text-xs font-semibold text-gray-200" id="detail-pop">0</span>
-                        </div>
-                        <div class="flex justify-between items-center py-0.5 border-t border-gray-800/40 pt-2">
-                            <span class="text-xs text-gray-400">Confiança do Dado</span>
-                            <span class="text-xs font-semibold text-gray-200" id="detail-confidence">N/A</span>
+                    </div>
+
+                    <!-- Evidências e Observações Cadastradas -->
+                    <div class="space-y-2">
+                        <span class="text-[10px] font-bold text-[#f09f48] uppercase tracking-widest block">Evidência / Observações</span>
+                        <div class="bg-gray-950/50 border border-gray-800/80 p-3.5 rounded-xl text-xs text-gray-300 leading-relaxed italic" id="detail-evidence">
+                            Nenhuma observação informada.
                         </div>
                     </div>
 
@@ -375,17 +301,45 @@
                             <!-- Gerado dinamicamente -->
                         </div>
                     </div>
-
-                    <!-- Evidências e Observações Cadastradas -->
-                    <div class="space-y-2">
-                        <span class="text-[10px] font-bold text-[#f09f48] uppercase tracking-widest block">Evidência / Observações</span>
-                        <div class="bg-gray-950/50 border border-gray-800/80 p-3.5 rounded-xl text-xs text-gray-300 leading-relaxed italic" id="detail-evidence">
-                            Nenhuma observação informada.
-                        </div>
-                    </div>
                 </div>
             </div>
         </aside>
+
+        <!-- CONTAINER DO MAPA (EXPANDIDO À DIREITA) -->
+        <section class="flex-1 h-full relative" id="map-container">
+            <div id="map" class="w-full h-full bg-gray-950 z-0"></div>
+
+            <!-- LEGENDA FLUTUANTE DO MAPA -->
+            <div class="absolute top-6 left-6 z-[400] bg-gray-900/95 backdrop-blur-md border border-gray-800 p-4 rounded-xl shadow-2xl max-w-xs space-y-3">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-gray-200" id="legend-title">Sinalização Semafórica</h4>
+                <div class="space-y-2">
+                    <div class="flex items-center space-x-2.5">
+                        <span class="w-4 h-4 rounded-full bg-red-500 text-white flex items-center justify-center text-[9px] font-bold shadow-[0_0_10px_rgba(239,68,68,0.5)]">
+                            <i class="fa-solid fa-xmark"></i>
+                        </span>
+                        <span class="text-xs text-gray-300">Vermelho</span>
+                    </div>
+                    <div class="flex items-center space-x-2.5">
+                        <span class="w-4 h-4 rounded-full bg-amber-500 text-gray-950 flex items-center justify-center text-[9px] font-bold shadow-[0_0_10px_rgba(245,158,11,0.5)]">
+                            <i class="fa-solid fa-exclamation"></i>
+                        </span>
+                        <span class="text-xs text-gray-300">Amarelo</span>
+                    </div>
+                    <div class="flex items-center space-x-2.5">
+                        <span class="w-4 h-4 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[9px] font-bold shadow-[0_0_10px_rgba(16,185,129,0.5)]">
+                            <i class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="text-xs text-gray-300">Verde</span>
+                    </div>
+                    <div class="flex items-center space-x-2.5 border-t border-gray-800/60 pt-2 mt-1">
+                        <span class="w-4 h-4 rounded-full bg-gray-600 text-gray-300 flex items-center justify-center text-[9px] font-bold">
+                            <i class="fa-solid fa-minus"></i>
+                        </span>
+                        <span class="text-xs text-gray-400">Dado Indisponível</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
@@ -533,6 +487,14 @@
             default: '#4B5563'   
         };
 
+        // Função para alternar a exibição da caixa de metodologia/descrição
+        function toggleIndicatorDesc() {
+            const box = document.getElementById('indicator-desc-box');
+            if (box) {
+                box.classList.toggle('hidden');
+            }
+        }
+
         // Atualização Visual do Loader
         function updateLoader(percentage, statusText) {
             const bar = document.getElementById('loader-bar');
@@ -574,7 +536,26 @@
         // Inicializador do Mapa
         function initMap() {
             map = L.map('map', { zoomControl: false }).setView([-30.2, -53.5], 7);
-            L.control.zoom({ position: 'topright' }).addTo(map);
+            
+            // Adiciona o controle de zoom (+ / -)
+            const zoomControl = L.control.zoom({ position: 'topright' }).addTo(map);
+
+            // Anexa o botão de Visão 100% diretamente ao grupo de controles de zoom
+            const zoomContainer = zoomControl.getContainer();
+            if (zoomContainer) {
+                const resetBtn = L.DomUtil.create('a', 'leaflet-control-zoom-reset', zoomContainer);
+                resetBtn.href = '#';
+                resetBtn.title = 'Visão 100% (Restaurar mapa do RS)';
+                resetBtn.role = 'button';
+                resetBtn.setAttribute('aria-label', 'Visão 100%');
+                resetBtn.innerHTML = '<i class="fa-solid fa-expand text-xs"></i>';
+                
+                L.DomEvent.disableClickPropagation(resetBtn);
+                L.DomEvent.on(resetBtn, 'click', function(e) {
+                    L.DomEvent.preventDefault(e);
+                    resetMapView();
+                });
+            }
 
             L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
                 attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
@@ -856,8 +837,6 @@
             document.getElementById('detail-indicator-name').textContent = metaActive ? metaActive.title : 'Consolidado Geral';
 
             document.getElementById('detail-name').textContent = indicator.municipio;
-            document.getElementById('detail-pop').textContent = indicator.populacao_total || 'Não declarada';
-            document.getElementById('detail-confidence').textContent = indicator.confianca || 'N/A';
             document.getElementById('detail-evidence').textContent = indicator.evidencia || 'Sem observações declaradas.';
 
             const badge = document.getElementById('detail-badge');
@@ -933,39 +912,18 @@
         function switchIndicator(indicatorId, keepDetailsOpen = false) {
             activeIndicator = indicatorId;
             
-            // Remover estilos ativos de todas as opções de lista
-            document.querySelectorAll('[id^="btn-P"], #btn-consolidado').forEach(btn => {
-                btn.classList.remove('active-indicator-item', 'border-[#f05f61]/50');
-                btn.classList.add('bg-gray-850', 'hover:bg-gray-800');
-            });
-
-            // Remover estilos ativos de todas os badges dos indicadores
-            document.querySelectorAll('[id^="badge-P"], #badge-consolidado').forEach(badge => {
-                badge.classList.remove('active-indicator-badge');
-                badge.classList.add('bg-gray-900', 'text-[#f05f61]');
-                if (badge.id === 'badge-consolidado') {
-                    badge.className = "w-8 h-8 rounded-md flex items-center justify-center bg-[#a5597c]/20 border border-[#a5597c]/40 font-bold text-[11px] text-[#f05f61] shrink-0";
-                }
-            });
-
-            // Adicionar estilos de ativo para o elemento clicado
-            const activeBtn = document.getElementById(`btn-${indicatorId}`);
-            const activeBadge = document.getElementById(`badge-${indicatorId}`);
-            
-            if (activeBtn) {
-                activeBtn.classList.add('active-indicator-item');
-                activeBtn.classList.remove('bg-gray-850', 'hover:bg-gray-800');
-            }
-            
-            if (activeBadge) {
-                activeBadge.classList.add('active-indicator-badge');
-                activeBadge.classList.remove('bg-gray-900', 'text-[#f05f61]');
+            // Sincroniza o valor do elemento select dropdown
+            const selectEl = document.getElementById('indicator-select');
+            if (selectEl && selectEl.value !== indicatorId) {
+                selectEl.value = indicatorId;
             }
 
-            // Atualizar Descrição do Indicador Selecionado (Acima do Buscar Município)
+            // Atualizar Descrição do Indicador Selecionado
             const meta = INDICATORS_METADATA[indicatorId];
-            document.getElementById('active-indicator-title').textContent = meta.title;
-            document.getElementById('active-indicator-desc').textContent = meta.desc;
+            if (meta) {
+                document.getElementById('active-indicator-title').textContent = meta.title;
+                document.getElementById('active-indicator-desc').textContent = meta.desc;
+            }
 
             // Recarregar os dados integrados do mapa e as tabelas de ranking
             if (geojsonData) {
@@ -1098,6 +1056,17 @@
                 map = null;
             }
             fetchAllData();
+        }
+
+        // Função para restaurar a visão 100% do mapa (Visão Geral do RS)
+        function resetMapView() {
+            if (map) {
+                if (geojsonLayer) {
+                    map.fitBounds(geojsonLayer.getBounds(), { padding: [40, 40], duration: 1.2 });
+                } else {
+                    map.setView([-30.2, -53.5], 7, { animate: true, duration: 1.2 });
+                }
+            }
         }
 
         // Mecanismo de simulação total em contingência / arquivos locais

@@ -112,6 +112,35 @@
 </head>
 <body class="bg-gray-950 text-gray-100 overflow-hidden h-screen flex flex-col">
 
+    <!-- AVISO DE VERSÃO BETA (exibido a cada acesso) -->
+    <div id="beta-modal" class="fixed inset-0 z-[10000] flex items-center justify-center bg-black/70 backdrop-blur-sm px-4">
+        <div class="max-w-md w-full bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl overflow-hidden">
+            <div class="h-1.5 bg-gradient-to-r from-[#a5597c] via-[#d7453c] to-[#f09f48]"></div>
+            <div class="p-6 space-y-4">
+                <div class="flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-xl bg-[#f09f48]/15 border border-[#f09f48]/30 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-flask text-[#f09f48] text-lg"></i>
+                    </span>
+                    <div>
+                        <h2 class="text-base font-bold text-white leading-tight">Versão Beta</h2>
+                        <p class="text-[11px] text-[#f09f48] font-semibold uppercase tracking-wider">Em revisão técnica</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-300 leading-relaxed">
+                    Esta versão do Observatório ainda é <strong class="text-white">beta</strong> e está sob revisão da
+                    equipe técnica. Os dados podem conter imprecisões.
+                </p>
+                <p class="text-sm text-gray-300 leading-relaxed">
+                    Caso identifique algum ponto de ajuste, entre em contato pelo e-mail
+                    <a href="mailto:contato@observatoriodaresiliencia.org" class="text-[#f09f48] hover:underline font-semibold break-all">contato@observatoriodaresiliencia.org</a>.
+                </p>
+                <button onclick="closeBetaModal()" class="w-full py-2.5 bg-gradient-to-r from-[#a5597c] via-[#d7453c] to-[#f09f48] hover:opacity-90 text-white text-sm font-semibold rounded-lg transition">
+                    Entendi, continuar
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- LOADER / TELA DE BOAS-VINDAS -->
     <div id="loader-screen" class="fixed inset-0 bg-gray-950 z-[9999] flex flex-col items-center justify-center transition-all duration-500">
         <div class="max-w-md w-full px-6 text-center space-y-6">
@@ -576,6 +605,12 @@
             const loader = document.getElementById('loader-screen');
             loader.classList.add('opacity-0', 'pointer-events-none');
             setTimeout(() => loader.classList.add('hidden'), 500);
+        }
+
+        // Fecha o aviso de versão beta. Sem persistência: reaparece a cada acesso.
+        function closeBetaModal() {
+            const modal = document.getElementById('beta-modal');
+            if (modal) modal.remove();
         }
 
         function showFetchError() {

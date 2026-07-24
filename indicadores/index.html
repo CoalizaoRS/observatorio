@@ -168,7 +168,7 @@
                     <h1 class="text-base sm:text-lg font-bold tracking-tight text-white flex items-center gap-2">
                         Observatório da Resiliência
                     </h1>
-                    <p class="text-[11px] text-gray-400 hidden sm:block">Plataforma Multicritério de Gestão de Risco e Prevenção de Desastres Climáticos</p>
+                    <p class="text-[11px] text-gray-400 hidden sm:block">Plataforma de Indicadores de Resiliência Territorial</p>
                     <p class="text-[10px] text-gray-500 mt-0.5"><i class="fa-solid fa-circle-info mr-1"></i>Dados obtidos dos planos de contingência do RS.</p>
                 </div>
             </div>
@@ -209,7 +209,7 @@
                 <div class="space-y-1">
                     <div class="flex justify-between items-center">
                         <label for="indicator-select" class="text-[10px] font-bold uppercase tracking-wider text-gray-400">
-                            Métrica de Avaliação
+                            Indicadores
                         </label>
                         <button type="button" onclick="toggleIndicatorDesc()" class="text-[10px] text-[#f09f48] hover:text-[#f05f61] font-semibold flex items-center gap-1 focus:outline-none transition-colors">
                             <i class="fa-solid fa-circle-info"></i> Metodologia
@@ -219,14 +219,13 @@
                         <select id="indicator-select" onchange="switchIndicator(this.value)" 
                                 class="w-full bg-gray-950 border border-gray-800 rounded-lg px-3 py-2 text-xs text-gray-100 font-medium focus:outline-none focus:border-[#a5597c] transition-colors appearance-none cursor-pointer pr-8 shadow-sm">
                             <option value="consolidado">Consolidado Geral (Visão Geral)</option>
-                            <option value="P1">P1 - Mapeamento de Áreas de Risco</option>
-                            <option value="P2">P2 - Disponibilidade de Abrigos</option>
-                            <option value="P3">P3 - Treinamento de Evacuação</option>
-                            <option value="P4">P4 - Rotas de Fuga Sinalizadas</option>
-                            <option value="P5">P5 - Sistemas de Alerta Precoce</option>
-                            <option value="P6">P6 - Atualização do PlanCon</option>
-                            <option value="P7">P7 - Mobilização Comunitária</option>
-                            <option value="P8">P8 - Investimento em Proteção Civil</option>
+                            <option value="P1">1 - Mapeamento de Áreas de Risco</option>
+                            <option value="P2">2 - Disponibilidade de Abrigos</option>
+                            <option value="P3">3 - Treinamento de Evacuação</option>
+                            <option value="P4">4 - Rotas de Evacuação Sinalizadas</option>
+                            <option value="P5">5 - Sistemas de Alerta Precoce</option>
+                            <option value="P6">6 - Atualização do PlanCon</option>
+                            <option value="P7">7 - Mobilização Comunitária</option>
                         </select>
                         <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2.5 text-gray-400">
                             <i class="fa-solid fa-chevron-down text-[10px]"></i>
@@ -237,7 +236,10 @@
                 <!-- Descrição Dinâmica do Indicador Selecionado (Expansível / Compacta) -->
                 <div id="indicator-desc-box" class="bg-gray-950/60 p-2.5 rounded-lg border border-gray-800/80 space-y-1">
                     <h2 id="active-indicator-title" class="text-xs font-bold text-white leading-tight">Carregando indicador...</h2>
+                    <span class="text-[9px] font-bold text-[#f09f48] uppercase tracking-widest block pt-0.5">Questão Norteadora</span>
                     <p id="active-indicator-desc" class="text-[10px] text-gray-400 leading-relaxed italic">Aguardando dados...</p>
+                    <span class="text-[9px] font-bold text-[#f09f48] uppercase tracking-widest block pt-1">Critérios de Classificação</span>
+                    <p id="active-indicator-criterio" class="text-[10px] text-gray-400 leading-relaxed">Aguardando dados...</p>
                 </div>
 
                 <!-- Linha Unificada: Campo de Busca + Contadores de Risco -->
@@ -299,7 +301,7 @@
                     <!-- Cartão de Metadados / Resumo -->
                     <div class="bg-gray-950/50 p-4 rounded-xl border border-gray-800/80 space-y-3">
                         <div class="border-b border-gray-800/40 pb-2 mb-2">
-                            <span class="text-[10px] font-bold text-[#f09f48] uppercase tracking-widest block">Métrica Ativa</span>
+                            <span class="text-[10px] font-bold text-[#f09f48] uppercase tracking-widest block">Indicador Ativo</span>
                             <span id="detail-indicator-name" class="text-xs font-semibold text-white leading-tight block mt-0.5">Carregando indicador...</span>
                         </div>
                         <div class="flex justify-between items-center py-0.5">
@@ -316,9 +318,9 @@
                         </div>
                     </div>
 
-                    <!-- Detalhamento Semafórico Integrado dos 8 Indicadores -->
+                    <!-- Detalhamento Semafórico Integrado dos 7 Indicadores -->
                     <div class="space-y-3">
-                        <span class="text-[10px] font-bold text-[#f09f48] uppercase tracking-widest block">Detalhamento dos 8 Indicadores</span>
+                        <span class="text-[10px] font-bold text-[#f09f48] uppercase tracking-widest block">Detalhamento dos 7 Indicadores</span>
                         <div id="detail-indicators-grid" class="space-y-2">
                             <!-- Gerado dinamicamente -->
                         </div>
@@ -435,41 +437,45 @@
     <script>
         // Configurações Globais dos Indicadores
         const INDICATORS_METADATA = {
-            'P1': { 
-                title: "P1: Quantidade de pessoas em áreas de risco", 
-                desc: "O município sabe quantas pessoas vivem em área de risco?" 
+            'P1': {
+                title: "1: Quantidade de pessoas em áreas de risco",
+                desc: "O município sabe quantas pessoas vivem em área de risco?",
+                criterio: "VERDE: declara nº específico de RESIDENTES em áreas de risco (mapeamento/estimativa). VERMELHO: não declara — inclui só população total ou nº de afetados por evento."
             },
-            'P2': { 
-                title: "P2: Disponibilidade estrutural de abrigos", 
-                desc: "Há abrigos disponíveis antes do desastre? O município possui capacidade de acolhimento para deslocados?" 
+            'P2': {
+                title: "2: Disponibilidade estrutural de abrigos",
+                desc: "Há abrigos disponíveis antes do desastre?",
+                criterio: "VERDE: lista abrigos concretos (nomes/endereços) E o nº de vagas. AMARELO: menciona abrigos sem listar ou sem vagas. VERMELHO: não menciona abrigos."
             },
-            'P3': { 
-                title: "P3: Práticas preventivas de evacuação", 
-                desc: "A população pratica a evacuação preventiva?" 
+            'P3': {
+                title: "3: Práticas preventivas de evacuação",
+                desc: "A população pratica a evacuação preventiva?",
+                criterio: "VERDE: descreve simulado de evacuação efetivamente REALIZADO (data/relatório). VERMELHO: simulado apenas previsto/planejado, ou nenhum."
             },
-            'P4': { 
-                title: "P4: Sinalização de rotas de fuga estratégicas", 
-                desc: "As rotas de fuga estão devidamente sinalizadas? A população consegue evacuar áreas de risco?" 
+            'P4': {
+                title: "4: Sinalização de rotas de evacuação",
+                desc: "As rotas de evacuação estão devidamente sinalizadas?",
+                criterio: "VERDE: descreve rota de evacuação específica (ruas nomeadas/trajeto/ponto de encontro). VERMELHO: menção genérica ou futura, lista de abrigos, ou nenhuma rota."
             },
-            'P5': { 
-                title: "P5: Sistema de emissão de alertas precoces", 
-                desc: "O município emite alertas antes do desastre chegar? A população receberá estes alertas?" 
+            'P5': {
+                title: "5: Sistema de emissão de alertas precoces",
+                desc: "O município emite alertas antes do desastre chegar?",
+                criterio: "VERDE: mais de 3 canais de emissão de alerta à população (sirenes, SMS, carro de som, app...). AMARELO: 1 a 3 canais. VERMELHO: nenhum."
             },
-            'P6': { 
-                title: "P6: Atualização do plano de contingência", 
-                desc: "O plano de contingência (PlanCon) do município está devidamente atualizado?" 
+            'P6': {
+                title: "6: Atualização do plano de contingência",
+                desc: "O plano de contingência (PlanCon) do município está devidamente atualizado?",
+                criterio: "VERDE: publicação/revisão há menos de 2 anos. AMARELO: entre 2 e 5 anos. VERMELHO: mais de 5 anos ou sem data."
             },
-            'P7': { 
-                title: "P7: Mobilização ativa da sociedade civil", 
-                desc: "Há grupos comunitários de defesa civil ativos? Existe mobilização comunitária estruturada?" 
-            },
-            'P8': { 
-                title: "P8: Investimentos municipais em proteção civil", 
-                desc: "O município investe em proteção civil e preparação preventiva a desastres climáticos?" 
+            'P7': {
+                title: "7: Mobilização ativa da sociedade civil",
+                desc: "Há grupos comunitários de defesa civil ativos?",
+                criterio: "VERDE: lista NUPDEC(s) já existentes e formalizados. AMARELO: menciona voluntários/grupos não formalizados. VERMELHO: nada, ou apenas núcleos a serem organizados no futuro."
             },
             'consolidado': {
-                title: "Métrica Geral: Consolidado",
-                desc: "Visão consolidada frente aos 8 indicadores ativos."
+                title: "Indicadores: Consolidado",
+                desc: "Visão consolidada frente aos 7 indicadores.",
+                criterio: "Cada município é classificado em verde, amarelo ou vermelho por indicador, conforme a análise do PlanCon municipal. Selecione um indicador para ver seu critério."
             }
         };
 
@@ -483,7 +489,7 @@
         
         let csvData = {
             'P1': {}, 'P2': {}, 'P3': {}, 'P4': {},
-            'P5': {}, 'P6': {}, 'P7': {}, 'P8': {},
+            'P5': {}, 'P6': {}, 'P7': {},
             'consolidado': {}
         };
         
@@ -653,7 +659,7 @@
             let sum = 0;
             let count = 0;
 
-            for (let i = 1; i <= 8; i++) {
+            for (let i = 1; i <= 7; i++) {
                 const data = csvData[`P${i}`][municipalityKey];
                 if (data && data.valor && data.valor !== 'N/A' && data.valor !== 'default') {
                     if (data.valor === 'verde') sum += 3;
@@ -678,7 +684,7 @@
 
                 const consValue = getConsolidatedValue(municipalityKey);
                 let evidences = [];
-                for (let i = 1; i <= 8; i++) {
+                for (let i = 1; i <= 7; i++) {
                     const d = csvData[`P${i}`][municipalityKey];
                     if (d && d.valor && d.valor !== 'N/A' && d.valor !== 'default') {
                         evidences.push(`P${i}: ${d.valor.toUpperCase()}`);
@@ -899,7 +905,7 @@
             grid.innerHTML = '';
             
             const key = normalizeString(indicator.municipio);
-            for (let i = 1; i <= 8; i++) {
+            for (let i = 1; i <= 7; i++) {
                 const indData = csvData[`P${i}`][key];
                 const val = indData && indData.valor ? indData.valor.toLowerCase() : 'n/a';
                 const color = COLORS[val] || COLORS['n/a'];
@@ -967,6 +973,8 @@
             if (meta) {
                 document.getElementById('active-indicator-title').textContent = meta.title;
                 document.getElementById('active-indicator-desc').textContent = meta.desc;
+                const critEl = document.getElementById('active-indicator-criterio');
+                if (critEl) critEl.textContent = meta.criterio || '';
             }
 
             if (geojsonData) {
@@ -1048,7 +1056,7 @@
                     });
                 loadPromises.push(resumoPromise);
 
-                for (let i = 1; i <= 8; i++) {
+                for (let i = 1; i <= 7; i++) {
                     const csvUrl = `${BASE_AZURE_URL}/P${i}.csv`;
                     const loadPromise = fetch(csvUrl, { cache: 'no-cache' })
                         .then(async (res) => {
@@ -1120,7 +1128,7 @@
                 updateLoader(65, "Calculando e simulando séries temporais locais...");
 
                 generateFallbackDataForIndicator('consolidado', geojsonData);
-                for (let i = 1; i <= 8; i++) {
+                for (let i = 1; i <= 7; i++) {
                     generateFallbackDataForIndicator(`P${i}`, geojsonData);
                 }
 

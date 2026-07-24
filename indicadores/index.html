@@ -1035,7 +1035,7 @@
                 const loadPromises = [];
 
                 const resumoUrl = `${BASE_AZURE_URL}/_resumo.csv`;
-                const resumoPromise = fetch(resumoUrl)
+                const resumoPromise = fetch(resumoUrl, { cache: 'no-cache' })
                     .then(async (res) => {
                         if (!res.ok) throw new Error("_resumo.csv ausente no servidor.");
                         const text = await res.text();
@@ -1050,7 +1050,7 @@
 
                 for (let i = 1; i <= 8; i++) {
                     const csvUrl = `${BASE_AZURE_URL}/P${i}.csv`;
-                    const loadPromise = fetch(csvUrl)
+                    const loadPromise = fetch(csvUrl, { cache: 'no-cache' })
                         .then(async (res) => {
                             if (!res.ok) throw new Error(`P${i} ausente no servidor.`);
                             const text = await res.text();

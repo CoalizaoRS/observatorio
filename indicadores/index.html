@@ -108,9 +108,15 @@
             background-color: #a5597c !important;
             color: #ffffff !important;
         }
+        /* Altura real da viewport no mobile (evita que a barra do navegador
+           corte o fim das listas roláveis). Fallback para 100vh. */
+        .app-shell {
+            height: 100vh;
+            height: 100dvh;
+        }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 overflow-hidden h-screen flex flex-col">
+<body class="bg-gray-950 text-gray-100 overflow-hidden app-shell flex flex-col">
 
     <!-- AVISO DE VERSÃO BETA (exibido a cada acesso) -->
     <div id="beta-modal" class="fixed inset-0 z-[10000] flex items-center justify-center bg-black/70 backdrop-blur-sm px-4">
@@ -394,9 +400,9 @@
     </main>
 
     <!-- BOTÃO FLUTUANTE DO CHATBOT -->
-    <button id="chat-toggle-btn" onclick="toggleChatWindow()" 
-            class="fixed bottom-6 right-6 z-[1000] w-14 h-14 rounded-full bg-gradient-to-tr from-[#a5597c] via-[#d7453c] to-[#f09f48] hover:opacity-90 text-white shadow-2xl shadow-black/80 flex items-center justify-center border border-[#f09f48]/40 transition-all duration-300 transform hover:scale-105 active:scale-95 group focus:outline-none"
-            title="Abrir Assistente Observatório">
+    <button id="chat-toggle-btn"
+            class="fixed bottom-6 right-6 z-[1000] w-14 h-14 rounded-full bg-gradient-to-tr from-[#a5597c] via-[#d7453c] to-[#f09f48] hover:opacity-90 text-white shadow-2xl shadow-black/80 flex items-center justify-center border border-[#f09f48]/40 transition-all duration-300 transform hover:scale-105 active:scale-95 group focus:outline-none cursor-grab active:cursor-grabbing select-none touch-none"
+            title="Clique para abrir o Assistente · Arraste para mover">
         <i class="fa-solid fa-comments text-2xl group-hover:rotate-12 transition-transform" id="chat-btn-icon"></i>
         <span class="absolute -top-1 -right-1 flex h-4 w-4">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#f09f48] opacity-75"></span>
@@ -1144,6 +1150,85 @@
                 icon.className = 'fa-solid fa-comments text-2xl';
             }
         }
+
+        // Torna o botão do chat arrastável (mouse + toque), para sair da frente
+        // do conteúdo. Distingue arraste de clique por um limiar de movimento.
+        (function makeChatButtonDraggable() {
+            const btn = document.getElementById('chat-toggle-btn');
+            if (!btn) return;
+
+            const THRESHOLD = 6;     // px mínimos para considerar arraste
+            const MARGIN = 8;        // px de folga das bordas
+            let dragging = false, moved = false;
+            let startX = 0, startY = 0, originLeft = 0, originTop = 0;
+
+            function anchorToLeftTop() {
+                const rect = btn.getBoundingClientRect();
+                btn.style.left = rect.left + 'px';
+                btn.style.top = rect.top + 'px';
+                btn.style.right = 'auto';
+                btn.style.bottom = 'auto';
+                btn.classList.remove('bottom-6', 'right-6');
+            }
+
+            btn.addEventListener('pointerdown', (e) => {
+                if (e.button && e.button !== 0) return; // só botão primário
+                dragging = true;
+                moved = false;
+                startX = e.clientX;
+                startY = e.clientY;
+                anchorToLeftTop();
+                originLeft = parseFloat(btn.style.left);
+                originTop = parseFloat(btn.style.top);
+                btn.style.transition = 'none';
+                try { btn.setPointerCapture(e.pointerId); } catch (_) {}
+            });
+
+            btn.addEventListener('pointermove', (e) => {
+                if (!dragging) return;
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+                if (!moved && Math.hypot(dx, dy) > THRESHOLD) moved = true;
+                if (!moved) return;
+                e.preventDefault();
+                const size = btn.offsetWidth;
+                let nl = Math.min(Math.max(MARGIN, originLeft + dx), window.innerWidth - size - MARGIN);
+                let nt = Math.min(Math.max(MARGIN, originTop + dy), window.innerHeight - size - MARGIN);
+                btn.style.left = nl + 'px';
+                btn.style.top = nt + 'px';
+            });
+
+            function endDrag(e) {
+                if (!dragging) return;
+                dragging = false;
+                btn.style.transition = '';
+                try { btn.releasePointerCapture(e.pointerId); } catch (_) {}
+            }
+            btn.addEventListener('pointerup', endDrag);
+            btn.addEventListener('pointercancel', endDrag);
+
+            // Clique real (sem arraste) abre/fecha o chat; arraste não dispara toggle.
+            btn.addEventListener('click', (e) => {
+                if (moved) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    moved = false;
+                    return;
+                }
+                toggleChatWindow();
+            });
+
+            // Reposiciona para dentro da tela se a janela for redimensionada/girada.
+            window.addEventListener('resize', () => {
+                if (btn.style.left === '' && btn.style.top === '') return;
+                const size = btn.offsetWidth;
+                const curLeft = parseFloat(btn.style.left);
+                const curTop = parseFloat(btn.style.top);
+                if (isNaN(curLeft) || isNaN(curTop)) return;
+                btn.style.left = Math.min(Math.max(MARGIN, curLeft), window.innerWidth - size - MARGIN) + 'px';
+                btn.style.top = Math.min(Math.max(MARGIN, curTop), window.innerHeight - size - MARGIN) + 'px';
+            });
+        })();
 
         function appendChatMessage(sender, text, isError = false, references = []) {
             const container = document.getElementById('chat-messages');

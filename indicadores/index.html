@@ -149,9 +149,6 @@
                     <button onclick="retryFetch()" class="w-full py-2 bg-[#d7453c] hover:bg-[#f05f61] text-white text-xs font-semibold rounded-lg transition">
                         Tentar Novamente <i class="fa-solid fa-rotate-right ml-1"></i>
                     </button>
-                    <button onclick="loadLocalFallback()" class="w-full py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 text-xs font-semibold rounded-lg border border-gray-700 transition">
-                        Forçar modo simulação local
-                    </button>
                 </div>
             </div>
         </div>
@@ -573,23 +570,6 @@
             const status = document.getElementById('loader-status');
             if (bar) bar.style.width = `${percentage}%`;
             if (status) status.textContent = statusText;
-        }
-
-        function generateFallbackDataForIndicator(indicatorId, geojson) {
-            geojson.features.forEach(feature => {
-                const cityName = feature.properties.name;
-                const key = normalizeString(cityName);
-                
-                if (!csvData[indicatorId][key]) {
-                    csvData[indicatorId][key] = {
-                        municipio: cityName,
-                        valor: 'N/A',
-                        populacao_total: 'N/A',
-                        evidencia: 'Dado não catalogado ou indisponível no arquivo do indicador.',
-                        confianca: 'N/A'
-                    };
-                }
-            });
         }
 
         function hideLoader() {
@@ -1051,8 +1031,8 @@
                         updateLoader(45, "Resumo consolidado (_resumo.csv) sincronizado...");
                     })
                     .catch(err => {
-                        console.warn("[PlanCon Sincronizador] Erro ao obter _resumo.csv. Ativando cálculo de contingência.", err);
-                        generateFallbackDataForIndicator('consolidado', geojsonData);
+                        // Sem dado sintético: se o CSV falhar, o indicador fica como "Dado Indisponível".
+                        console.error("[Observatório] Falha ao obter _resumo.csv do Azure.", err);
                     });
                 loadPromises.push(resumoPromise);
 
@@ -1066,9 +1046,8 @@
                             updateLoader(45 + (i * 6), `Dados do indicador P${i} sincronizados com sucesso...`);
                         })
                         .catch(err => {
-                            console.warn(`[PlanCon Sincronizador] Erro ao obter indicador P${i}. Semeando fallback dinâmico.`, err);
-                            generateFallbackDataForIndicator(`P${i}`, geojsonData);
-                            updateLoader(45 + (i * 6), `Indicador P${i} estruturado em modo de contingência...`);
+                            // Sem dado sintético: se o CSV falhar, o indicador fica como "Dado Indisponível".
+                            console.error(`[Observatório] Falha ao obter o indicador P${i} do Azure.`, err);
                         });
                     loadPromises.push(loadPromise);
                 }
@@ -1108,60 +1087,6 @@
                 } else {
                     map.setView([-30.2, -53.5], 7, { animate: true, duration: 1.2 });
                 }
-            }
-        }
-
-        async function loadLocalFallback() {
-            document.getElementById('error-container').classList.add('hidden');
-            document.getElementById('loader-bar').parentElement.classList.remove('hidden');
-            document.getElementById('loader-status').classList.remove('hidden');
-            
-            try {
-                updateLoader(20, "Ativando base de dados de contingência...");
-                if (!map) initMap();
-
-                updateLoader(40, "Carregando malha do estado do RS...");
-                const geojsonResponse = await fetch(RS_GEOJSON_URL);
-                const geojsonRaw = await geojsonResponse.json();
-                geojsonData = geojsonRaw;
-
-                updateLoader(65, "Calculando e simulando séries temporais locais...");
-
-                generateFallbackDataForIndicator('consolidado', geojsonData);
-                for (let i = 1; i <= 7; i++) {
-                    generateFallbackDataForIndicator(`P${i}`, geojsonData);
-                }
-
-                try {
-                    const resumoLocal = await fetch('_resumo.csv');
-                    if (resumoLocal.ok) {
-                        const resumoText = await resumoLocal.text();
-                        parseIndicatorCSV(resumoText, 'consolidado');
-                    }
-                } catch (e) {
-                    console.log("_resumo.csv local ausente. Usando dados sintéticos.");
-                }
-
-                try {
-                    const p1Local = await fetch('P1.csv');
-                    if (p1Local.ok) {
-                        const p1Text = await p1Local.text();
-                        parseIndicatorCSV(p1Text, 'P1');
-                    }
-                } catch (e) {
-                    console.log("P1.csv local ausente. Usando dados sintéticos.");
-                }
-
-                updateLoader(90, "Cruzando banco simulado de contingência...");
-                switchIndicator('consolidado');
-
-                updateLoader(100, "Ambiente simulado carregado com sucesso!");
-                setTimeout(hideLoader, 600);
-            } catch (e) {
-                updateLoader(0, "Erro crítico.");
-                document.getElementById('loader-status').textContent = "Falha grave de processamento. Certifique-se de que possui conexão com a internet.";
-                document.getElementById('loader-status').classList.remove('hidden');
-                console.error(e);
             }
         }
 

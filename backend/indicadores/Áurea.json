@@ -1,0 +1,137 @@
+{
+  "municipio": "Áurea",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec02/aurea.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:57:23.072Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 66652,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": "3.517",
+        "tipo_do_numero": "populacao total",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "População: 3.517 habitantes",
+      "confianca": "alta",
+      "tokens": 10799,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "N/A",
+        "populacao_area_risco": "340",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "ABRIGO 1 Tipo: CENTRO ESPORTIVO Nome: Ginásio Nédio Omizzolo Endereço: Praça João Paulo II, Nº 33 - Centro | ABRIGO 2 Tipo: PARÓQUIA DA CIDADE Nome: Centro de Eventos Paroquial Endereço: Rua da Matriz, 267, Centro | ABRIGO 3 Tipo: GINÁSIO Nome: Ginásio Municipal da Escola Agrícola Endereço: linha 4, secção treze de maio, km 1,6 | Nº de afetados: 340",
+      "confianca": "alta",
+      "tokens": 9035,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "nao",
+        "evento_real_nao_simulado": "sim"
+      },
+      "evidencia": "Histórico de Recorrência: Eventuais na sede e em pontos específicos do município. Evento ocorrido em 2023 em grande proporção.[ref_id:0]",
+      "confianca": "alta",
+      "tokens": 6199,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "Lista de abrigos com endereços (ex.: \"Endereço: Praça João Paulo II, Nº 33 - Centro\"; \"Endereço: Rua da Matriz, 267, Centro\"), e menções genéricas a ações como \"realizar a remoção de pessoas das áreas de risco\" e \"principal(ais) vias\" sem descrição de trajeto específico",
+      "confianca": "alta",
+      "tokens": 9263,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "verde",
+      "componentes": {
+        "n_canais_alerta": 5,
+        "meios_alerta": [
+          "Internet",
+          "Telefone",
+          "Rádio",
+          "Carro de Som",
+          "Sino da Igreja"
+        ]
+      },
+      "evidencia": "Internet, Telefone, Rádio, Carro de Som, Sino da Igreja.",
+      "confianca": "alta",
+      "tokens": 11223,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "verde",
+      "componentes": {
+        "ano_plano": "2025",
+        "data_plano": "2025"
+      },
+      "evidencia": "Histórico de Recorrência: Eventualmente, evento ocorrido nos anos de 2002, 2004, 2005, 2009, 2012, 2013, 2019, 2020, 2022, 2023 e 2025.",
+      "confianca": "media",
+      "tokens": 8954,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "vermelho",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "N/A",
+        "grupos_comunitarios": "N/A"
+      },
+      "evidencia": "Não há menção a NUPDEC(s)/NUDEC(s) já existentes e formalizados no documento do Plano de Contingência de Áurea/RS; o documento lista COMDEC, contatos, ações e abrigos, mas não cita núcleos comunitários formalizados.",
+      "confianca": "alta",
+      "tokens": 11179,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

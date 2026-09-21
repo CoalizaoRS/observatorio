@@ -1,0 +1,131 @@
+{
+  "municipio": "São Pedro do Sul",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec03/sao-pedro-do-sul.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:54:23.298Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 34937,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": "N/A",
+        "tipo_do_numero": "N/A",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "Nº de residências: 0; Nº de prédios públicos: 30; Nº de afetados: 16671",
+      "confianca": "alta",
+      "tokens": 5793,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "N/A",
+        "populacao_area_risco": "16671",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "Nome: Ginásio Municipal Álvaro Becker; Endereço: Rua Ernesto Wagner, 359; ABRIGOS - 1\" e \"Nº de afetados: 16671",
+      "confianca": "alta",
+      "tokens": 5163,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "nao",
+        "evento_real_nao_simulado": "N/A"
+      },
+      "evidencia": "N/A",
+      "confianca": "alta",
+      "tokens": 4616,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "Documento listado: \"PLANO DE CONTINGÊNCIA SPS.docx\"; conteúdo presente na página: descrição geral do município, principais vias (BR-287) e locais (Prefeitura, Local de Doações), sem trecho com trajeto de evacuação nomeando ruas ligando área de risco a ponto de encontro.",
+      "confianca": "alta",
+      "tokens": 4146,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "vermelho",
+      "componentes": {
+        "n_canais_alerta": 0,
+        "meios_alerta": "N/A"
+      },
+      "evidencia": "Os documentos mostram apenas texto de acionamento interno com contatos (responsável e telefone) e as palavras \"ATENÇÃO! A DEFESA CIVIL MUNICIPAL ALERTA!\"; não descrevem canais de emissão ao público como sirenes, SMS, alto-falantes, aplicativo, rádio ou redes sociais.",
+      "confianca": "alta",
+      "tokens": 4453,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "amarelo",
+      "componentes": {
+        "ano_plano": "2022",
+        "data_plano": "08/07/2022"
+      },
+      "evidencia": "timestamped 08/07/2022 13:31",
+      "confianca": "alta",
+      "tokens": 4263,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "vermelho",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "N/A",
+        "grupos_comunitarios": "N/A"
+      },
+      "evidencia": "Não há menção a NUPDEC(s)/NUDEC(s) existentes ou a grupos voluntários no documento; somente informações sobre contatos, recursos, riscos e instrução para ativar mecanismos do plano de contingência.",
+      "confianca": "alta",
+      "tokens": 6503,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

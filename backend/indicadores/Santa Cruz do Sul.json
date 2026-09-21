@@ -1,0 +1,138 @@
+{
+  "municipio": "Santa Cruz do Sul",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec08/santa-cruz-do-sul.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:50:46.857Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 93110,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": "132.816 mil hab",
+        "tipo_do_numero": "populacao total",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "População 132.816 mil hab",
+      "confianca": "alta",
+      "tokens": 13808,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "N/A",
+        "populacao_area_risco": "132.816 mil hab",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "ANEXO I – ABRIGOS: Abrigo I - Parque da Oktoberfest – Pavilhão II; Abrigo II - Parque da Oktoberfest – Pavilhão III; Abrigo III - Parque da Oktoberfest – Casas Feira (08 Casas); Abrigo IV - EMEF Guido Herbert; Abrigo V - EMEF Harmonia; Abrigo VI - EMEF São Canísio; Abrigo VII - Centro Comunitário Viver Bem; Abrigo VIII - EMEF José Leopoldo Rauber; Abrigo IX - EMEF Cristiano João Schmit (Rio Pardinho); Abrigo X - EMEF Felix Hop (Linha Nova); Abrigo XI - Ginásio Comunidade Monte Alverne; Abrigo XII - Ginásio Poliesportivo (Alojamentos=08)\" [ref_id:17][ref_id:12][ref_id:1]",
+      "confianca": "alta",
+      "tokens": 13719,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "sim",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "O documento descreve procedimentos e prevê a realização de ações e simulados (ex.: \"O Plano de Contingência... estabelecendo os procedimentos...\" e menciona padrões de ativação e exercícios como obrigação), mas não apresenta registro de simulado realizado no passado com data, ata, relatório ou nº de participantes; anexo lista \"Eventos ocorridos no período de 2013 a 2024\" sem indicar que algum desses itens foi um simulado realizado com ata/relatório especificando participantes (N/A).",
+      "confianca": "alta",
+      "tokens": 13639,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "Listagem de ruas/áreas vulneráveis e mapas individuais com acessos (ex.: \"Obs: Acesso pela BR 471 (Trevo com a Rua Ten. O. Jost)\", \"Acesso Principal - BR 471 (Próximo ao Hospitalzinho).\") e ANEXO I com endereços de abrigos, sem indicação de trajeto de evacuação nomeando ruas sequenciais até ponto de encontro seguro.",
+      "confianca": "alta",
+      "tokens": 13747,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "verde",
+      "componentes": {
+        "n_canais_alerta": 6,
+        "meios_alerta": [
+          "rádio difusão (Arauto FM, Gazeta AM, Gazeta FM, Santa Cruz AM)",
+          "WhatsApp (grupos/aviso de difusão)",
+          "jornal (imprensa escrita)",
+          "pessoalmente através da equipe (alerta presencial/porta a porta)",
+          "boletins de informação à imprensa (divulgação de boletins oficiais)",
+          "mensagem via WhatsApp da 8ª CREPDEC (informe meteorológico)"
+        ]
+      },
+      "evidencia": "Informar a comunidade através dos meios de comunicações (rádio difusão - Arauto FM, Gazeta AM, Gazeta FM, Santa Cruz AM), whatsapp, jornais ou pessoalmente através da equipe sobre a EVOLUÇÃO do evento e quais as medidas que estão sendo adotadas; Ademais, deverá se ordenar a transição... Será definido um assessor de comunicação bem como os horários em que serão divulgados os boletins de informação à imprensa.; Adicionalmente, a 8ª CREPDEC enviará mensagem via wathtsApp com informes meteorológicos.",
+      "confianca": "alta",
+      "tokens": 10298,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "verde",
+      "componentes": {
+        "ano_plano": "2025",
+        "data_plano": "MARÇO DE 2025"
+      },
+      "evidencia": "Plano Contingência\n\n2025\n\n\n\n\n\n2\n\nMARÇO DE 2025",
+      "confianca": "alta",
+      "tokens": 13326,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "vermelho",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "nao",
+        "grupos_comunitarios": "N/A"
+      },
+      "evidencia": "N/A",
+      "confianca": "alta",
+      "tokens": 14573,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

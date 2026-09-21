@@ -1,0 +1,58 @@
+{
+  "container": "indicadores",
+  "base_url": "https://plancon.blob.core.windows.net/indicadores",
+  "regras_versao": "planilha IRM · aba simplificado (semáforo)",
+  "count": 10,
+  "arquivos": [
+    {
+      "nome": "P1.csv",
+      "descricao": "P1 — % população em área de risco (semáforo verde/vermelho)",
+      "url": "https://plancon.blob.core.windows.net/indicadores/P1.csv"
+    },
+    {
+      "nome": "P2.csv",
+      "descricao": "P2 — Capacidade de abrigamento (semáforo)",
+      "url": "https://plancon.blob.core.windows.net/indicadores/P2.csv"
+    },
+    {
+      "nome": "P3.csv",
+      "descricao": "P3 — Simulados de evacuação (semáforo)",
+      "url": "https://plancon.blob.core.windows.net/indicadores/P3.csv"
+    },
+    {
+      "nome": "P4.csv",
+      "descricao": "P4 — Rotas de evacuação (semáforo)",
+      "url": "https://plancon.blob.core.windows.net/indicadores/P4.csv"
+    },
+    {
+      "nome": "P5.csv",
+      "descricao": "P5 — Cobertura de sistemas de alerta (semáforo)",
+      "url": "https://plancon.blob.core.windows.net/indicadores/P5.csv"
+    },
+    {
+      "nome": "P6.csv",
+      "descricao": "P6 — Plano de contingência atualizado (semáforo)",
+      "url": "https://plancon.blob.core.windows.net/indicadores/P6.csv"
+    },
+    {
+      "nome": "P7.csv",
+      "descricao": "P7 — NUPDECs ativos (semáforo)",
+      "url": "https://plancon.blob.core.windows.net/indicadores/P7.csv"
+    },
+    {
+      "nome": "_resumo.csv",
+      "descricao": "Matriz município × valor de cada indicador (P1..P8)",
+      "url": "https://plancon.blob.core.windows.net/indicadores/_resumo.csv"
+    },
+    {
+      "nome": "familias.csv",
+      "descricao": "Estimativa de famílias em áreas de risco (legado)",
+      "url": "https://plancon.blob.core.windows.net/indicadores/familias.csv"
+    },
+    {
+      "nome": "vagas_abrigos.csv",
+      "descricao": "Vagas em abrigos (dados de apoio)",
+      "url": "https://plancon.blob.core.windows.net/indicadores/vagas_abrigos.csv"
+    }
+  ]
+}

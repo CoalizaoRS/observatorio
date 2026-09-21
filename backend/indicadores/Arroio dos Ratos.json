@@ -1,0 +1,135 @@
+{
+  "municipio": "Arroio dos Ratos",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec01/PLANCON%20-%20ARROIO%20DOS%20RATOS.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:36:53.119Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 96611,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": 13608,
+        "tipo_do_numero": "populacao total",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "O município de Arroio dos Ratos com uma população de 13.608 habitantes com área territorial de 425,9 km² onde a ocupação urbana estendeu-se sobre seus afluentes Arroio dos Ratos e Arroio Ipiranga.",
+      "confianca": "alta",
+      "tokens": 13939,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "N/A",
+        "populacao_area_risco": "13.608",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "▪ Centro de Referência de Assistência Social - CRAS SANTA BÁRBARA  Representante: Morgana de Oliveira Ferreira ▪ Associação do Corpo de Bombeiros Voluntários de Arroio dos Ratos  Representante: Carlos Vales; O município de Arroio dos Ratos com uma população de 13.608 habitantes com área territorial de 425,9 km²",
+      "confianca": "alta",
+      "tokens": 13586,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "sim",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "Além disso, devem ser realizados exercícios simulados conjuntos, com pelo menos uma edição anual em Arroio dos Ratos, como prevê a Lei Federal nº 12.608, de 10 de abril de 2012.",
+      "confianca": "alta",
+      "tokens": 13922,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "\"a evacuação das áreas afetadas sempre pelas principais ruas e avenidas a serem definidas de acordo com a magnitude do evento adverso\" [ref_id:1]",
+      "confianca": "alta",
+      "tokens": 14011,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "amarelo",
+      "componentes": {
+        "n_canais_alerta": 3,
+        "meios_alerta": [
+          "rádio (rádios locais / rádio local)",
+          "megafone/carro de som/alto-falante",
+          "telefone/SMS (telefones celulares) "
+        ]
+      },
+      "evidencia": "\"O alerta é realizado por meio de telefone, e-mail, rádios comunicadores, rádio local, megafone ou presencialmente.\"",
+      "confianca": "alta",
+      "tokens": 13198,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "verde",
+      "componentes": {
+        "ano_plano": "2025",
+        "data_plano": "PLAMCON – 2025"
+      },
+      "evidencia": "Plano Municipal de Contingência de Proteção e Defesa Civil - PLAMCON – 2025",
+      "confianca": "alta",
+      "tokens": 13325,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "amarelo",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "nao",
+        "grupos_comunitarios": "menção a voluntários da comunidade e Servidores Municipais voluntários"
+      },
+      "evidencia": "“Servidores Municipais voluntários \\n✓ Voluntários da comunidade” [ref_id:6]",
+      "confianca": "alta",
+      "tokens": 14630,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

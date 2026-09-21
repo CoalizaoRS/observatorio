@@ -1,0 +1,19 @@
+# Node (backend/)
+node_modules/
+dist/
+
+# Python (monitor/)
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Monitor: PDFs baixados a cada rodada — não versionados, ficam só localmente
+# e como artefato do workflow do GitHub Actions.
+monitor/changed_pdfs/
+
+.DS_Store
+
+# Config local de ferramentas de IA (não deve ser versionada)
+.claude/
+

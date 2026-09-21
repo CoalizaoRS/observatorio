@@ -1,0 +1,136 @@
+{
+  "municipio": "Sertão Santana",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec01/PLANCON%20-%20SERTA%CC%83O%20SANTANA.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:52:58.701Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 94997,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": "5.989",
+        "tipo_do_numero": "populacao total",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "Caracterização do Município Sertão Santana, com 5.989 habitantes (Estimativa IBGE 2025)",
+      "confianca": "alta",
+      "tokens": 13801,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "N/A",
+        "populacao_area_risco": "5.989",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "Ativação de Abrigos (Responsável: Sec. Assistência Social): Ativar o Ginásio Estadual de Esportes e, se necessário, outras estruturas.",
+      "confianca": "alta",
+      "tokens": 12900,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "sim",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "“Deverá ser revisado a cada 12 meses” / “Manter o PLAMCON atualizado, ... treinar equipes.”",
+      "confianca": "alta",
+      "tokens": 13781,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "\"ALERTA MÁXIMO. A Defesa Civil de Sertão Santana determina que todos busquem abrigo seguro IMEDIATAMENTE... Moradores de residências vulneráveis (telhado frágil, etc.) devem se dirigir ao Ginásio Estadual de Esportes.\" [ref_id:10]",
+      "confianca": "alta",
+      "tokens": 13319,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "verde",
+      "componentes": {
+        "n_canais_alerta": 4,
+        "meios_alerta": [
+          "sirenes",
+          "luzes (giroflex) / rondas da Brigada Militar",
+          "mensagens públicas (modelos de Alertas Amarelo/Laranja/Vermelho) — difusão pública",
+          "radiocomunicação (rádio / rádio amador como canal resiliente)"
+        ]
+      },
+      "evidencia": "“A ordem de evacuação emitida pelo Prefeito será disseminada por todos os canais oficiais. Em apoio, a Brigada Militar realizará rondas nas áreas de risco iminente, utilizando sirenes e luzes (giroflex)…” [ref_id:0]  \"ANEXO D: MODELOS DE MENSAGENS DE ALERTA PÚBLICO\" (modelos de alertas Amarelo/Laranja/Vermelho) [ref_id:3]  “Radiocomunicação: O CONSEPRO (Moisés) dispõe de equipamento de rádio amador, que servirá como um canal de comunicação secundário e resiliente…” [ref_id:1]",
+      "confianca": "alta",
+      "tokens": 13796,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "verde",
+      "componentes": {
+        "ano_plano": "2025",
+        "data_plano": "25 de agosto de 2025"
+      },
+      "evidencia": "VERSÃO 1.0 (Elaborado em 25 de agosto de 2025)",
+      "confianca": "alta",
+      "tokens": 13067,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "amarelo",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "nao",
+        "grupos_comunitarios": "sim"
+      },
+      "evidencia": "Mapa e cadastro de representantes ou líderes comunitários; referências a \"BOMBEIROS CIVIS VOLUNTÁRIOS\", \"Ponto de Recepção de Voluntários...para cadastrar voluntários\" e itens que indicam mapear voluntários e organizar voluntários para cozinha e limpeza.",
+      "confianca": "alta",
+      "tokens": 14333,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "municipio": "Três Coroas",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec01/PLANCON%20-%20TE%CC%82S%20COROAS.docx"
+  ],
+  "gerado_em": "2026-08-10T12:55:52.381Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 96870,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": "N/A",
+        "tipo_do_numero": "N/A",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "O documento trata de mapeamento e identificação de áreas de risco e de procedimentos de resposta, mas não apresenta um número ou estimativa específica de pessoas ou famílias que residem em áreas de risco no município de Três Coroas (ex.: \"Em função do mapeamento das áreas de riscos...\"; lista de ações e abrigos; seções sobre desabrigados/afetados)",
+      "confianca": "alta",
+      "tokens": 13866,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "N/A",
+        "populacao_area_risco": "N/A",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "- ABRIGO CENTRAL: Ginásio municipal de esportes Armando Brusius - Rua Luís Volkart, 267 – Centro.[ref_id:0][ref_id:12] - ABRIGO LOT. EUCALIPTO: EMEF Frederico Ritter - Rua das Camélias, 250 F - Loteamento Eucaliptos.[ref_id:12] - ABRIGO LINHA 28: EMEF Olavo Bilac - Rua Augusto Becker, 1840 - Linha 28.[ref_id:12][ref_id:16] - ABRIGO EM ÁGUAS BRANCAS: EMEF Águas Brancas - Rua Águas Brancas, 625 - Águas Brancas.[ref_id:12][ref_id:16] - ABRIGO QUILOMBO: EMEF Dom Pedro II - Rua Carlos F Saúl, 240 – Quilombo.[ref_id:12][ref_id:16] - ABRIGO MOREIRA: Sociedade da comunidade de moreira, Estrada Moreira.[ref_id:12][ref_id:16] - ABRIGO RECOSTA: Sociedade cultural e recreativa de canto avante de rodeio bonito, RS 020, N° 14046.[ref_id:12][ref_id:16] - Recursos com capacidades parciais citadas: CAPS alojamento para 2 famílias; Centro do Idoso alojamento para no máximo 5 famílias; Centro de Lazer do Idoso abriga até 10 famílias.[ref_id:12][ref_id:15]",
+      "confianca": "alta",
+      "tokens": 13901,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "sim",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "\"devem ser realizados simulados conjuntos, com pelo menos uma edição anual em TRES COROAS como prevê a Lei nº12.608, de 10 de abril de 2012.\"",
+      "confianca": "alta",
+      "tokens": 13934,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "\"A evacuação ... sendo a evacuação das áreas afetadas sempre pelas principais ruas a serem definidas de acordo com a magnitude do evento adverso\" [ref_id:15]",
+      "confianca": "alta",
+      "tokens": 13794,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "amarelo",
+      "componentes": {
+        "n_canais_alerta": 1,
+        "meios_alerta": [
+          "rádio (comunicação/difusão)"
+        ]
+      },
+      "evidencia": "os órgãos mobilizados ativarão os protocolos internos definidos de acordo com o nível da ativação (atenção, alerta, alarme e resposta). ... podendo ser chamado pelos diversos meios de comunicação como telefones, rádios, e-mails, etc...",
+      "confianca": "media",
+      "tokens": 13580,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "verde",
+      "componentes": {
+        "ano_plano": "2025",
+        "data_plano": "2025"
+      },
+      "evidencia": "ano \"2025\" na capa do documento: \"PLANO DE CONTINGÊNCIA DE PROTEÇÃO E DEFESA CIVIL\" ... ano \"2025.\"",
+      "confianca": "alta",
+      "tokens": 13220,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "amarelo",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "nao",
+        "grupos_comunitarios": "sim"
+      },
+      "evidencia": "“Informar os Agentes Voluntários da Defesa Civil municipal, órgãos municipais (Secretarias e Diretorias), órgãos voluntários (jipeiros, barqueiros, empresas de rafting e rádio amadores) e afins a situação.” [ref_id:7] / “Grupo destinado a voluntários que irão prestar apoio...” [ref_id:13] / Lista de contatos inclui 'CLUBE DOS JIPEIROS DE TC' e outros voluntários/organizações listados, sem menção a NUPDEC formalizado. [ref_id:21]",
+      "confianca": "alta",
+      "tokens": 14575,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

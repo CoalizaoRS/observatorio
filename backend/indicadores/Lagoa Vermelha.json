@@ -1,0 +1,137 @@
+{
+  "municipio": "Lagoa Vermelha",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec02/lagoa-vermelha.docx"
+  ],
+  "gerado_em": "2026-08-10T12:45:17.815Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 44171,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": 27525,
+        "tipo_do_numero": "populacao total",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "População: 27525",
+      "confianca": "alta",
+      "tokens": 5459,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "N/A",
+        "populacao_area_risco": "N/A",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "ABRIGOS - 1 Tipo: GINASIO Nome: Adolfo Stela Endereço: Rua 14 de Julho Estrutura Área Construída (m²): 1200 Área disponível para alojamento (m²): 650 3. Banheiros: sim - (masculinos: 5, femininos: 5)",
+      "confianca": "alta",
+      "tokens": 8021,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "nao",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "NÃO menciona realização de simulado: plano descreve atividades, estoques, alarmes e acionamento, mas não apresenta frase do tipo \"foi realizado o simulado em <data>\", ata ou relatório de simulado realizado",
+      "confianca": "alta",
+      "tokens": 5258,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "ABRIGOS - 1 ... Endereço: Rua 14 de Julho",
+      "confianca": "alta",
+      "tokens": 5278,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "verde",
+      "componentes": {
+        "n_canais_alerta": 5,
+        "meios_alerta": [
+          "Internet",
+          "Carro de som/alto-falante",
+          "Jornais",
+          "Rádio",
+          "Redes sociais"
+        ]
+      },
+      "evidencia": "\"AVISOS \\n\\nInternet, Carro de som, Jornais e radio\"; \"O alarme será disparado através de carro de som da DC, pelo rádio e pelas redes sociais\" [ref_id:0][ref_id:0]",
+      "confianca": "alta",
+      "tokens": 5648,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "vermelho",
+      "componentes": {
+        "ano_plano": "N/A",
+        "data_plano": "N/A"
+      },
+      "evidencia": "N/A",
+      "confianca": "baixa",
+      "tokens": 7575,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "vermelho",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "N/A",
+        "grupos_comunitarios": "N/A"
+      },
+      "evidencia": "NÃO há menção a NUPDEC(s)/NUDEC(s) ou a voluntários/grupos comunitários no documento recuperado.",
+      "confianca": "alta",
+      "tokens": 6932,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

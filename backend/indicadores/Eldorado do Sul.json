@@ -1,0 +1,136 @@
+{
+  "municipio": "Eldorado do Sul",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec01/PLANCON%20-%20ELDORADO%20DO%20SUL%202025.pdf",
+    "https://plancon.blob.core.windows.net/crepdec01/PLANCON%20-%20ELDORADO%20DO%20SUL%202025%20P2.pdf"
+  ],
+  "gerado_em": "2026-08-10T14:24:15.181Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 97558,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "verde",
+      "componentes": {
+        "populacao_area_risco": 1676,
+        "populacao_total": 40654,
+        "tipo_do_numero": "residentes em area de risco",
+        "percentual_pop_risco": 4.12
+      },
+      "evidencia": "Quantificações legíveis incluem ~1,676 people at risk (setor) e tabela lista 'Quantidade de pessoas em risco: 743' em outro setor; levantamentos setoriais com números de pessoas em risco estão presentes nas cartografias do SGB integradas ao PLANCON.",
+      "confianca": "media",
+      "tokens": 13907,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "1.720 pessoas",
+        "populacao_area_risco": "N/A",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "Assembleia Rincão Ângelo Colovini -30.085906° -51.662971° 80 pessoas; Escola Paraná Sidolfo da Silva -30.099532° -51.661772° 130 pessoas; Salão Paroquial Antenor Mercante -30.099002° -51.660453° 400 pessoas; Escola Roseli Estrada do Açude -30.078130° -51.619064° 120 pessoas; CTG Sesmaria Farrapo José Falcão Moreira -30.096496° -51.635108° 600 pessoas; Escola Otávio Gomes Av. dos Pinheiros -30.103192° -51.637606° 250 pessoas; Escola Sepé Tiaraju R. Parque dos Eucaliptos -30.116002° -51.616700° 70 pessoas; Piquete Rua Sete -30.104415° -51.656414° 70 pessoas; TOTAL 1.720 pessoas",
+      "confianca": "alta",
+      "tokens": 13908,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "sim",
+        "evento_real_nao_simulado": "sim"
+      },
+      "evidencia": "Material complementar ao presente Plancon... tem como base e foco a enchente ocorrida em maio de 2024.",
+      "confianca": "alta",
+      "tokens": 13945,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "verde",
+      "componentes": {
+        "rotas_descritas": "Para evacuação da localidade de Passo dos Pires, a evacuação deverá ocorrer pela Estrada do Açude; Para evacuação da Localidade do Rincão, a Avenida Ângelo Colovini é a rota direta até a BR-290; Para evacuação da Localidade do Poncho Verde, a Avenida das Samambaias é a rota direta até a BR-290; Para evacuação do Parque das Acácias, priorizar evacuação pela Rua Luz da Criança e pela Estrada do Açude."
+      },
+      "evidencia": "“Para evacuação da localidade de Passo dos Pires, a evacuação deverá ocorrer pela Estrada do Açude.” “Para evacuação da Localidade do Rincão, a Avenida Ângelo Colovini é a rota direta até a BR-290.” “Para evacuação da Localidade do Poncho Verde, a Avenida das Samambaias é a rota direta até a BR-290.” “Para evacuação do parque das Acácias, deve-se priorizar a evacuação pela Rua Luz da Criança, e pela Estr. do Açude”",
+      "confianca": "alta",
+      "tokens": 13972,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "amarelo",
+      "componentes": {
+        "n_canais_alerta": 3,
+        "meios_alerta": [
+          "WhatsApp (mensagens para população cadastrada e grupos de difusão)",
+          "Mídias sociais",
+          "Canal 199 (chamados pelos munícipes) — usado para comunicados/monitoramento"
+        ]
+      },
+      "evidencia": "“O alerta é realizado por meio de mensagens para população cadastrada no WhatsApp quando o monitoramento acusar altos índices pluviométricos.” [ref_id:0] \"Alertar a população via WhatsApp e mídias sociais sobre previsão de altos volumes pluviométricos; acionar os responsáveis envolvidos no plano de contingência\" [ref_id:4] \"monitoramento dos índices pluviométricos do CEMADEN, previsões pluviométricas ... e chamados pelo canal 199.\" [ref_id:4]",
+      "confianca": "alta",
+      "tokens": 13718,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "verde",
+      "componentes": {
+        "ano_plano": "2025",
+        "data_plano": "Ano: 2025"
+      },
+      "evidencia": "Órgão: SECDEF  Ano: 2025",
+      "confianca": "alta",
+      "tokens": 13300,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "verde",
+      "componentes": {
+        "n_nupdecs": "10",
+        "nupdec_futuro": "nao",
+        "grupos_comunitarios": "N/A"
+      },
+      "evidencia": "Reconhecendo sua grande importância na resposta a emergências e na prevenção de desastres, foram estabelecidos dez (10) NUPDECs no município. ✓ Núcleo Comunitário de Proteção e Defesa Civil – Bairro Chácara; ✓ Núcleo Comunitário de Proteção e Defesa Civil – Vila da Paz; ✓ Núcleo Comunitário de Proteção e Defesa Civil – Bairro Itaí; ✓ Núcleo Comunitário de Proteção e Defesa Civil – Bairro Picada; ✓ Núcleo Comunitário de Proteção e Defesa Civil – Bairro Irga; ✓ Núcleo Comunitário de Proteção e Defesa Civil – Bairro Bom Retiro; ✓ Núcleo Comunitário de Proteção e Defesa Civil – Bairro Sans Souci; ✓ Núcleo Comunitário de Proteção e Defesa Civil – Bairro Cidade Verde; ✓ Núcleo Comunitário de Proteção e Defesa Civil – Bairro Sol Nascente; ✓ Núcleo Comunitário de Proteção e Defesa Civil – Bairro Parque Eldorado.",
+      "confianca": "alta",
+      "tokens": 14808,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

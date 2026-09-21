@@ -1,0 +1,137 @@
+{
+  "municipio": "Lagoa dos Três Cantos",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec03/lagoa-dos-tres-cantos.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:45:22.642Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 61008,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": "~1.598",
+        "tipo_do_numero": "afetados por evento",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "Nº de afetados: 1.738",
+      "confianca": "alta",
+      "tokens": 8072,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "Área disponível para alojamento: 700 m² (ABRIGOS-3) + 200 m² (ABRIGOS-4) + 600 m² (ABRIGOS-2) + 400 m² (outra entrada) — documenta áreas disponíveis, não um total de vagas em número de pessoas",
+        "populacao_area_risco": "Nº de afetados: 1.738 (em cenário de seca) / 945 (em outro cenário de enxurradas) / 1.738 e outros valores conforme mapas descritos",
+        "vagas_por_1000_hab_risco": 402542.88
+      },
+      "evidencia": "Listagem de abrigos com tipos, nomes, endereços, responsáveis, contatos, coordenadas e áreas disponíveis para alojamento (ex.: \"ABRIGOS - 3 ... Área disponível para alojamento 700 m²\"; \"ABRIGOS - 4 ... Área disponível para alojamento 200 m²\"; \"ABRIGOS - 2 ... Centro Educacional Linha Glória ... área disponível para alojamento 600 m²\")",
+      "confianca": "alta",
+      "tokens": 9131,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "nao",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "\"DOCUMENTOS: Nenhum documento foi anexado.\" [ref_id:1]",
+      "confianca": "alta",
+      "tokens": 7256,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "Não há trechos que descrevam um trajeto de evacuação específico com ruas/vias nomeadas ligando área de risco a ponto de encontro; o documento traz listas de \"Ações a serem desenvolvidas\", mapas da área afetada e lista de abrigos (endereço) mas não rotas detalhadas (ex.: páginas com \"Ações a serem desenvolvidas\" e seção \"Abrigos\") [ref_id:2][ref_id:8][ref_id:10]",
+      "confianca": "alta",
+      "tokens": 10033,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "verde",
+      "componentes": {
+        "n_canais_alerta": 5,
+        "meios_alerta": [
+          "Internet",
+          "carro de som/alto-falante",
+          "rádio",
+          "sino da igreja",
+          "telefone"
+        ]
+      },
+      "evidencia": "AVISOS: listas comunicação means (Internet, carro de som, rádio, sino da igreja, telefone).",
+      "confianca": "alta",
+      "tokens": 6421,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "amarelo",
+      "componentes": {
+        "ano_plano": "2023",
+        "data_plano": "01/12/2023"
+      },
+      "evidencia": "timestamp (01/12/2023 12:58) e cabeçalho \"SEGRID - Sistema Estadual de Gestão Integrada de Riscos e Desastres\" presentes no documento referente a Lagoa dos Três Cantos",
+      "confianca": "alta",
+      "tokens": 9795,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "vermelho",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "N/A",
+        "grupos_comunitarios": "N/A"
+      },
+      "evidencia": "DOCUMENTOS: Nenhum documento foi anexado.",
+      "confianca": "alta",
+      "tokens": 10300,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

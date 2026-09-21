@@ -1,0 +1,133 @@
+{
+  "municipio": "Cerrito",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec04/cerrito.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:39:46.395Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 53116,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": "6402",
+        "tipo_do_numero": "populacao total",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "População: 6402  Área: 451,699 km²",
+      "confianca": "alta",
+      "tokens": 8425,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": 650,
+        "populacao_area_risco": 6402,
+        "vagas_por_1000_hab_risco": 101.53
+      },
+      "evidencia": "Lista De Abrigos ... Abrigo I Identificação: GINASIO DE ESPORTES MUNICIPAL ... Capacidade: 300 pessoas ... Abrigo II Identificação: ESCOLA ESTADUAL JOSE BERNABE DE SOUZA ... Capacidade: 200 pessoas ... Abrigo III ... Capacidade: 50 pessoas ... Abrigo IV ... Capacidade: 100 pessoas; MUNICÍPIO CERRITO-RS Nome: CERRITO-RS População: 6402",
+      "confianca": "alta",
+      "tokens": 8274,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "sim",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "Não menciona simulado realizado; contém apenas disposições/objetivos do plano e acionamento quando ocorrer evento adverso (\"O plano será acionado quando ocorrer algum evento adverso no Município\") e não há ata, data de simulado, relatório ou número de participantes no documento recuperado",
+      "confianca": "alta",
+      "tokens": 5681,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "verde",
+      "componentes": {
+        "rotas_descritas": "A listagem indica vias nomeadas em áreas de risco ligadas à área atingida (ex.: ATERRO DA PONTE (PONTE ATÉ O TRILHO DO TREM) — RUA JOSÉ VAZ DE SOUZA (BAIRRO SÃO MIGUEL), RUA MIGUEL IRIGON (BAIRRO SÃO MIGUEL), RUA ALCIDES NUNES (BAIRRO SÃO MIGUEL), RUA IRAI SOARES (BAIRRO SÃO MIGUEL), RUA FRANQUILIN SOARES (BAIRRO SÃO MIGUEL), AV BENTO GONÇALVES, ALMIRANTE AMEDA PORTOS, PRAÇA LUIS SIQUEIRA, LARGO CANGUÇU, AVENIDA FLORES DA CUNHA (entre nº 240 a 330), BAIRRO OASIS OLARIAS (rua direção ao Passo Novo)"
+      },
+      "evidencia": "\"ATERRO DA PONTE (PONTE ATÉ O TRILHO DO TREM)\\n\\nRUA JOSÉ VAZ DE SOUZA (BAIRRO SÃO MIGUEL)\\n\\nRUA MIGUEL IRIGON (BAIRRO SÃO MIGUEL)\\n\\nRUA ALCIDES NUNES (BAIRRO SÃO MIGUEL)\\n\\nRUA IRAI SOARES (BAIRRO SÃO MIGUEL)\\n\\nRUA FRANQUILIN SOARES (BAIRRO SÃO MIGUEL)\\n\\nAV BENTO GONÇALVES\\n\\nALMIRANTE AMEDA PORTOS\\n\\nPRAÇA LUIS SIQUEIRA\\n\\nLARGO CANGUÇU\\n\\nAVENIDA FLORES DA CUNHA ENTRE OS Nº 240 A 330\\n\\nBAIRRO OASIS OLARIAS (RUA DIREÇÃO AO PASSO NOVO)\"",
+      "confianca": "alta",
+      "tokens": 6573,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "amarelo",
+      "componentes": {
+        "n_canais_alerta": 1,
+        "meios_alerta": [
+          "mídia local / ações da mídia (difusão continuada)"
+        ]
+      },
+      "evidencia": "Simultaneamente, com o uso de recursos de informação da própria estrutura local de gestão e também com o uso combinado das ações da mídia local, difundir continuadamente as orientações sobre a magnitude do evento, seu agravamento ou não e das ações necessárias para proteção.",
+      "confianca": "media",
+      "tokens": 7464,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "verde",
+      "componentes": {
+        "ano_plano": "2025",
+        "data_plano": "2025-07-22T16:47:06+0000"
+      },
+      "evidencia": "2025-07-22T16:47:06+0000",
+      "confianca": "alta",
+      "tokens": 7657,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "amarelo",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "nao",
+        "grupos_comunitarios": "Voluntários de Defesa Civil 20 (COMDEC) e lista de abrigos/voluntários mencionados"
+      },
+      "evidencia": "Voluntários de Defesa Civil 20 COMDEC 53-991650406",
+      "confianca": "alta",
+      "tokens": 9042,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

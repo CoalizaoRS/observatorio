@@ -1,0 +1,136 @@
+{
+  "municipio": "Riozinho",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec01/PLANCON%20-%20RIOZINHO.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:50:00.611Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 60093,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "verde",
+      "componentes": {
+        "populacao_area_risco": 640,
+        "populacao_total": 4473,
+        "tipo_do_numero": "residentes em area de risco",
+        "percentual_pop_risco": 14.31
+      },
+      "evidencia": "pequena tabela dá estimativas de populações para áreas de risco (valores mostrados aproximadamente 130, 300 e 210) e Número de habitantes: 4.473",
+      "confianca": "media",
+      "tokens": 9171,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "≈500 (capacidade indicada para alguns locais; total exato não informado)",
+        "populacao_area_risco": "4.473 (população municipal) e áreas de risco com estimativas locais: Morro Azul ≈130; Loteamento Wesen ≈300; Chuvisqueiro ≈210",
+        "vagas_por_1000_hab_risco": 111778.55
+      },
+      "evidencia": "Documento lista \"Diagnóstico das unidades escolares e locais que poderão ser utilizados como abrigos\" com nome, localização, descrição e capacidade de instalações (ex.: salões, cozinha, banheiros e capacidades até cerca de 500)\" [ref_id:0] ; lista de pontos de encontro/abrigos específicos: \"Prefeitura Municipal — Avenida Guerino Pandolfo, nº 580\", \"Pátio da Secretaria de Obras — Rua José Esquinatti, nº 01, Centro\", \"Salão paroquial — Avenida André Brambilla, nº 181\", \"Centro do Idoso de Riozinho — Rua Pascoal Brambilla, nº 835, Centro\" [ref_id:16] ; população municipal indicada: \"Número de habitantes: 4.473\" e estimativas por localidade de risco (Morro Azul ≈130; Loteamento Wesen ≈300; Chuvisqueiro ≈210) [ref_id:2]",
+      "confianca": "media",
+      "tokens": 8697,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "sim",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "“instruções ... referências a conducting simulated exercises, coordinating with the municipal protection and civil defense office, documenting problems and suggested improvements, and distributing revised versions.” [ref_id:0]",
+      "confianca": "alta",
+      "tokens": 8444,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "verde",
+      "componentes": {
+        "rotas_descritas": "Pontos de encontro listados com endereço e coluna \"Descrição da rota de fuga\" indicando rotas de fuga ligando áreas de risco aos pontos: 1) Prefeitura Municipal — Avenida Guerino Pandolfo, nº 580; 2) Pátio da Secretaria de Obras — Rua José Esquinatti, nº 01, Centro; 3) Salão paroquial — Avenida André Brambilla, nº 181; 4) Centro do Idoso de Riozinho — Rua Pascoal Brambilla, nº 835, Centro."
+      },
+      "evidencia": "Tabela \"Identificação dos pontos de encontro e rotas de fuga\" listando nome do ponto de encontro, endereço e \"Descrição da rota de fuga\" com os quatro pontos e respectivos endereços.",
+      "confianca": "alta",
+      "tokens": 8627,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "verde",
+      "componentes": {
+        "n_canais_alerta": 4,
+        "meios_alerta": [
+          "veículo/mobilidade com alto‑falante/carro de som",
+          "redes sociais (postagens/alertas)",
+          "telefone/telefonema/mensagem (indica telefonia/WhatsApp/internet como meio de mobilização)",
+          "rádio (Rádio WEB Riozinho)"
+        ]
+      },
+      "evidencia": "Tabela lista \"municipal vehicle with loudspeaker, social media\" e indica \"phone calls, loudspeaker rounds by a vehicle, posts/alerts on social networks\"; página lista \"Mídia (rádio, TV, etc) existente no município: Rádio WEB Riozinho\"; formulário menciona cobertura de telefonia e nota sobre internet/WhatsApp usage",
+      "confianca": "alta",
+      "tokens": 6217,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "amarelo",
+      "componentes": {
+        "ano_plano": "2024",
+        "data_plano": "JANEIRO DE 2024"
+      },
+      "evidencia": "JANEIRO DE 2024",
+      "confianca": "alta",
+      "tokens": 8772,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "amarelo",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "nao",
+        "grupos_comunitarios": "N/A"
+      },
+      "evidencia": "Não há menção a NUPDEC/NUDEC já existentes ou formalizados no plano; há listas de pontos de encontro, abrigos e procedimentos de mobilização da comunidade (ex.: \"Identificação dos pontos de encontro... Prefeitura Municipal... Pátio da Secretaria de Obras... Salão paroquial... Centro do Idoso de Riozinho\") e instruções de mobilização/alerta (meios: telefone, carro com alto‑falante, redes sociais). [ref_id:12][ref_id:8][ref_id:4]",
+      "confianca": "alta",
+      "tokens": 10165,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

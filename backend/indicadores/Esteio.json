@@ -1,0 +1,136 @@
+{
+  "municipio": "Esteio",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec01/PLANCON%20-%20ESTEIO.docx"
+  ],
+  "gerado_em": "2026-08-10T12:42:10.730Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 96874,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "verde",
+      "componentes": {
+        "populacao_area_risco": 8500,
+        "populacao_total": 78181,
+        "tipo_do_numero": "residentes em area de risco",
+        "percentual_pop_risco": 10.87
+      },
+      "evidencia": "sendo que aproximadamente 8.500 pessoas vivem em áreas vulneráveis, inclusive com habitações irregulares às margens dos arroios.[ref_id:0] O município de Esteio possui uma população estimada de 78.181 habitantes (conforme IBGE 2024).[ref_id:0]",
+      "confianca": "alta",
+      "tokens": 13899,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "N/A",
+        "populacao_area_risco": "aproximadamente 8.500 pessoas",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "LOCAIS PARA ABRIGOS\n\n\tLOCAL\tENDEREÇO\tRESPONSÁVEL\tCONTATO\n\n\tCMEB Eva Karnal\t\nRua Alvício Nienow, 202\n\n\tCMEB Vila Olímpica\tRua Hugo Guilherme Klein, 198\n\n\tCMEB Luiza Fraga\tRua Agostinho Camilo de Borba, 530\n\n\tCMEB Maria Lygia\tRua Oswaldo Jesus Vieira, 345\n\n\tCMEB Maria Marques\tRua Manoel Santos, 212\n\n\tSalão da Paróquia São Sebastião\tRua Bom Jesus, 206",
+      "confianca": "alta",
+      "tokens": 13757,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "sim",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "“deverão realizar exercícios simulados conjuntos, sob a coordenação da Diretoria de Defesa Civil ... emitindo relatório ao final”[ref_id:0][ref_id:0]",
+      "confianca": "alta",
+      "tokens": 13946,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "\"As áreas de evacuação serão planejadas de acordo com a magnitude e evolução do evento, e sempre que houver a necessidade de evacuação de urgência, devendo ser estabelecidas as rotas de acordo com o evento.\" [ref_id:0]",
+      "confianca": "alta",
+      "tokens": 13827,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "verde",
+      "componentes": {
+        "n_canais_alerta": 4,
+        "meios_alerta": [
+          "telefone para lideranças comunitárias/órgãos (alerta atualizado por telefone) - USADO COMO ALERTA À COMUNIDADE",
+          "site institucional (publicação no site do município)",
+          "rádios locais (divulgação nas rádios locais)",
+          "redes sociais (utilizar redes sociais para divulgação)"
+        ]
+      },
+      "evidencia": "“o alerta será complementado pela Diretoria de Comunicação através de publicação no site do município e divulgação nas rádios locais.” / “Estabelecer canais de informação com o público, utilizar site institucional, redes sociais, e-mails, entre outros, proporcionando uma divulgação ampliada sobre o desastre.” / “esta notificação será repassada ao Prefeito ... por meio de telefone.”",
+      "confianca": "media",
+      "tokens": 13791,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "verde",
+      "componentes": {
+        "ano_plano": "2025",
+        "data_plano": "31/07/2025"
+      },
+      "evidencia": "Plano Municipal de Contingência de Proteção e Defesa Civil – PLAMCON (Versão 6 – atualizada em 31/07/2025)",
+      "confianca": "alta",
+      "tokens": 13143,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "amarelo",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "nao",
+        "grupos_comunitarios": "sim"
+      },
+      "evidencia": "\"acompanhamento diário dos voluntários cadastrados para esse fim que residem nos bairros do município.\"",
+      "confianca": "alta",
+      "tokens": 14511,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

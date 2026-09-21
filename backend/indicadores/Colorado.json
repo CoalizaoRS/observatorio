@@ -1,0 +1,133 @@
+{
+  "municipio": "Colorado",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec03/colorado.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:40:31.245Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 61556,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": "3.550",
+        "tipo_do_numero": "populacao total",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "População: 3.550",
+      "confianca": "alta",
+      "tokens": 8676,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": 5247,
+        "populacao_area_risco": 3550,
+        "vagas_por_1000_hab_risco": 1478.03
+      },
+      "evidencia": "Abrigo 01 Identificação: Ginásio Municipal de Esportes Centro Social e Esportivo Endereço: Avenida Boa Esperança, n. 692 - Centro Capacidade: 4.222 pessoas; Abrigo 02 Identificação: Ginásio de Esportes e EMEF Espírito Santo Endereço: Avenida Santo Martins Pinto, s/nº, distrito Vista Alegre Capacidade: 650 pessoas; Abrigo 03 Identificação: Ginásio de Esportes e EMEF Princesa Isabel Endereço: Rua do Estudante, n. 68, Vila Padre Osmari Capacidade: 325 pessoas; Município População: 3.550",
+      "confianca": "alta",
+      "tokens": 9231,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "nao",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "Não há no documento nenhuma menção de simulado/exercício de evacuação efetivamente realizado com data, ata, relatório ou número de participantes; o texto descreve procedimentos, responsabilidades e que \"Acionamento da equipe responsável por guiar a população para o ponto de encontro\" e que o plano foi elaborado em \"MARÇO, 2025\" [ref_id:0][ref_id:1][ref_id:2]",
+      "confianca": "alta",
+      "tokens": 9510,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "Fuga (evacuação) — Acionamento da equipe responsável por guiar a população para o ponto de encontro. Ponto de Encontro: para os desabrigados/desalojados abrigo 01 (Ginásio do Centro Social e Esportivo); Lista de abrigos com endereços (ex.: Abrigo 01: Avenida Boa Esperança, n. 692 - Centro; Abrigo 03: Rua do Estudante, n. 68, Vila Padre Osmari).",
+      "confianca": "alta",
+      "tokens": 9330,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "amarelo",
+      "componentes": {
+        "n_canais_alerta": 1,
+        "meios_alerta": [
+          "Rádio (difusão)"
+        ]
+      },
+      "evidencia": "Jornal Digital Colorado em Foco ... Jornal JE Acontece ... Rádio Ibirubá (54) 3324-1758 ou (54) 99608 3496",
+      "confianca": "media",
+      "tokens": 7529,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "verde",
+      "componentes": {
+        "ano_plano": "2025",
+        "data_plano": "MARÇO, 2025"
+      },
+      "evidencia": "MARÇO, 2025.",
+      "confianca": "alta",
+      "tokens": 8021,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "vermelho",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "nao",
+        "grupos_comunitarios": "N/A"
+      },
+      "evidencia": "O documento é o \"PLANO DE CONTINGÊNCIA DE COLORADO/RS\" e lista recursos, abrigos, atribuições do COMDEC e responsáveis, sem menção a NUPDEC(s)/NUDEC(s) existentes nem a criação futura dos mesmos; exemplo de trecho: \"Membros COMDEC\" e lista de abrigos (Abrigo 01, Abrigo 02, Abrigo 03) e responsáveis\"",
+      "confianca": "media",
+      "tokens": 9259,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "municipio": "São José do Hortêncio",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec01/PLANCON%20HIDRO%20-%20SA%CC%83O%20JOSE%CC%81%20DO%20HORTE%CC%82NCIO.pdf",
+    "https://plancon.blob.core.windows.net/crepdec01/PLANCON%20METEOR%20-%20SA%CC%83O%20JOSE%CC%81%20DO%20HORTE%CC%82NCIO.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:53:38.092Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 73243,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": "4.551",
+        "tipo_do_numero": "populacao total",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "População: 4.551 habitantes  Área: 63,709 km²",
+      "confianca": "alta",
+      "tokens": 10541,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "N/A",
+        "populacao_area_risco": "4.551 habitantes",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "Lista De Abrigos — Abrigo I Identificação: Ginásio Municipal Clóvis Luiz Schaffer Endereço: Avenida do Parque Responsável: Kelli Cristini Krummenauer Tel Celular: (51) 99398-1000 Capacidade: pessoas",
+      "confianca": "alta",
+      "tokens": 9843,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "sim",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "Não há menção a simulados realizados; o texto usa instruções e procedimentos e prevê ações como \"esteja preparado para evacuar\" e responsabilidades, sem relatar datas ou atas de simulados realizados. Ex.: \"Laranja – acima de 3,0 metros até 4,0 metros: esteja preparado para evacuar.\"[ref_id:2] ",
+      "confianca": "alta",
+      "tokens": 10779,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "A Assessoria de Comunicação Municipal será responsável por elaborar, centralizar e divulgar informações ... rotas de evacuação, pontos de apoio e orientações à população.",
+      "confianca": "alta",
+      "tokens": 10493,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "amarelo",
+      "componentes": {
+        "n_canais_alerta": 3,
+        "meios_alerta": [
+          "rádio comunitária",
+          "mídias sociais",
+          "grupos de comunicação comunitária"
+        ]
+      },
+      "evidencia": "Emissão de alertas preventivos à população por meios oficiais (rádio, mídias sociais, e grupos de comunicação comunitária).",
+      "confianca": "alta",
+      "tokens": 10403,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "verde",
+      "componentes": {
+        "ano_plano": "2025",
+        "data_plano": "Junho/ 2025"
+      },
+      "evidencia": "Junho/ 2025.",
+      "confianca": "alta",
+      "tokens": 9974,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "vermelho",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "nao",
+        "grupos_comunitarios": "sim"
+      },
+      "evidencia": "Plano lista ações, responsáveis e voluntários (ex.: \"Voluntários de Defesa Civil\" apareceu no resumo de recursos) e menciona Corpo de Bombeiros Voluntário Municipal, mas não cita NUPDEC/NUDEC existente.",
+      "confianca": "alta",
+      "tokens": 11210,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

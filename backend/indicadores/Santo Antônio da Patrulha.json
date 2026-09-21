@@ -1,0 +1,137 @@
+{
+  "municipio": "Santo Antônio da Patrulha",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec01/PLANCON%20Santo%20Anto%CC%82nio%20da%20Patrulha.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:51:14.502Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 96518,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": "43.171",
+        "tipo_do_numero": "populacao total",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "Santo Antônio da Patrulha com 43.171 (IBGE 2020), habitantes está localizada em uma região na qual as precipitações pluviométricas são bem consideráveis",
+      "confianca": "alta",
+      "tokens": 13632,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": 750,
+        "populacao_area_risco": "N/A",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "Salão Paroquial da Cidade Alta ... Capacidade: 400 pessoas; Ginásio de Esportes do Colégio Santa Teresinha ... Capacidade: 100 pessoas; Espaço Cultural Qorpo Santo ... Capacidade: 50 pessoas; Salão Paroquial da Boa Viagem ... Capacidade: 200 pessoas",
+      "confianca": "alta",
+      "tokens": 13606,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "sim",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "“Além disso, devem ser realizados exercícios simulados conjuntos, com pelo menos uma edição anual em Santo Antônio da Patrulha como prevê a Lei Federal Nº 12.608, de 10 de Abril de 2012.” [ref_id:0][ref_id:2]",
+      "confianca": "alta",
+      "tokens": 13980,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "a evacuação das áreas afetadas feita pelas principais ruas e avenidas a serem definidas de acordo com a magnitude do evento adverso.",
+      "confianca": "alta",
+      "tokens": 13719,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "verde",
+      "componentes": {
+        "n_canais_alerta": 5,
+        "meios_alerta": [
+          "carro de som/alto-falante",
+          "visitas presenciais dos agentes (com alerta direto à população)",
+          "mídias sociais",
+          "rádio (AM/FM)",
+          "aplicativos/telefone (mensagem em massa)"
+        ]
+      },
+      "evidencia": "\"O Acionamento se dará pelo COMPDEC, por meio de carro de som e visitas presenciais dos agentes de Defesa Civil a população, e através da mídia sociais, rádio e/ou telefone “aplicativos”.\"",
+      "confianca": "alta",
+      "tokens": 13746,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "verde",
+      "componentes": {
+        "ano_plano": "2025",
+        "data_plano": "Mai/2025"
+      },
+      "evidencia": "Plano de Contingência\n\n\n\nMai/2025",
+      "confianca": "alta",
+      "tokens": 13330,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "amarelo",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "nao",
+        "grupos_comunitarios": "sim"
+      },
+      "evidencia": "“A instalação se dará com a convocação dos voluntários “Defesa Civil” e Comissão de Enfrentamento de Desastres” [ref_id:8] — e lista recursos humanos previstos incluindo “05 voluntários de COMPDEC” [ref_id:13]",
+      "confianca": "alta",
+      "tokens": 14505,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "municipio": "Viamão",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec01/PLANCON%20VIAMA%CC%82O.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:56:52.741Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 66105,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": 224116,
+        "tipo_do_numero": "populacao total",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "O município de Viamão conta 224.116 habitantes no último censo do IBGE (2022).",
+      "confianca": "alta",
+      "tokens": 9571,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "amarelo",
+      "componentes": {
+        "abrigos_listados": "nao",
+        "vagas_abrigos": "N/A",
+        "populacao_area_risco": "224.116",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "Procedimentos de Abrigamento: - Ao ser acionado, a Assistência Social, que é responsável pelos abrigos deve imediatamente preparar o local para recebimento das pessoas.",
+      "confianca": "alta",
+      "tokens": 9689,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "sim",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "Este plano deve ser revisado e atualizado: - Anualmente, de forma ordinária; - Após cada ocorrência real, para incorporar lições aprendidas;  - Quando houver alterações significativas... (procedimentos e acionamento descrevem evacuação e treinamentos como procedimentos a serem realizados, mas o documento não cita simulado efetivamente realizado, ata, relatório ou número de participantes).",
+      "confianca": "alta",
+      "tokens": 10000,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "As equipes devem percorrer as ruas designadas, orientando os moradores a se dirigirem ao ponto de encontro.",
+      "confianca": "alta",
+      "tokens": 9264,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "verde",
+      "componentes": {
+        "n_canais_alerta": 5,
+        "meios_alerta": [
+          "Redes sociais oficiais da Prefeitura",
+          "Mensagens de emergência nos grupos de WhatsApp",
+          "Equipes da Defesa Civil com megafones",
+          "Via imprensa oficial municipal",
+          "Mensagens de alerta (conteúdo descrito: data/hora, situação, áreas afetadas, orientações)"
+        ]
+      },
+      "evidencia": "Meios de Divulgação – Via imprensa oficial municipal - Redes sociais oficiais da Prefeitura;  ... Meios de Acionamento – Via imprensa oficial municipal - Mensagens de emergência nos grupos de WhatsApp. - Equipes da Defesa Civil com megafones;  A mensagem de alerta deverá conter: - Data e hora da emissão; - Situação atual - Previsão de evolução; - Áreas potencialmente afetadas; - Orientações para a população;",
+      "confianca": "alta",
+      "tokens": 7789,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "verde",
+      "componentes": {
+        "ano_plano": "2026",
+        "data_plano": "MARÇO/2026"
+      },
+      "evidencia": "PLANO DE CONTINGÊNCIA ... Município de VIAMÃO/RS DEFESA CIVIL MARÇO/2026",
+      "confianca": "alta",
+      "tokens": 9273,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "vermelho",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "N/A",
+        "grupos_comunitarios": "N/A"
+      },
+      "evidencia": "Documento do Plano de Contingência de Viamão/RS (março/2026) não menciona NUPDEC(s)/NUDEC(s) formalizados nem cita criação futura de NUPDEC; apresenta apenas estrutura institucional (Coordenadoria Municipal de Defesa Civil, Corpo de Bombeiros, Secretarias) e responsabilidades institucionais.",
+      "confianca": "alta",
+      "tokens": 10519,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

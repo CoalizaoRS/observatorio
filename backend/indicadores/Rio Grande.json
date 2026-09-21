@@ -1,0 +1,133 @@
+{
+  "municipio": "Rio Grande",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec04/rio-grande.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:49:44.318Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 83084,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": "198.958",
+        "tipo_do_numero": "populacao total",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "População no último censo 2024 198. 958 pessoas",
+      "confianca": "alta",
+      "tokens": 11245,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "N/A",
+        "populacao_area_risco": "198.958",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "Relação de Abrigos Temporários * locais pré-definidos\n\nEscola Endereço\n\nGinásio Escola França Pinto\n\nMinas Gerais\n\nIgreja Salvador General Vitorino/ General Neto\n\nSalão Paroquial\nPovo Novo\n\nCamping Cassino – abrigo para Cassino\n\nColchões para abrigo 100\n\nCobertores para abrigo 100",
+      "confianca": "alta",
+      "tokens": 12180,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "sim",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "Não há menção a simulados efetivamente realizados. O documento contém trechos como \"Esse plano encontra-se em processo de revisão\" e várias determinações de ação/rotina (ex.: \"Saída em campo das equipes da Defesa Civil\", \"Acionamento de equipes\", \"Montagem de abrigos\") sem indicação de data, ata, relatório ou número de participantes de um simulado realizado.",
+      "confianca": "alta",
+      "tokens": 12431,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "Resposta Inicial: Saída em campo das equipes da Defesa Civil, para avaliar as condições de ruas em áreas que já se tem histórico de alagamento (Área Central, Bairro Getúlio Vargas, Salgado Filho, Navegantes, Lar Gaúcho, Zona Leste)\" e \"Anexo 3 - Relação de Abrigos Temporários * locais pré-definidos\"",
+      "confianca": "alta",
+      "tokens": 12310,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "amarelo",
+      "componentes": {
+        "n_canais_alerta": 1,
+        "meios_alerta": [
+          "Atendimento/Chamadas via 199 / WhatsApp"
+        ]
+      },
+      "evidencia": "Atendimento de Chamadas via 199 – 53999683244 WhatsApp",
+      "confianca": "media",
+      "tokens": 10165,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "verde",
+      "componentes": {
+        "ano_plano": "2025",
+        "data_plano": "Rio Grande, junho de 2025."
+      },
+      "evidencia": "Rio Grande, junho de 2025.",
+      "confianca": "alta",
+      "tokens": 11747,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "verde",
+      "componentes": {
+        "n_nupdecs": "4",
+        "nupdec_futuro": "nao",
+        "grupos_comunitarios": "NUPDEC Socorristas, NUPDEC Bombeiro Civil, NUPDEC Jipeiros, NUPDEC Rasioamadores"
+      },
+      "evidencia": "Empresas, ONGs e Voluntariado:  NUPDEC Socorristas, NUPDEC Bombeiro Civil, NUPDEC Jipeiros, NUPDEC Rasioamadores.",
+      "confianca": "alta",
+      "tokens": 13006,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

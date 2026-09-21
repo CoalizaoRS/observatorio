@@ -1,0 +1,133 @@
+{
+  "municipio": "Camargo",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec02/camargo.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:38:29.650Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 35791,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": "N/A",
+        "tipo_do_numero": "N/A",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "Documentos do PLANO DE CONTINGÊNCIA MULTIRRISCO — seções mostram cenários de risco, ações por evento, infraestrutura e contatos, mas não apresentam um número ou estimativa de pessoas/famílias que residem em áreas de risco.",
+      "confianca": "alta",
+      "tokens": 5145,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "N/A",
+        "populacao_area_risco": "N/A",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "INFRAESTRUTURA DISPONÍVEL: ... duas unidades de abrigos (Ginásio Sílvio Bernardon e Ginásio Parque de Rodeios)",
+      "confianca": "alta",
+      "tokens": 5017,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "sim",
+        "evento_real_nao_simulado": "N/A"
+      },
+      "evidencia": "Documento indica ações e organização (\"AÇÕES POR EVENTO\"; \"monitoramento e evacuação\"), planejamento e infraestrutura disponível, mas não contém referência a simulado/exercício já realizado com data, ata, relatório ou número de participantes nos trechos recuperados",
+      "confianca": "alta",
+      "tokens": 5252,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "O documento lista cenários de risco, ações por evento, infraestrutura e abrigos (ex.: \"ações — limpeza de drenos e vias, abrigos emergenciais\"; \"dois abrigos (Ginásio Sílvio Bernardon e Ginásio Parque de Rodeios)\"), mas não descreve trajetos de evacuação com ruas nomeadas ou mapas de rotas específicos.",
+      "confianca": "alta",
+      "tokens": 5088,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "amarelo",
+      "componentes": {
+        "n_canais_alerta": 1,
+        "meios_alerta": [
+          "rádio"
+        ]
+      },
+      "evidencia": "ações — clearing drains and roads, emergency shelters, radio alerts",
+      "confianca": "media",
+      "tokens": 4928,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "verde",
+      "componentes": {
+        "ano_plano": "2025",
+        "data_plano": "2025"
+      },
+      "evidencia": "PLANO DE CONTINGÊNCIA MULTIRRISCO - CAMARGO/RS - 2025",
+      "confianca": "alta",
+      "tokens": 4538,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "vermelho",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "N/A",
+        "grupos_comunitarios": "N/A"
+      },
+      "evidencia": "Nenhuma menção a NUPDEC/NUDEC ou a existência de núcleos comunitários formalizados é apresentada nas páginas recuperadas do Plano de Contingência e documentos municipais (apresentação, infraestrutura disponível, instituições envolvidas, listas de contato e ações por evento); há apenas referências genéricas à Defesa Civil, instituições envolvidas e voluntários não aparecem listados como núcleos formalizados.",
+      "confianca": "alta",
+      "tokens": 5823,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

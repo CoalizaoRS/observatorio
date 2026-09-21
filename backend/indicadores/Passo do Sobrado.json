@@ -1,0 +1,131 @@
+{
+  "municipio": "Passo do Sobrado",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec08/passo-do-sobrado.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:48:22.525Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 40343,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": 6025,
+        "tipo_do_numero": "populacao total",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "População: 6025.",
+      "confianca": "alta",
+      "tokens": 5824,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "1200",
+        "populacao_area_risco": "N/A",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "Lista De Abrigos: Abrigo I ... Capacidade (300 pessoas) ... Abrigo II ... Capacidade (300 pessoas) ... Abrigo III ... Capacidade (300 pessoas) ... Abrigo IV ... Capacidade (300 pessoas)",
+      "confianca": "alta",
+      "tokens": 5670,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "sim",
+        "evento_real_nao_simulado": "N/A"
+      },
+      "evidencia": "Documento apresenta ações a serem desenvolvidas (ex.: \"5.1 Acionamento do Plano de Contingência; 5.2 Verificar danos humanitários; 5.3 Verificar danos em estradas, rodovias, pontes; 5.4 Prestar assistência às vítimas.\") e listas de abrigos/recursos, sem menção a simulado realizado, ata, relatório ou número de participantes.",
+      "confianca": "alta",
+      "tokens": 6041,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "Não há descrição de trajeto de evacuação com ruas nomeadas; o documento lista 'Áreas de Risco: Toda a área do município' e contém 'Lista De Abrigos' e instruções gerais de ações (ex.: '5.1 Acionamento do Plano de Contingência; 5.2 Verificar danos humanitários; 5.3 Verificar danos em estradas, rodovias, pontes; 5.4 Prestar assistência às vítimas').",
+      "confianca": "alta",
+      "tokens": 5823,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "vermelho",
+      "componentes": {
+        "n_canais_alerta": 0,
+        "meios_alerta": "N/A"
+      },
+      "evidencia": "Documentos consultados (Plano de Contingência e formulários municipais) listam responsáveis, contatos, abrigos, recursos e ações a serem desenvolvidas (ex.: \"Quem aciona o plano\", \"Ações desenvolvidas\", listas de telefones, lista de abrigos, resumo dos recursos\"), mas não descrevem canais de emissão de alerta à população como sirenes, SMS/mensagem em massa, carro de som/alto-falante, aplicativo, rádio ou redes sociais de difusão.",
+      "confianca": "alta",
+      "tokens": 5232,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "vermelho",
+      "componentes": {
+        "ano_plano": "N/A",
+        "data_plano": "N/A"
+      },
+      "evidencia": "N/A",
+      "confianca": "alta",
+      "tokens": 5267,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "amarelo",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "nao",
+        "grupos_comunitarios": "menção a voluntários (\"Voluntário defesa civil: 10\") e grupos/recursos comunitários (abrigos, escolas)"
+      },
+      "evidencia": "Resumo dos recursos mostra \"Voluntário defesa civil: 10\" e listas de abrigos; nenhum documento cita \"NUPDEC\" ou \"NUDEC\" existente",
+      "confianca": "alta",
+      "tokens": 6486,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

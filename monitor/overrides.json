@@ -1,0 +1,7 @@
+{
+  "_readme": "Correções manuais de URL para municípios cuja convenção www.<slug>.rs.gov.br não funciona. Chave = nome exato do município (igual ao campo 'nome' em municipios_rs.json). Use {\"site_base\": \"https://...\"} para apontar a URL correta, ou {\"skip\": true} para excluir um município da varredura.",
+  "_exemplo": {
+    "site_base": "https://www.exemplo.rs.gov.br",
+    "skip": false
+  }
+}

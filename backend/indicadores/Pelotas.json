@@ -1,0 +1,133 @@
+{
+  "municipio": "Pelotas",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec04/pelotas.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:48:40.511Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 91115,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": 343826,
+        "tipo_do_numero": "populacao total",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "Estimativa de população 343.826 (2021).",
+      "confianca": "alta",
+      "tokens": 13861,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "amarelo",
+      "componentes": {
+        "abrigos_listados": "nao",
+        "vagas_abrigos": "N/A",
+        "populacao_area_risco": "343,826 (estimada 2021)",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "O documento menciona \"organização e controle de abrigos municipais\" e responsabilidades da Secretaria Municipal de Assistência Social, mas não lista nomes/endereços de abrigos nem indica número de vagas: \"Secretaria Municipal de Assistência Social: identificação e apoio a pessoas vulneráveis, organização e controle de abrigos municipais, fornecimento de alimentação, água e vestuário.\" [ref_id:0][ref_id:14][ref_id:15] Além disso o plano fornece dado populacional: \"Estimated population 343,826 (2021).\" [ref_id:20]",
+      "confianca": "alta",
+      "tokens": 12422,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "sim",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "Texto apresenta procedimentos, responsabilidades, protocolos e indicação de que órgãos \"acionarão\" protocolos, salas de operações e realização de vistorias, mas não registra frase afirmando que \"foi realizado o simulado\" nem ata/relatório/nº de participantes. Ex.: \"o Gabinete da Prefeita, via Defesa Civil, acionará a chamada, o posto de comando e compilará informações para as equipes, e que órgãos mobilizados ativarão seus protocolos internos.\" [ref_id:22] e \"a sala de operações recebe pedidos, pode despachar a equipe de vistoria...\" [ref_id:2][ref_id:21]",
+      "confianca": "alta",
+      "tokens": 13255,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "documento lista responsabilidades, abrigos, contatos e mapas de áreas de risco, mas não descreve trajetos de evacuação com ruas nomeadas nem mapas de rotas detalhados (ex.: \"Fluxo de atendimento\"; lista de setores de risco; lista de abrigos e responsabilidades)",
+      "confianca": "alta",
+      "tokens": 11321,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "amarelo",
+      "componentes": {
+        "n_canais_alerta": 1,
+        "meios_alerta": [
+          "Assessoria Especial de Comunicação / divulgação à imprensa (bulletins oficiais)"
+        ]
+      },
+      "evidencia": "Assessoria Especial de Comunicação: publicize the situation in official bulletins and to media.[ref_id:16]",
+      "confianca": "media",
+      "tokens": 13714,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "amarelo",
+      "componentes": {
+        "ano_plano": "2023",
+        "data_plano": "novembro de 2023"
+      },
+      "evidencia": "Pelotas, novembro de 2023.",
+      "confianca": "alta",
+      "tokens": 13266,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "vermelho",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "nao",
+        "grupos_comunitarios": "N/A"
+      },
+      "evidencia": "O documento lista órgãos, secretarias, protocolos e equipes (ex.: \"Defesa Civil\", \"Secretaria Municipal de Assistência Social: identificação e apoio a pessoas vulneráveis, organização e controle de abrigos municipais\"), mas não menciona NUPDEC(s)/NUDEC(s) já existentes; referências a organização de equipes e ativação de protocolos estão em várias páginas (ex.: pp. 63, 69, 72, 79) sem citar NUPDECs formais.",
+      "confianca": "alta",
+      "tokens": 13276,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

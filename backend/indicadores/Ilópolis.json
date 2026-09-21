@@ -1,0 +1,131 @@
+{
+  "municipio": "Ilópolis",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec08/ilopolis.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:44:21.207Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 37811,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": 4157,
+        "tipo_do_numero": "populacao total",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "Município: Ilópolis/RS; população 4.157; área listada como \"123,602 km²\".",
+      "confianca": "alta",
+      "tokens": 5463,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "amarelo",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "N/A",
+        "populacao_area_risco": "4.157",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "Seção 4 (Área de Risco do Município) lista locais específicos: \"Rua Augusto Tomasini — Enxurradas — Obstrução e alagamento.\"; o resumo de recursos indica \"3 escolas/creches\" como recurso disponível; população municipal indicada como \"população 4.157\".",
+      "confianca": "alta",
+      "tokens": 5259,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "nao",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "O documento lista ações, organização, áreas de risco e recursos, mas não registra nenhum \"simulado\" realizado nem data/ata/relatório de exercício; ex.: \"Que ações devem ser desenvolvidas: 5.1–5.6 ...\" e o documento contém formulário/identificação de pessoas e recursos datado \"Ilópolis, outubro de 2025\" sem mencionar simulado realizado",
+      "confianca": "alta",
+      "tokens": 5610,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "Section 4 (Área de Risco do Município) lista locais com riscos (ex.: \"Rua Augusto Tomasini — Enxurradas — Obstrução e alagamento\"; \"Toda extensão das estradas vicinais — Enxurradas — Obstrução de vias\"), mas o documento não descreve um trajeto de evacuação com ruas nomeadas ligando a área de risco a um ponto de encontro/local seguro nem apresenta mapa de rotas definido.",
+      "confianca": "alta",
+      "tokens": 5483,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "vermelho",
+      "componentes": {
+        "n_canais_alerta": 0,
+        "meios_alerta": "N/A"
+      },
+      "evidencia": "Documento descreve responsáveis, contatos (telefone, WhatsApp, e‑mail) e ações de comando/coordenação, mas não menciona sirenes, SMS/mensagem em massa, carro de som/alto‑falante, aplicativo, rádio ou redes sociais como canais de emissão de alerta à população.",
+      "confianca": "alta",
+      "tokens": 4984,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "verde",
+      "componentes": {
+        "ano_plano": "2025",
+        "data_plano": "outubro de 2025"
+      },
+      "evidencia": "Ilópolis, outubro de 2025",
+      "confianca": "alta",
+      "tokens": 4896,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "vermelho",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "nao",
+        "grupos_comunitarios": "N/A"
+      },
+      "evidencia": "Documento \"Plano de Contingência Município de Ilópolis/RS\" contém objetivos, áreas de risco, ação a serem desenvolvidas, quadro de pessoas responsáveis e recursos, sem menção a \"NUPDEC\" ou \"NUDEC\" nem a núcleos comunitários formalizados.",
+      "confianca": "alta",
+      "tokens": 6116,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

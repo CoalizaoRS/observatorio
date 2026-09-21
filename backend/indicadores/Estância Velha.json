@@ -1,0 +1,136 @@
+{
+  "municipio": "Estância Velha",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec01/PLANCON%20-%20ESTANCIA%20VELHA.docx"
+  ],
+  "gerado_em": "2026-08-10T12:42:24.910Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 96010,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": "49.440",
+        "tipo_do_numero": "populacao total",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "Estância Velha possui uma população de 49.440 habitantes (estimativa IBGE-2024), predominantemente urbana (93,1%).",
+      "confianca": "alta",
+      "tokens": 13869,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "amarelo",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "N/A",
+        "populacao_area_risco": "49.440",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "Lista de Abrigos\nAbrigo I\n\tIdentificação:\n\t\n\tEndereço:\n\t\n\t...\n\tCapacidade:\n\t\nAbrigo II\n\tIdentificação:\n\t\n\tEndereço:\n\t\n\t...\n\tCapacidade:\n\t\nAbrigo III\n\tIdentificação:\n\t\n\tEndereço:\n\t\n\t...\n\tCapacidade:\n\t\n\nEstância Velha possui uma população de 49.440 habitantes (estimativa IBGE-2024)",
+      "confianca": "alta",
+      "tokens": 13811,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "sim",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "Para melhorias e concretização do Plano de Contingência, os órgãos envolvidos na sua elaboração e aplicação deverão realizar exercícios simulados em conjunto, duas vezes ao ano, sendo um exercício parcial (mesa) e um exercício geral, sob a coordenação da Coordenadoria Municipal de Proteção e Defesa Civil. Será emitido um relatório ao final de cada exercício, destacando os pontos do Plano que merecerão alteração ou reformulação, bem como as dificuldades encontradas na sua execução. (trechos do plano que preveem realização de exercícios simulados)",
+      "confianca": "alta",
+      "tokens": 13616,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "A seção de EVACUAÇÃO menciona 'mobilizar essa população para os pontos de apoio' e 'áreas de evacuação', 'Rotas de fuga' e lista de abrigos com endereços, mas não descreve trajetos específicos com ruas nomeadas ligando áreas de risco a pontos de encontro; há referências genéricas como 'pelas vias principais' e lista de locais de risco por ruas, sem indicar rotas de evacuação definidas (ex.: 'Organização da Área Afetada... - Rotas de fuga; - Pontos de encontro;' e lista de abrigos).",
+      "confianca": "alta",
+      "tokens": 13944,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "verde",
+      "componentes": {
+        "n_canais_alerta": 4,
+        "meios_alerta": [
+          "Núcleos Comunitários de Defesa Civil (Nudecs)",
+          "Rede de Radioamadores",
+          "vinculação dos alertas nas redes de comunicação de massa pelo Departamento de Comunicação Social",
+          "agentes comunitários de Saúde e de Endemia (difusão/alerta comunitário)"
+        ]
+      },
+      "evidencia": "A população será alertada através dos Núcleos Comunitários de Defesa Civil  (Nudecs), da Rede de Radioamadores, dos agentes comunitários de Saúde e de Endemia, além da vinculação dos alertas nas redes de comunicação de massa existentes no município pelo Departamento de Comunicação Social.",
+      "confianca": "media",
+      "tokens": 13645,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "verde",
+      "componentes": {
+        "ano_plano": "2025",
+        "data_plano": "PLACON 2025/2028"
+      },
+      "evidencia": "PLANO DE CONTINGÊNCIA DE PROTEÇÃO E DEFESA CIVIL\n\nPLACON 2025/2028",
+      "confianca": "alta",
+      "tokens": 13277,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "verde",
+      "componentes": {
+        "n_nupdecs": "1",
+        "nupdec_futuro": "nao",
+        "grupos_comunitarios": "N/A"
+      },
+      "evidencia": "A população será alertada através dos Núcleos Comunitários de Defesa Civil (Nudecs), da Rede de Radioamadores, dos agentes comunitários de Saúde e de Endemia, além da vinculação dos alertas nas redes de comunicação de massa existentes no município pelo Departamento de Comunicação Social.",
+      "confianca": "alta",
+      "tokens": 13848,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

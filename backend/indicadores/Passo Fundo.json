@@ -1,0 +1,135 @@
+{
+  "municipio": "Passo Fundo",
+  "fonte_documentos": [
+    "https://plancon.blob.core.windows.net/crepdec02/passo-fundo.pdf"
+  ],
+  "gerado_em": "2026-08-10T12:48:19.131Z",
+  "regras_versao": "planilha IRM · aba \"simplificado\" (semáforo)",
+  "indicadores_reprocessados_neste_passe": [
+    "P7"
+  ],
+  "metodo": "Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)",
+  "tokens_consumidos": 97029,
+  "indicadores": {
+    "P1": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "% população em área de risco",
+      "mede": "Grau de conhecimento da população exposta",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "pessoas estimadas em área de risco ÷ população total",
+      "valor": "vermelho",
+      "componentes": {
+        "populacao_area_risco": "N/A",
+        "populacao_total": "N/A",
+        "tipo_do_numero": "N/A",
+        "percentual_pop_risco": "N/A"
+      },
+      "evidencia": "O documento apresenta números de \"Nº de residências\" e \"N° de afetados\" por cenários (ex.: \"Nº de residências: 120\"; \"N° de afetados: 480\"), bem como populações em instalações/áreas industriais (ex.: \"População: 2.574 pessoas.\"), mas não declara explicitamente um número/estimativa de pessoas que RESIDEM em áreas de risco do município.",
+      "confianca": "alta",
+      "tokens": 13878,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P2": {
+      "grupo": "G1 · Pessoas e Equidade",
+      "nome": "Capacidade de abrigamento",
+      "mede": "Capacidade de acolhimento em caso de evacuação",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "PLANCON LISTA abrigos concretos (nomes/endereços) — e, para verde, também vagas",
+      "valor": "verde",
+      "componentes": {
+        "abrigos_listados": "sim",
+        "vagas_abrigos": "N/A",
+        "populacao_area_risco": "N/A",
+        "vagas_por_1000_hab_risco": "N/A"
+      },
+      "evidencia": "Tipo: CENTRO SOCIAL\nNome: Associação de Moradores do Loteamento Berthier\nEndereço: General Osório, 207 Loteamentos Berthier\nÁrea disponível para alojamento (m²): 600\n\nTipo: GINÁSIO\nNome: EMEF Eloi Pinheiro Machado\nEndereço: Telmo Ilha, 478, Loteamento Leonardo Ilha\nÁrea disponível para alojamento(m²): 650\n\nTipo: GINÁSIO\nNome: Ginásio da UAMPAF\nEndereço: Rua Manuel Portela, 163",
+      "confianca": "alta",
+      "tokens": 13679,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P3": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Simulados de evacuação",
+      "mede": "Exercícios práticos realizados pela população",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a SIMULADO/EXERCÍCIO de evacuação efetivamente REALIZADO (treinamento, não evento real)",
+      "valor": "vermelho",
+      "componentes": {
+        "apenas_previsto": "sim",
+        "evento_real_nao_simulado": "nao"
+      },
+      "evidencia": "“Para a melhoria do plano Municipal de Contingência ... realizarão, anualmente, exercícios simulados conjuntos, sob a coordenação da Coordenadoria Municipal de Proteção e Defesa Civil (COMPDEC), mediante autorização do Prefeito Municipal, emitindo Relatório final...” [ref_id:0]",
+      "confianca": "alta",
+      "tokens": 14024,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P4": {
+      "grupo": "G2 · Material, Infraestrutura e Economia",
+      "nome": "Rotas de evacuação",
+      "mede": "Existência de rotas formalmente definidas",
+      "unidade": "semáforo (verde/vermelho)",
+      "formula": "menção no PLANCON a rotas de evacuação ESPECÍFICAS (trajetos/mapa/sinalização), não genéricas",
+      "valor": "vermelho",
+      "componentes": {
+        "rotas_descritas": "N/A"
+      },
+      "evidencia": "A evacuação será realizada para pontos de abrigos e/ou casas de familiares que se localizem a uma distância segura da área do evento, sempre de forma ordenada.",
+      "confianca": "alta",
+      "tokens": 13779,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P5": {
+      "grupo": "G3 · Ambiente e Resiliência Hídrica",
+      "nome": "Cobertura de sistemas de alerta",
+      "mede": "Alcance dos alertas à população exposta",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "quantidade de canais de EMISSÃO DE ALERTA À POPULAÇÃO descritos no PLANCON",
+      "valor": "amarelo",
+      "componentes": {
+        "n_canais_alerta": 3,
+        "meios_alerta": [
+          "Internet",
+          "Carro de som",
+          "Radio"
+        ]
+      },
+      "evidencia": "AVISOS\nInternet, Carro de som, Radio,",
+      "confianca": "alta",
+      "tokens": 13598,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P6": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "Plano de contingência atualizado",
+      "mede": "Existência de planejamento formal atualizado",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "data de publicação/revisão constante no PLANCON (referência: ano corrente)",
+      "valor": "amarelo",
+      "componentes": {
+        "ano_plano": "2024",
+        "data_plano": "2024"
+      },
+      "evidencia": "PLANO DE CONTINGÊNCIA Passo Fundo/RS 2024\nPLANO MUNICIPAL DE CONTINGÊNCIA DE PROTEÇÃO E DEFESA CIVIL\n\nPLANCON 2024",
+      "confianca": "alta",
+      "tokens": 13348,
+      "obs": "valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)"
+    },
+    "P7": {
+      "grupo": "G4 · Governança e Capacidade Institucional",
+      "nome": "NUPDECs ativos",
+      "mede": "Mobilização comunitária organizada",
+      "unidade": "semáforo (verde/amarelo/vermelho)",
+      "formula": "menção no PLANCON a NUPDEC/NUDEC FORMALIZADO e existente (não a voluntários genéricos)",
+      "valor": "amarelo",
+      "componentes": {
+        "n_nupdecs": "0",
+        "nupdec_futuro": "nao",
+        "grupos_comunitarios": "sim"
+      },
+      "evidencia": "Também havendo necessidade acionará os voluntários cadastrados neste Plano de Contingência.",
+      "confianca": "alta",
+      "tokens": 14723,
+      "obs": "P7 restaurado a partir de P7.csv publicado em 30/07/2026 (reprocessamentos de 07-10/08 revertidos)"
+    }
+  }
+}

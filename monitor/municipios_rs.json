@@ -1,0 +1,2984 @@
+[
+  {
+    "codigo_ibge": 4300034,
+    "nome": "Aceguá",
+    "slug": "acegua",
+    "site_base": "https://www.acegua.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300109,
+    "nome": "Agudo",
+    "slug": "agudo",
+    "site_base": "https://www.agudo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300208,
+    "nome": "Ajuricaba",
+    "slug": "ajuricaba",
+    "site_base": "https://www.ajuricaba.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300307,
+    "nome": "Alecrim",
+    "slug": "alecrim",
+    "site_base": "https://www.alecrim.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300406,
+    "nome": "Alegrete",
+    "slug": "alegrete",
+    "site_base": "https://www.alegrete.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300455,
+    "nome": "Alegria",
+    "slug": "alegria",
+    "site_base": "https://www.alegria.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300471,
+    "nome": "Almirante Tamandaré do Sul",
+    "slug": "almirantetamandaredosul",
+    "site_base": "https://www.almirantetamandaredosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300505,
+    "nome": "Alpestre",
+    "slug": "alpestre",
+    "site_base": "https://www.alpestre.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300554,
+    "nome": "Alto Alegre",
+    "slug": "altoalegre",
+    "site_base": "https://www.altoalegre.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300570,
+    "nome": "Alto Feliz",
+    "slug": "altofeliz",
+    "site_base": "https://www.altofeliz.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300604,
+    "nome": "Alvorada",
+    "slug": "alvorada",
+    "site_base": "https://www.alvorada.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300638,
+    "nome": "Amaral Ferrador",
+    "slug": "amaralferrador",
+    "site_base": "https://www.amaralferrador.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300646,
+    "nome": "Ametista do Sul",
+    "slug": "ametistadosul",
+    "site_base": "https://www.ametistadosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300661,
+    "nome": "André da Rocha",
+    "slug": "andredarocha",
+    "site_base": "https://www.andredarocha.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300703,
+    "nome": "Anta Gorda",
+    "slug": "antagorda",
+    "site_base": "https://www.antagorda.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300802,
+    "nome": "Antônio Prado",
+    "slug": "antonioprado",
+    "site_base": "https://www.antonioprado.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300851,
+    "nome": "Arambaré",
+    "slug": "arambare",
+    "site_base": "https://www.arambare.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300877,
+    "nome": "Araricá",
+    "slug": "ararica",
+    "site_base": "https://www.ararica.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300901,
+    "nome": "Aratiba",
+    "slug": "aratiba",
+    "site_base": "https://www.aratiba.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301305,
+    "nome": "Arroio Grande",
+    "slug": "arroiogrande",
+    "site_base": "https://www.arroiogrande.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301008,
+    "nome": "Arroio do Meio",
+    "slug": "arroiodomeio",
+    "site_base": "https://www.arroiodomeio.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301073,
+    "nome": "Arroio do Padre",
+    "slug": "arroiodopadre",
+    "site_base": "https://www.arroiodopadre.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301057,
+    "nome": "Arroio do Sal",
+    "slug": "arroiodosal",
+    "site_base": "https://www.arroiodosal.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301206,
+    "nome": "Arroio do Tigre",
+    "slug": "arroiodotigre",
+    "site_base": "https://www.arroiodotigre.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301107,
+    "nome": "Arroio dos Ratos",
+    "slug": "arroiodosratos",
+    "site_base": "https://www.arroiodosratos.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301404,
+    "nome": "Arvorezinha",
+    "slug": "arvorezinha",
+    "site_base": "https://www.arvorezinha.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301503,
+    "nome": "Augusto Pestana",
+    "slug": "augustopestana",
+    "site_base": "https://www.augustopestana.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301602,
+    "nome": "Bagé",
+    "slug": "bage",
+    "site_base": "https://www.bage.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301636,
+    "nome": "Balneário Pinhal",
+    "slug": "balneariopinhal",
+    "site_base": "https://www.balneariopinhal.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301958,
+    "nome": "Barra Funda",
+    "slug": "barrafunda",
+    "site_base": "https://www.barrafunda.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301859,
+    "nome": "Barra do Guarita",
+    "slug": "barradoguarita",
+    "site_base": "https://www.barradoguarita.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301875,
+    "nome": "Barra do Quaraí",
+    "slug": "barradoquarai",
+    "site_base": "https://www.barradoquarai.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301909,
+    "nome": "Barra do Ribeiro",
+    "slug": "barradoribeiro",
+    "site_base": "https://www.barradoribeiro.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301925,
+    "nome": "Barra do Rio Azul",
+    "slug": "barradorioazul",
+    "site_base": "https://www.barradorioazul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301800,
+    "nome": "Barracão",
+    "slug": "barracao",
+    "site_base": "https://www.barracao.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302006,
+    "nome": "Barros Cassal",
+    "slug": "barroscassal",
+    "site_base": "https://www.barroscassal.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301651,
+    "nome": "Barão",
+    "slug": "barao",
+    "site_base": "https://www.barao.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301701,
+    "nome": "Barão de Cotegipe",
+    "slug": "baraodecotegipe",
+    "site_base": "https://www.baraodecotegipe.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301750,
+    "nome": "Barão do Triunfo",
+    "slug": "baraodotriunfo",
+    "site_base": "https://www.baraodotriunfo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302055,
+    "nome": "Benjamin Constant do Sul",
+    "slug": "benjaminconstantdosul",
+    "site_base": "https://www.benjaminconstantdosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302105,
+    "nome": "Bento Gonçalves",
+    "slug": "bentogoncalves",
+    "site_base": "https://www.bentogoncalves.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302154,
+    "nome": "Boa Vista das Missões",
+    "slug": "boavistadasmissoes",
+    "site_base": "https://www.boavistadasmissoes.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302204,
+    "nome": "Boa Vista do Buricá",
+    "slug": "boavistadoburica",
+    "site_base": "https://www.boavistadoburica.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302220,
+    "nome": "Boa Vista do Cadeado",
+    "slug": "boavistadocadeado",
+    "site_base": "https://www.boavistadocadeado.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302238,
+    "nome": "Boa Vista do Incra",
+    "slug": "boavistadoincra",
+    "site_base": "https://www.boavistadoincra.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302253,
+    "nome": "Boa Vista do Sul",
+    "slug": "boavistadosul",
+    "site_base": "https://www.boavistadosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302303,
+    "nome": "Bom Jesus",
+    "slug": "bomjesus",
+    "site_base": "https://www.bomjesus.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302352,
+    "nome": "Bom Princípio",
+    "slug": "bomprincipio",
+    "site_base": "https://www.bomprincipio.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302378,
+    "nome": "Bom Progresso",
+    "slug": "bomprogresso",
+    "site_base": "https://www.bomprogresso.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302402,
+    "nome": "Bom Retiro do Sul",
+    "slug": "bomretirodosul",
+    "site_base": "https://www.bomretirodosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302451,
+    "nome": "Boqueirão do Leão",
+    "slug": "boqueiraodoleao",
+    "site_base": "https://www.boqueiraodoleao.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302501,
+    "nome": "Bossoroca",
+    "slug": "bossoroca",
+    "site_base": "https://www.bossoroca.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302584,
+    "nome": "Bozano",
+    "slug": "bozano",
+    "site_base": "https://www.bozano.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302600,
+    "nome": "Braga",
+    "slug": "braga",
+    "site_base": "https://www.braga.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302659,
+    "nome": "Brochier",
+    "slug": "brochier",
+    "site_base": "https://www.brochier.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302709,
+    "nome": "Butiá",
+    "slug": "butia",
+    "site_base": "https://www.butia.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302907,
+    "nome": "Cacequi",
+    "slug": "cacequi",
+    "site_base": "https://www.cacequi.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4303004,
+    "nome": "Cachoeira do Sul",
+    "slug": "cachoeiradosul",
+    "site_base": "https://www.cachoeiradosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4303103,
+    "nome": "Cachoeirinha",
+    "slug": "cachoeirinha",
+    "site_base": "https://www.cachoeirinha.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4303202,
+    "nome": "Cacique Doble",
+    "slug": "caciquedoble",
+    "site_base": "https://www.caciquedoble.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4303301,
+    "nome": "Caibaté",
+    "slug": "caibate",
+    "site_base": "https://www.caibate.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4303400,
+    "nome": "Caiçara",
+    "slug": "caicara",
+    "site_base": "https://www.caicara.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4303509,
+    "nome": "Camaquã",
+    "slug": "camaqua",
+    "site_base": "https://www.camaqua.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4303558,
+    "nome": "Camargo",
+    "slug": "camargo",
+    "site_base": "https://www.camargo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4303608,
+    "nome": "Cambará do Sul",
+    "slug": "cambaradosul",
+    "site_base": "https://www.cambaradosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4303673,
+    "nome": "Campestre da Serra",
+    "slug": "campestredaserra",
+    "site_base": "https://www.campestredaserra.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4303707,
+    "nome": "Campina das Missões",
+    "slug": "campinadasmissoes",
+    "site_base": "https://www.campinadasmissoes.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4303806,
+    "nome": "Campinas do Sul",
+    "slug": "campinasdosul",
+    "site_base": "https://www.campinasdosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4303905,
+    "nome": "Campo Bom",
+    "slug": "campobom",
+    "site_base": "https://www.campobom.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304002,
+    "nome": "Campo Novo",
+    "slug": "camponovo",
+    "site_base": "https://www.camponovo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304101,
+    "nome": "Campos Borges",
+    "slug": "camposborges",
+    "site_base": "https://www.camposborges.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304200,
+    "nome": "Candelária",
+    "slug": "candelaria",
+    "site_base": "https://www.candelaria.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304358,
+    "nome": "Candiota",
+    "slug": "candiota",
+    "site_base": "https://www.candiota.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304408,
+    "nome": "Canela",
+    "slug": "canela",
+    "site_base": "https://www.canela.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304507,
+    "nome": "Canguçu",
+    "slug": "cangucu",
+    "site_base": "https://www.cangucu.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304606,
+    "nome": "Canoas",
+    "slug": "canoas",
+    "site_base": "https://www.canoas.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304614,
+    "nome": "Canudos do Vale",
+    "slug": "canudosdovale",
+    "site_base": "https://www.canudosdovale.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304689,
+    "nome": "Capela de Santana",
+    "slug": "capeladesantana",
+    "site_base": "https://www.capeladesantana.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304697,
+    "nome": "Capitão",
+    "slug": "capitao",
+    "site_base": "https://www.capitao.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304671,
+    "nome": "Capivari do Sul",
+    "slug": "capivaridosul",
+    "site_base": "https://www.capivaridosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304622,
+    "nome": "Capão Bonito do Sul",
+    "slug": "capaobonitodosul",
+    "site_base": "https://www.capaobonitodosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304630,
+    "nome": "Capão da Canoa",
+    "slug": "capaodacanoa",
+    "site_base": "https://www.capaodacanoa.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304655,
+    "nome": "Capão do Cipó",
+    "slug": "capaodocipo",
+    "site_base": "https://www.capaodocipo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304663,
+    "nome": "Capão do Leão",
+    "slug": "capaodoleao",
+    "site_base": "https://www.capaodoleao.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304705,
+    "nome": "Carazinho",
+    "slug": "carazinho",
+    "site_base": "https://www.carazinho.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304713,
+    "nome": "Caraá",
+    "slug": "caraa",
+    "site_base": "https://www.caraa.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304804,
+    "nome": "Carlos Barbosa",
+    "slug": "carlosbarbosa",
+    "site_base": "https://www.carlosbarbosa.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304853,
+    "nome": "Carlos Gomes",
+    "slug": "carlosgomes",
+    "site_base": "https://www.carlosgomes.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304903,
+    "nome": "Casca",
+    "slug": "casca",
+    "site_base": "https://www.casca.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304952,
+    "nome": "Caseiros",
+    "slug": "caseiros",
+    "site_base": "https://www.caseiros.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305009,
+    "nome": "Catuípe",
+    "slug": "catuipe",
+    "site_base": "https://www.catuipe.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305108,
+    "nome": "Caxias do Sul",
+    "slug": "caxiasdosul",
+    "site_base": "https://www.caxiasdosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4302808,
+    "nome": "Caçapava do Sul",
+    "slug": "cacapavadosul",
+    "site_base": "https://www.cacapavadosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305116,
+    "nome": "Centenário",
+    "slug": "centenario",
+    "site_base": "https://www.centenario.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305124,
+    "nome": "Cerrito",
+    "slug": "cerrito",
+    "site_base": "https://www.cerrito.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305132,
+    "nome": "Cerro Branco",
+    "slug": "cerrobranco",
+    "site_base": "https://www.cerrobranco.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305157,
+    "nome": "Cerro Grande",
+    "slug": "cerrogrande",
+    "site_base": "https://www.cerrogrande.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305173,
+    "nome": "Cerro Grande do Sul",
+    "slug": "cerrograndedosul",
+    "site_base": "https://www.cerrograndedosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305207,
+    "nome": "Cerro Largo",
+    "slug": "cerrolargo",
+    "site_base": "https://www.cerrolargo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305306,
+    "nome": "Chapada",
+    "slug": "chapada",
+    "site_base": "https://www.chapada.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305355,
+    "nome": "Charqueadas",
+    "slug": "charqueadas",
+    "site_base": "https://www.charqueadas.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305371,
+    "nome": "Charrua",
+    "slug": "charrua",
+    "site_base": "https://www.charrua.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305405,
+    "nome": "Chiapetta",
+    "slug": "chiapetta",
+    "site_base": "https://www.chiapetta.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305447,
+    "nome": "Chuvisca",
+    "slug": "chuvisca",
+    "site_base": "https://www.chuvisca.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305439,
+    "nome": "Chuí",
+    "slug": "chui",
+    "site_base": "https://www.chui.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305454,
+    "nome": "Cidreira",
+    "slug": "cidreira",
+    "site_base": "https://www.cidreira.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305504,
+    "nome": "Ciríaco",
+    "slug": "ciriaco",
+    "site_base": "https://www.ciriaco.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305587,
+    "nome": "Colinas",
+    "slug": "colinas",
+    "site_base": "https://www.colinas.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305603,
+    "nome": "Colorado",
+    "slug": "colorado",
+    "site_base": "https://www.colorado.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305702,
+    "nome": "Condor",
+    "slug": "condor",
+    "site_base": "https://www.condor.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305801,
+    "nome": "Constantina",
+    "slug": "constantina",
+    "site_base": "https://www.constantina.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305835,
+    "nome": "Coqueiro Baixo",
+    "slug": "coqueirobaixo",
+    "site_base": "https://www.coqueirobaixo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305850,
+    "nome": "Coqueiros do Sul",
+    "slug": "coqueirosdosul",
+    "site_base": "https://www.coqueirosdosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305871,
+    "nome": "Coronel Barros",
+    "slug": "coronelbarros",
+    "site_base": "https://www.coronelbarros.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305900,
+    "nome": "Coronel Bicaco",
+    "slug": "coronelbicaco",
+    "site_base": "https://www.coronelbicaco.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305934,
+    "nome": "Coronel Pilar",
+    "slug": "coronelpilar",
+    "site_base": "https://www.coronelpilar.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305959,
+    "nome": "Cotiporã",
+    "slug": "cotipora",
+    "site_base": "https://www.cotipora.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4305975,
+    "nome": "Coxilha",
+    "slug": "coxilha",
+    "site_base": "https://www.coxilha.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306007,
+    "nome": "Crissiumal",
+    "slug": "crissiumal",
+    "site_base": "https://www.crissiumal.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306056,
+    "nome": "Cristal",
+    "slug": "cristal",
+    "site_base": "https://www.cristal.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306072,
+    "nome": "Cristal do Sul",
+    "slug": "cristaldosul",
+    "site_base": "https://www.cristaldosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306106,
+    "nome": "Cruz Alta",
+    "slug": "cruzalta",
+    "site_base": "https://www.cruzalta.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306130,
+    "nome": "Cruzaltense",
+    "slug": "cruzaltense",
+    "site_base": "https://www.cruzaltense.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306205,
+    "nome": "Cruzeiro do Sul",
+    "slug": "cruzeirodosul",
+    "site_base": "https://www.cruzeirodosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4304309,
+    "nome": "Cândido Godói",
+    "slug": "candidogodoi",
+    "site_base": "https://www.candidogodoi.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306304,
+    "nome": "David Canabarro",
+    "slug": "davidcanabarro",
+    "site_base": "https://www.davidcanabarro.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306320,
+    "nome": "Derrubadas",
+    "slug": "derrubadas",
+    "site_base": "https://www.derrubadas.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306353,
+    "nome": "Dezesseis de Novembro",
+    "slug": "dezesseisdenovembro",
+    "site_base": "https://www.dezesseisdenovembro.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306379,
+    "nome": "Dilermando de Aguiar",
+    "slug": "dilermandodeaguiar",
+    "site_base": "https://www.dilermandodeaguiar.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306403,
+    "nome": "Dois Irmãos",
+    "slug": "doisirmaos",
+    "site_base": "https://www.doisirmaos.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306429,
+    "nome": "Dois Irmãos das Missões",
+    "slug": "doisirmaosdasmissoes",
+    "site_base": "https://www.doisirmaosdasmissoes.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306452,
+    "nome": "Dois Lajeados",
+    "slug": "doislajeados",
+    "site_base": "https://www.doislajeados.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306502,
+    "nome": "Dom Feliciano",
+    "slug": "domfeliciano",
+    "site_base": "https://www.domfeliciano.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306601,
+    "nome": "Dom Pedrito",
+    "slug": "dompedrito",
+    "site_base": "https://www.dompedrito.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306551,
+    "nome": "Dom Pedro de Alcântara",
+    "slug": "dompedrodealcantara",
+    "site_base": "https://www.dompedrodealcantara.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306700,
+    "nome": "Dona Francisca",
+    "slug": "donafrancisca",
+    "site_base": "https://www.donafrancisca.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306734,
+    "nome": "Doutor Maurício Cardoso",
+    "slug": "doutormauriciocardoso",
+    "site_base": "https://www.doutormauriciocardoso.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306759,
+    "nome": "Doutor Ricardo",
+    "slug": "doutorricardo",
+    "site_base": "https://www.doutorricardo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306767,
+    "nome": "Eldorado do Sul",
+    "slug": "eldoradodosul",
+    "site_base": "https://www.eldoradodosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306809,
+    "nome": "Encantado",
+    "slug": "encantado",
+    "site_base": "https://www.encantado.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306908,
+    "nome": "Encruzilhada do Sul",
+    "slug": "encruzilhadadosul",
+    "site_base": "https://www.encruzilhadadosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306924,
+    "nome": "Engenho Velho",
+    "slug": "engenhovelho",
+    "site_base": "https://www.engenhovelho.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306957,
+    "nome": "Entre Rios do Sul",
+    "slug": "entreriosdosul",
+    "site_base": "https://www.entreriosdosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306932,
+    "nome": "Entre-Ijuís",
+    "slug": "entreijuis",
+    "site_base": "https://www.entreijuis.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4306973,
+    "nome": "Erebango",
+    "slug": "erebango",
+    "site_base": "https://www.erebango.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4307005,
+    "nome": "Erechim",
+    "slug": "erechim",
+    "site_base": "https://www.erechim.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4307054,
+    "nome": "Ernestina",
+    "slug": "ernestina",
+    "site_base": "https://www.ernestina.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4307203,
+    "nome": "Erval Grande",
+    "slug": "ervalgrande",
+    "site_base": "https://www.ervalgrande.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4307302,
+    "nome": "Erval Seco",
+    "slug": "ervalseco",
+    "site_base": "https://www.ervalseco.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4307401,
+    "nome": "Esmeralda",
+    "slug": "esmeralda",
+    "site_base": "https://www.esmeralda.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4307450,
+    "nome": "Esperança do Sul",
+    "slug": "esperancadosul",
+    "site_base": "https://www.esperancadosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4307500,
+    "nome": "Espumoso",
+    "slug": "espumoso",
+    "site_base": "https://www.espumoso.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4307559,
+    "nome": "Estação",
+    "slug": "estacao",
+    "site_base": "https://www.estacao.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4307708,
+    "nome": "Esteio",
+    "slug": "esteio",
+    "site_base": "https://www.esteio.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4307807,
+    "nome": "Estrela",
+    "slug": "estrela",
+    "site_base": "https://www.estrela.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4307815,
+    "nome": "Estrela Velha",
+    "slug": "estrelavelha",
+    "site_base": "https://www.estrelavelha.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4307609,
+    "nome": "Estância Velha",
+    "slug": "estanciavelha",
+    "site_base": "https://www.estanciavelha.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4307831,
+    "nome": "Eugênio de Castro",
+    "slug": "eugeniodecastro",
+    "site_base": "https://www.eugeniodecastro.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4307864,
+    "nome": "Fagundes Varela",
+    "slug": "fagundesvarela",
+    "site_base": "https://www.fagundesvarela.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4307906,
+    "nome": "Farroupilha",
+    "slug": "farroupilha",
+    "site_base": "https://www.farroupilha.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4308003,
+    "nome": "Faxinal do Soturno",
+    "slug": "faxinaldosoturno",
+    "site_base": "https://www.faxinaldosoturno.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4308052,
+    "nome": "Faxinalzinho",
+    "slug": "faxinalzinho",
+    "site_base": "https://www.faxinalzinho.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4308078,
+    "nome": "Fazenda Vilanova",
+    "slug": "fazendavilanova",
+    "site_base": "https://www.fazendavilanova.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4308102,
+    "nome": "Feliz",
+    "slug": "feliz",
+    "site_base": "https://www.feliz.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4308201,
+    "nome": "Flores da Cunha",
+    "slug": "floresdacunha",
+    "site_base": "https://www.floresdacunha.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4308250,
+    "nome": "Floriano Peixoto",
+    "slug": "florianopeixoto",
+    "site_base": "https://www.florianopeixoto.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4308300,
+    "nome": "Fontoura Xavier",
+    "slug": "fontouraxavier",
+    "site_base": "https://www.fontouraxavier.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4308409,
+    "nome": "Formigueiro",
+    "slug": "formigueiro",
+    "site_base": "https://www.formigueiro.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4308433,
+    "nome": "Forquetinha",
+    "slug": "forquetinha",
+    "site_base": "https://www.forquetinha.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4308458,
+    "nome": "Fortaleza dos Valos",
+    "slug": "fortalezadosvalos",
+    "site_base": "https://www.fortalezadosvalos.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4308508,
+    "nome": "Frederico Westphalen",
+    "slug": "fredericowestphalen",
+    "site_base": "https://www.fredericowestphalen.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4308607,
+    "nome": "Garibaldi",
+    "slug": "garibaldi",
+    "site_base": "https://www.garibaldi.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4308656,
+    "nome": "Garruchos",
+    "slug": "garruchos",
+    "site_base": "https://www.garruchos.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4308706,
+    "nome": "Gaurama",
+    "slug": "gaurama",
+    "site_base": "https://www.gaurama.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4308805,
+    "nome": "General Câmara",
+    "slug": "generalcamara",
+    "site_base": "https://www.generalcamara.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4308854,
+    "nome": "Gentil",
+    "slug": "gentil",
+    "site_base": "https://www.gentil.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4308904,
+    "nome": "Getúlio Vargas",
+    "slug": "getuliovargas",
+    "site_base": "https://www.getuliovargas.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309001,
+    "nome": "Giruá",
+    "slug": "girua",
+    "site_base": "https://www.girua.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309050,
+    "nome": "Glorinha",
+    "slug": "glorinha",
+    "site_base": "https://www.glorinha.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309100,
+    "nome": "Gramado",
+    "slug": "gramado",
+    "site_base": "https://www.gramado.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309159,
+    "nome": "Gramado Xavier",
+    "slug": "gramadoxavier",
+    "site_base": "https://www.gramadoxavier.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309126,
+    "nome": "Gramado dos Loureiros",
+    "slug": "gramadodosloureiros",
+    "site_base": "https://www.gramadodosloureiros.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309209,
+    "nome": "Gravataí",
+    "slug": "gravatai",
+    "site_base": "https://www.gravatai.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309258,
+    "nome": "Guabiju",
+    "slug": "guabiju",
+    "site_base": "https://www.guabiju.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309407,
+    "nome": "Guaporé",
+    "slug": "guapore",
+    "site_base": "https://www.guapore.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309506,
+    "nome": "Guarani das Missões",
+    "slug": "guaranidasmissoes",
+    "site_base": "https://www.guaranidasmissoes.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309308,
+    "nome": "Guaíba",
+    "slug": "guaiba",
+    "site_base": "https://www.guaiba.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309555,
+    "nome": "Harmonia",
+    "slug": "harmonia",
+    "site_base": "https://www.harmonia.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4307104,
+    "nome": "Herval",
+    "slug": "herval",
+    "site_base": "https://www.herval.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309571,
+    "nome": "Herveiras",
+    "slug": "herveiras",
+    "site_base": "https://www.herveiras.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309605,
+    "nome": "Horizontina",
+    "slug": "horizontina",
+    "site_base": "https://www.horizontina.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309654,
+    "nome": "Hulha Negra",
+    "slug": "hulhanegra",
+    "site_base": "https://www.hulhanegra.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309704,
+    "nome": "Humaitá",
+    "slug": "humaita",
+    "site_base": "https://www.humaita.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309753,
+    "nome": "Ibarama",
+    "slug": "ibarama",
+    "site_base": "https://www.ibarama.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309803,
+    "nome": "Ibiaçá",
+    "slug": "ibiaca",
+    "site_base": "https://www.ibiaca.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309902,
+    "nome": "Ibiraiaras",
+    "slug": "ibiraiaras",
+    "site_base": "https://www.ibiraiaras.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4309951,
+    "nome": "Ibirapuitã",
+    "slug": "ibirapuita",
+    "site_base": "https://www.ibirapuita.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310009,
+    "nome": "Ibirubá",
+    "slug": "ibiruba",
+    "site_base": "https://www.ibiruba.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310108,
+    "nome": "Igrejinha",
+    "slug": "igrejinha",
+    "site_base": "https://www.igrejinha.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310207,
+    "nome": "Ijuí",
+    "slug": "ijui",
+    "site_base": "https://www.ijui.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310306,
+    "nome": "Ilópolis",
+    "slug": "ilopolis",
+    "site_base": "https://www.ilopolis.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310330,
+    "nome": "Imbé",
+    "slug": "imbe",
+    "site_base": "https://www.imbe.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310363,
+    "nome": "Imigrante",
+    "slug": "imigrante",
+    "site_base": "https://www.imigrante.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310405,
+    "nome": "Independência",
+    "slug": "independencia",
+    "site_base": "https://www.independencia.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310413,
+    "nome": "Inhacorá",
+    "slug": "inhacora",
+    "site_base": "https://www.inhacora.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310462,
+    "nome": "Ipiranga do Sul",
+    "slug": "ipirangadosul",
+    "site_base": "https://www.ipirangadosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310439,
+    "nome": "Ipê",
+    "slug": "ipe",
+    "site_base": "https://www.ipe.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310504,
+    "nome": "Iraí",
+    "slug": "irai",
+    "site_base": "https://www.irai.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310538,
+    "nome": "Itaara",
+    "slug": "itaara",
+    "site_base": "https://www.itaara.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310553,
+    "nome": "Itacurubi",
+    "slug": "itacurubi",
+    "site_base": "https://www.itacurubi.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310579,
+    "nome": "Itapuca",
+    "slug": "itapuca",
+    "site_base": "https://www.itapuca.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310603,
+    "nome": "Itaqui",
+    "slug": "itaqui",
+    "site_base": "https://www.itaqui.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310652,
+    "nome": "Itati",
+    "slug": "itati",
+    "site_base": "https://www.itati.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310702,
+    "nome": "Itatiba do Sul",
+    "slug": "itatibadosul",
+    "site_base": "https://www.itatibadosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310751,
+    "nome": "Ivorá",
+    "slug": "ivora",
+    "site_base": "https://www.ivora.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310801,
+    "nome": "Ivoti",
+    "slug": "ivoti",
+    "site_base": "https://www.ivoti.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310850,
+    "nome": "Jaboticaba",
+    "slug": "jaboticaba",
+    "site_base": "https://www.jaboticaba.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310876,
+    "nome": "Jacuizinho",
+    "slug": "jacuizinho",
+    "site_base": "https://www.jacuizinho.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4310900,
+    "nome": "Jacutinga",
+    "slug": "jacutinga",
+    "site_base": "https://www.jacutinga.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311106,
+    "nome": "Jaguari",
+    "slug": "jaguari",
+    "site_base": "https://www.jaguari.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311007,
+    "nome": "Jaguarão",
+    "slug": "jaguarao",
+    "site_base": "https://www.jaguarao.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311122,
+    "nome": "Jaquirana",
+    "slug": "jaquirana",
+    "site_base": "https://www.jaquirana.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311130,
+    "nome": "Jari",
+    "slug": "jari",
+    "site_base": "https://www.jari.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311155,
+    "nome": "Jóia",
+    "slug": "joia",
+    "site_base": "https://www.joia.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311205,
+    "nome": "Júlio de Castilhos",
+    "slug": "juliodecastilhos",
+    "site_base": "https://www.juliodecastilhos.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311239,
+    "nome": "Lagoa Bonita do Sul",
+    "slug": "lagoabonitadosul",
+    "site_base": "https://www.lagoabonitadosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311304,
+    "nome": "Lagoa Vermelha",
+    "slug": "lagoavermelha",
+    "site_base": "https://www.lagoavermelha.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311270,
+    "nome": "Lagoa dos Três Cantos",
+    "slug": "lagoadostrescantos",
+    "site_base": "https://www.lagoadostrescantos.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311254,
+    "nome": "Lagoão",
+    "slug": "lagoao",
+    "site_base": "https://www.lagoao.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311403,
+    "nome": "Lajeado",
+    "slug": "lajeado",
+    "site_base": "https://www.lajeado.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311429,
+    "nome": "Lajeado do Bugre",
+    "slug": "lajeadodobugre",
+    "site_base": "https://www.lajeadodobugre.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311502,
+    "nome": "Lavras do Sul",
+    "slug": "lavrasdosul",
+    "site_base": "https://www.lavrasdosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311601,
+    "nome": "Liberato Salzano",
+    "slug": "liberatosalzano",
+    "site_base": "https://www.liberatosalzano.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311627,
+    "nome": "Lindolfo Collor",
+    "slug": "lindolfocollor",
+    "site_base": "https://www.lindolfocollor.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311643,
+    "nome": "Linha Nova",
+    "slug": "linhanova",
+    "site_base": "https://www.linhanova.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311700,
+    "nome": "Machadinho",
+    "slug": "machadinho",
+    "site_base": "https://www.machadinho.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311734,
+    "nome": "Mampituba",
+    "slug": "mampituba",
+    "site_base": "https://www.mampituba.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311759,
+    "nome": "Manoel Viana",
+    "slug": "manoelviana",
+    "site_base": "https://www.manoelviana.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311775,
+    "nome": "Maquiné",
+    "slug": "maquine",
+    "site_base": "https://www.maquine.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311791,
+    "nome": "Maratá",
+    "slug": "marata",
+    "site_base": "https://www.marata.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311809,
+    "nome": "Marau",
+    "slug": "marau",
+    "site_base": "https://www.marau.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311908,
+    "nome": "Marcelino Ramos",
+    "slug": "marcelinoramos",
+    "site_base": "https://www.marcelinoramos.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311981,
+    "nome": "Mariana Pimentel",
+    "slug": "marianapimentel",
+    "site_base": "https://www.marianapimentel.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312005,
+    "nome": "Mariano Moro",
+    "slug": "marianomoro",
+    "site_base": "https://www.marianomoro.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312054,
+    "nome": "Marques de Souza",
+    "slug": "marquesdesouza",
+    "site_base": "https://www.marquesdesouza.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312104,
+    "nome": "Mata",
+    "slug": "mata",
+    "site_base": "https://www.mata.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312138,
+    "nome": "Mato Castelhano",
+    "slug": "matocastelhano",
+    "site_base": "https://www.matocastelhano.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312153,
+    "nome": "Mato Leitão",
+    "slug": "matoleitao",
+    "site_base": "https://www.matoleitao.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312179,
+    "nome": "Mato Queimado",
+    "slug": "matoqueimado",
+    "site_base": "https://www.matoqueimado.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312203,
+    "nome": "Maximiliano de Almeida",
+    "slug": "maximilianodealmeida",
+    "site_base": "https://www.maximilianodealmeida.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4311718,
+    "nome": "Maçambará",
+    "slug": "macambara",
+    "site_base": "https://www.macambara.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312252,
+    "nome": "Minas do Leão",
+    "slug": "minasdoleao",
+    "site_base": "https://www.minasdoleao.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312302,
+    "nome": "Miraguaí",
+    "slug": "miraguai",
+    "site_base": "https://www.miraguai.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312351,
+    "nome": "Montauri",
+    "slug": "montauri",
+    "site_base": "https://www.montauri.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312377,
+    "nome": "Monte Alegre dos Campos",
+    "slug": "montealegredoscampos",
+    "site_base": "https://www.montealegredoscampos.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312385,
+    "nome": "Monte Belo do Sul",
+    "slug": "montebelodosul",
+    "site_base": "https://www.montebelodosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312401,
+    "nome": "Montenegro",
+    "slug": "montenegro",
+    "site_base": "https://www.montenegro.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312427,
+    "nome": "Mormaço",
+    "slug": "mormaco",
+    "site_base": "https://www.mormaco.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312443,
+    "nome": "Morrinhos do Sul",
+    "slug": "morrinhosdosul",
+    "site_base": "https://www.morrinhosdosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312450,
+    "nome": "Morro Redondo",
+    "slug": "morroredondo",
+    "site_base": "https://www.morroredondo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312476,
+    "nome": "Morro Reuter",
+    "slug": "morroreuter",
+    "site_base": "https://www.morroreuter.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312500,
+    "nome": "Mostardas",
+    "slug": "mostardas",
+    "site_base": "https://www.mostardas.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312617,
+    "nome": "Muitos Capões",
+    "slug": "muitoscapoes",
+    "site_base": "https://www.muitoscapoes.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312625,
+    "nome": "Muliterno",
+    "slug": "muliterno",
+    "site_base": "https://www.muliterno.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312609,
+    "nome": "Muçum",
+    "slug": "mucum",
+    "site_base": "https://www.mucum.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312674,
+    "nome": "Nicolau Vergueiro",
+    "slug": "nicolauvergueiro",
+    "site_base": "https://www.nicolauvergueiro.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312708,
+    "nome": "Nonoai",
+    "slug": "nonoai",
+    "site_base": "https://www.nonoai.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312757,
+    "nome": "Nova Alvorada",
+    "slug": "novaalvorada",
+    "site_base": "https://www.novaalvorada.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312807,
+    "nome": "Nova Araçá",
+    "slug": "novaaraca",
+    "site_base": "https://www.novaaraca.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312906,
+    "nome": "Nova Bassano",
+    "slug": "novabassano",
+    "site_base": "https://www.novabassano.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312955,
+    "nome": "Nova Boa Vista",
+    "slug": "novaboavista",
+    "site_base": "https://www.novaboavista.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313003,
+    "nome": "Nova Bréscia",
+    "slug": "novabrescia",
+    "site_base": "https://www.novabrescia.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313011,
+    "nome": "Nova Candelária",
+    "slug": "novacandelaria",
+    "site_base": "https://www.novacandelaria.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313037,
+    "nome": "Nova Esperança do Sul",
+    "slug": "novaesperancadosul",
+    "site_base": "https://www.novaesperancadosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313060,
+    "nome": "Nova Hartz",
+    "slug": "novahartz",
+    "site_base": "https://www.novahartz.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313102,
+    "nome": "Nova Palma",
+    "slug": "novapalma",
+    "site_base": "https://www.novapalma.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313201,
+    "nome": "Nova Petrópolis",
+    "slug": "novapetropolis",
+    "site_base": "https://www.novapetropolis.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313300,
+    "nome": "Nova Prata",
+    "slug": "novaprata",
+    "site_base": "https://www.novaprata.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313086,
+    "nome": "Nova Pádua",
+    "slug": "novapadua",
+    "site_base": "https://www.novapadua.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313334,
+    "nome": "Nova Ramada",
+    "slug": "novaramada",
+    "site_base": "https://www.novaramada.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313359,
+    "nome": "Nova Roma do Sul",
+    "slug": "novaromadosul",
+    "site_base": "https://www.novaromadosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313375,
+    "nome": "Nova Santa Rita",
+    "slug": "novasantarita",
+    "site_base": "https://www.novasantarita.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313490,
+    "nome": "Novo Barreiro",
+    "slug": "novobarreiro",
+    "site_base": "https://www.novobarreiro.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313391,
+    "nome": "Novo Cabrais",
+    "slug": "novocabrais",
+    "site_base": "https://www.novocabrais.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313409,
+    "nome": "Novo Hamburgo",
+    "slug": "novohamburgo",
+    "site_base": "https://www.novohamburgo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313425,
+    "nome": "Novo Machado",
+    "slug": "novomachado",
+    "site_base": "https://www.novomachado.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313441,
+    "nome": "Novo Tiradentes",
+    "slug": "novotiradentes",
+    "site_base": "https://www.novotiradentes.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313466,
+    "nome": "Novo Xingu",
+    "slug": "novoxingu",
+    "site_base": "https://www.novoxingu.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4312658,
+    "nome": "Não-Me-Toque",
+    "slug": "naometoque",
+    "site_base": "https://www.naometoque.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313508,
+    "nome": "Osório",
+    "slug": "osorio",
+    "site_base": "https://www.osorio.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313607,
+    "nome": "Paim Filho",
+    "slug": "paimfilho",
+    "site_base": "https://www.paimfilho.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313656,
+    "nome": "Palmares do Sul",
+    "slug": "palmaresdosul",
+    "site_base": "https://www.palmaresdosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313706,
+    "nome": "Palmeira das Missões",
+    "slug": "palmeiradasmissoes",
+    "site_base": "https://www.palmeiradasmissoes.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313805,
+    "nome": "Palmitinho",
+    "slug": "palmitinho",
+    "site_base": "https://www.palmitinho.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313904,
+    "nome": "Panambi",
+    "slug": "panambi",
+    "site_base": "https://www.panambi.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4313953,
+    "nome": "Pantano Grande",
+    "slug": "pantanogrande",
+    "site_base": "https://www.pantanogrande.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314001,
+    "nome": "Paraí",
+    "slug": "parai",
+    "site_base": "https://www.parai.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314027,
+    "nome": "Paraíso do Sul",
+    "slug": "paraisodosul",
+    "site_base": "https://www.paraisodosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314035,
+    "nome": "Pareci Novo",
+    "slug": "parecinovo",
+    "site_base": "https://www.parecinovo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314050,
+    "nome": "Parobé",
+    "slug": "parobe",
+    "site_base": "https://www.parobe.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314068,
+    "nome": "Passa Sete",
+    "slug": "passasete",
+    "site_base": "https://www.passasete.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314100,
+    "nome": "Passo Fundo",
+    "slug": "passofundo",
+    "site_base": "https://www.passofundo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314076,
+    "nome": "Passo do Sobrado",
+    "slug": "passodosobrado",
+    "site_base": "https://www.passodosobrado.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314134,
+    "nome": "Paulo Bento",
+    "slug": "paulobento",
+    "site_base": "https://www.paulobento.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314159,
+    "nome": "Paverama",
+    "slug": "paverama",
+    "site_base": "https://www.paverama.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314175,
+    "nome": "Pedras Altas",
+    "slug": "pedrasaltas",
+    "site_base": "https://www.pedrasaltas.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314209,
+    "nome": "Pedro Osório",
+    "slug": "pedroosorio",
+    "site_base": "https://www.pedroosorio.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314308,
+    "nome": "Pejuçara",
+    "slug": "pejucara",
+    "site_base": "https://www.pejucara.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314407,
+    "nome": "Pelotas",
+    "slug": "pelotas",
+    "site_base": "https://www.pelotas.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314423,
+    "nome": "Picada Café",
+    "slug": "picadacafe",
+    "site_base": "https://www.picadacafe.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314456,
+    "nome": "Pinhal",
+    "slug": "pinhal",
+    "site_base": "https://www.pinhal.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314472,
+    "nome": "Pinhal Grande",
+    "slug": "pinhalgrande",
+    "site_base": "https://www.pinhalgrande.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314464,
+    "nome": "Pinhal da Serra",
+    "slug": "pinhaldaserra",
+    "site_base": "https://www.pinhaldaserra.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314498,
+    "nome": "Pinheirinho do Vale",
+    "slug": "pinheirinhodovale",
+    "site_base": "https://www.pinheirinhodovale.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314506,
+    "nome": "Pinheiro Machado",
+    "slug": "pinheiromachado",
+    "site_base": "https://www.pinheiromachado.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314548,
+    "nome": "Pinto Bandeira",
+    "slug": "pintobandeira",
+    "site_base": "https://www.pintobandeira.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314555,
+    "nome": "Pirapó",
+    "slug": "pirapo",
+    "site_base": "https://www.pirapo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314605,
+    "nome": "Piratini",
+    "slug": "piratini",
+    "site_base": "https://www.piratini.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314704,
+    "nome": "Planalto",
+    "slug": "planalto",
+    "site_base": "https://www.planalto.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314787,
+    "nome": "Ponte Preta",
+    "slug": "pontepreta",
+    "site_base": "https://www.pontepreta.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314779,
+    "nome": "Pontão",
+    "slug": "pontao",
+    "site_base": "https://www.pontao.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314902,
+    "nome": "Porto Alegre",
+    "slug": "portoalegre",
+    "site_base": "https://www.portoalegre.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315008,
+    "nome": "Porto Lucena",
+    "slug": "portolucena",
+    "site_base": "https://www.portolucena.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315057,
+    "nome": "Porto Mauá",
+    "slug": "portomaua",
+    "site_base": "https://www.portomaua.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315073,
+    "nome": "Porto Vera Cruz",
+    "slug": "portoveracruz",
+    "site_base": "https://www.portoveracruz.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315107,
+    "nome": "Porto Xavier",
+    "slug": "portoxavier",
+    "site_base": "https://www.portoxavier.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314803,
+    "nome": "Portão",
+    "slug": "portao",
+    "site_base": "https://www.portao.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315131,
+    "nome": "Pouso Novo",
+    "slug": "pousonovo",
+    "site_base": "https://www.pousonovo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4314753,
+    "nome": "Poço das Antas",
+    "slug": "pocodasantas",
+    "site_base": "https://www.pocodasantas.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315149,
+    "nome": "Presidente Lucena",
+    "slug": "presidentelucena",
+    "site_base": "https://www.presidentelucena.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315156,
+    "nome": "Progresso",
+    "slug": "progresso",
+    "site_base": "https://www.progresso.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315172,
+    "nome": "Protásio Alves",
+    "slug": "protasioalves",
+    "site_base": "https://www.protasioalves.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315206,
+    "nome": "Putinga",
+    "slug": "putinga",
+    "site_base": "https://www.putinga.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315305,
+    "nome": "Quaraí",
+    "slug": "quarai",
+    "site_base": "https://www.quarai.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315313,
+    "nome": "Quatro Irmãos",
+    "slug": "quatroirmaos",
+    "site_base": "https://www.quatroirmaos.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315321,
+    "nome": "Quevedos",
+    "slug": "quevedos",
+    "site_base": "https://www.quevedos.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315354,
+    "nome": "Quinze de Novembro",
+    "slug": "quinzedenovembro",
+    "site_base": "https://www.quinzedenovembro.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315404,
+    "nome": "Redentora",
+    "slug": "redentora",
+    "site_base": "https://www.redentora.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315453,
+    "nome": "Relvado",
+    "slug": "relvado",
+    "site_base": "https://www.relvado.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315503,
+    "nome": "Restinga Sêca",
+    "slug": "restingaseca",
+    "site_base": "https://www.restingaseca.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315602,
+    "nome": "Rio Grande",
+    "slug": "riogrande",
+    "site_base": "https://www.riogrande.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315701,
+    "nome": "Rio Pardo",
+    "slug": "riopardo",
+    "site_base": "https://www.riopardo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315552,
+    "nome": "Rio dos Índios",
+    "slug": "riodosindios",
+    "site_base": "https://www.riodosindios.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315750,
+    "nome": "Riozinho",
+    "slug": "riozinho",
+    "site_base": "https://www.riozinho.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315800,
+    "nome": "Roca Sales",
+    "slug": "rocasales",
+    "site_base": "https://www.rocasales.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315909,
+    "nome": "Rodeio Bonito",
+    "slug": "rodeiobonito",
+    "site_base": "https://www.rodeiobonito.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4315958,
+    "nome": "Rolador",
+    "slug": "rolador",
+    "site_base": "https://www.rolador.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316006,
+    "nome": "Rolante",
+    "slug": "rolante",
+    "site_base": "https://www.rolante.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316105,
+    "nome": "Ronda Alta",
+    "slug": "rondaalta",
+    "site_base": "https://www.rondaalta.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316204,
+    "nome": "Rondinha",
+    "slug": "rondinha",
+    "site_base": "https://www.rondinha.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316303,
+    "nome": "Roque Gonzales",
+    "slug": "roquegonzales",
+    "site_base": "https://www.roquegonzales.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316402,
+    "nome": "Rosário do Sul",
+    "slug": "rosariodosul",
+    "site_base": "https://www.rosariodosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316428,
+    "nome": "Sagrada Família",
+    "slug": "sagradafamilia",
+    "site_base": "https://www.sagradafamilia.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316436,
+    "nome": "Saldanha Marinho",
+    "slug": "saldanhamarinho",
+    "site_base": "https://www.saldanhamarinho.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316451,
+    "nome": "Salto do Jacuí",
+    "slug": "saltodojacui",
+    "site_base": "https://www.saltodojacui.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316477,
+    "nome": "Salvador das Missões",
+    "slug": "salvadordasmissoes",
+    "site_base": "https://www.salvadordasmissoes.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316501,
+    "nome": "Salvador do Sul",
+    "slug": "salvadordosul",
+    "site_base": "https://www.salvadordosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316600,
+    "nome": "Sananduva",
+    "slug": "sananduva",
+    "site_base": "https://www.sananduva.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4317103,
+    "nome": "Sant'Ana do Livramento",
+    "slug": "santanadolivramento",
+    "site_base": "https://www.santanadolivramento.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316709,
+    "nome": "Santa Bárbara do Sul",
+    "slug": "santabarbaradosul",
+    "site_base": "https://www.santabarbaradosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316733,
+    "nome": "Santa Cecília do Sul",
+    "slug": "santaceciliadosul",
+    "site_base": "https://www.santaceciliadosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316758,
+    "nome": "Santa Clara do Sul",
+    "slug": "santaclaradosul",
+    "site_base": "https://www.santaclaradosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316808,
+    "nome": "Santa Cruz do Sul",
+    "slug": "santacruzdosul",
+    "site_base": "https://www.santacruzdosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316972,
+    "nome": "Santa Margarida do Sul",
+    "slug": "santamargaridadosul",
+    "site_base": "https://www.santamargaridadosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316907,
+    "nome": "Santa Maria",
+    "slug": "santamaria",
+    "site_base": "https://www.santamaria.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4316956,
+    "nome": "Santa Maria do Herval",
+    "slug": "santamariadoherval",
+    "site_base": "https://www.santamariadoherval.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4317202,
+    "nome": "Santa Rosa",
+    "slug": "santarosa",
+    "site_base": "https://www.santarosa.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4317251,
+    "nome": "Santa Tereza",
+    "slug": "santatereza",
+    "site_base": "https://www.santatereza.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4317301,
+    "nome": "Santa Vitória do Palmar",
+    "slug": "santavitoriadopalmar",
+    "site_base": "https://www.santavitoriadopalmar.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4317004,
+    "nome": "Santana da Boa Vista",
+    "slug": "santanadaboavista",
+    "site_base": "https://www.santanadaboavista.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4317400,
+    "nome": "Santiago",
+    "slug": "santiago",
+    "site_base": "https://www.santiago.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4317608,
+    "nome": "Santo Antônio da Patrulha",
+    "slug": "santoantoniodapatrulha",
+    "site_base": "https://www.santoantoniodapatrulha.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4317707,
+    "nome": "Santo Antônio das Missões",
+    "slug": "santoantoniodasmissoes",
+    "site_base": "https://www.santoantoniodasmissoes.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4317558,
+    "nome": "Santo Antônio do Palma",
+    "slug": "santoantoniodopalma",
+    "site_base": "https://www.santoantoniodopalma.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4317756,
+    "nome": "Santo Antônio do Planalto",
+    "slug": "santoantoniodoplanalto",
+    "site_base": "https://www.santoantoniodoplanalto.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4317806,
+    "nome": "Santo Augusto",
+    "slug": "santoaugusto",
+    "site_base": "https://www.santoaugusto.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4317905,
+    "nome": "Santo Cristo",
+    "slug": "santocristo",
+    "site_base": "https://www.santocristo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4317954,
+    "nome": "Santo Expedito do Sul",
+    "slug": "santoexpeditodosul",
+    "site_base": "https://www.santoexpeditodosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4317509,
+    "nome": "Santo Ângelo",
+    "slug": "santoangelo",
+    "site_base": "https://www.santoangelo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319901,
+    "nome": "Sapiranga",
+    "slug": "sapiranga",
+    "site_base": "https://www.sapiranga.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320008,
+    "nome": "Sapucaia do Sul",
+    "slug": "sapucaiadosul",
+    "site_base": "https://www.sapucaiadosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320107,
+    "nome": "Sarandi",
+    "slug": "sarandi",
+    "site_base": "https://www.sarandi.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320206,
+    "nome": "Seberi",
+    "slug": "seberi",
+    "site_base": "https://www.seberi.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320230,
+    "nome": "Sede Nova",
+    "slug": "sedenova",
+    "site_base": "https://www.sedenova.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320263,
+    "nome": "Segredo",
+    "slug": "segredo",
+    "site_base": "https://www.segredo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320305,
+    "nome": "Selbach",
+    "slug": "selbach",
+    "site_base": "https://www.selbach.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320321,
+    "nome": "Senador Salgado Filho",
+    "slug": "senadorsalgadofilho",
+    "site_base": "https://www.senadorsalgadofilho.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320354,
+    "nome": "Sentinela do Sul",
+    "slug": "sentineladosul",
+    "site_base": "https://www.sentineladosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320404,
+    "nome": "Serafina Corrêa",
+    "slug": "serafinacorrea",
+    "site_base": "https://www.serafinacorrea.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320503,
+    "nome": "Sertão",
+    "slug": "sertao",
+    "site_base": "https://www.sertao.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320552,
+    "nome": "Sertão Santana",
+    "slug": "sertaosantana",
+    "site_base": "https://www.sertaosantana.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320578,
+    "nome": "Sete de Setembro",
+    "slug": "setedesetembro",
+    "site_base": "https://www.setedesetembro.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320602,
+    "nome": "Severiano de Almeida",
+    "slug": "severianodealmeida",
+    "site_base": "https://www.severianodealmeida.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320651,
+    "nome": "Silveira Martins",
+    "slug": "silveiramartins",
+    "site_base": "https://www.silveiramartins.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320677,
+    "nome": "Sinimbu",
+    "slug": "sinimbu",
+    "site_base": "https://www.sinimbu.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320701,
+    "nome": "Sobradinho",
+    "slug": "sobradinho",
+    "site_base": "https://www.sobradinho.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320800,
+    "nome": "Soledade",
+    "slug": "soledade",
+    "site_base": "https://www.soledade.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318002,
+    "nome": "São Borja",
+    "slug": "saoborja",
+    "site_base": "https://www.saoborja.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318051,
+    "nome": "São Domingos do Sul",
+    "slug": "saodomingosdosul",
+    "site_base": "https://www.saodomingosdosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318101,
+    "nome": "São Francisco de Assis",
+    "slug": "saofranciscodeassis",
+    "site_base": "https://www.saofranciscodeassis.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318200,
+    "nome": "São Francisco de Paula",
+    "slug": "saofranciscodepaula",
+    "site_base": "https://www.saofranciscodepaula.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318309,
+    "nome": "São Gabriel",
+    "slug": "saogabriel",
+    "site_base": "https://www.saogabriel.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318408,
+    "nome": "São Jerônimo",
+    "slug": "saojeronimo",
+    "site_base": "https://www.saojeronimo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318440,
+    "nome": "São Jorge",
+    "slug": "saojorge",
+    "site_base": "https://www.saojorge.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318457,
+    "nome": "São José das Missões",
+    "slug": "saojosedasmissoes",
+    "site_base": "https://www.saojosedasmissoes.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318465,
+    "nome": "São José do Herval",
+    "slug": "saojosedoherval",
+    "site_base": "https://www.saojosedoherval.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318481,
+    "nome": "São José do Hortêncio",
+    "slug": "saojosedohortencio",
+    "site_base": "https://www.saojosedohortencio.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318499,
+    "nome": "São José do Inhacorá",
+    "slug": "saojosedoinhacora",
+    "site_base": "https://www.saojosedoinhacora.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318507,
+    "nome": "São José do Norte",
+    "slug": "saojosedonorte",
+    "site_base": "https://www.saojosedonorte.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318606,
+    "nome": "São José do Ouro",
+    "slug": "saojosedoouro",
+    "site_base": "https://www.saojosedoouro.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318614,
+    "nome": "São José do Sul",
+    "slug": "saojosedosul",
+    "site_base": "https://www.saojosedosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318622,
+    "nome": "São José dos Ausentes",
+    "slug": "saojosedosausentes",
+    "site_base": "https://www.saojosedosausentes.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318424,
+    "nome": "São João da Urtiga",
+    "slug": "saojoaodaurtiga",
+    "site_base": "https://www.saojoaodaurtiga.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318432,
+    "nome": "São João do Polêsine",
+    "slug": "saojoaodopolesine",
+    "site_base": "https://www.saojoaodopolesine.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318705,
+    "nome": "São Leopoldo",
+    "slug": "saoleopoldo",
+    "site_base": "https://www.saoleopoldo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318804,
+    "nome": "São Lourenço do Sul",
+    "slug": "saolourencodosul",
+    "site_base": "https://www.saolourencodosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4318903,
+    "nome": "São Luiz Gonzaga",
+    "slug": "saoluizgonzaga",
+    "site_base": "https://www.saoluizgonzaga.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319000,
+    "nome": "São Marcos",
+    "slug": "saomarcos",
+    "site_base": "https://www.saomarcos.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319109,
+    "nome": "São Martinho",
+    "slug": "saomartinho",
+    "site_base": "https://www.saomartinho.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319125,
+    "nome": "São Martinho da Serra",
+    "slug": "saomartinhodaserra",
+    "site_base": "https://www.saomartinhodaserra.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319158,
+    "nome": "São Miguel das Missões",
+    "slug": "saomigueldasmissoes",
+    "site_base": "https://www.saomigueldasmissoes.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319208,
+    "nome": "São Nicolau",
+    "slug": "saonicolau",
+    "site_base": "https://www.saonicolau.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319307,
+    "nome": "São Paulo das Missões",
+    "slug": "saopaulodasmissoes",
+    "site_base": "https://www.saopaulodasmissoes.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319356,
+    "nome": "São Pedro da Serra",
+    "slug": "saopedrodaserra",
+    "site_base": "https://www.saopedrodaserra.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319364,
+    "nome": "São Pedro das Missões",
+    "slug": "saopedrodasmissoes",
+    "site_base": "https://www.saopedrodasmissoes.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319372,
+    "nome": "São Pedro do Butiá",
+    "slug": "saopedrodobutia",
+    "site_base": "https://www.saopedrodobutia.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319406,
+    "nome": "São Pedro do Sul",
+    "slug": "saopedrodosul",
+    "site_base": "https://www.saopedrodosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319505,
+    "nome": "São Sebastião do Caí",
+    "slug": "saosebastiaodocai",
+    "site_base": "https://www.saosebastiaodocai.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319604,
+    "nome": "São Sepé",
+    "slug": "saosepe",
+    "site_base": "https://www.saosepe.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319703,
+    "nome": "São Valentim",
+    "slug": "saovalentim",
+    "site_base": "https://www.saovalentim.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319711,
+    "nome": "São Valentim do Sul",
+    "slug": "saovalentimdosul",
+    "site_base": "https://www.saovalentimdosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319737,
+    "nome": "São Valério do Sul",
+    "slug": "saovaleriodosul",
+    "site_base": "https://www.saovaleriodosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319752,
+    "nome": "São Vendelino",
+    "slug": "saovendelino",
+    "site_base": "https://www.saovendelino.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4319802,
+    "nome": "São Vicente do Sul",
+    "slug": "saovicentedosul",
+    "site_base": "https://www.saovicentedosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320453,
+    "nome": "Sério",
+    "slug": "serio",
+    "site_base": "https://www.serio.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320859,
+    "nome": "Tabaí",
+    "slug": "tabai",
+    "site_base": "https://www.tabai.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4320909,
+    "nome": "Tapejara",
+    "slug": "tapejara",
+    "site_base": "https://www.tapejara.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321006,
+    "nome": "Tapera",
+    "slug": "tapera",
+    "site_base": "https://www.tapera.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321105,
+    "nome": "Tapes",
+    "slug": "tapes",
+    "site_base": "https://www.tapes.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321204,
+    "nome": "Taquara",
+    "slug": "taquara",
+    "site_base": "https://www.taquara.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321303,
+    "nome": "Taquari",
+    "slug": "taquari",
+    "site_base": "https://www.taquari.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321329,
+    "nome": "Taquaruçu do Sul",
+    "slug": "taquarucudosul",
+    "site_base": "https://www.taquarucudosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321352,
+    "nome": "Tavares",
+    "slug": "tavares",
+    "site_base": "https://www.tavares.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321402,
+    "nome": "Tenente Portela",
+    "slug": "tenenteportela",
+    "site_base": "https://www.tenenteportela.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321436,
+    "nome": "Terra de Areia",
+    "slug": "terradeareia",
+    "site_base": "https://www.terradeareia.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321451,
+    "nome": "Teutônia",
+    "slug": "teutonia",
+    "site_base": "https://www.teutonia.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321469,
+    "nome": "Tio Hugo",
+    "slug": "tiohugo",
+    "site_base": "https://www.tiohugo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321477,
+    "nome": "Tiradentes do Sul",
+    "slug": "tiradentesdosul",
+    "site_base": "https://www.tiradentesdosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321493,
+    "nome": "Toropi",
+    "slug": "toropi",
+    "site_base": "https://www.toropi.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321501,
+    "nome": "Torres",
+    "slug": "torres",
+    "site_base": "https://www.torres.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321600,
+    "nome": "Tramandaí",
+    "slug": "tramandai",
+    "site_base": "https://www.tramandai.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321626,
+    "nome": "Travesseiro",
+    "slug": "travesseiro",
+    "site_base": "https://www.travesseiro.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321956,
+    "nome": "Trindade do Sul",
+    "slug": "trindadedosul",
+    "site_base": "https://www.trindadedosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322004,
+    "nome": "Triunfo",
+    "slug": "triunfo",
+    "site_base": "https://www.triunfo.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321634,
+    "nome": "Três Arroios",
+    "slug": "tresarroios",
+    "site_base": "https://www.tresarroios.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321667,
+    "nome": "Três Cachoeiras",
+    "slug": "trescachoeiras",
+    "site_base": "https://www.trescachoeiras.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321709,
+    "nome": "Três Coroas",
+    "slug": "trescoroas",
+    "site_base": "https://www.trescoroas.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321832,
+    "nome": "Três Forquilhas",
+    "slug": "tresforquilhas",
+    "site_base": "https://www.tresforquilhas.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321857,
+    "nome": "Três Palmeiras",
+    "slug": "trespalmeiras",
+    "site_base": "https://www.trespalmeiras.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321907,
+    "nome": "Três Passos",
+    "slug": "trespassos",
+    "site_base": "https://www.trespassos.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4321808,
+    "nome": "Três de Maio",
+    "slug": "tresdemaio",
+    "site_base": "https://www.tresdemaio.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322103,
+    "nome": "Tucunduva",
+    "slug": "tucunduva",
+    "site_base": "https://www.tucunduva.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322152,
+    "nome": "Tunas",
+    "slug": "tunas",
+    "site_base": "https://www.tunas.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322186,
+    "nome": "Tupanci do Sul",
+    "slug": "tupancidosul",
+    "site_base": "https://www.tupancidosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322202,
+    "nome": "Tupanciretã",
+    "slug": "tupancireta",
+    "site_base": "https://www.tupancireta.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322251,
+    "nome": "Tupandi",
+    "slug": "tupandi",
+    "site_base": "https://www.tupandi.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322301,
+    "nome": "Tuparendi",
+    "slug": "tuparendi",
+    "site_base": "https://www.tuparendi.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322327,
+    "nome": "Turuçu",
+    "slug": "turucu",
+    "site_base": "https://www.turucu.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322343,
+    "nome": "Ubiretama",
+    "slug": "ubiretama",
+    "site_base": "https://www.ubiretama.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322376,
+    "nome": "Unistalda",
+    "slug": "unistalda",
+    "site_base": "https://www.unistalda.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322350,
+    "nome": "União da Serra",
+    "slug": "uniaodaserra",
+    "site_base": "https://www.uniaodaserra.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322400,
+    "nome": "Uruguaiana",
+    "slug": "uruguaiana",
+    "site_base": "https://www.uruguaiana.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322509,
+    "nome": "Vacaria",
+    "slug": "vacaria",
+    "site_base": "https://www.vacaria.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322541,
+    "nome": "Vale Real",
+    "slug": "valereal",
+    "site_base": "https://www.valereal.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322525,
+    "nome": "Vale Verde",
+    "slug": "valeverde",
+    "site_base": "https://www.valeverde.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322533,
+    "nome": "Vale do Sol",
+    "slug": "valedosol",
+    "site_base": "https://www.valedosol.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322558,
+    "nome": "Vanini",
+    "slug": "vanini",
+    "site_base": "https://www.vanini.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322608,
+    "nome": "Venâncio Aires",
+    "slug": "venancioaires",
+    "site_base": "https://www.venancioaires.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322707,
+    "nome": "Vera Cruz",
+    "slug": "veracruz",
+    "site_base": "https://www.veracruz.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322806,
+    "nome": "Veranópolis",
+    "slug": "veranopolis",
+    "site_base": "https://www.veranopolis.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322855,
+    "nome": "Vespasiano Corrêa",
+    "slug": "vespasianocorrea",
+    "site_base": "https://www.vespasianocorrea.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4322905,
+    "nome": "Viadutos",
+    "slug": "viadutos",
+    "site_base": "https://www.viadutos.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4323002,
+    "nome": "Viamão",
+    "slug": "viamao",
+    "site_base": "https://www.viamao.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4323101,
+    "nome": "Vicente Dutra",
+    "slug": "vicentedutra",
+    "site_base": "https://www.vicentedutra.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4323200,
+    "nome": "Victor Graeff",
+    "slug": "victorgraeff",
+    "site_base": "https://www.victorgraeff.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4323309,
+    "nome": "Vila Flores",
+    "slug": "vilaflores",
+    "site_base": "https://www.vilaflores.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4323358,
+    "nome": "Vila Lângaro",
+    "slug": "vilalangaro",
+    "site_base": "https://www.vilalangaro.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4323408,
+    "nome": "Vila Maria",
+    "slug": "vilamaria",
+    "site_base": "https://www.vilamaria.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4323457,
+    "nome": "Vila Nova do Sul",
+    "slug": "vilanovadosul",
+    "site_base": "https://www.vilanovadosul.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4323507,
+    "nome": "Vista Alegre",
+    "slug": "vistaalegre",
+    "site_base": "https://www.vistaalegre.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4323606,
+    "nome": "Vista Alegre do Prata",
+    "slug": "vistaalegredoprata",
+    "site_base": "https://www.vistaalegredoprata.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4323705,
+    "nome": "Vista Gaúcha",
+    "slug": "vistagaucha",
+    "site_base": "https://www.vistagaucha.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4323754,
+    "nome": "Vitória das Missões",
+    "slug": "vitoriadasmissoes",
+    "site_base": "https://www.vitoriadasmissoes.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4323770,
+    "nome": "Westfália",
+    "slug": "westfalia",
+    "site_base": "https://www.westfalia.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4323804,
+    "nome": "Xangri-lá",
+    "slug": "xangrila",
+    "site_base": "https://www.xangrila.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4300059,
+    "nome": "Água Santa",
+    "slug": "aguasanta",
+    "site_base": "https://www.aguasanta.rs.gov.br"
+  },
+  {
+    "codigo_ibge": 4301552,
+    "nome": "Áurea",
+    "slug": "aurea",
+    "site_base": "https://www.aurea.rs.gov.br"
+  }
+]

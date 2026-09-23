@@ -49,5 +49,4 @@ npm run consolidar           # agrega em backend/indicadores/_consolidado/*.csv
 ```
 
 `backend/indicadores/` é a saída desse pipeline (dados versionados no repo,
-não confundir com a pasta `/indicadores` na raiz do repositório, que é uma
-página do site).
+não confundir com `site/indicadores/`, que é uma página do site).

@@ -16,6 +16,7 @@ import cors from 'cors';
 import { promises as fsp } from 'fs';
 import * as path from 'path';
 import { detectMunicipios, buildFilterAddOn, MUNICIPIOS } from './municipios';
+import { SEARCH_BASE, SEARCH_KB, SEARCH_KS, SEARCH_KEY, SEARCH_INDEX, INDEX_API_VERSION, RETRIEVE_ENDPOINT } from './config';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -34,24 +35,8 @@ Responda de forma sucinta, em português do Brasil, usando exclusivamente os doc
 Se a busca trouxer mais de um município, separe os dados de cada um em listas distintas e nunca misture dados entre municípios.
 `;
 
-// --- Configuração da Azure AI Search (Server-Side, via variáveis de ambiente) ---
-// NÃO coloque a chave no código. Defina AZURE_SEARCH_KEY como secret no Container App.
-const SEARCH_BASE = process.env.AZURE_SEARCH_BASE || "https://observatorio-rag.search.windows.net";
-const SEARCH_KB = process.env.AZURE_SEARCH_KB || "kb-plancon-filtered";
-const SEARCH_KS = process.env.AZURE_SEARCH_KS || "plancon-si-ks";
-const SEARCH_API_VERSION = process.env.AZURE_SEARCH_API_VERSION || "2026-05-01-preview";
-const SEARCH_KEY = process.env.AZURE_SEARCH_KEY || "";
-
-// Índice de busca subjacente ao knowledge source — usado para resolver o blob_url de
-// cada referência (o retrieve não devolve o blob_url; ver enriquecerReferencias).
-const SEARCH_INDEX = process.env.AZURE_SEARCH_INDEX || "knowledgesource-1783085585361-index";
-const INDEX_API_VERSION = process.env.AZURE_SEARCH_INDEX_API_VERSION || "2024-07-01";
-
-const RETRIEVE_ENDPOINT = `${SEARCH_BASE}/knowledgebases/${SEARCH_KB}/retrieve?api-version=${SEARCH_API_VERSION}`;
-
-if (!SEARCH_KEY) {
-    console.warn("[Proxy] ATENÇÃO: AZURE_SEARCH_KEY não definido. As chamadas de busca vão falhar até configurar o secret.");
-}
+// Configuração da Azure AI Search: ver ./config.ts (compartilhada com o pipeline
+// de indicadores em indicadores/retrieve.ts).
 
 // Rota de saúde para verificar se o servidor está online
 app.get('/health', (req, res) => {

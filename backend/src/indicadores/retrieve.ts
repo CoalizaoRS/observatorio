@@ -4,22 +4,10 @@
  * aos documentos do município via `filterAddOn` (city-based retrieval), o que mantém
  * o contexto pequeno e reduz o consumo de tokens do modelo de síntese (gpt-5-mini).
  *
- * Configuração por variáveis de ambiente (com defaults do serviço do Observatório):
- *   AZURE_SEARCH_BASE, AZURE_SEARCH_KB, AZURE_SEARCH_KS, AZURE_SEARCH_API_VERSION,
- *   AZURE_SEARCH_KEY  (obrigatória — sem default; defina no ambiente/secret)
+ * Configuração (endpoint, índice, chave) compartilhada com o proxy via ../config.
  */
 
-const SEARCH_BASE = process.env.AZURE_SEARCH_BASE || 'https://observatorio-rag.search.windows.net';
-const SEARCH_KB = process.env.AZURE_SEARCH_KB || 'kb-plancon-filtered';
-const SEARCH_KS = process.env.AZURE_SEARCH_KS || 'plancon-si-ks';
-const SEARCH_API_VERSION = process.env.AZURE_SEARCH_API_VERSION || '2026-05-01-preview';
-const SEARCH_KEY = process.env.AZURE_SEARCH_KEY || '';
-
-if (!SEARCH_KEY) {
-  console.warn('[extrair/consolidar] ATENÇÃO: AZURE_SEARCH_KEY não definido. As chamadas de retrieve vão falhar até configurar a variável de ambiente.');
-}
-
-const RETRIEVE_ENDPOINT = `${SEARCH_BASE}/knowledgebases/${SEARCH_KB}/retrieve?api-version=${SEARCH_API_VERSION}`;
+import { SEARCH_KS, SEARCH_KEY, RETRIEVE_ENDPOINT } from '../config';
 
 export interface RetrieveResult {
   /** Texto sintetizado pelo modelo (esperado: um objeto JSON). */
@@ -90,5 +78,3 @@ export async function retrieve(
 
   throw new Error(`Retrieve esgotou tentativas para "${municipio}": ${ultimoErro}`);
 }
-
-export const CONFIG = { SEARCH_BASE, SEARCH_KB, SEARCH_KS, SEARCH_API_VERSION, RETRIEVE_ENDPOINT };

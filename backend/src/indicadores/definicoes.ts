@@ -277,7 +277,7 @@ export const INDICADORES: IndicadorDef[] = [
     // Guard: verde só com NUPDEC existente (n>=1) e não-futuro. Futuro/planejado nunca é verde.
     // ATENÇÃO (auditoria de 10/08/2026): este guard confia em n_nupdecs sem exigir âncora textual,
     // e 16 dos 29 "verdes" publicados não têm a palavra NUPDEC/núcleo no PLANCON — o modelo conta a
-    // COMDEC/Coordenadoria como núcleo. Correção pendente de decisão; ver ANALISE-P7-NUPDEC.md.
+    // COMDEC/Coordenadoria como núcleo. Correção pendente de decisão; ver ./ANALISE-P7-NUPDEC.md.
     calcular: (c) => {
       const n = paraNumero(c.n_nupdecs);
       const futuro = String(c.nupdec_futuro).toLowerCase() === 'sim';

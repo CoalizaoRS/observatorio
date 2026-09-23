@@ -40,7 +40,7 @@ python3 - "$CSV_LOCAL" "$BASE" > "$CSV_LOCAL/../manifest.json" <<'PY'
 import json, os, sys, glob
 csv_dir, base = sys.argv[1], sys.argv[2]
 desc = {
- '_resumo.csv':'Matriz município × valor de cada indicador (P1..P8)',
+ '_resumo.csv':'Matriz município × valor de cada indicador (P1..P7)',
  'P1.csv':'P1 — % população em área de risco (semáforo verde/vermelho)',
  'P2.csv':'P2 — Capacidade de abrigamento (semáforo)',
  'P3.csv':'P3 — Simulados de evacuação (semáforo)',

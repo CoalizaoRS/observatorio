@@ -41,7 +41,7 @@
     },
     {
       "nome": "_resumo.csv",
-      "descricao": "Matriz município × valor de cada indicador (P1..P8)",
+      "descricao": "Matriz município × valor de cada indicador (P1..P7)",
       "url": "https://plancon.blob.core.windows.net/indicadores/_resumo.csv"
     },
     {

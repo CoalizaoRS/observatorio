@@ -51,13 +51,24 @@ npm run consolidar           # agrega em backend/indicadores/_consolidado/*.csv
 `backend/indicadores/` é a saída desse pipeline (não confundir com
 `site/indicadores/`, que é uma página do site).
 
-**Os CSVs (`backend/dados/csv/*.csv`, `backend/indicadores/_consolidado/*.csv`,
-`backend/indicadores/familias.csv`, `backend/vagas_abrigos.csv`) não são
-versionados neste repositório** — são dado gerado, não código, e mudam a cada
-rodada do pipeline. Estão no `.gitignore`; a cópia de referência atual fica em
-`marfim.lad.pucrs.br:~/observatorio/data/` (mesma estrutura de pastas deste
-repo). Planejado migrar para MinIO self-hosted na PUC (com histórico via DVC
-ou LakeFS) — até lá, essa cópia no servidor é a fonte de verdade fora do git.
+**Os dados gerados pelo pipeline não são versionados neste repositório** — os
+CSVs (`backend/dados/csv/*.csv`, `backend/indicadores/_consolidado/*.csv`,
+`backend/indicadores/familias.csv`, `backend/vagas_abrigos.csv`) e também os
+JSONs por município (`backend/indicadores/<Município>.json`). São dado
+gerado, não código, e mudam a cada rodada do pipeline. Estão no `.gitignore`;
+a cópia de referência atual fica em `marfim.lad.pucrs.br:~/observatorio/data/`
+(mesma estrutura de pastas deste repo). Planejado migrar para MinIO
+self-hosted na PUC (com histórico via DVC ou LakeFS) — até lá, essa cópia no
+servidor é a fonte de verdade fora do git.
+
+**Atenção ao rodar `npm run extrair` sem os JSONs locais**: sem `--force`, o
+extrator pula todo município que já tem `backend/indicadores/<Município>.json`
+(processamento incremental). Num checkout limpo esses arquivos não existem —
+rodar `npm run extrair` nesse estado reprocessa **todos** os municípios do
+zero (uma chamada ao RAG por indicador por cidade, custa caro em tokens),
+mesmo sem passar `--force`. Copie os JSONs da cópia acima para
+`backend/indicadores/` **antes** de rodar `npm run extrair`, a não ser que a
+intenção seja mesmo reprocessar tudo.
 
 Isso também significa que `docker build` a partir de um checkout limpo produz
 uma imagem **sem** `dados/csv/` (o `Dockerfile` copia o que existir em

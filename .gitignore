@@ -19,6 +19,7 @@ monitor/changed_pdfs/
 backend/dados/csv/*.csv
 backend/indicadores/_consolidado/*.csv
 backend/indicadores/familias.csv
+backend/indicadores/*.json
 backend/vagas_abrigos.csv
 
 .DS_Store

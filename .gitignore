@@ -12,6 +12,15 @@ venv/
 # e como artefato do workflow do GitHub Actions.
 monitor/changed_pdfs/
 
+# Indicadores: CSVs gerados pelo pipeline (backend/src/indicadores/) — dado, não
+# código. Ficam fora do git para não inchar o repo a cada rodada; versionados à
+# parte (hoje: cópia em marfim.lad.pucrs.br:~/observatorio/data/, futuramente
+# MinIO/DVC). Ver backend/README.md.
+backend/dados/csv/*.csv
+backend/indicadores/_consolidado/*.csv
+backend/indicadores/familias.csv
+backend/vagas_abrigos.csv
+
 .DS_Store
 
 # Config local de ferramentas de IA (não deve ser versionada)

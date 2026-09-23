@@ -300,6 +300,28 @@
                     </div>
                 </div>
 
+                <!-- Agrupamento Regional: CREPDEC / Bacia Hidrográfica / Associação de Municípios -->
+                <div class="flex items-center gap-2">
+                    <div class="relative flex-1">
+                        <select id="region-type-select" onchange="switchRegionType(this.value)" disabled
+                                class="w-full bg-gray-950 border border-gray-800 rounded-lg pl-2.5 pr-6 py-1.5 text-[11px] text-gray-100 font-medium focus:outline-none focus:border-[#a5597c] transition-colors appearance-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
+                            <option value="">Carregando regiões...</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
+                            <i class="fa-solid fa-layer-group text-[9px]"></i>
+                        </div>
+                    </div>
+                    <div class="relative flex-1" id="region-group-wrapper" style="display:none;">
+                        <select id="region-group-select" onchange="switchRegionGroup(this.value)"
+                                class="w-full bg-gray-950 border border-gray-800 rounded-lg pl-2.5 pr-6 py-1.5 text-[11px] text-gray-100 font-medium focus:outline-none focus:border-[#a5597c] transition-colors appearance-none cursor-pointer">
+                            <option value="">Todos os grupos</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
+                            <i class="fa-solid fa-chevron-down text-[9px]"></i>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Seletor de visualização ativa / Rótulo do Filtro -->
@@ -530,6 +552,13 @@
         let searchTerm = '';
         let selectedMunicipality = null;
         let conversationHistory = [];
+
+        // Agrupamento regional (CREPDEC / Bacia Hidrográfica / Associação de Municípios)
+        const REGIOES_URL = 'regioes.json';
+        let regioesData = null;
+        let regionLookup = {}; // { tipo: { municipioNormalizado: 'grupo' | ['grupo1','grupo2'] } }
+        let activeRegionType = null;
+        let activeRegionGroup = null;
 
         // Alternador de Visão no Celular
         function switchMobileView(view) {
@@ -818,11 +847,13 @@
                 onEachFeature: onEachFeature,
                 filter: (feature) => {
                     const indicator = feature.properties.indicator;
-                    
+
                     if (searchTerm) {
                         const nameMatches = normalizeString(indicator.municipio).includes(normalizeString(searchTerm));
                         if (!nameMatches) return false;
                     }
+
+                    if (!municipioMatchesRegion(normalizeString(indicator.municipio))) return false;
 
                     if (activeFilter) {
                         return indicator.valor === activeFilter;
@@ -841,6 +872,7 @@
                 .filter(item => {
                     if (activeFilter && item.valor !== activeFilter) return false;
                     if (searchTerm && !normalizeString(item.municipio).includes(normalizeString(searchTerm))) return false;
+                    if (!municipioMatchesRegion(normalizeString(item.municipio))) return false;
                     return true;
                 });
 
@@ -1023,22 +1055,128 @@
             }
         }
 
-        function setRiskFilter(color) {
-            if (activeFilter === color) {
-                clearFilter();
-                return;
+        // Monta o rótulo do filtro combinando classificação semafórica + agrupamento
+        // regional (os dois podem estar ativos ao mesmo tempo, com semântica E).
+        function updateFilterLabel() {
+            const parts = [];
+            if (activeRegionType && activeRegionGroup) {
+                parts.push(activeRegionGroup);
+            } else if (activeRegionType) {
+                parts.push(`Todos (${regioesData[activeRegionType].titulo})`);
             }
-            activeFilter = color;
-            document.getElementById('filter-label').textContent = `Filtro: Classificação ${color.toUpperCase()}`;
-            document.getElementById('clear-filter-btn').classList.remove('hidden');
+            if (activeFilter) {
+                parts.push(`Classificação ${activeFilter.toUpperCase()}`);
+            }
+
+            const label = document.getElementById('filter-label');
+            const clearBtn = document.getElementById('clear-filter-btn');
+            if (parts.length === 0) {
+                label.textContent = 'Filtro: Todos os Municípios';
+                clearBtn.classList.add('hidden');
+            } else {
+                label.textContent = `Filtro: ${parts.join(' · ')}`;
+                clearBtn.classList.remove('hidden');
+            }
+        }
+
+        function setRiskFilter(color) {
+            activeFilter = (activeFilter === color) ? null : color;
+            updateFilterLabel();
             renderGeoJsonLayer();
             renderMunicipalityList();
         }
 
         function clearFilter() {
             activeFilter = null;
-            document.getElementById('filter-label').textContent = 'Filtro: Todos os Municípios';
-            document.getElementById('clear-filter-btn').classList.add('hidden');
+            activeRegionType = null;
+            activeRegionGroup = null;
+            const typeSelect = document.getElementById('region-type-select');
+            if (typeSelect && !typeSelect.disabled) typeSelect.value = '';
+            document.getElementById('region-group-wrapper').style.display = 'none';
+            updateFilterLabel();
+            renderGeoJsonLayer();
+            renderMunicipalityList();
+        }
+
+        // --- Agrupamento regional (CREPDEC / Bacia Hidrográfica / Associação de Municípios) ---
+
+        async function loadRegioes() {
+            const typeSelect = document.getElementById('region-type-select');
+            try {
+                const res = await fetch(REGIOES_URL, { cache: 'no-cache' });
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                regioesData = await res.json();
+                buildRegionLookup();
+
+                typeSelect.innerHTML = '<option value="">Agrupar por região...</option>';
+                Object.entries(regioesData).forEach(([tipo, info]) => {
+                    const opt = document.createElement('option');
+                    opt.value = tipo;
+                    opt.textContent = info.titulo;
+                    typeSelect.appendChild(opt);
+                });
+                typeSelect.disabled = false;
+            } catch (err) {
+                console.error('[Observatório] Falha ao carregar regioes.json — filtro regional desabilitado.', err);
+                typeSelect.innerHTML = '<option value="">Regiões indisponíveis</option>';
+            }
+        }
+
+        function buildRegionLookup() {
+            regionLookup = {};
+            Object.entries(regioesData).forEach(([tipo, info]) => {
+                const lookup = {};
+                Object.entries(info.grupos).forEach(([grupo, municipios]) => {
+                    municipios.forEach(m => {
+                        const key = normalizeString(m);
+                        if (info.multiplo) {
+                            (lookup[key] || (lookup[key] = [])).push(grupo);
+                        } else {
+                            lookup[key] = grupo;
+                        }
+                    });
+                });
+                regionLookup[tipo] = lookup;
+            });
+        }
+
+        // true se o município (chave normalizada) pertence ao grupo regional ativo,
+        // ou se não há filtro regional ativo.
+        function municipioMatchesRegion(municipalityKey) {
+            if (!activeRegionType || !activeRegionGroup) return true;
+            const val = regionLookup[activeRegionType] ? regionLookup[activeRegionType][municipalityKey] : undefined;
+            if (val === undefined) return false;
+            return Array.isArray(val) ? val.includes(activeRegionGroup) : val === activeRegionGroup;
+        }
+
+        function switchRegionType(tipo) {
+            activeRegionType = tipo || null;
+            activeRegionGroup = null;
+
+            const groupWrapper = document.getElementById('region-group-wrapper');
+            const groupSelect = document.getElementById('region-group-select');
+            groupSelect.innerHTML = '<option value="">Todos os grupos</option>';
+
+            if (tipo && regioesData && regioesData[tipo]) {
+                Object.keys(regioesData[tipo].grupos).forEach(grupo => {
+                    const opt = document.createElement('option');
+                    opt.value = grupo;
+                    opt.textContent = grupo;
+                    groupSelect.appendChild(opt);
+                });
+                groupWrapper.style.display = '';
+            } else {
+                groupWrapper.style.display = 'none';
+            }
+
+            updateFilterLabel();
+            renderGeoJsonLayer();
+            renderMunicipalityList();
+        }
+
+        function switchRegionGroup(grupo) {
+            activeRegionGroup = grupo || null;
+            updateFilterLabel();
             renderGeoJsonLayer();
             renderMunicipalityList();
         }
@@ -1053,7 +1191,11 @@
             try {
                 updateLoader(10, "Inicializando motor de renderização cartográfica...");
                 initMap();
-                
+
+                // Não bloqueia o loader principal — o filtro regional é um extra opcional,
+                // então falha isolada aqui não deve impedir o carregamento do painel.
+                loadRegioes();
+
                 updateLoader(25, "Buscando limites geográficos do RS (GeoJSON)...");
                 const geojsonResponse = await fetch(RS_GEOJSON_URL);
                 if (!geojsonResponse.ok) throw new Error("Erro de conexão com o banco geográfico.");

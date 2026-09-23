@@ -1,0 +1,62 @@
+name: Monitor Planos de Contingência RS
+
+on:
+  schedule:
+    # 08:00 no horário de Brasília (UTC-3) = 11:00 UTC
+    - cron: "0 11 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: monitor-planos
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar tesseract (OCR de PDFs digitalizados)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-por
+
+      - name: Instalar dependências
+        run: pip install -r monitor/requirements.txt
+
+      - name: Rodar monitor
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: python monitor/monitor.py
+
+      - name: Publicar PDFs alterados como artefato
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: planos-alterados-${{ github.run_id }}
+          path: monitor/changed_pdfs/
+          if-no-files-found: ignore
+          retention-days: 90
+
+      - name: Commit do estado atualizado
+        run: |
+          git config user.name "monitor-planos-bot"
+          git config user.email "actions@github.com"
+          git add monitor/state.json
+          if git diff --cached --quiet; then
+            echo "Nenhuma mudança em state.json"
+          else
+            git commit -m "chore: atualiza state.json ($(date -u +%Y-%m-%dT%H:%M:%SZ))"
+            git push
+          fi

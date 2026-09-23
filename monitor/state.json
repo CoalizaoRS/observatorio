@@ -1,0 +1,3863 @@
+{
+  "Aceguá": {
+    "codigo_ibge": 4300034,
+    "last_checked": "2026-09-21T12:27:04Z",
+    "plano": null,
+    "site_base": "https://acegua.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Agudo": {
+    "codigo_ibge": 4300109,
+    "last_checked": "2026-09-21T12:27:08Z",
+    "plano": {
+      "content_length": 1253917,
+      "etag": "\"87e77a9c3c6e9246e9337c8197b24050\"",
+      "first_seen": "2026-09-21T12:27:08Z",
+      "last_changed": "2026-09-21T12:27:08Z",
+      "last_modified_header": "Tue, 28 Jul 2026 11:48:42 GMT",
+      "sha256": "707e34781dac255f7d4adb340ea5b46d50b89f470fa3a58085f4261e156feb4d",
+      "termo_confirmado": true,
+      "url": "https://cdn-gw.webdehost.com.br/264/DocumentAssets/818967/images/original/Plano_Municipal_de_Contigencia 27-07-2026 (1).pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.agudo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Ajuricaba": {
+    "codigo_ibge": 4300208,
+    "last_checked": "2026-09-21T12:27:05Z",
+    "plano": null,
+    "site_base": "https://www.ajuricaba.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Alecrim": {
+    "codigo_ibge": 4300307,
+    "last_checked": "2026-09-21T12:27:04Z",
+    "plano": null,
+    "site_base": "https://www.alecrim.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Alegrete": {
+    "codigo_ibge": 4300406,
+    "last_checked": "2026-09-21T12:27:04Z",
+    "plano": null,
+    "site_base": "https://www.alegrete.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Alegria": {
+    "codigo_ibge": 4300455,
+    "last_checked": "2026-09-21T12:27:04Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Almirante Tamandaré do Sul": {
+    "codigo_ibge": 4300471,
+    "last_checked": "2026-09-21T12:27:05Z",
+    "plano": {
+      "content_length": 462302,
+      "etag": "\"41185944f09f18d637d79c598ba3da02\"",
+      "first_seen": "2026-09-21T12:27:05Z",
+      "last_changed": "2026-09-21T12:27:05Z",
+      "last_modified_header": "Tue, 30 Sep 2025 18:20:01 GMT",
+      "sha256": "14608ff5424d168bd5de42ccfa6c531aec69d135bc2f6029493aa6ee53728649",
+      "termo_confirmado": true,
+      "url": "https://br-gru-1.linodeobjects.com/prefeitura-almirante-tamandare-do-sul/1_Plano_ALMIRANTE_CORONA_2020_05983bd25a.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://almirantetamandaredosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Alpestre": {
+    "codigo_ibge": 4300505,
+    "last_checked": "2026-09-21T12:27:04Z",
+    "plano": null,
+    "site_base": "https://www.alpestre.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Alto Alegre": {
+    "codigo_ibge": 4300554,
+    "last_checked": "2026-09-21T12:27:04Z",
+    "plano": null,
+    "site_base": "https://www.altoalegre.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Alto Feliz": {
+    "codigo_ibge": 4300570,
+    "last_checked": "2026-09-21T12:27:04Z",
+    "plano": null,
+    "site_base": "https://www.altofeliz.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Alvorada": {
+    "codigo_ibge": 4300604,
+    "last_checked": "2026-09-21T12:27:05Z",
+    "plano": {
+      "content_length": 1242324,
+      "etag": null,
+      "first_seen": "2026-09-21T13:00:16Z",
+      "last_changed": "2026-09-21T13:00:16Z",
+      "last_modified_header": null,
+      "sha256": "2169edf1b97546253ca892682939456c638e9c0732020f59b100ef8920253c97",
+      "termo_confirmado": true,
+      "url": "https://www.alvorada.rs.gov.br/wordpress/wp-content/uploads/2026/08/PLANO-DE-CONTINGENCIA-PARA-INUNDACOES.pdf?x94002",
+      "validado_via_ocr": true
+    },
+    "site_base": "https://www.alvorada.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Amaral Ferrador": {
+    "codigo_ibge": 4300638,
+    "last_checked": "2026-09-21T12:27:04Z",
+    "plano": null,
+    "site_base": "https://www.amaralferrador.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Ametista do Sul": {
+    "codigo_ibge": 4300646,
+    "last_checked": "2026-09-21T12:27:04Z",
+    "plano": null,
+    "site_base": "https://www.ametistadosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "André da Rocha": {
+    "codigo_ibge": 4300661,
+    "last_checked": "2026-09-21T12:27:04Z",
+    "plano": null,
+    "site_base": "https://www.andredarocha.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Anta Gorda": {
+    "codigo_ibge": 4300703,
+    "last_checked": "2026-09-21T12:27:05Z",
+    "plano": null,
+    "site_base": "https://www.antagorda.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Antônio Prado": {
+    "codigo_ibge": 4300802,
+    "last_checked": "2026-09-21T12:27:05Z",
+    "plano": null,
+    "site_base": "https://www.antonioprado.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Arambaré": {
+    "codigo_ibge": 4300851,
+    "last_checked": "2026-09-21T12:27:04Z",
+    "plano": null,
+    "site_base": "https://www.arambare.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Araricá": {
+    "codigo_ibge": 4300877,
+    "falso_positivo": {
+      "chars_extraidos": 1799,
+      "detectado_em": "2026-09-21T12:48:41Z",
+      "motivo": "termo \"Plano de Contingência\" não encontrado no texto do PDF (tentativa via OCR também não encontrou o termo)",
+      "ocr_tentado": true,
+      "url": "https://ararica.rs.gov.br/uploads/legislacao/12596/Bgf0rrx-v-514aoIpBVu1jrXObuUZRwG.pdf"
+    },
+    "last_checked": "2026-09-21T12:27:05Z",
+    "plano": null,
+    "site_base": "https://www.ararica.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Aratiba": {
+    "codigo_ibge": 4300901,
+    "last_checked": "2026-09-21T12:27:04Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Arroio Grande": {
+    "codigo_ibge": 4301305,
+    "last_checked": "2026-09-21T12:27:04Z",
+    "plano": null,
+    "site_base": "https://www.arroiogrande.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Arroio do Meio": {
+    "codigo_ibge": 4301008,
+    "last_checked": "2026-09-21T12:27:11Z",
+    "plano": {
+      "content_length": 12607850,
+      "etag": null,
+      "first_seen": "2026-09-21T12:27:11Z",
+      "last_changed": "2026-09-21T12:27:11Z",
+      "last_modified_header": "Fri, 26 Jun 2026 21:17:13 GMT",
+      "sha256": "5de5a4777c93797b6544d62c7f990500f1b916da3b95acddb759ad4f954dea02",
+      "termo_confirmado": true,
+      "url": "https://arroiodomeio.rs.gov.br/uploads/paginadinamica/21533/Plano_de_Contingncia_Arroio_do_Meio_2026___Google_Docs.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.arroiodomeio.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Arroio do Padre": {
+    "codigo_ibge": 4301073,
+    "last_checked": "2026-09-21T12:27:05Z",
+    "plano": null,
+    "site_base": "https://www.arroiodopadre.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Arroio do Sal": {
+    "codigo_ibge": 4301057,
+    "last_checked": "2026-09-21T12:27:06Z",
+    "plano": null,
+    "site_base": "https://www.arroiodosal.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Arroio do Tigre": {
+    "codigo_ibge": 4301206,
+    "last_checked": "2026-09-21T12:27:04Z",
+    "plano": null,
+    "site_base": "https://www.arroiodotigre.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Arroio dos Ratos": {
+    "codigo_ibge": 4301107,
+    "last_checked": "2026-09-21T12:27:17Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Arvorezinha": {
+    "codigo_ibge": 4301404,
+    "last_checked": "2026-09-21T12:27:05Z",
+    "plano": null,
+    "site_base": "https://www.arvorezinha.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Augusto Pestana": {
+    "codigo_ibge": 4301503,
+    "last_checked": "2026-09-21T12:27:05Z",
+    "plano": null,
+    "site_base": "https://www.augustopestana.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Bagé": {
+    "codigo_ibge": 4301602,
+    "last_checked": "2026-09-21T12:27:05Z",
+    "plano": null,
+    "site_base": "https://www.bage.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Balneário Pinhal": {
+    "codigo_ibge": 4301636,
+    "last_checked": "2026-09-21T12:27:06Z",
+    "plano": null,
+    "site_base": "https://www.balneariopinhal.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Barra Funda": {
+    "codigo_ibge": 4301958,
+    "last_checked": "2026-09-21T12:27:05Z",
+    "plano": null,
+    "site_base": "https://www.barrafunda.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Barra do Guarita": {
+    "codigo_ibge": 4301859,
+    "last_checked": "2026-09-21T12:27:05Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Barra do Quaraí": {
+    "codigo_ibge": 4301875,
+    "last_checked": "2026-09-21T12:27:06Z",
+    "plano": null,
+    "site_base": "https://www.barradoquarai.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Barra do Ribeiro": {
+    "codigo_ibge": 4301909,
+    "last_checked": "2026-09-21T12:27:09Z",
+    "plano": {
+      "content_length": 2140609,
+      "etag": null,
+      "first_seen": "2026-09-21T12:27:09Z",
+      "last_changed": "2026-09-21T12:27:09Z",
+      "last_modified_header": "Thu, 06 Aug 2026 18:18:10 GMT",
+      "sha256": "3ca0b1c498a13bb38744816c13652dd30165297f9c5dd71359c98695c67fdb3b",
+      "termo_confirmado": true,
+      "url": "https://www.barradoribeiro.rs.gov.br/uploads/pagina/arquivos/Decreto-4158-2026-com-anexos.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.barradoribeiro.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Barra do Rio Azul": {
+    "codigo_ibge": 4301925,
+    "last_checked": "2026-09-21T12:27:06Z",
+    "plano": null,
+    "site_base": "https://www.barradorioazul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Barracão": {
+    "codigo_ibge": 4301800,
+    "last_checked": "2026-09-21T12:27:06Z",
+    "plano": null,
+    "site_base": "https://www.barracao.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Barros Cassal": {
+    "codigo_ibge": 4302006,
+    "last_checked": "2026-09-21T12:27:07Z",
+    "plano": null,
+    "site_base": "https://www.barroscassal.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Barão": {
+    "codigo_ibge": 4301651,
+    "last_checked": "2026-09-21T12:27:06Z",
+    "plano": null,
+    "site_base": "https://www.barao.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Barão de Cotegipe": {
+    "codigo_ibge": 4301701,
+    "last_checked": "2026-09-21T12:27:06Z",
+    "plano": null,
+    "site_base": "https://www.baraodecotegipe.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Barão do Triunfo": {
+    "codigo_ibge": 4301750,
+    "last_checked": "2026-09-21T12:27:12Z",
+    "plano": null,
+    "site_base": "https://www.baraodotriunfo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Benjamin Constant do Sul": {
+    "codigo_ibge": 4302055,
+    "last_checked": "2026-09-21T12:27:06Z",
+    "plano": null,
+    "site_base": "https://www.benjaminconstantdosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Bento Gonçalves": {
+    "codigo_ibge": 4302105,
+    "last_checked": "2026-09-21T12:27:07Z",
+    "plano": null,
+    "site_base": "https://www.bentogoncalves.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Boa Vista das Missões": {
+    "codigo_ibge": 4302154,
+    "last_checked": "2026-09-21T12:27:06Z",
+    "plano": null,
+    "site_base": "https://www.boavistadasmissoes.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Boa Vista do Buricá": {
+    "codigo_ibge": 4302204,
+    "last_checked": "2026-09-21T12:27:07Z",
+    "plano": null,
+    "site_base": "https://www.boavistadoburica.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Boa Vista do Cadeado": {
+    "codigo_ibge": 4302220,
+    "last_checked": "2026-09-21T12:27:06Z",
+    "plano": null,
+    "site_base": "https://www.boavistadocadeado.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Boa Vista do Incra": {
+    "codigo_ibge": 4302238,
+    "last_checked": "2026-09-21T12:27:06Z",
+    "plano": null,
+    "site_base": "https://www.boavistadoincra.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Boa Vista do Sul": {
+    "codigo_ibge": 4302253,
+    "last_checked": "2026-09-21T12:27:07Z",
+    "plano": null,
+    "site_base": "https://www.boavistadosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Bom Jesus": {
+    "codigo_ibge": 4302303,
+    "last_checked": "2026-09-21T12:27:08Z",
+    "plano": null,
+    "site_base": "https://www.bomjesus.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Bom Princípio": {
+    "codigo_ibge": 4302352,
+    "last_checked": "2026-09-21T12:27:08Z",
+    "plano": null,
+    "site_base": "https://www.bomprincipio.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Bom Progresso": {
+    "codigo_ibge": 4302378,
+    "last_checked": "2026-09-21T12:27:07Z",
+    "plano": null,
+    "site_base": "https://www.bomprogresso.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Bom Retiro do Sul": {
+    "codigo_ibge": 4302402,
+    "last_checked": "2026-09-21T12:27:07Z",
+    "plano": null,
+    "site_base": "https://www.bomretirodosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Boqueirão do Leão": {
+    "codigo_ibge": 4302451,
+    "last_checked": "2026-09-21T12:27:11Z",
+    "plano": null,
+    "site_base": "https://www.boqueiraodoleao.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Bossoroca": {
+    "codigo_ibge": 4302501,
+    "last_checked": "2026-09-21T12:27:07Z",
+    "plano": null,
+    "site_base": "https://www.bossoroca.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Bozano": {
+    "codigo_ibge": 4302584,
+    "last_checked": "2026-09-21T12:27:07Z",
+    "plano": null,
+    "site_base": "https://www.bozano.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Braga": {
+    "codigo_ibge": 4302600,
+    "last_checked": "2026-09-21T12:27:07Z",
+    "plano": null,
+    "site_base": "https://www.braga.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Brochier": {
+    "codigo_ibge": 4302659,
+    "last_checked": "2026-09-21T12:27:07Z",
+    "plano": null,
+    "site_base": "https://www.brochier.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Butiá": {
+    "codigo_ibge": 4302709,
+    "last_checked": "2026-09-21T12:27:14Z",
+    "plano": null,
+    "site_base": "https://www.butia.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Cacequi": {
+    "codigo_ibge": 4302907,
+    "last_checked": "2026-09-21T12:27:07Z",
+    "plano": null,
+    "site_base": "https://www.cacequi.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Cachoeira do Sul": {
+    "codigo_ibge": 4303004,
+    "last_checked": "2026-09-21T12:27:08Z",
+    "plano": null,
+    "site_base": "https://www.cachoeiradosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Cachoeirinha": {
+    "codigo_ibge": 4303103,
+    "last_checked": "2026-09-21T12:27:17Z",
+    "plano": null,
+    "site_base": "https://cachoeirinha.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Cacique Doble": {
+    "codigo_ibge": 4303202,
+    "last_checked": "2026-09-21T12:27:08Z",
+    "plano": null,
+    "site_base": "https://www.caciquedoble.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Caibaté": {
+    "codigo_ibge": 4303301,
+    "last_checked": "2026-09-21T12:27:08Z",
+    "plano": null,
+    "site_base": "https://www.caibate.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Caiçara": {
+    "codigo_ibge": 4303400,
+    "last_checked": "2026-09-21T12:27:11Z",
+    "plano": null,
+    "site_base": "https://caicara.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Camaquã": {
+    "codigo_ibge": 4303509,
+    "last_checked": "2026-09-21T12:27:11Z",
+    "plano": null,
+    "site_base": "https://www.camaqua.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Camargo": {
+    "codigo_ibge": 4303558,
+    "last_checked": "2026-09-21T12:27:08Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Cambará do Sul": {
+    "codigo_ibge": 4303608,
+    "last_checked": "2026-09-21T12:27:10Z",
+    "plano": null,
+    "site_base": "https://www.cambaradosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Campestre da Serra": {
+    "codigo_ibge": 4303673,
+    "last_checked": "2026-09-21T12:27:11Z",
+    "plano": null,
+    "site_base": "https://www.campestredaserra.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Campina das Missões": {
+    "codigo_ibge": 4303707,
+    "last_checked": "2026-09-21T12:27:14Z",
+    "plano": null,
+    "site_base": "https://www.campinadasmissoes.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Campinas do Sul": {
+    "codigo_ibge": 4303806,
+    "last_checked": "2026-09-21T12:27:10Z",
+    "plano": null,
+    "site_base": "https://www.campinasdosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Campo Bom": {
+    "codigo_ibge": 4303905,
+    "last_checked": "2026-09-21T12:27:10Z",
+    "plano": null,
+    "site_base": "https://www.campobom.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Campo Novo": {
+    "codigo_ibge": 4304002,
+    "last_checked": "2026-09-21T12:27:12Z",
+    "plano": null,
+    "site_base": "https://www.camponovo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Campos Borges": {
+    "codigo_ibge": 4304101,
+    "last_checked": "2026-09-21T12:27:11Z",
+    "plano": null,
+    "site_base": "https://www.camposborges.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Candelária": {
+    "codigo_ibge": 4304200,
+    "last_checked": "2026-09-21T12:27:12Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Candiota": {
+    "codigo_ibge": 4304358,
+    "last_checked": "2026-09-21T12:27:12Z",
+    "plano": null,
+    "site_base": "https://www.candiota.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Canela": {
+    "codigo_ibge": 4304408,
+    "last_checked": "2026-09-21T12:27:11Z",
+    "plano": null,
+    "site_base": "https://www.canela.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Canguçu": {
+    "codigo_ibge": 4304507,
+    "last_checked": "2026-09-21T12:27:13Z",
+    "plano": null,
+    "site_base": "https://www.cangucu.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Canoas": {
+    "codigo_ibge": 4304606,
+    "last_checked": "2026-09-21T12:27:17Z",
+    "plano": null,
+    "site_base": "https://www.canoas.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Canudos do Vale": {
+    "codigo_ibge": 4304614,
+    "last_checked": "2026-09-21T12:27:12Z",
+    "plano": null,
+    "site_base": "https://www.canudosdovale.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Capela de Santana": {
+    "codigo_ibge": 4304689,
+    "falso_positivo": {
+      "chars_extraidos": 414,
+      "detectado_em": "2026-09-21T12:48:42Z",
+      "motivo": "termo \"Plano de Contingência\" não encontrado no texto do PDF (tentativa via OCR também não encontrou o termo)",
+      "ocr_tentado": true,
+      "url": "https://capeladesantana.rs.gov.br/uploads/pagina/19269/CYgbL0OXkJOKFUZ4uQni0YAhyRMllqQe.pdf"
+    },
+    "last_checked": "2026-09-21T12:27:13Z",
+    "plano": null,
+    "site_base": "https://www.capeladesantana.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Capitão": {
+    "codigo_ibge": 4304697,
+    "last_checked": "2026-09-21T12:29:57Z",
+    "plano": {
+      "content_length": 46398243,
+      "etag": null,
+      "first_seen": "2026-09-21T13:00:30Z",
+      "last_changed": "2026-09-21T13:00:30Z",
+      "last_modified_header": null,
+      "sha256": "7c7628245e444876934726c99dca637a564f77ab4475da596f3151ca85f4dd9b",
+      "termo_confirmado": true,
+      "url": "https://www.capitao.rs.gov.br/wp-content/uploads/Plano-de-Contingencia-2026-aprovado.pdf",
+      "validado_via_ocr": true
+    },
+    "site_base": "https://www.capitao.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Capivari do Sul": {
+    "codigo_ibge": 4304671,
+    "last_checked": "2026-09-21T12:27:14Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Capão Bonito do Sul": {
+    "codigo_ibge": 4304622,
+    "last_checked": "2026-09-21T12:27:14Z",
+    "plano": null,
+    "site_base": "https://www.capaobonitodosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Capão da Canoa": {
+    "codigo_ibge": 4304630,
+    "falso_positivo": {
+      "chars_extraidos": 31564,
+      "detectado_em": "2026-09-21T12:48:43Z",
+      "motivo": "termo \"Plano de Contingência\" não encontrado no texto do PDF",
+      "ocr_tentado": false,
+      "url": "https://www.capaodacanoa.rs.gov.br/uploads/secretaria/4765/o0MlweFHabd5U0BrYiEm-32Zwa5K4rPR.pdf"
+    },
+    "last_checked": "2026-09-21T12:27:16Z",
+    "plano": null,
+    "site_base": "https://www.capaodacanoa.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Capão do Cipó": {
+    "codigo_ibge": 4304655,
+    "last_checked": "2026-09-21T12:27:12Z",
+    "plano": null,
+    "site_base": "https://www.capaodocipo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Capão do Leão": {
+    "codigo_ibge": 4304663,
+    "last_checked": "2026-09-21T12:27:12Z",
+    "plano": null,
+    "site_base": "https://www.capaodoleao.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Carazinho": {
+    "codigo_ibge": 4304705,
+    "last_checked": "2026-09-21T12:27:13Z",
+    "plano": null,
+    "site_base": "https://www.carazinho.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Caraá": {
+    "codigo_ibge": 4304713,
+    "last_checked": "2026-09-21T12:27:13Z",
+    "plano": null,
+    "site_base": "https://www.caraa.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Carlos Barbosa": {
+    "codigo_ibge": 4304804,
+    "last_checked": "2026-09-21T12:27:15Z",
+    "plano": null,
+    "site_base": "https://www.carlosbarbosa.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Carlos Gomes": {
+    "codigo_ibge": 4304853,
+    "last_checked": "2026-09-21T12:27:14Z",
+    "plano": null,
+    "site_base": "https://www.carlosgomes.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Casca": {
+    "codigo_ibge": 4304903,
+    "last_checked": "2026-09-21T12:27:13Z",
+    "plano": null,
+    "site_base": "https://www.casca.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Caseiros": {
+    "codigo_ibge": 4304952,
+    "last_checked": "2026-09-21T12:27:14Z",
+    "plano": null,
+    "site_base": "https://www.caseiros.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Catuípe": {
+    "codigo_ibge": 4305009,
+    "last_checked": "2026-09-21T12:27:14Z",
+    "plano": null,
+    "site_base": "https://www.catuipe.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Caxias do Sul": {
+    "codigo_ibge": 4305108,
+    "last_checked": "2026-09-21T12:27:14Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Caçapava do Sul": {
+    "codigo_ibge": 4302808,
+    "last_checked": "2026-09-21T12:27:15Z",
+    "plano": null,
+    "site_base": "https://www.cacapavadosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Centenário": {
+    "codigo_ibge": 4305116,
+    "last_checked": "2026-09-21T12:27:14Z",
+    "plano": null,
+    "site_base": "https://www.centenario.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Cerrito": {
+    "codigo_ibge": 4305124,
+    "last_checked": "2026-09-21T12:27:15Z",
+    "plano": {
+      "content_length": 1690193,
+      "etag": null,
+      "first_seen": "2026-09-21T12:27:15Z",
+      "last_changed": "2026-09-21T12:27:15Z",
+      "last_modified_header": "Tue, 22 Jul 2025 16:46:34 GMT",
+      "sha256": "db7d958531b113592115775860de4b82456bf9ef108330b878adfff4e10be727",
+      "termo_confirmado": true,
+      "url": "https://www.cerrito.rs.gov.br/arquivos/193316_plano_contingencia_2025_22013959.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.cerrito.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Cerro Branco": {
+    "codigo_ibge": 4305132,
+    "last_checked": "2026-09-21T12:27:14Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Cerro Grande": {
+    "codigo_ibge": 4305157,
+    "last_checked": "2026-09-21T12:27:19Z",
+    "plano": null,
+    "site_base": "https://www.cerrogrande.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Cerro Grande do Sul": {
+    "codigo_ibge": 4305173,
+    "last_checked": "2026-09-21T12:27:15Z",
+    "plano": null,
+    "site_base": "https://www.cerrograndedosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Cerro Largo": {
+    "codigo_ibge": 4305207,
+    "last_checked": "2026-09-21T12:27:14Z",
+    "plano": null,
+    "site_base": "https://www.cerrolargo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Chapada": {
+    "codigo_ibge": 4305306,
+    "last_checked": "2026-09-21T12:27:15Z",
+    "plano": null,
+    "site_base": "https://www.chapada.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Charqueadas": {
+    "codigo_ibge": 4305355,
+    "last_checked": "2026-09-21T12:27:15Z",
+    "plano": null,
+    "site_base": "https://www.charqueadas.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Charrua": {
+    "codigo_ibge": 4305371,
+    "last_checked": "2026-09-21T12:27:15Z",
+    "plano": null,
+    "site_base": "https://www.charrua.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Chiapetta": {
+    "codigo_ibge": 4305405,
+    "last_checked": "2026-09-21T12:27:21Z",
+    "plano": null,
+    "site_base": "https://www.chiapetta.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Chuvisca": {
+    "codigo_ibge": 4305447,
+    "last_checked": "2026-09-21T12:27:15Z",
+    "plano": null,
+    "site_base": "https://www.chuvisca.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Chuí": {
+    "codigo_ibge": 4305439,
+    "last_checked": "2026-09-21T12:27:21Z",
+    "plano": null,
+    "site_base": "https://www.chui.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Cidreira": {
+    "codigo_ibge": 4305454,
+    "last_checked": "2026-09-21T12:27:16Z",
+    "plano": null,
+    "site_base": "https://www.cidreira.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Ciríaco": {
+    "codigo_ibge": 4305504,
+    "last_checked": "2026-09-21T12:27:17Z",
+    "plano": null,
+    "site_base": "https://www.ciriaco.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Colinas": {
+    "codigo_ibge": 4305587,
+    "last_checked": "2026-09-21T12:27:16Z",
+    "plano": null,
+    "site_base": "https://www.colinas.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Colorado": {
+    "codigo_ibge": 4305603,
+    "last_checked": "2026-09-21T12:27:18Z",
+    "plano": null,
+    "site_base": "https://www.colorado.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Condor": {
+    "codigo_ibge": 4305702,
+    "last_checked": "2026-09-21T12:27:19Z",
+    "plano": null,
+    "site_base": "https://www.condor.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Constantina": {
+    "codigo_ibge": 4305801,
+    "last_checked": "2026-09-21T12:27:21Z",
+    "plano": null,
+    "site_base": "https://www.constantina.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Coqueiro Baixo": {
+    "codigo_ibge": 4305835,
+    "last_checked": "2026-09-21T12:27:17Z",
+    "plano": {
+      "content_length": 415948,
+      "etag": null,
+      "first_seen": "2026-09-21T12:27:17Z",
+      "last_changed": "2026-09-21T12:27:17Z",
+      "last_modified_header": "Mon, 16 Mar 2020 18:14:16 GMT",
+      "sha256": "58a2ce66f344b5b1085f54422c30800599d3f0d9a02eecd3f3cd729c3d8a16c9",
+      "termo_confirmado": true,
+      "url": "https://www.coqueirobaixo.rs.gov.br/uploads/norma/17703/PLANO_CONT_CORONAVRUS__CB_09032020.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.coqueirobaixo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Coqueiros do Sul": {
+    "codigo_ibge": 4305850,
+    "last_checked": "2026-09-21T12:27:17Z",
+    "plano": null,
+    "site_base": "https://www.coqueirosdosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Coronel Barros": {
+    "codigo_ibge": 4305871,
+    "last_checked": "2026-09-21T12:27:18Z",
+    "plano": null,
+    "site_base": "https://www.coronelbarros.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Coronel Bicaco": {
+    "codigo_ibge": 4305900,
+    "last_checked": "2026-09-21T12:27:16Z",
+    "plano": null,
+    "site_base": "https://www.coronelbicaco.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Coronel Pilar": {
+    "codigo_ibge": 4305934,
+    "last_checked": "2026-09-21T12:27:42Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Cotiporã": {
+    "codigo_ibge": 4305959,
+    "last_checked": "2026-09-21T12:27:17Z",
+    "plano": null,
+    "site_base": "https://www.cotipora.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Coxilha": {
+    "codigo_ibge": 4305975,
+    "last_checked": "2026-09-21T12:27:17Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Crissiumal": {
+    "codigo_ibge": 4306007,
+    "last_checked": "2026-09-21T12:27:18Z",
+    "plano": null,
+    "site_base": "https://www.crissiumal.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Cristal": {
+    "codigo_ibge": 4306056,
+    "last_checked": "2026-09-21T12:27:19Z",
+    "plano": null,
+    "site_base": "https://www.cristal.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Cristal do Sul": {
+    "codigo_ibge": 4306072,
+    "last_checked": "2026-09-21T12:27:19Z",
+    "plano": null,
+    "site_base": "http://www.cristaldosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Cruz Alta": {
+    "codigo_ibge": 4306106,
+    "last_checked": "2026-09-21T12:27:18Z",
+    "plano": null,
+    "site_base": "https://cruzalta.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Cruzaltense": {
+    "codigo_ibge": 4306130,
+    "last_checked": "2026-09-21T12:27:19Z",
+    "plano": null,
+    "site_base": "https://www.cruzaltense.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Cruzeiro do Sul": {
+    "codigo_ibge": 4306205,
+    "last_checked": "2026-09-21T12:27:18Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Cândido Godói": {
+    "codigo_ibge": 4304309,
+    "last_checked": "2026-09-21T12:27:18Z",
+    "plano": null,
+    "site_base": "https://www.candidogodoi.rs.gov.br",
+    "site_status": "ok"
+  },
+  "David Canabarro": {
+    "codigo_ibge": 4306304,
+    "last_checked": "2026-09-21T12:27:32Z",
+    "plano": null,
+    "site_base": "https://www.davidcanabarro.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Derrubadas": {
+    "codigo_ibge": 4306320,
+    "last_checked": "2026-09-21T12:27:19Z",
+    "plano": null,
+    "site_base": "https://www.derrubadas.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Dezesseis de Novembro": {
+    "codigo_ibge": 4306353,
+    "last_checked": "2026-09-21T12:27:19Z",
+    "plano": null,
+    "site_base": "https://www.dezesseisdenovembro.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Dilermando de Aguiar": {
+    "codigo_ibge": 4306379,
+    "last_checked": "2026-09-21T12:27:20Z",
+    "plano": null,
+    "site_base": "https://www.dilermandodeaguiar.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Dois Irmãos": {
+    "codigo_ibge": 4306403,
+    "last_checked": "2026-09-21T12:27:19Z",
+    "plano": null,
+    "site_base": "https://doisirmaos.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Dois Irmãos das Missões": {
+    "codigo_ibge": 4306429,
+    "last_checked": "2026-09-21T12:27:21Z",
+    "plano": null,
+    "site_base": "https://www.doisirmaosdasmissoes.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Dois Lajeados": {
+    "codigo_ibge": 4306452,
+    "last_checked": "2026-09-21T12:27:24Z",
+    "plano": null,
+    "site_base": "https://www.doislajeados.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Dom Feliciano": {
+    "codigo_ibge": 4306502,
+    "last_checked": "2026-09-21T12:27:24Z",
+    "plano": null,
+    "site_base": "https://www.domfeliciano.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Dom Pedrito": {
+    "codigo_ibge": 4306601,
+    "last_checked": "2026-09-21T12:27:20Z",
+    "plano": null,
+    "site_base": "https://www.dompedrito.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Dom Pedro de Alcântara": {
+    "codigo_ibge": 4306551,
+    "last_checked": "2026-09-21T12:27:21Z",
+    "plano": null,
+    "site_base": "https://www.dompedrodealcantara.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Dona Francisca": {
+    "codigo_ibge": 4306700,
+    "last_checked": "2026-09-21T12:27:19Z",
+    "plano": null,
+    "site_base": "https://www.donafrancisca.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Doutor Maurício Cardoso": {
+    "codigo_ibge": 4306734,
+    "last_checked": "2026-09-21T12:27:20Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Doutor Ricardo": {
+    "codigo_ibge": 4306759,
+    "last_checked": "2026-09-21T12:27:23Z",
+    "plano": {
+      "content_length": 763896,
+      "etag": null,
+      "first_seen": "2026-09-21T12:27:23Z",
+      "last_changed": "2026-09-21T12:27:23Z",
+      "last_modified_header": "Wed, 12 Mar 2025 17:21:59 GMT",
+      "sha256": "90c4d3302cb1887c67bb2f0c0e367c10f6a260e30b03eff30707eb6d7780c029",
+      "termo_confirmado": true,
+      "url": "https://doutorricardo.rs.gov.br/uploads/norma/26056/SEGIRD___Plano_de_Contingncia.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.doutorricardo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Eldorado do Sul": {
+    "codigo_ibge": 4306767,
+    "last_checked": "2026-09-21T12:27:20Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Encantado": {
+    "codigo_ibge": 4306809,
+    "last_checked": "2026-09-21T12:27:21Z",
+    "plano": null,
+    "site_base": "https://www.encantado.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Encruzilhada do Sul": {
+    "codigo_ibge": 4306908,
+    "last_checked": "2026-09-21T12:27:20Z",
+    "plano": null,
+    "site_base": "https://www.encruzilhadadosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Engenho Velho": {
+    "codigo_ibge": 4306924,
+    "last_checked": "2026-09-21T12:27:22Z",
+    "plano": null,
+    "site_base": "https://www.engenhovelho.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Entre Rios do Sul": {
+    "codigo_ibge": 4306957,
+    "last_checked": "2026-09-21T12:27:22Z",
+    "plano": null,
+    "site_base": "https://www.entreriosdosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Entre-Ijuís": {
+    "codigo_ibge": 4306932,
+    "last_checked": "2026-09-21T12:27:22Z",
+    "plano": null,
+    "site_base": "https://www.entreijuis.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Erebango": {
+    "codigo_ibge": 4306973,
+    "last_checked": "2026-09-21T12:27:24Z",
+    "plano": null,
+    "site_base": "https://www.erebango.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Erechim": {
+    "codigo_ibge": 4307005,
+    "last_checked": "2026-09-21T12:27:21Z",
+    "plano": null,
+    "site_base": "https://www.erechim.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Ernestina": {
+    "codigo_ibge": 4307054,
+    "last_checked": "2026-09-21T12:27:27Z",
+    "plano": null,
+    "site_base": "https://www.ernestina.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Erval Grande": {
+    "codigo_ibge": 4307203,
+    "last_checked": "2026-09-21T12:27:21Z",
+    "plano": null,
+    "site_base": "https://www.ervalgrande.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Erval Seco": {
+    "codigo_ibge": 4307302,
+    "last_checked": "2026-09-21T12:27:22Z",
+    "plano": null,
+    "site_base": "https://www.ervalseco.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Esmeralda": {
+    "codigo_ibge": 4307401,
+    "last_checked": "2026-09-21T12:27:21Z",
+    "plano": null,
+    "site_base": "https://www.esmeralda.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Esperança do Sul": {
+    "codigo_ibge": 4307450,
+    "last_checked": "2026-09-21T12:27:22Z",
+    "plano": null,
+    "site_base": "https://www.esperancadosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Espumoso": {
+    "codigo_ibge": 4307500,
+    "last_checked": "2026-09-21T12:27:26Z",
+    "plano": null,
+    "site_base": "https://www.espumoso.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Estação": {
+    "codigo_ibge": 4307559,
+    "last_checked": "2026-09-21T12:27:22Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Esteio": {
+    "codigo_ibge": 4307708,
+    "last_checked": "2026-09-21T12:27:22Z",
+    "plano": null,
+    "site_base": "https://www.esteio.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Estrela": {
+    "codigo_ibge": 4307807,
+    "last_checked": "2026-09-21T12:27:25Z",
+    "plano": null,
+    "site_base": "https://estrela.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Estrela Velha": {
+    "codigo_ibge": 4307815,
+    "last_checked": "2026-09-21T12:27:22Z",
+    "plano": null,
+    "site_base": "https://www.estrelavelha.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Estância Velha": {
+    "codigo_ibge": 4307609,
+    "last_checked": "2026-09-21T12:27:24Z",
+    "plano": null,
+    "site_base": "https://www.estanciavelha.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Eugênio de Castro": {
+    "codigo_ibge": 4307831,
+    "last_checked": "2026-09-21T12:27:23Z",
+    "plano": null,
+    "site_base": "https://www.eugeniodecastro.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Fagundes Varela": {
+    "codigo_ibge": 4307864,
+    "last_checked": "2026-09-21T12:27:23Z",
+    "plano": null,
+    "site_base": "https://www.fagundesvarela.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Farroupilha": {
+    "codigo_ibge": 4307906,
+    "last_checked": "2026-09-21T12:27:23Z",
+    "plano": null,
+    "site_base": "https://www.farroupilha.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Faxinal do Soturno": {
+    "codigo_ibge": 4308003,
+    "last_checked": "2026-09-21T12:27:27Z",
+    "plano": {
+      "content_length": 3664986,
+      "etag": null,
+      "first_seen": "2026-09-21T12:27:27Z",
+      "last_changed": "2026-09-21T12:27:27Z",
+      "last_modified_header": "Thu, 28 May 2026 15:38:28 GMT",
+      "sha256": "142487a934d8941b632260980ee74477b95f993cb5b3255c0dae69a91007b91c",
+      "termo_confirmado": true,
+      "url": "https://www.faxinaldosoturno.rs.gov.br/arqs/17139.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.faxinaldosoturno.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Faxinalzinho": {
+    "codigo_ibge": 4308052,
+    "last_checked": "2026-09-21T12:27:23Z",
+    "plano": null,
+    "site_base": "https://www.faxinalzinho.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Fazenda Vilanova": {
+    "codigo_ibge": 4308078,
+    "last_checked": "2026-09-21T12:27:24Z",
+    "plano": null,
+    "site_base": "https://www.fazendavilanova.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Feliz": {
+    "codigo_ibge": 4308102,
+    "last_checked": "2026-09-21T12:27:24Z",
+    "plano": null,
+    "site_base": "https://www.feliz.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Flores da Cunha": {
+    "codigo_ibge": 4308201,
+    "last_checked": "2026-09-21T12:27:26Z",
+    "plano": null,
+    "site_base": "https://www.floresdacunha.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Floriano Peixoto": {
+    "codigo_ibge": 4308250,
+    "last_checked": "2026-09-21T12:27:24Z",
+    "plano": null,
+    "site_base": "https://www.florianopeixoto.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Fontoura Xavier": {
+    "codigo_ibge": 4308300,
+    "last_checked": "2026-09-21T12:27:25Z",
+    "plano": null,
+    "site_base": "https://www.fontouraxavier.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Formigueiro": {
+    "codigo_ibge": 4308409,
+    "last_checked": "2026-09-21T12:27:25Z",
+    "plano": null,
+    "site_base": "https://www.formigueiro.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Forquetinha": {
+    "codigo_ibge": 4308433,
+    "last_checked": "2026-09-21T12:27:25Z",
+    "plano": null,
+    "site_base": "https://www.forquetinha.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Fortaleza dos Valos": {
+    "codigo_ibge": 4308458,
+    "last_checked": "2026-09-21T12:27:25Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Frederico Westphalen": {
+    "codigo_ibge": 4308508,
+    "last_checked": "2026-09-21T12:27:26Z",
+    "plano": null,
+    "site_base": "https://www.fredericowestphalen.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Garibaldi": {
+    "codigo_ibge": 4308607,
+    "last_checked": "2026-09-21T12:27:26Z",
+    "plano": null,
+    "site_base": "https://www.garibaldi.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Garruchos": {
+    "codigo_ibge": 4308656,
+    "last_checked": "2026-09-21T12:27:25Z",
+    "plano": null,
+    "site_base": "https://www.garruchos.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Gaurama": {
+    "codigo_ibge": 4308706,
+    "last_checked": "2026-09-21T12:27:26Z",
+    "plano": null,
+    "site_base": "https://www.gaurama.rs.gov.br",
+    "site_status": "ok"
+  },
+  "General Câmara": {
+    "codigo_ibge": 4308805,
+    "last_checked": "2026-09-21T12:27:26Z",
+    "plano": null,
+    "site_base": "https://www.generalcamara.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Gentil": {
+    "codigo_ibge": 4308854,
+    "last_checked": "2026-09-21T12:27:26Z",
+    "plano": null,
+    "site_base": "https://www.gentil.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Getúlio Vargas": {
+    "codigo_ibge": 4308904,
+    "last_checked": "2026-09-21T12:27:26Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Giruá": {
+    "codigo_ibge": 4309001,
+    "last_checked": "2026-09-21T12:27:26Z",
+    "plano": null,
+    "site_base": "https://www.girua.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Glorinha": {
+    "codigo_ibge": 4309050,
+    "last_checked": "2026-09-21T12:27:29Z",
+    "plano": null,
+    "site_base": "https://glorinha.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Gramado": {
+    "codigo_ibge": 4309100,
+    "last_checked": "2026-09-21T12:27:26Z",
+    "plano": null,
+    "site_base": "https://www.gramado.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Gramado Xavier": {
+    "codigo_ibge": 4309159,
+    "last_checked": "2026-09-21T12:27:26Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Gramado dos Loureiros": {
+    "codigo_ibge": 4309126,
+    "last_checked": "2026-09-21T12:27:29Z",
+    "plano": null,
+    "site_base": "https://www.gramadodosloureiros.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Gravataí": {
+    "codigo_ibge": 4309209,
+    "last_checked": "2026-09-21T12:27:28Z",
+    "plano": null,
+    "site_base": "https://gravatai.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Guabiju": {
+    "codigo_ibge": 4309258,
+    "last_checked": "2026-09-21T12:27:27Z",
+    "plano": null,
+    "site_base": "https://www.guabiju.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Guaporé": {
+    "codigo_ibge": 4309407,
+    "last_checked": "2026-09-21T12:27:27Z",
+    "plano": null,
+    "site_base": "https://www.guapore.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Guarani das Missões": {
+    "codigo_ibge": 4309506,
+    "last_checked": "2026-09-21T12:27:27Z",
+    "plano": null,
+    "site_base": "https://www.guaranidasmissoes.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Guaíba": {
+    "codigo_ibge": 4309308,
+    "last_checked": "2026-09-21T12:27:32Z",
+    "plano": null,
+    "site_base": "https://guaiba.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Harmonia": {
+    "codigo_ibge": 4309555,
+    "last_checked": "2026-09-21T12:27:28Z",
+    "plano": null,
+    "site_base": "https://www.harmonia.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Herval": {
+    "codigo_ibge": 4307104,
+    "last_checked": "2026-09-21T12:27:27Z",
+    "plano": null,
+    "site_base": "https://herval.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Herveiras": {
+    "codigo_ibge": 4309571,
+    "last_checked": "2026-09-21T12:27:27Z",
+    "plano": null,
+    "site_base": "https://www.herveiras.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Horizontina": {
+    "codigo_ibge": 4309605,
+    "last_checked": "2026-09-21T12:27:29Z",
+    "plano": null,
+    "site_base": "http://www.horizontina.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Hulha Negra": {
+    "codigo_ibge": 4309654,
+    "last_checked": "2026-09-21T12:27:28Z",
+    "plano": null,
+    "site_base": "https://www.hulhanegra.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Humaitá": {
+    "codigo_ibge": 4309704,
+    "last_checked": "2026-09-21T12:27:29Z",
+    "plano": null,
+    "site_base": "https://www.humaita.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Ibarama": {
+    "codigo_ibge": 4309753,
+    "last_checked": "2026-09-21T12:27:28Z",
+    "plano": null,
+    "site_base": "https://www.ibarama.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Ibiaçá": {
+    "codigo_ibge": 4309803,
+    "last_checked": "2026-09-21T12:27:27Z",
+    "plano": null,
+    "site_base": "https://www.ibiaca.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Ibiraiaras": {
+    "codigo_ibge": 4309902,
+    "last_checked": "2026-09-21T12:27:29Z",
+    "plano": null,
+    "site_base": "https://www.ibiraiaras.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Ibirapuitã": {
+    "codigo_ibge": 4309951,
+    "last_checked": "2026-09-21T12:27:29Z",
+    "plano": null,
+    "site_base": "https://www.ibirapuita.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Ibirubá": {
+    "codigo_ibge": 4310009,
+    "last_checked": "2026-09-21T12:27:29Z",
+    "plano": null,
+    "site_base": "https://www.ibiruba.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Igrejinha": {
+    "codigo_ibge": 4310108,
+    "last_checked": "2026-09-21T12:27:29Z",
+    "plano": null,
+    "site_base": "https://www.igrejinha.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Ijuí": {
+    "codigo_ibge": 4310207,
+    "last_checked": "2026-09-21T12:27:29Z",
+    "plano": null,
+    "site_base": "https://www.ijui.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Ilópolis": {
+    "codigo_ibge": 4310306,
+    "last_checked": "2026-09-21T12:27:29Z",
+    "plano": null,
+    "site_base": "https://www.ilopolis.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Imbé": {
+    "codigo_ibge": 4310330,
+    "last_checked": "2026-09-21T12:27:28Z",
+    "plano": null,
+    "site_base": "https://www.imbe.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Imigrante": {
+    "codigo_ibge": 4310363,
+    "last_checked": "2026-09-21T12:27:31Z",
+    "plano": null,
+    "site_base": "https://www.imigrante.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Independência": {
+    "codigo_ibge": 4310405,
+    "last_checked": "2026-09-21T12:27:29Z",
+    "plano": null,
+    "site_base": "https://www.independencia.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Inhacorá": {
+    "codigo_ibge": 4310413,
+    "last_checked": "2026-09-21T12:27:29Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Ipiranga do Sul": {
+    "codigo_ibge": 4310462,
+    "last_checked": "2026-09-21T12:27:35Z",
+    "plano": null,
+    "site_base": "https://www.ipirangadosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Ipê": {
+    "codigo_ibge": 4310439,
+    "last_checked": "2026-09-21T12:27:29Z",
+    "plano": null,
+    "site_base": "http://www.ipe.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Iraí": {
+    "codigo_ibge": 4310504,
+    "last_checked": "2026-09-21T12:27:30Z",
+    "plano": null,
+    "site_base": "https://www.irai.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Itaara": {
+    "codigo_ibge": 4310538,
+    "last_checked": "2026-09-21T12:27:31Z",
+    "plano": {
+      "content_length": 2500835,
+      "etag": "\"2628e3-69f385c7-b2df7b78c1fdc40a;;;\"",
+      "first_seen": "2026-09-21T12:27:31Z",
+      "last_changed": "2026-09-21T12:27:31Z",
+      "last_modified_header": "Thu, 30 Apr 2026 16:39:35 GMT",
+      "sha256": "4e0054486f41e3807b8eb18a0ed377a73d61235b7d5525c8354ee5bd20e7a460",
+      "termo_confirmado": true,
+      "url": "https://itaara.rs.gov.br/wp-content/uploads/2026/04/plano-de-contingencia-2025-pdf.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.itaara.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Itacurubi": {
+    "codigo_ibge": 4310553,
+    "last_checked": "2026-09-21T12:27:30Z",
+    "plano": null,
+    "site_base": "https://www.itacurubi.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Itapuca": {
+    "codigo_ibge": 4310579,
+    "last_checked": "2026-09-21T12:27:30Z",
+    "plano": null,
+    "site_base": "https://www.itapuca.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Itaqui": {
+    "codigo_ibge": 4310603,
+    "last_checked": "2026-09-21T12:27:31Z",
+    "plano": null,
+    "site_base": "https://www.itaqui.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Itati": {
+    "codigo_ibge": 4310652,
+    "last_checked": "2026-09-21T12:27:30Z",
+    "plano": null,
+    "site_base": "https://www.itati.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Itatiba do Sul": {
+    "codigo_ibge": 4310702,
+    "last_checked": "2026-09-21T12:27:30Z",
+    "plano": null,
+    "site_base": "https://www.itatibadosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Ivorá": {
+    "codigo_ibge": 4310751,
+    "last_checked": "2026-09-21T12:27:31Z",
+    "plano": null,
+    "site_base": "https://www.ivora.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Ivoti": {
+    "codigo_ibge": 4310801,
+    "last_checked": "2026-09-21T12:27:31Z",
+    "plano": null,
+    "site_base": "https://www.ivoti.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Jaboticaba": {
+    "codigo_ibge": 4310850,
+    "last_checked": "2026-09-21T12:27:30Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Jacuizinho": {
+    "codigo_ibge": 4310876,
+    "last_checked": "2026-09-21T12:27:31Z",
+    "plano": null,
+    "site_base": "https://www.jacuizinho.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Jacutinga": {
+    "codigo_ibge": 4310900,
+    "last_checked": "2026-09-21T12:27:33Z",
+    "plano": null,
+    "site_base": "https://www.jacutinga.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Jaguari": {
+    "codigo_ibge": 4311106,
+    "last_checked": "2026-09-21T12:27:31Z",
+    "plano": null,
+    "site_base": "https://www.jaguari.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Jaguarão": {
+    "codigo_ibge": 4311007,
+    "last_checked": "2026-09-21T12:27:32Z",
+    "plano": null,
+    "site_base": "https://www.jaguarao.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Jaquirana": {
+    "codigo_ibge": 4311122,
+    "last_checked": "2026-09-21T12:27:32Z",
+    "plano": null,
+    "site_base": "https://www.jaquirana.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Jari": {
+    "codigo_ibge": 4311130,
+    "last_checked": "2026-09-21T12:27:31Z",
+    "plano": null,
+    "site_base": "https://www.jari.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Jóia": {
+    "codigo_ibge": 4311155,
+    "last_checked": "2026-09-21T12:27:31Z",
+    "plano": null,
+    "site_base": "https://www.joia.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Júlio de Castilhos": {
+    "codigo_ibge": 4311205,
+    "last_checked": "2026-09-21T12:27:31Z",
+    "plano": null,
+    "site_base": "https://www.juliodecastilhos.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Lagoa Bonita do Sul": {
+    "codigo_ibge": 4311239,
+    "last_checked": "2026-09-21T12:27:31Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Lagoa Vermelha": {
+    "codigo_ibge": 4311304,
+    "last_checked": "2026-09-21T12:27:32Z",
+    "plano": null,
+    "site_base": "https://lagoavermelha.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Lagoa dos Três Cantos": {
+    "codigo_ibge": 4311270,
+    "last_checked": "2026-09-21T12:27:31Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Lagoão": {
+    "codigo_ibge": 4311254,
+    "last_checked": "2026-09-21T12:27:32Z",
+    "plano": null,
+    "site_base": "https://www.lagoao.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Lajeado": {
+    "codigo_ibge": 4311403,
+    "last_checked": "2026-09-21T19:21:52Z",
+    "plano": null,
+    "site_base": "https://www.lajeado.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Lajeado do Bugre": {
+    "codigo_ibge": 4311429,
+    "last_checked": "2026-09-21T12:27:35Z",
+    "plano": null,
+    "site_base": "https://www.lajeadodobugre.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Lavras do Sul": {
+    "codigo_ibge": 4311502,
+    "last_checked": "2026-09-21T12:27:32Z",
+    "plano": null,
+    "site_base": "https://www.lavrasdosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Liberato Salzano": {
+    "codigo_ibge": 4311601,
+    "last_checked": "2026-09-21T12:27:32Z",
+    "plano": null,
+    "site_base": "https://www.liberatosalzano.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Lindolfo Collor": {
+    "codigo_ibge": 4311627,
+    "last_checked": "2026-09-21T12:27:41Z",
+    "plano": null,
+    "site_base": "https://www.lindolfocollor.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Linha Nova": {
+    "codigo_ibge": 4311643,
+    "last_checked": "2026-09-21T12:27:33Z",
+    "plano": null,
+    "site_base": "https://www.linhanova.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Machadinho": {
+    "codigo_ibge": 4311700,
+    "last_checked": "2026-09-21T12:27:34Z",
+    "plano": null,
+    "site_base": "https://www.machadinho.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Mampituba": {
+    "codigo_ibge": 4311734,
+    "last_checked": "2026-09-21T12:27:35Z",
+    "plano": null,
+    "site_base": "https://www.mampituba.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Manoel Viana": {
+    "codigo_ibge": 4311759,
+    "last_checked": "2026-09-21T12:27:32Z",
+    "plano": null,
+    "site_base": "https://www.manoelviana.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Maquiné": {
+    "codigo_ibge": 4311775,
+    "last_checked": "2026-09-21T12:27:34Z",
+    "plano": null,
+    "site_base": "https://www.maquine.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Maratá": {
+    "codigo_ibge": 4311791,
+    "last_checked": "2026-09-21T12:27:33Z",
+    "plano": null,
+    "site_base": "https://www.marata.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Marau": {
+    "codigo_ibge": 4311809,
+    "last_checked": "2026-09-21T12:27:32Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Marcelino Ramos": {
+    "codigo_ibge": 4311908,
+    "last_checked": "2026-09-21T12:27:33Z",
+    "plano": null,
+    "site_base": "https://www.marcelinoramos.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Mariana Pimentel": {
+    "codigo_ibge": 4311981,
+    "last_checked": "2026-09-21T12:27:32Z",
+    "plano": null,
+    "site_base": "https://www.marianapimentel.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Mariano Moro": {
+    "codigo_ibge": 4312005,
+    "last_checked": "2026-09-21T12:27:33Z",
+    "plano": null,
+    "site_base": "https://www.marianomoro.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Marques de Souza": {
+    "codigo_ibge": 4312054,
+    "last_checked": "2026-09-21T12:27:33Z",
+    "plano": null,
+    "site_base": "https://www.marquesdesouza.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Mata": {
+    "codigo_ibge": 4312104,
+    "last_checked": "2026-09-21T12:27:34Z",
+    "plano": null,
+    "site_base": "https://www.mata.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Mato Castelhano": {
+    "codigo_ibge": 4312138,
+    "last_checked": "2026-09-21T12:27:33Z",
+    "plano": null,
+    "site_base": "https://www.matocastelhano.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Mato Leitão": {
+    "codigo_ibge": 4312153,
+    "last_checked": "2026-09-21T12:27:35Z",
+    "plano": null,
+    "site_base": "https://www.matoleitao.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Mato Queimado": {
+    "codigo_ibge": 4312179,
+    "last_checked": "2026-09-21T12:27:33Z",
+    "plano": null,
+    "site_base": "https://www.matoqueimado.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Maximiliano de Almeida": {
+    "codigo_ibge": 4312203,
+    "last_checked": "2026-09-21T12:27:33Z",
+    "plano": null,
+    "site_base": "https://www.maximilianodealmeida.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Maçambará": {
+    "codigo_ibge": 4311718,
+    "last_checked": "2026-09-21T12:27:34Z",
+    "plano": null,
+    "site_base": "https://www.macambara.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Minas do Leão": {
+    "codigo_ibge": 4312252,
+    "last_checked": "2026-09-21T12:27:34Z",
+    "plano": null,
+    "site_base": "https://www.minasdoleao.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Miraguaí": {
+    "codigo_ibge": 4312302,
+    "last_checked": "2026-09-21T12:27:35Z",
+    "plano": null,
+    "site_base": "https://www.miraguai.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Montauri": {
+    "codigo_ibge": 4312351,
+    "last_checked": "2026-09-21T12:27:36Z",
+    "plano": null,
+    "site_base": "https://www.montauri.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Monte Alegre dos Campos": {
+    "codigo_ibge": 4312377,
+    "last_checked": "2026-09-21T12:27:36Z",
+    "plano": null,
+    "site_base": "https://www.montealegredoscampos.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Monte Belo do Sul": {
+    "codigo_ibge": 4312385,
+    "last_checked": "2026-09-21T12:27:34Z",
+    "plano": null,
+    "site_base": "https://www.montebelodosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Montenegro": {
+    "codigo_ibge": 4312401,
+    "last_checked": "2026-09-21T12:27:36Z",
+    "plano": {
+      "content_length": 825760,
+      "etag": null,
+      "first_seen": "2026-09-21T12:27:36Z",
+      "last_changed": "2026-09-21T12:27:36Z",
+      "last_modified_header": null,
+      "sha256": "2e80f44f98ab837dfb8af65c3c864b6b51655dfa35dc24409e90ce4df2f641a6",
+      "termo_confirmado": true,
+      "url": "https://www.montenegro.rs.gov.br/municipio/secretarias-1/gabinete-do-prefeito/orgaos-de-cooperacao/cartilha-defesa-civil.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.montenegro.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Mormaço": {
+    "codigo_ibge": 4312427,
+    "last_checked": "2026-09-21T12:27:38Z",
+    "plano": null,
+    "site_base": "https://www.mormaco.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Morrinhos do Sul": {
+    "codigo_ibge": 4312443,
+    "last_checked": "2026-09-21T12:27:35Z",
+    "plano": null,
+    "site_base": "https://www.morrinhosdosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Morro Redondo": {
+    "codigo_ibge": 4312450,
+    "last_checked": "2026-09-21T12:27:35Z",
+    "plano": null,
+    "site_base": "https://www.morroredondo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Morro Reuter": {
+    "codigo_ibge": 4312476,
+    "last_checked": "2026-09-21T12:27:35Z",
+    "plano": null,
+    "site_base": "https://www.morroreuter.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Mostardas": {
+    "codigo_ibge": 4312500,
+    "last_checked": "2026-09-21T12:27:35Z",
+    "plano": null,
+    "site_base": "https://www.mostardas.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Muitos Capões": {
+    "codigo_ibge": 4312617,
+    "last_checked": "2026-09-21T12:27:36Z",
+    "plano": null,
+    "site_base": "https://www.muitoscapoes.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Muliterno": {
+    "codigo_ibge": 4312625,
+    "falso_positivo": {
+      "chars_extraidos": 21803,
+      "detectado_em": "2026-09-21T12:48:44Z",
+      "motivo": "termo \"Plano de Contingência\" não encontrado no texto do PDF (tentativa via OCR também não encontrou o termo)",
+      "ocr_tentado": true,
+      "url": "https://www.muliterno.rs.gov.br/wp-content/uploads/2025/08/Lei-1.518-de-2023-cria-a-Coordenadoria-Municipal-de-Defesa-Civil-1.pdf"
+    },
+    "last_checked": "2026-09-21T12:27:43Z",
+    "plano": null,
+    "site_base": "https://www.muliterno.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Muçum": {
+    "codigo_ibge": 4312609,
+    "last_checked": "2026-09-21T12:27:36Z",
+    "last_error": "link de plano encontrado, mas download falhou",
+    "plano": null,
+    "site_base": "https://www.mucum.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Nicolau Vergueiro": {
+    "codigo_ibge": 4312674,
+    "last_checked": "2026-09-21T12:27:35Z",
+    "plano": null,
+    "site_base": "https://www.nicolauvergueiro.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Nonoai": {
+    "codigo_ibge": 4312708,
+    "last_checked": "2026-09-21T12:27:42Z",
+    "plano": null,
+    "site_base": "https://www.nonoai.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Nova Alvorada": {
+    "codigo_ibge": 4312757,
+    "last_checked": "2026-09-21T12:27:36Z",
+    "plano": null,
+    "site_base": "https://www.novaalvorada.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Nova Araçá": {
+    "codigo_ibge": 4312807,
+    "last_checked": "2026-09-21T12:27:44Z",
+    "plano": null,
+    "site_base": "https://www.novaaraca.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Nova Bassano": {
+    "codigo_ibge": 4312906,
+    "last_checked": "2026-09-21T12:27:36Z",
+    "plano": null,
+    "site_base": "https://www.novabassano.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Nova Boa Vista": {
+    "codigo_ibge": 4312955,
+    "last_checked": "2026-09-21T12:27:38Z",
+    "plano": null,
+    "site_base": "https://www.novaboavista.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Nova Bréscia": {
+    "codigo_ibge": 4313003,
+    "last_checked": "2026-09-21T12:27:37Z",
+    "plano": null,
+    "site_base": "https://www.novabrescia.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Nova Candelária": {
+    "codigo_ibge": 4313011,
+    "last_checked": "2026-09-21T12:27:37Z",
+    "plano": null,
+    "site_base": "https://www.novacandelaria.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Nova Esperança do Sul": {
+    "codigo_ibge": 4313037,
+    "last_checked": "2026-09-21T12:27:36Z",
+    "plano": null,
+    "site_base": "https://www.novaesperancadosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Nova Hartz": {
+    "codigo_ibge": 4313060,
+    "last_checked": "2026-09-21T12:27:37Z",
+    "plano": null,
+    "site_base": "https://www.novahartz.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Nova Palma": {
+    "codigo_ibge": 4313102,
+    "last_checked": "2026-09-21T12:27:41Z",
+    "plano": null,
+    "site_base": "https://www.novapalma.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Nova Petrópolis": {
+    "codigo_ibge": 4313201,
+    "last_checked": "2026-09-21T12:27:42Z",
+    "plano": {
+      "content_length": 3101506,
+      "etag": "\"a91f6b2f384b72692d56cf0e87d3b13e\"",
+      "first_seen": "2026-09-21T12:27:42Z",
+      "last_changed": "2026-09-21T12:27:42Z",
+      "last_modified_header": "Mon, 17 Aug 2026 15:03:32 GMT",
+      "sha256": "4fda20c750808ec9b0874e5f0664528ca96206a5289210776afdeb9097708e2e",
+      "termo_confirmado": true,
+      "url": "https://cdn-gw.webdehost.com.br/6/PhotoAssets/827558/images/original/wamid.HBgMNTU1NDk5MzUxNzI3FQIAEhggQUM3MDQzQkQ0QTVCQUJFMEQ5MTU3OUU5MEM0OTM1RUMA.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.novapetropolis.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Nova Prata": {
+    "codigo_ibge": 4313300,
+    "falso_positivo": {
+      "chars_extraidos": 140,
+      "detectado_em": "2026-09-21T12:48:45Z",
+      "motivo": "termo \"Plano de Contingência\" não encontrado no texto do PDF",
+      "ocr_tentado": false,
+      "url": "https://www.novaprata.rs.gov.br/images/guia.pdf"
+    },
+    "last_checked": "2026-09-21T12:27:38Z",
+    "plano": null,
+    "site_base": "https://www.novaprata.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Nova Pádua": {
+    "codigo_ibge": 4313086,
+    "last_checked": "2026-09-21T12:27:42Z",
+    "plano": null,
+    "site_base": "https://www.novapadua.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Nova Ramada": {
+    "codigo_ibge": 4313334,
+    "last_checked": "2026-09-21T12:27:37Z",
+    "plano": null,
+    "site_base": "https://www.novaramada.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Nova Roma do Sul": {
+    "codigo_ibge": 4313359,
+    "last_checked": "2026-09-21T12:27:42Z",
+    "plano": {
+      "content_length": 2782655,
+      "etag": "\"fb10cfad69e9b247155023918593dc1a\"",
+      "first_seen": "2026-09-21T12:27:42Z",
+      "last_changed": "2026-09-21T12:27:42Z",
+      "last_modified_header": "Wed, 17 Jun 2026 11:30:42 GMT",
+      "sha256": "f7475051fe50c0f6014cd5afa4c05ce06850e9f399f948fe05512ad50cbfd36e",
+      "termo_confirmado": true,
+      "url": "https://cdn-gw.webdehost.com.br/412/PhotoAssets/801611/images/original/Plano de Contingencia de Nova Roma do Sul - Versão 2.0 (2).pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.novaromadosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Nova Santa Rita": {
+    "codigo_ibge": 4313375,
+    "last_checked": "2026-09-21T12:27:41Z",
+    "plano": null,
+    "site_base": "http://www.novasantarita.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Novo Barreiro": {
+    "codigo_ibge": 4313490,
+    "last_checked": "2026-09-21T12:27:38Z",
+    "plano": null,
+    "site_base": "https://www.novobarreiro.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Novo Cabrais": {
+    "codigo_ibge": 4313391,
+    "last_checked": "2026-09-21T12:27:40Z",
+    "plano": null,
+    "site_base": "https://www.novocabrais.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Novo Hamburgo": {
+    "codigo_ibge": 4313409,
+    "last_checked": "2026-09-21T12:27:39Z",
+    "plano": null,
+    "site_base": "https://www.novohamburgo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Novo Machado": {
+    "codigo_ibge": 4313425,
+    "last_checked": "2026-09-21T12:27:38Z",
+    "plano": null,
+    "site_base": "https://www.novomachado.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Novo Tiradentes": {
+    "codigo_ibge": 4313441,
+    "last_checked": "2026-09-21T12:27:39Z",
+    "plano": null,
+    "site_base": "https://www.novotiradentes.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Novo Xingu": {
+    "codigo_ibge": 4313466,
+    "last_checked": "2026-09-21T12:27:40Z",
+    "plano": null,
+    "site_base": "https://www.novoxingu.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Não-Me-Toque": {
+    "codigo_ibge": 4312658,
+    "last_checked": "2026-09-21T12:28:01Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Osório": {
+    "codigo_ibge": 4313508,
+    "last_checked": "2026-09-21T12:27:42Z",
+    "plano": null,
+    "site_base": "http://www.osorio.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Paim Filho": {
+    "codigo_ibge": 4313607,
+    "last_checked": "2026-09-21T12:27:43Z",
+    "plano": null,
+    "site_base": "https://www.paimfilho.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Palmares do Sul": {
+    "codigo_ibge": 4313656,
+    "falso_positivo": {
+      "chars_extraidos": 3358,
+      "detectado_em": "2026-09-21T12:48:45Z",
+      "motivo": "termo \"Plano de Contingência\" não encontrado no texto do PDF (tentativa via OCR também não encontrou o termo)",
+      "ocr_tentado": true,
+      "url": "https://palmaresdosul.rs.gov.br/novosite/wp-content/uploads/2023/05/edital-002-23-cmdca.pdf"
+    },
+    "last_checked": "2026-09-21T12:27:51Z",
+    "plano": null,
+    "site_base": "https://www.palmaresdosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Palmeira das Missões": {
+    "codigo_ibge": 4313706,
+    "last_checked": "2026-09-21T12:27:44Z",
+    "plano": null,
+    "site_base": "https://www.palmeiradasmissoes.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Palmitinho": {
+    "codigo_ibge": 4313805,
+    "last_checked": "2026-09-21T12:27:55Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Panambi": {
+    "codigo_ibge": 4313904,
+    "last_checked": "2026-09-21T12:27:43Z",
+    "plano": null,
+    "site_base": "http://www.panambi.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Pantano Grande": {
+    "codigo_ibge": 4313953,
+    "last_checked": "2026-09-21T12:27:44Z",
+    "plano": null,
+    "site_base": "https://www.pantanogrande.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Paraí": {
+    "codigo_ibge": 4314001,
+    "last_checked": "2026-09-21T12:27:43Z",
+    "plano": null,
+    "site_base": "https://www.parai.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Paraíso do Sul": {
+    "codigo_ibge": 4314027,
+    "last_checked": "2026-09-21T12:27:43Z",
+    "plano": null,
+    "site_base": "https://www.paraisodosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Pareci Novo": {
+    "codigo_ibge": 4314035,
+    "last_checked": "2026-09-21T12:27:44Z",
+    "plano": null,
+    "site_base": "https://www.parecinovo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Parobé": {
+    "codigo_ibge": 4314050,
+    "last_checked": "2026-09-21T12:27:44Z",
+    "plano": null,
+    "site_base": "https://parobe.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Passa Sete": {
+    "codigo_ibge": 4314068,
+    "last_checked": "2026-09-21T12:27:43Z",
+    "plano": null,
+    "site_base": "https://www.passasete.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Passo Fundo": {
+    "codigo_ibge": 4314100,
+    "last_checked": "2026-09-21T12:28:13Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Passo do Sobrado": {
+    "codigo_ibge": 4314076,
+    "last_checked": "2026-09-21T12:27:45Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Paulo Bento": {
+    "codigo_ibge": 4314134,
+    "last_checked": "2026-09-21T12:27:43Z",
+    "plano": null,
+    "site_base": "https://www.paulobento.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Paverama": {
+    "codigo_ibge": 4314159,
+    "last_checked": "2026-09-21T12:27:45Z",
+    "plano": null,
+    "site_base": "https://paverama.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Pedras Altas": {
+    "codigo_ibge": 4314175,
+    "last_checked": "2026-09-21T12:27:43Z",
+    "plano": null,
+    "site_base": "https://www.pedrasaltas.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Pedro Osório": {
+    "codigo_ibge": 4314209,
+    "last_checked": "2026-09-21T12:27:44Z",
+    "plano": null,
+    "site_base": "https://www.pedroosorio.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Pejuçara": {
+    "codigo_ibge": 4314308,
+    "last_checked": "2026-09-21T12:27:45Z",
+    "plano": null,
+    "site_base": "https://www.pejucara.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Pelotas": {
+    "codigo_ibge": 4314407,
+    "last_checked": "2026-09-21T12:27:45Z",
+    "plano": null,
+    "site_base": "https://www.pelotas.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Picada Café": {
+    "codigo_ibge": 4314423,
+    "last_checked": "2026-09-21T12:27:45Z",
+    "plano": null,
+    "site_base": "https://www.picadacafe.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Pinhal": {
+    "codigo_ibge": 4314456,
+    "last_checked": "2026-09-21T12:27:45Z",
+    "plano": null,
+    "site_base": "https://www.pinhal.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Pinhal Grande": {
+    "codigo_ibge": 4314472,
+    "last_checked": "2026-09-21T12:27:45Z",
+    "plano": null,
+    "site_base": "https://www.pinhalgrande.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Pinhal da Serra": {
+    "codigo_ibge": 4314464,
+    "last_checked": "2026-09-21T12:27:45Z",
+    "plano": null,
+    "site_base": "https://www.pinhaldaserra.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Pinheirinho do Vale": {
+    "codigo_ibge": 4314498,
+    "last_checked": "2026-09-21T12:27:46Z",
+    "plano": null,
+    "site_base": "https://www.pinheirinhodovale.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Pinheiro Machado": {
+    "codigo_ibge": 4314506,
+    "last_checked": "2026-09-21T12:27:45Z",
+    "plano": null,
+    "site_base": "https://www.pinheiromachado.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Pinto Bandeira": {
+    "codigo_ibge": 4314548,
+    "last_checked": "2026-09-21T12:27:48Z",
+    "plano": null,
+    "site_base": "https://www.pintobandeira.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Pirapó": {
+    "codigo_ibge": 4314555,
+    "last_checked": "2026-09-21T12:27:45Z",
+    "plano": null,
+    "site_base": "https://www.pirapo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Piratini": {
+    "codigo_ibge": 4314605,
+    "last_checked": "2026-09-21T12:27:45Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Planalto": {
+    "codigo_ibge": 4314704,
+    "last_checked": "2026-09-21T12:27:48Z",
+    "plano": null,
+    "site_base": "https://www.planalto.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Ponte Preta": {
+    "codigo_ibge": 4314787,
+    "last_checked": "2026-09-21T12:27:46Z",
+    "plano": null,
+    "site_base": "https://www.pontepreta.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Pontão": {
+    "codigo_ibge": 4314779,
+    "last_checked": "2026-09-21T12:27:46Z",
+    "plano": null,
+    "site_base": "https://www.pontao.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Porto Alegre": {
+    "codigo_ibge": 4314902,
+    "last_checked": "2026-09-21T12:27:45Z",
+    "plano": null,
+    "site_base": "https://www.portoalegre.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Porto Lucena": {
+    "codigo_ibge": 4315008,
+    "last_checked": "2026-09-21T12:27:46Z",
+    "plano": null,
+    "site_base": "https://www.portolucena.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Porto Mauá": {
+    "codigo_ibge": 4315057,
+    "last_checked": "2026-09-21T12:27:47Z",
+    "plano": null,
+    "site_base": "https://www.portomaua.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Porto Vera Cruz": {
+    "codigo_ibge": 4315073,
+    "last_checked": "2026-09-21T12:27:47Z",
+    "plano": null,
+    "site_base": "https://www.portoveracruz.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Porto Xavier": {
+    "codigo_ibge": 4315107,
+    "last_checked": "2026-09-21T12:27:46Z",
+    "plano": null,
+    "site_base": "https://www.portoxavier.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Portão": {
+    "codigo_ibge": 4314803,
+    "last_checked": "2026-09-21T12:27:50Z",
+    "plano": null,
+    "site_base": "https://www.portao.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Pouso Novo": {
+    "codigo_ibge": 4315131,
+    "last_checked": "2026-09-21T12:27:47Z",
+    "plano": null,
+    "site_base": "https://www.pousonovo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Poço das Antas": {
+    "codigo_ibge": 4314753,
+    "last_checked": "2026-09-21T12:27:49Z",
+    "plano": null,
+    "site_base": "https://www.pocodasantas.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Presidente Lucena": {
+    "codigo_ibge": 4315149,
+    "last_checked": "2026-09-21T12:27:52Z",
+    "plano": null,
+    "site_base": "https://www.presidentelucena.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Progresso": {
+    "codigo_ibge": 4315156,
+    "last_checked": "2026-09-21T12:27:48Z",
+    "plano": null,
+    "site_base": "https://www.progresso.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Protásio Alves": {
+    "codigo_ibge": 4315172,
+    "last_checked": "2026-09-21T12:27:47Z",
+    "plano": null,
+    "site_base": "https://www.protasioalves.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Putinga": {
+    "codigo_ibge": 4315206,
+    "last_checked": "2026-09-21T12:27:48Z",
+    "plano": null,
+    "site_base": "https://www.putinga.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Quaraí": {
+    "codigo_ibge": 4315305,
+    "last_checked": "2026-09-21T12:27:47Z",
+    "plano": null,
+    "site_base": "https://www.quarai.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Quatro Irmãos": {
+    "codigo_ibge": 4315313,
+    "last_checked": "2026-09-21T12:27:47Z",
+    "plano": null,
+    "site_base": "https://www.quatroirmaos.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Quevedos": {
+    "codigo_ibge": 4315321,
+    "last_checked": "2026-09-21T12:27:48Z",
+    "plano": null,
+    "site_base": "https://www.quevedos.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Quinze de Novembro": {
+    "codigo_ibge": 4315354,
+    "last_checked": "2026-09-21T12:27:48Z",
+    "plano": null,
+    "site_base": "https://www.quinzedenovembro.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Redentora": {
+    "codigo_ibge": 4315404,
+    "last_checked": "2026-09-21T12:28:01Z",
+    "plano": {
+      "content_length": 2445401,
+      "etag": "\"76e7ab2ce742174ade55650cf701d7be\"",
+      "first_seen": "2026-09-21T12:28:01Z",
+      "last_changed": "2026-09-21T12:28:01Z",
+      "last_modified_header": "Mon, 19 Sep 2022 16:37:47 GMT",
+      "sha256": "454cb389f1f3bb30da78c79fb84a65c45302ffd81713143e4c680c846819d657",
+      "termo_confirmado": true,
+      "url": "https://sitearquivos.s3-us-west-2.amazonaws.com/720/Conteudos/4374/huo3d8x26ijxpvo3ez54_PLANODECONTINGENCIADENGUE_000564.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.redentora.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Relvado": {
+    "codigo_ibge": 4315453,
+    "last_checked": "2026-09-21T12:27:49Z",
+    "plano": null,
+    "site_base": "https://www.relvado.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Restinga Sêca": {
+    "codigo_ibge": 4315503,
+    "last_checked": "2026-09-21T12:27:57Z",
+    "plano": {
+      "content_length": 408597,
+      "etag": "\"4162a558611ff7cb0bdb7d901046d4b2\"",
+      "first_seen": "2026-09-21T12:27:57Z",
+      "last_changed": "2026-09-21T12:27:57Z",
+      "last_modified_header": "Wed, 29 Apr 2026 04:14:16 GMT",
+      "sha256": "d0505410beb69a4b8a467213e57b96fcfe3ee12e9988c7bbbde9f8a77c6117a3",
+      "termo_confirmado": true,
+      "url": "https://gsaude-prod.s3.us-east-2.amazonaws.com/363a1845-pmrs-4ec5-a1c8-63198b6b74fa/old-files/3493/16635.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.restingaseca.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Rio Grande": {
+    "codigo_ibge": 4315602,
+    "last_checked": "2026-09-21T12:27:49Z",
+    "plano": null,
+    "site_base": "https://www.riogrande.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Rio Pardo": {
+    "codigo_ibge": 4315701,
+    "last_checked": "2026-09-21T12:27:49Z",
+    "plano": null,
+    "site_base": "https://www.riopardo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Rio dos Índios": {
+    "codigo_ibge": 4315552,
+    "last_checked": "2026-09-21T12:27:49Z",
+    "plano": null,
+    "site_base": "https://www.riodosindios.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Riozinho": {
+    "codigo_ibge": 4315750,
+    "last_checked": "2026-09-21T12:27:50Z",
+    "plano": null,
+    "site_base": "https://www.riozinho.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Roca Sales": {
+    "codigo_ibge": 4315800,
+    "last_checked": "2026-09-21T12:27:50Z",
+    "plano": null,
+    "site_base": "https://www.rocasales.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Rodeio Bonito": {
+    "codigo_ibge": 4315909,
+    "last_checked": "2026-09-21T12:27:50Z",
+    "plano": null,
+    "site_base": "https://www.rodeiobonito.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Rolador": {
+    "codigo_ibge": 4315958,
+    "last_checked": "2026-09-21T12:27:55Z",
+    "plano": null,
+    "site_base": "https://www.rolador.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Rolante": {
+    "codigo_ibge": 4316006,
+    "last_checked": "2026-09-21T12:27:50Z",
+    "plano": null,
+    "site_base": "https://www.rolante.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Ronda Alta": {
+    "codigo_ibge": 4316105,
+    "last_checked": "2026-09-21T12:27:50Z",
+    "plano": null,
+    "site_base": "https://www.rondaalta.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Rondinha": {
+    "codigo_ibge": 4316204,
+    "last_checked": "2026-09-21T12:27:50Z",
+    "plano": null,
+    "site_base": "https://www.rondinha.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Roque Gonzales": {
+    "codigo_ibge": 4316303,
+    "last_checked": "2026-09-21T12:27:50Z",
+    "plano": null,
+    "site_base": "https://www.roquegonzales.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Rosário do Sul": {
+    "codigo_ibge": 4316402,
+    "last_checked": "2026-09-21T12:27:51Z",
+    "plano": null,
+    "site_base": "https://www.rosariodosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Sagrada Família": {
+    "codigo_ibge": 4316428,
+    "last_checked": "2026-09-21T12:27:52Z",
+    "plano": null,
+    "site_base": "https://www.sagradafamilia.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Saldanha Marinho": {
+    "codigo_ibge": 4316436,
+    "last_checked": "2026-09-21T12:27:50Z",
+    "plano": null,
+    "site_base": "https://www.saldanhamarinho.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Salto do Jacuí": {
+    "codigo_ibge": 4316451,
+    "last_checked": "2026-09-21T12:27:51Z",
+    "plano": null,
+    "site_base": "https://www.saltodojacui.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Salvador das Missões": {
+    "codigo_ibge": 4316477,
+    "last_checked": "2026-09-21T12:27:51Z",
+    "plano": null,
+    "site_base": "https://www.salvadordasmissoes.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Salvador do Sul": {
+    "codigo_ibge": 4316501,
+    "last_checked": "2026-09-21T12:27:51Z",
+    "plano": null,
+    "site_base": "https://www.salvadordosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Sananduva": {
+    "codigo_ibge": 4316600,
+    "last_checked": "2026-09-21T12:27:51Z",
+    "plano": null,
+    "site_base": "https://www.sananduva.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Sant'Ana do Livramento": {
+    "codigo_ibge": 4317103,
+    "last_checked": "2026-09-21T12:27:51Z",
+    "plano": null,
+    "site_base": "https://www.santanadolivramento.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santa Bárbara do Sul": {
+    "codigo_ibge": 4316709,
+    "last_checked": "2026-09-21T12:27:52Z",
+    "plano": null,
+    "site_base": "https://www.santabarbaradosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santa Cecília do Sul": {
+    "codigo_ibge": 4316733,
+    "last_checked": "2026-09-21T12:27:51Z",
+    "plano": null,
+    "site_base": "https://www.santaceciliadosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santa Clara do Sul": {
+    "codigo_ibge": 4316758,
+    "last_checked": "2026-09-21T12:27:53Z",
+    "plano": null,
+    "site_base": "https://www.santaclaradosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santa Cruz do Sul": {
+    "codigo_ibge": 4316808,
+    "last_checked": "2026-09-21T12:27:51Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Santa Margarida do Sul": {
+    "codigo_ibge": 4316972,
+    "last_checked": "2026-09-21T12:27:56Z",
+    "plano": null,
+    "site_base": "https://www.santamargaridadosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santa Maria": {
+    "codigo_ibge": 4316907,
+    "last_checked": "2026-09-21T12:27:53Z",
+    "plano": null,
+    "site_base": "https://www.santamaria.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santa Maria do Herval": {
+    "codigo_ibge": 4316956,
+    "last_checked": "2026-09-21T12:27:55Z",
+    "plano": null,
+    "site_base": "https://www.santamariadoherval.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santa Rosa": {
+    "codigo_ibge": 4317202,
+    "last_checked": "2026-09-21T12:27:53Z",
+    "plano": null,
+    "site_base": "https://www.santarosa.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santa Tereza": {
+    "codigo_ibge": 4317251,
+    "last_checked": "2026-09-21T12:27:52Z",
+    "plano": null,
+    "site_base": "https://www.santatereza.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santa Vitória do Palmar": {
+    "codigo_ibge": 4317301,
+    "last_checked": "2026-09-21T12:27:53Z",
+    "plano": null,
+    "site_base": "https://www.santavitoriadopalmar.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santana da Boa Vista": {
+    "codigo_ibge": 4317004,
+    "last_checked": "2026-09-21T12:27:53Z",
+    "plano": null,
+    "site_base": "https://www.santanadaboavista.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santiago": {
+    "codigo_ibge": 4317400,
+    "last_checked": "2026-09-21T12:27:53Z",
+    "plano": null,
+    "site_base": "https://www.santiago.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santo Antônio da Patrulha": {
+    "codigo_ibge": 4317608,
+    "last_checked": "2026-09-21T12:28:07Z",
+    "plano": null,
+    "site_base": "https://www.santoantoniodapatrulha.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santo Antônio das Missões": {
+    "codigo_ibge": 4317707,
+    "last_checked": "2026-09-21T12:28:01Z",
+    "plano": {
+      "content_length": 11160710,
+      "etag": "\"fdee0040dff8a6296f62bb5e10a1166c\"",
+      "first_seen": "2026-09-21T12:28:01Z",
+      "last_changed": "2026-09-21T12:28:01Z",
+      "last_modified_header": "Thu, 04 Sep 2025 09:59:40 GMT",
+      "sha256": "f92da58ffaecd373e24b29bd690f1317f49bfd3b389a3900bc83f3d023ac6f2d",
+      "termo_confirmado": true,
+      "url": "https://sp1-object.adentro.com.br/sites/520/Conteudos/5533/dfeynsbuwgeme3vb3qmg_ProtocoloS2id.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.santoantoniodasmissoes.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santo Antônio do Palma": {
+    "codigo_ibge": 4317558,
+    "last_checked": "2026-09-21T12:27:53Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Santo Antônio do Planalto": {
+    "codigo_ibge": 4317756,
+    "last_checked": "2026-09-21T12:27:55Z",
+    "plano": null,
+    "site_base": "https://www.santoantoniodoplanalto.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santo Augusto": {
+    "codigo_ibge": 4317806,
+    "last_checked": "2026-09-21T12:27:56Z",
+    "plano": null,
+    "site_base": "https://www.santoaugusto.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santo Cristo": {
+    "codigo_ibge": 4317905,
+    "last_checked": "2026-09-21T12:27:53Z",
+    "plano": null,
+    "site_base": "https://www.santocristo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santo Expedito do Sul": {
+    "codigo_ibge": 4317954,
+    "last_checked": "2026-09-21T12:27:54Z",
+    "plano": null,
+    "site_base": "https://www.santoexpeditodosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Santo Ângelo": {
+    "codigo_ibge": 4317509,
+    "last_checked": "2026-09-21T12:27:54Z",
+    "plano": null,
+    "site_base": "https://www.santoangelo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Sapiranga": {
+    "codigo_ibge": 4319901,
+    "last_checked": "2026-09-21T12:27:55Z",
+    "plano": null,
+    "site_base": "https://www.sapiranga.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Sapucaia do Sul": {
+    "codigo_ibge": 4320008,
+    "last_checked": "2026-09-21T12:28:34Z",
+    "plano": {
+      "content_length": 2922496,
+      "etag": null,
+      "first_seen": "2026-09-21T12:28:34Z",
+      "last_changed": "2026-09-21T12:28:34Z",
+      "last_modified_header": "Mon, 31 Aug 2026 15:18:35 GMT",
+      "sha256": "8e74440a94327374ad34941c2fd875649b09e8ebed26adcb6f2a11d18f10b558",
+      "termo_confirmado": true,
+      "url": "https://www.sapucaiadosul.rs.gov.br/wp-content/uploads/2026/08/Plano-de-Contingencia-Sapucaia-2026.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.sapucaiadosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Sarandi": {
+    "codigo_ibge": 4320107,
+    "last_checked": "2026-09-21T12:27:58Z",
+    "plano": null,
+    "site_base": "https://www.sarandi.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Seberi": {
+    "codigo_ibge": 4320206,
+    "last_checked": "2026-09-21T12:27:56Z",
+    "plano": null,
+    "site_base": "https://www.seberi.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Sede Nova": {
+    "codigo_ibge": 4320230,
+    "last_checked": "2026-09-21T12:28:10Z",
+    "plano": null,
+    "site_base": "http://www.sedenova.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Segredo": {
+    "codigo_ibge": 4320263,
+    "last_checked": "2026-09-21T12:27:56Z",
+    "plano": null,
+    "site_base": "https://www.segredo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Selbach": {
+    "codigo_ibge": 4320305,
+    "last_checked": "2026-09-21T12:27:58Z",
+    "plano": null,
+    "site_base": "https://www.selbach.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Senador Salgado Filho": {
+    "codigo_ibge": 4320321,
+    "last_checked": "2026-09-21T12:28:00Z",
+    "plano": null,
+    "site_base": "https://www.senadorsalgadofilho.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Sentinela do Sul": {
+    "codigo_ibge": 4320354,
+    "falso_positivo": {
+      "chars_extraidos": 4462,
+      "detectado_em": "2026-09-21T12:48:46Z",
+      "motivo": "termo \"Plano de Contingência\" não encontrado no texto do PDF (tentativa via OCR também não encontrou o termo)",
+      "ocr_tentado": true,
+      "url": "https://cdn-gw.webdehost.com.br/280/DocumentAssets/661139/images/original/Lei 1647_2025.pdf"
+    },
+    "last_checked": "2026-09-21T12:28:01Z",
+    "plano": null,
+    "site_base": "https://www.sentineladosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Serafina Corrêa": {
+    "codigo_ibge": 4320404,
+    "last_checked": "2026-09-21T12:28:00Z",
+    "last_error": "link de plano encontrado, mas download falhou",
+    "plano": null,
+    "site_base": "https://www.serafinacorrea.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Sertão": {
+    "codigo_ibge": 4320503,
+    "last_checked": "2026-09-21T12:27:58Z",
+    "plano": null,
+    "site_base": "https://www.sertao.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Sertão Santana": {
+    "codigo_ibge": 4320552,
+    "falso_positivo": {
+      "chars_extraidos": 1383,
+      "detectado_em": "2026-09-21T12:48:46Z",
+      "motivo": "termo \"Plano de Contingência\" não encontrado no texto do PDF",
+      "ocr_tentado": false,
+      "url": "https://www.sertaosantana.rs.gov.br/public/admin/globalarq/uploads/files/Defesa_Civil_de_Sert%C3%A3o_Santana_1.pdf"
+    },
+    "last_checked": "2026-09-21T12:27:59Z",
+    "plano": null,
+    "site_base": "https://www.sertaosantana.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Sete de Setembro": {
+    "codigo_ibge": 4320578,
+    "last_checked": "2026-09-21T12:27:58Z",
+    "plano": null,
+    "site_base": "https://www.setedesetembro.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Severiano de Almeida": {
+    "codigo_ibge": 4320602,
+    "last_checked": "2026-09-21T12:27:58Z",
+    "plano": null,
+    "site_base": "https://www.severianodealmeida.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Silveira Martins": {
+    "codigo_ibge": 4320651,
+    "last_checked": "2026-09-21T12:27:59Z",
+    "plano": null,
+    "site_base": "https://www.silveiramartins.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Sinimbu": {
+    "codigo_ibge": 4320677,
+    "falso_positivo": {
+      "chars_extraidos": 3962,
+      "detectado_em": "2026-09-21T12:48:46Z",
+      "motivo": "termo \"Plano de Contingência\" não encontrado no texto do PDF",
+      "ocr_tentado": false,
+      "url": "https://sizfiles.sizing.com.br/prefeiturasinimbu/202466/lei-n-1632-cria-coordenadoria-da-defesa-civil.pdf"
+    },
+    "last_checked": "2026-09-21T12:28:01Z",
+    "plano": null,
+    "site_base": "https://www.sinimbu.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Sobradinho": {
+    "codigo_ibge": 4320701,
+    "last_checked": "2026-09-21T12:27:59Z",
+    "plano": null,
+    "site_base": "https://www.sobradinho.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Soledade": {
+    "codigo_ibge": 4320800,
+    "last_checked": "2026-09-21T12:28:00Z",
+    "plano": null,
+    "site_base": "https://www.soledade.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Borja": {
+    "codigo_ibge": 4318002,
+    "last_checked": "2026-09-21T12:28:00Z",
+    "plano": null,
+    "site_base": "https://www.saoborja.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Domingos do Sul": {
+    "codigo_ibge": 4318051,
+    "last_checked": "2026-09-21T12:28:00Z",
+    "plano": null,
+    "site_base": "https://www.saodomingosdosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Francisco de Assis": {
+    "codigo_ibge": 4318101,
+    "last_checked": "2026-09-21T12:28:00Z",
+    "plano": null,
+    "site_base": "https://www.saofranciscodeassis.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Francisco de Paula": {
+    "codigo_ibge": 4318200,
+    "last_checked": "2026-09-21T12:28:01Z",
+    "plano": null,
+    "site_base": "https://www.saofranciscodepaula.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Gabriel": {
+    "codigo_ibge": 4318309,
+    "last_checked": "2026-09-21T12:28:02Z",
+    "plano": null,
+    "site_base": "https://www.saogabriel.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Jerônimo": {
+    "codigo_ibge": 4318408,
+    "last_checked": "2026-09-21T12:28:01Z",
+    "plano": null,
+    "site_base": "https://www.saojeronimo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Jorge": {
+    "codigo_ibge": 4318440,
+    "last_checked": "2026-09-21T12:28:00Z",
+    "plano": null,
+    "site_base": "https://www.saojorge.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São José das Missões": {
+    "codigo_ibge": 4318457,
+    "last_checked": "2026-09-21T12:28:06Z",
+    "plano": null,
+    "site_base": "https://www.saojosedasmissoes.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São José do Herval": {
+    "codigo_ibge": 4318465,
+    "last_checked": "2026-09-21T12:28:01Z",
+    "plano": null,
+    "site_base": "https://www.saojosedoherval.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São José do Hortêncio": {
+    "codigo_ibge": 4318481,
+    "last_checked": "2026-09-21T12:28:06Z",
+    "plano": null,
+    "site_base": "https://www.saojosedohortencio.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São José do Inhacorá": {
+    "codigo_ibge": 4318499,
+    "last_checked": "2026-09-21T12:28:02Z",
+    "plano": {
+      "content_length": 728901,
+      "etag": "\"fc4a1a9b9be12462fa51ba4a70e5ed39\"",
+      "first_seen": "2026-09-21T12:28:02Z",
+      "last_changed": "2026-09-21T12:28:02Z",
+      "last_modified_header": "Thu, 04 Sep 2025 15:49:40 GMT",
+      "sha256": "26678fa99b49d1278c436c5d8f0f270f1872959ce25cbcd8ce7e81b64ae1bd12",
+      "termo_confirmado": true,
+      "url": "https://sp1-object.adentro.com.br/sites/650/Conteudos/4526/o3v9673mjostg2oodm0t_PlanodeContingenciaeAçaoCovid19.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.saojosedoinhacora.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São José do Norte": {
+    "codigo_ibge": 4318507,
+    "last_checked": "2026-09-21T12:28:04Z",
+    "plano": null,
+    "site_base": "https://www.saojosedonorte.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São José do Ouro": {
+    "codigo_ibge": 4318606,
+    "last_checked": "2026-09-21T12:28:02Z",
+    "plano": null,
+    "site_base": "https://www.saojosedoouro.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São José do Sul": {
+    "codigo_ibge": 4318614,
+    "last_checked": "2026-09-21T12:28:03Z",
+    "plano": null,
+    "site_base": "https://www.saojosedosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São José dos Ausentes": {
+    "codigo_ibge": 4318622,
+    "last_checked": "2026-09-21T12:28:08Z",
+    "plano": null,
+    "site_base": "https://www.saojosedosausentes.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São João da Urtiga": {
+    "codigo_ibge": 4318424,
+    "last_checked": "2026-09-21T12:28:02Z",
+    "plano": null,
+    "site_base": "https://www.saojoaodaurtiga.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São João do Polêsine": {
+    "codigo_ibge": 4318432,
+    "last_checked": "2026-09-21T12:28:04Z",
+    "plano": null,
+    "site_base": "https://www.saojoaodopolesine.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Leopoldo": {
+    "codigo_ibge": 4318705,
+    "last_checked": "2026-09-21T12:28:38Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "São Lourenço do Sul": {
+    "codigo_ibge": 4318804,
+    "last_checked": "2026-09-21T12:28:04Z",
+    "plano": null,
+    "site_base": "https://www.saolourencodosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Luiz Gonzaga": {
+    "codigo_ibge": 4318903,
+    "last_checked": "2026-09-21T12:28:03Z",
+    "plano": null,
+    "site_base": "https://www.saoluizgonzaga.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Marcos": {
+    "codigo_ibge": 4319000,
+    "last_checked": "2026-09-21T12:28:09Z",
+    "plano": {
+      "content_length": 14697371,
+      "etag": "\"f57ba176af35b14dd0e564fe926a3094\"",
+      "first_seen": "2026-09-21T12:28:09Z",
+      "last_changed": "2026-09-21T12:28:09Z",
+      "last_modified_header": "Thu, 13 Aug 2026 16:12:46 GMT",
+      "sha256": "4debd94b71be3c7d7f726021c893914de965b3b65f6e7400d33c6068240aa8ea",
+      "termo_confirmado": true,
+      "url": "https://cdn-gw.webdehost.com.br/418/DocumentAssets/826217/images/original/PLANCON_-_Para_Assinar_assinado_260810_123031_2608_260813_093208.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.saomarcos.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Martinho": {
+    "codigo_ibge": 4319109,
+    "last_checked": "2026-09-21T12:28:04Z",
+    "plano": null,
+    "site_base": "https://www.saomartinho.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Martinho da Serra": {
+    "codigo_ibge": 4319125,
+    "last_checked": "2026-09-21T12:28:05Z",
+    "plano": null,
+    "site_base": "https://www.saomartinhodaserra.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Miguel das Missões": {
+    "codigo_ibge": 4319158,
+    "last_checked": "2026-09-21T12:28:04Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "São Nicolau": {
+    "codigo_ibge": 4319208,
+    "last_checked": "2026-09-21T12:28:05Z",
+    "plano": null,
+    "site_base": "https://www.saonicolau.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Paulo das Missões": {
+    "codigo_ibge": 4319307,
+    "last_checked": "2026-09-21T12:28:05Z",
+    "plano": null,
+    "site_base": "https://www.saopaulodasmissoes.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Pedro da Serra": {
+    "codigo_ibge": 4319356,
+    "last_checked": "2026-09-21T12:28:04Z",
+    "plano": null,
+    "site_base": "https://www.saopedrodaserra.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Pedro das Missões": {
+    "codigo_ibge": 4319364,
+    "last_checked": "2026-09-21T12:28:11Z",
+    "plano": null,
+    "site_base": "https://www.saopedrodasmissoes.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Pedro do Butiá": {
+    "codigo_ibge": 4319372,
+    "last_checked": "2026-09-21T12:28:05Z",
+    "plano": null,
+    "site_base": "https://www.saopedrodobutia.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Pedro do Sul": {
+    "codigo_ibge": 4319406,
+    "last_checked": "2026-09-21T12:28:05Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "São Sebastião do Caí": {
+    "codigo_ibge": 4319505,
+    "last_checked": "2026-09-21T12:28:05Z",
+    "plano": null,
+    "site_base": "https://www.saosebastiaodocai.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Sepé": {
+    "codigo_ibge": 4319604,
+    "last_checked": "2026-09-21T12:28:10Z",
+    "plano": {
+      "content_length": 7778569,
+      "etag": null,
+      "first_seen": "2026-09-21T13:00:59Z",
+      "last_changed": "2026-09-21T13:00:59Z",
+      "last_modified_header": null,
+      "sha256": "1611e0f73031cd11187c542ecd12f16b0d45883d993274c9699fd8a6ac05fddf",
+      "termo_confirmado": true,
+      "url": "https://saosepe.rs.gov.br/wp-content/uploads/2026/05/Plano-de-Contingencia_Final.pdf",
+      "validado_via_ocr": true
+    },
+    "site_base": "https://www.saosepe.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Valentim": {
+    "codigo_ibge": 4319703,
+    "last_checked": "2026-09-21T12:28:07Z",
+    "plano": null,
+    "site_base": "https://www.saovalentim.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Valentim do Sul": {
+    "codigo_ibge": 4319711,
+    "falso_positivo": {
+      "chars_extraidos": 8509,
+      "detectado_em": "2026-09-21T12:48:46Z",
+      "motivo": "termo \"Plano de Contingência\" não encontrado no texto do PDF",
+      "ocr_tentado": false,
+      "url": "https://cdn-gw.webdehost.com.br/325/DocumentAssets/808766/images/original/PLANO_DE_CONTINGENCIA_23.06.2026 (1).pdf"
+    },
+    "last_checked": "2026-09-21T12:28:14Z",
+    "plano": null,
+    "site_base": "https://www.saovalentimdosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Valério do Sul": {
+    "codigo_ibge": 4319737,
+    "last_checked": "2026-09-21T12:28:06Z",
+    "plano": null,
+    "site_base": "https://www.saovaleriodosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Vendelino": {
+    "codigo_ibge": 4319752,
+    "last_checked": "2026-09-21T12:28:10Z",
+    "plano": {
+      "content_length": 550078,
+      "etag": "\"864be-65a853df529f5\"",
+      "first_seen": "2026-09-21T12:28:10Z",
+      "last_changed": "2026-09-21T12:28:10Z",
+      "last_modified_header": "Wed, 02 Sep 2026 19:42:56 GMT",
+      "sha256": "c91a6b295aa1844b5ce195dc2492e078f0d875475fbe62ef7cabc138997f3f13",
+      "termo_confirmado": true,
+      "url": "https://www.saovendelino.rs.gov.br/uploads/blocos/plano-municipal-de-contingencia-para-eventos-climaticos1788378176.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.saovendelino.rs.gov.br",
+    "site_status": "ok"
+  },
+  "São Vicente do Sul": {
+    "codigo_ibge": 4319802,
+    "last_checked": "2026-09-21T12:28:09Z",
+    "plano": null,
+    "site_base": "https://www.saovicentedosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Sério": {
+    "codigo_ibge": 4320453,
+    "last_checked": "2026-09-21T12:28:07Z",
+    "plano": null,
+    "site_base": "https://www.serio.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Tabaí": {
+    "codigo_ibge": 4320859,
+    "last_checked": "2026-09-21T12:28:09Z",
+    "plano": null,
+    "site_base": "https://www.tabai.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Tapejara": {
+    "codigo_ibge": 4320909,
+    "last_checked": "2026-09-21T12:28:07Z",
+    "plano": null,
+    "site_base": "https://www.tapejara.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Tapera": {
+    "codigo_ibge": 4321006,
+    "last_checked": "2026-09-21T12:28:10Z",
+    "plano": null,
+    "site_base": "https://www.tapera.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Tapes": {
+    "codigo_ibge": 4321105,
+    "last_checked": "2026-09-21T12:28:09Z",
+    "plano": null,
+    "site_base": "https://www.tapes.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Taquara": {
+    "codigo_ibge": 4321204,
+    "last_checked": "2026-09-21T12:28:09Z",
+    "plano": null,
+    "site_base": "https://www.taquara.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Taquari": {
+    "codigo_ibge": 4321303,
+    "last_checked": "2026-09-21T12:28:14Z",
+    "plano": {
+      "content_length": 1509058,
+      "etag": null,
+      "first_seen": "2026-09-21T12:28:14Z",
+      "last_changed": "2026-09-21T12:28:14Z",
+      "last_modified_header": "Tue, 29 Apr 2025 14:35:10 GMT",
+      "sha256": "388c6530d3a9f7f52c75dc4144a32adb2d616505486056057f4ac1cea6f2c5d0",
+      "termo_confirmado": true,
+      "url": "https://www.taquari.rs.gov.br/uploads/paginadinamica/47749/Plano_defesa_civil___finalizado__falta_fluxograma_2.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.taquari.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Taquaruçu do Sul": {
+    "codigo_ibge": 4321329,
+    "last_checked": "2026-09-21T12:28:10Z",
+    "plano": null,
+    "site_base": "https://www.taquarucudosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Tavares": {
+    "codigo_ibge": 4321352,
+    "last_checked": "2026-09-21T12:28:11Z",
+    "plano": null,
+    "site_base": "https://www.tavares.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Tenente Portela": {
+    "codigo_ibge": 4321402,
+    "last_checked": "2026-09-21T12:28:11Z",
+    "plano": null,
+    "site_base": "https://www.tenenteportela.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Terra de Areia": {
+    "codigo_ibge": 4321436,
+    "last_checked": "2026-09-21T12:28:10Z",
+    "plano": null,
+    "site_base": "https://www.terradeareia.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Teutônia": {
+    "codigo_ibge": 4321451,
+    "last_checked": "2026-09-21T12:28:12Z",
+    "plano": null,
+    "site_base": "https://www.teutonia.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Tio Hugo": {
+    "codigo_ibge": 4321469,
+    "last_checked": "2026-09-21T12:28:14Z",
+    "plano": null,
+    "site_base": "https://www.tiohugo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Tiradentes do Sul": {
+    "codigo_ibge": 4321477,
+    "last_checked": "2026-09-21T12:28:11Z",
+    "plano": {
+      "content_length": 271138,
+      "etag": "\"3457c286c6fc98e72f61ae38ebccc1f5\"",
+      "first_seen": "2026-09-21T12:28:11Z",
+      "last_changed": "2026-09-21T12:28:11Z",
+      "last_modified_header": "Wed, 01 Jul 2026 13:09:22 GMT",
+      "sha256": "55f993d9c87f1e824bb5cd58aca1ee8a06184d5f5227d7cbbd75c9b178bf3a90",
+      "termo_confirmado": true,
+      "url": "https://sp1-object.adentro.com.br/sites/640/Conteudos/2146280/leawp1ruq1z9gcq0cm60_PLANODECONTINGENCIAJUN26.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.tiradentesdosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Toropi": {
+    "codigo_ibge": 4321493,
+    "last_checked": "2026-09-21T12:28:12Z",
+    "plano": null,
+    "site_base": "https://www.toropi.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Torres": {
+    "codigo_ibge": 4321501,
+    "last_checked": "2026-09-21T12:28:16Z",
+    "plano": null,
+    "site_base": "https://www.torres.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Tramandaí": {
+    "codigo_ibge": 4321600,
+    "last_checked": "2026-09-21T12:28:11Z",
+    "plano": null,
+    "site_base": "https://www.tramandai.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Travesseiro": {
+    "codigo_ibge": 4321626,
+    "last_checked": "2026-09-21T12:28:12Z",
+    "plano": null,
+    "site_base": "https://www.travesseiro.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Trindade do Sul": {
+    "codigo_ibge": 4321956,
+    "last_checked": "2026-09-21T12:28:14Z",
+    "plano": {
+      "content_length": 678839,
+      "etag": null,
+      "first_seen": "2026-09-21T12:28:14Z",
+      "last_changed": "2026-09-21T12:28:14Z",
+      "last_modified_header": "Thu, 26 Jun 2025 17:05:26 GMT",
+      "sha256": "09f8e8c977dfe43fd79879cda9ef58ee76f08a1ae4a64f147e9e7013ee98090b",
+      "termo_confirmado": true,
+      "url": "https://www.trindadedosul.rs.gov.br/wp-content/uploads/2025/06/Plano-de-Contingencia.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.trindadedosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Triunfo": {
+    "codigo_ibge": 4322004,
+    "last_checked": "2026-09-21T12:28:35Z",
+    "plano": null,
+    "site_base": "https://triunfo.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Três Arroios": {
+    "codigo_ibge": 4321634,
+    "last_checked": "2026-09-21T12:28:13Z",
+    "plano": null,
+    "site_base": "https://www.tresarroios.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Três Cachoeiras": {
+    "codigo_ibge": 4321667,
+    "last_checked": "2026-09-21T12:28:12Z",
+    "plano": null,
+    "site_base": "https://www.trescachoeiras.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Três Coroas": {
+    "codigo_ibge": 4321709,
+    "last_checked": "2026-09-21T12:28:12Z",
+    "plano": null,
+    "site_base": "https://www.trescoroas.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Três Forquilhas": {
+    "codigo_ibge": 4321832,
+    "last_checked": "2026-09-21T12:28:13Z",
+    "plano": null,
+    "site_base": "https://www.tresforquilhas.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Três Palmeiras": {
+    "codigo_ibge": 4321857,
+    "last_checked": "2026-09-21T12:28:14Z",
+    "plano": null,
+    "site_base": "https://www.trespalmeiras.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Três Passos": {
+    "codigo_ibge": 4321907,
+    "last_checked": "2026-09-21T12:28:13Z",
+    "plano": null,
+    "site_base": "https://www.trespassos.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Três de Maio": {
+    "codigo_ibge": 4321808,
+    "last_checked": "2026-09-21T12:28:13Z",
+    "plano": null,
+    "site_base": "https://www.tresdemaio.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Tucunduva": {
+    "codigo_ibge": 4322103,
+    "falso_positivo": {
+      "chars_extraidos": 26634,
+      "detectado_em": "2026-09-21T12:48:48Z",
+      "motivo": "termo \"Plano de Contingência\" não encontrado no texto do PDF",
+      "ocr_tentado": false,
+      "url": "https://sp1-object.adentro.com.br/sites/690/Conteudos/2947/okxiezxawk3c51ahjg9i_Edital_075_2019_Processo_de_Escolha_Conselho_Tutelar-_Tucunduva_272E..pdf"
+    },
+    "last_checked": "2026-09-21T12:28:14Z",
+    "plano": null,
+    "site_base": "https://www.tucunduva.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Tunas": {
+    "codigo_ibge": 4322152,
+    "last_checked": "2026-09-21T12:28:13Z",
+    "plano": null,
+    "site_base": "https://www.tunas.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Tupanci do Sul": {
+    "codigo_ibge": 4322186,
+    "last_checked": "2026-09-21T12:28:13Z",
+    "plano": null,
+    "site_base": "https://www.tupancidosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Tupanciretã": {
+    "codigo_ibge": 4322202,
+    "last_checked": "2026-09-21T12:28:13Z",
+    "plano": null,
+    "site_base": "https://www.tupancireta.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Tupandi": {
+    "codigo_ibge": 4322251,
+    "last_checked": "2026-09-21T12:28:14Z",
+    "plano": null,
+    "site_base": "https://www.tupandi.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Tuparendi": {
+    "codigo_ibge": 4322301,
+    "falso_positivo": {
+      "chars_extraidos": 4188,
+      "detectado_em": "2026-09-21T12:48:48Z",
+      "motivo": "termo \"Plano de Contingência\" não encontrado no texto do PDF",
+      "ocr_tentado": false,
+      "url": "https://sp1-object.adentro.com.br/sites/230/Licitacoes/2150402/g0tjcuz3smbvqymr4w66_DECRETON4.114DE20DEMARCODE2026..pdf"
+    },
+    "last_checked": "2026-09-21T12:28:15Z",
+    "plano": null,
+    "site_base": "https://www.tuparendi.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Turuçu": {
+    "codigo_ibge": 4322327,
+    "last_checked": "2026-09-21T12:28:15Z",
+    "plano": null,
+    "site_base": "https://www.turucu.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Ubiretama": {
+    "codigo_ibge": 4322343,
+    "last_checked": "2026-09-21T12:28:14Z",
+    "plano": null,
+    "site_base": "https://www.ubiretama.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Unistalda": {
+    "codigo_ibge": 4322376,
+    "last_checked": "2026-09-21T12:28:17Z",
+    "plano": null,
+    "site_base": "https://www.unistalda.rs.gov.br",
+    "site_status": "ok"
+  },
+  "União da Serra": {
+    "codigo_ibge": 4322350,
+    "last_checked": "2026-09-21T12:28:17Z",
+    "plano": null,
+    "site_base": "https://www.uniaodaserra.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Uruguaiana": {
+    "codigo_ibge": 4322400,
+    "last_checked": "2026-09-21T12:28:15Z",
+    "plano": null,
+    "site_base": "https://www.uruguaiana.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Vacaria": {
+    "codigo_ibge": 4322509,
+    "last_checked": "2026-09-21T12:28:16Z",
+    "plano": null,
+    "site_base": "https://www.vacaria.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Vale Real": {
+    "codigo_ibge": 4322541,
+    "last_checked": "2026-09-21T12:28:21Z",
+    "plano": null,
+    "site_base": "https://www.valereal.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Vale Verde": {
+    "codigo_ibge": 4322525,
+    "last_checked": "2026-09-21T12:28:16Z",
+    "plano": null,
+    "site_base": "https://www.valeverde.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Vale do Sol": {
+    "codigo_ibge": 4322533,
+    "last_checked": "2026-09-21T12:28:15Z",
+    "plano": null,
+    "site_base": "https://www.valedosol.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Vanini": {
+    "codigo_ibge": 4322558,
+    "last_checked": "2026-09-21T12:28:15Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Venâncio Aires": {
+    "codigo_ibge": 4322608,
+    "last_checked": "2026-09-21T12:28:16Z",
+    "plano": null,
+    "site_base": "https://www.venancioaires.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Vera Cruz": {
+    "codigo_ibge": 4322707,
+    "last_checked": "2026-09-21T12:28:15Z",
+    "plano": null,
+    "site_base": "https://www.veracruz.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Veranópolis": {
+    "codigo_ibge": 4322806,
+    "last_checked": "2026-09-21T12:28:23Z",
+    "plano": null,
+    "site_base": "https://www.veranopolis.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Vespasiano Corrêa": {
+    "codigo_ibge": 4322855,
+    "last_checked": "2026-09-21T12:28:16Z",
+    "plano": null,
+    "site_base": "https://www.vespasianocorrea.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Viadutos": {
+    "codigo_ibge": 4322905,
+    "last_checked": "2026-09-21T12:28:16Z",
+    "plano": null,
+    "site_base": "https://www.viadutos.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Viamão": {
+    "codigo_ibge": 4323002,
+    "last_checked": "2026-09-21T12:28:16Z",
+    "plano": null,
+    "site_base": "https://www.viamao.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Vicente Dutra": {
+    "codigo_ibge": 4323101,
+    "last_checked": "2026-09-21T12:28:17Z",
+    "plano": null,
+    "site_base": "https://www.vicentedutra.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Victor Graeff": {
+    "codigo_ibge": 4323200,
+    "last_checked": "2026-09-21T12:28:19Z",
+    "plano": null,
+    "site_base": "https://www.victorgraeff.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Vila Flores": {
+    "codigo_ibge": 4323309,
+    "last_checked": "2026-09-21T12:28:20Z",
+    "plano": {
+      "content_length": 308378,
+      "etag": "\"9c91a53bf980ee4a27e630fa0252cc76\"",
+      "first_seen": "2026-09-21T12:28:20Z",
+      "last_changed": "2026-09-21T12:28:20Z",
+      "last_modified_header": "Tue, 30 Jun 2026 16:40:51 GMT",
+      "sha256": "50d385a7ba05a37a3d79dbbc2a976a2d54fd3ec66c0918c48c82bd4035b00392",
+      "termo_confirmado": true,
+      "url": "https://cdn-gw.webdehost.com.br/269/PhotoAssets/807317/images/original/PLANO DE CONTINGÊNCIA MUNICIPAL DE PROTEÇÃO E DEFESA CIVIL.pdf",
+      "validado_via_ocr": false
+    },
+    "site_base": "https://www.vilaflores.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Vila Lângaro": {
+    "codigo_ibge": 4323358,
+    "last_checked": "2026-09-21T12:28:16Z",
+    "plano": null,
+    "site_base": "https://www.vilalangaro.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Vila Maria": {
+    "codigo_ibge": 4323408,
+    "last_checked": "2026-09-21T12:28:16Z",
+    "plano": null,
+    "site_base": "https://www.vilamaria.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Vila Nova do Sul": {
+    "codigo_ibge": 4323457,
+    "last_checked": "2026-09-21T12:28:17Z",
+    "plano": null,
+    "site_base": "https://www.vilanovadosul.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Vista Alegre": {
+    "codigo_ibge": 4323507,
+    "last_checked": "2026-09-21T12:28:16Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Vista Alegre do Prata": {
+    "codigo_ibge": 4323606,
+    "last_checked": "2026-09-21T12:28:16Z",
+    "last_error": "site inacessível (home não respondeu em nenhuma variante testada)",
+    "plano": null,
+    "site_base": null,
+    "site_status": "unreachable"
+  },
+  "Vista Gaúcha": {
+    "codigo_ibge": 4323705,
+    "last_checked": "2026-09-21T12:28:17Z",
+    "plano": null,
+    "site_base": "https://www.vistagaucha.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Vitória das Missões": {
+    "codigo_ibge": 4323754,
+    "last_checked": "2026-09-21T12:28:19Z",
+    "plano": null,
+    "site_base": "https://www.vitoriadasmissoes.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Westfália": {
+    "codigo_ibge": 4323770,
+    "last_checked": "2026-09-21T12:28:18Z",
+    "plano": null,
+    "site_base": "https://www.westfalia.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Xangri-lá": {
+    "codigo_ibge": 4323804,
+    "last_checked": "2026-09-21T12:28:17Z",
+    "plano": null,
+    "site_base": "https://www.xangrila.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Água Santa": {
+    "codigo_ibge": 4300059,
+    "last_checked": "2026-09-21T12:28:17Z",
+    "plano": null,
+    "site_base": "https://www.aguasanta.rs.gov.br",
+    "site_status": "ok"
+  },
+  "Áurea": {
+    "codigo_ibge": 4301552,
+    "last_checked": "2026-09-21T12:28:19Z",
+    "plano": null,
+    "site_base": "https://www.aurea.rs.gov.br",
+    "site_status": "ok"
+  }
+}

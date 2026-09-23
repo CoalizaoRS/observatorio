@@ -112,16 +112,27 @@ configurado para rodar todo dia às 08:00 (horário de Brasília) e também pode
 ser disparado manualmente pela aba **Actions** do GitHub
 (`workflow_dispatch`).
 
-Para ativar o envio de e-mail, em **Settings → Secrets and variables →
-Actions** do repositório `CoalizaoRS/observatorio`, cadastre:
+### Configuração de e-mail (Resend)
 
-- `SMTP_HOST` — ex.: `smtp.gmail.com`
-- `SMTP_PORT` — ex.: `587`
-- `SMTP_USER` — usuário/e-mail da conta usada para enviar
-- `SMTP_PASS` — senha ou senha de app (não use a senha normal do Gmail —
-  gere uma "senha de app" se usar Gmail/Workspace)
-- `EMAIL_TO` — endereço que vai receber o digest (pode ser uma lista separada
-  por vírgula, dependendo do provedor SMTP)
+O digest é enviado via API HTTP do [Resend](https://resend.com) — sem
+SMTP, sem guardar senha de e-mail, só uma API key escopada só para envio
+(gratuito até 3.000 e-mails/mês, mais que suficiente pra no máximo 1
+e-mail/dia).
+
+1. Crie uma conta em resend.com e gere uma API key (**API Keys → Create API
+   Key**, com permissão só de "Sending").
+   - Para o campo `from`, dá pra usar `onboarding@resend.dev` sem configurar
+     nada (funciona em modo de teste, mas só entrega para o e-mail da própria
+     conta Resend). Para enviar para qualquer destinatário, verifique um
+     domínio próprio em **Domains** (ex.: um subdomínio de
+     `observatoriodaresiliencia.org`) e use um endereço desse domínio.
+2. Em **Settings → Secrets and variables → Actions** do repositório
+   `CoalizaoRS/observatorio`, cadastre:
+   - `RESEND_API_KEY` — a API key gerada no passo 1
+   - `EMAIL_FROM` — o remetente (ex.: `onboarding@resend.dev` ou um endereço
+     do domínio verificado)
+   - `EMAIL_TO` — endereço(s) que recebem o digest (aceita uma lista
+     separada por vírgula)
 
 O workflow já tem `permissions: contents: write` para commitar o
 `state.json` atualizado de volta no repositório a cada execução.

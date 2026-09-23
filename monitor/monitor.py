@@ -31,12 +31,10 @@ import json
 import logging
 import os
 import re
-import smtplib
 import sys
 import unicodedata
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
-from email.mime.text import MIMEText
 from pathlib import Path
 from urllib.parse import urljoin
 
@@ -455,14 +453,14 @@ def build_new_state_entry(prev: dict, r: MunicipioResult) -> dict:
 
 
 def send_email_digest(changes: list[dict], unreachable_count: int, total: int):
-    smtp_host = os.environ.get("SMTP_HOST")
-    smtp_port = int(os.environ.get("SMTP_PORT", "587"))
-    smtp_user = os.environ.get("SMTP_USER")
-    smtp_pass = os.environ.get("SMTP_PASS")
+    """Envia o digest via API HTTP do Resend (https://resend.com) — nenhuma
+    credencial de e-mail (SMTP) é armazenada, só uma API key escopada."""
+    resend_api_key = os.environ.get("RESEND_API_KEY")
+    email_from = os.environ.get("EMAIL_FROM")
     email_to = os.environ.get("EMAIL_TO")
 
-    if not all([smtp_host, smtp_user, smtp_pass, email_to]):
-        print("[email] Variáveis SMTP_HOST/SMTP_USER/SMTP_PASS/EMAIL_TO não configuradas — pulando envio de e-mail.")
+    if not all([resend_api_key, email_from, email_to]):
+        print("[email] Variáveis RESEND_API_KEY/EMAIL_FROM/EMAIL_TO não configuradas — pulando envio de e-mail.")
         return
 
     linhas = [
@@ -478,24 +476,29 @@ def send_email_digest(changes: list[dict], unreachable_count: int, total: int):
     linhas.append(f"Resumo geral: {total} municípios verificados, {unreachable_count} com site inacessível.")
     corpo = "\n".join(linhas)
 
-    msg = MIMEText(corpo, "plain", "utf-8")
-    msg["Subject"] = f"[Planos de Contingência RS] {len(changes)} atualização(ões) detectada(s)"
-    msg["From"] = smtp_user
-    msg["To"] = email_to
+    destinatarios = [e.strip() for e in email_to.split(",") if e.strip()]
 
     try:
-        if smtp_port == 465:
-            with smtplib.SMTP_SSL(smtp_host, smtp_port, timeout=30) as server:
-                server.login(smtp_user, smtp_pass)
-                server.sendmail(smtp_user, [email_to], msg.as_string())
+        resp = requests.post(
+            "https://api.resend.com/emails",
+            headers={
+                "Authorization": f"Bearer {resend_api_key}",
+                "Content-Type": "application/json",
+            },
+            json={
+                "from": email_from,
+                "to": destinatarios,
+                "subject": f"[Planos de Contingência RS] {len(changes)} atualização(ões) detectada(s)",
+                "text": corpo,
+            },
+            timeout=30,
+        )
+        if resp.status_code >= 400:
+            print(f"[email] Falha ao enviar e-mail via Resend (HTTP {resp.status_code}): {resp.text}", file=sys.stderr)
         else:
-            with smtplib.SMTP(smtp_host, smtp_port, timeout=30) as server:
-                server.starttls()
-                server.login(smtp_user, smtp_pass)
-                server.sendmail(smtp_user, [email_to], msg.as_string())
-        print(f"[email] Digest enviado para {email_to}.")
-    except Exception as e:
-        print(f"[email] Falha ao enviar e-mail: {e}", file=sys.stderr)
+            print(f"[email] Digest enviado via Resend para {email_to}.")
+    except requests.exceptions.RequestException as e:
+        print(f"[email] Falha ao enviar e-mail via Resend: {e}", file=sys.stderr)
 
 
 def escrever_relatorio_sem_plano(municipios: list[dict], state: dict):

@@ -1149,6 +1149,21 @@
             return Array.isArray(val) ? val.includes(activeRegionGroup) : val === activeRegionGroup;
         }
 
+        // Ordena nomes de grupo numericamente quando começam com um número
+        // ordinal (ex.: "2ª CREPDEC" antes de "10ª CREPDEC" — comparação de
+        // string pura colocaria "10ª" antes de "2ª"). Cai pra alfabética normal
+        // quando não há prefixo numérico (bacias, associações).
+        function compareGroupNames(a, b) {
+            const numA = parseInt(a, 10);
+            const numB = parseInt(b, 10);
+            const aIsNum = /^\d/.test(a) && !isNaN(numA);
+            const bIsNum = /^\d/.test(b) && !isNaN(numB);
+            if (aIsNum && bIsNum) return numA - numB;
+            if (aIsNum) return -1;
+            if (bIsNum) return 1;
+            return a.localeCompare(b, 'pt-BR');
+        }
+
         function switchRegionType(tipo) {
             activeRegionType = tipo || null;
             activeRegionGroup = null;
@@ -1158,7 +1173,7 @@
             groupSelect.innerHTML = '<option value="">Todos os grupos</option>';
 
             if (tipo && regioesData && regioesData[tipo]) {
-                Object.keys(regioesData[tipo].grupos).forEach(grupo => {
+                Object.keys(regioesData[tipo].grupos).sort(compareGroupNames).forEach(grupo => {
                     const opt = document.createElement('option');
                     opt.value = grupo;
                     opt.textContent = grupo;

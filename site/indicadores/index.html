@@ -535,6 +535,9 @@
 
         const BASE_AZURE_URL = 'https://plancon.blob.core.windows.net/indicadores';
         const RS_GEOJSON_URL = 'https://raw.githubusercontent.com/tbrugz/geodata-br/master/geojson/geojs-43-mun.json';
+        // Chave pública do CARTO Basemaps, restrita ao domínio observatoriodaresiliencia.org
+        // (restrição configurada no painel do CARTO — não protege se usada em outro domínio).
+        const CARTO_API_KEY = 'cb1_43we_1_67a1ec24ec723f0e9cd65fb1';
 
         let map;
         let geojsonLayer;
@@ -675,9 +678,8 @@
                 });
             }
 
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-                attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
-                subdomains: 'abcd',
+            L.tileLayer(`https://basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}{r}.png?key=${CARTO_API_KEY}`, {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>',
                 maxZoom: 20
             }).addTo(map);
         }

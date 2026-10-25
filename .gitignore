@@ -33,3 +33,9 @@ backend/vagas_abrigos.csv
 backend/indicadores/*.json
 !backend/indicadores/_ajustes_manuais.json
 backend/indicadores/_backup-*/
+
+# Listas de municípios de rodadas pontuais (geradas a cada execução no cluster).
+# Ficam só o grupo de controle e a entrada padrão do mapas.sbatch.
+rag-local/listas/*
+!rag-local/listas/controle.txt
+!rag-local/listas/p4_mapas.json

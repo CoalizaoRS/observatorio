@@ -58,5 +58,15 @@
     "justificativa": "tabela de cotas do Rio Taquari com as ruas ATINGIDAS em cada nível — área de risco, não rota de evacuação.",
     "revisado_por": "Fausto Vanin",
     "data": "2026-10-25"
+  },
+  {
+    "municipio": "Marcelino Ramos",
+    "indicador": "P3",
+    "valor": "verde",
+    "evidencia": "Cabe ao responsável pela operação da barragem, realizar exercícios simulados nas ZAS para treinamento da população atendida. Na data de 22 de junho de 2024, foi executado um simulado, na comunidade de Linha São Paulo, em Piratuba /SC.",
+    "pagina": 55,
+    "justificativa": "simulado realizado e datado na ZAS da UH Machadinho, que inclui famílias de Marcelino Ramos; conta para o município mesmo tendo ocorrido em Piratuba/SC (decisão da equipe, issue #6).",
+    "revisado_por": "Fausto Vanin",
+    "data": "2026-10-25"
   }
 ]

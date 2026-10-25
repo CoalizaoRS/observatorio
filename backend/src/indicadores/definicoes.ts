@@ -35,6 +35,11 @@ export interface IndicadorDef {
   campos: CampoDef[];
   /** Deriva o valor final. number|string → valor; 'N/A' → sem valor; null → usar json.valor. */
   calcular?: (campos: Record<string, any>) => number | string | 'N/A' | null;
+  /**
+   * RAG local: trechos que casam com esta expressão entram sempre no contexto (até um limite).
+   * Para termos que a busca semântica dilui em planos longos (ex.: "ROTA 01", "Rotas de fuga").
+   */
+  ancoras?: RegExp;
   /** Componentes numéricos derivados (ex.: razões de apoio) mesclados aos extraídos. */
   derivar?: (campos: Record<string, any>) => Record<string, any>;
 }
@@ -63,6 +68,26 @@ function razao(a: any, b: any, fator: number, casas = 2): number | 'N/A' {
 // A ausência do dado no PLANCON é, por definição da aba, o próprio sinal VERMELHO —
 // por isso o semáforo NÃO oferece "N/A": não mencionar = vermelho.
 const SEMAFORO = ['verde', 'amarelo', 'vermelho'];
+
+// P2: acima disso o "nº de vagas" extraído é lixo (ex.: 155564 em Tucunduva era área/código).
+const VAGAS_MAX = 50000;
+
+// P5: itens de meios_alerta que não são canal de emissão de alerta à população.
+const NAO_CANAL = /telefon|e-?mail|of[íi]cio|contato|0800|\(\d{2}\)|\d{4,}-?\d{4}|assessoria|emitir alerta|^\s*alarmes?\s*$/i;
+
+/**
+ * meios_alerta vem como array ou texto, e um mesmo item às vezes junta vários canais
+ * ("Internet, Radio, Telefone", "mídias sociais e mensagens de telefone"): separa em partes
+ * e tira parênteses (que costumam trazer números de contato) antes de filtrar. "/" não separa:
+ * "carro de som/alto-falante" é um canal só.
+ */
+function listaDeMeios(v: any): string[] {
+  const itens = Array.isArray(v) ? v.map(String) : typeof v === 'string' ? [v] : [];
+  return itens
+    .flatMap((s) => s.replace(/\([^)]*\)/g, ' ').split(/[;,\n]|\s+(?:e|ou)\s+/))
+    .map((s) => s.trim())
+    .filter((s) => s && !/^n\/?a$/i.test(s));
+}
 
 export const INDICADORES: IndicadorDef[] = [
   {
@@ -124,11 +149,16 @@ export const INDICADORES: IndicadorDef[] = [
       { nome: 'vagas_abrigos', tipo: 'numero', descricao: 'total de vagas em abrigos (ou "N/A")' },
       { nome: 'populacao_area_risco', tipo: 'numero', descricao: 'população em área de risco (ou "N/A")' },
     ],
-    // Guard: sem abrigos concretamente listados não pode ser verde (cai para amarelo se menciona abrigos).
+    // Semáforo determinístico a partir dos componentes (decisão de 22/10/2026), aplicando o
+    // critério à risca: abrigos listados + nº de vagas → verde; listados sem vagas → amarelo.
+    // Sem lista, só o modelo distingue "menciona abrigos" (amarelo) de "não menciona" (vermelho),
+    // mas nunca é verde. Vagas implausíveis (área em m², códigos) contam como não informadas.
     calcular: (c) => {
-      const v = String(c.valor).toLowerCase();
-      if (v === 'verde' && String(c.abrigos_listados).toLowerCase() !== 'sim') return 'amarelo';
-      return null;
+      if (String(c.abrigos_listados).toLowerCase() === 'sim') {
+        const vagas = paraNumero(c.vagas_abrigos);
+        return vagas !== null && vagas > 0 && vagas <= VAGAS_MAX ? 'verde' : 'amarelo';
+      }
+      return String(c.valor).toLowerCase() === 'verde' ? 'amarelo' : null;
     },
     derivar: (c) => ({ vagas_por_1000_hab_risco: razao(c.vagas_abrigos, c.populacao_area_risco, 1000) }),
   },
@@ -150,19 +180,36 @@ export const INDICADORES: IndicadorDef[] = [
       'O PLANCON descreve um SIMULADO/EXERCÍCIO de evacuação (treinamento) efetivamente REALIZADO no passado (com data, ata, ' +
       'relatório ou nº de participantes)? ATENÇÃO, NÃO conte como simulado realizado: (a) simulado só previsto/obrigatório ' +
       '("deverão realizar", "prevê a Lei"); (b) RESPOSTA A EVENTO REAL (resgates/evacuação numa enchente ou desastre de verdade — ' +
-      'não é treinamento); (c) a data do próprio plano. Na EVIDÊNCIA, explique claramente a classificação: para VERDE cite o simulado ' +
-      'realizado; para VERMELHO diga o motivo (ex.: "só previsto", "é resposta a evento real, não simulado", "não menciona simulados").',
+      'não é treinamento); (c) a data do próprio plano; (d) TAREFAS no infinitivo, como "Realizar simulados" ou "Promover ações de ' +
+      'treinamento com simulação" — são atribuições/intenções, não relato de algo que aconteceu. Na EVIDÊNCIA, explique claramente a ' +
+      'classificação: para VERDE cite o simulado realizado; para VERMELHO diga o motivo (ex.: "só previsto", "tarefa no infinitivo", ' +
+      '"é resposta a evento real, não simulado", "não menciona simulados").',
     campos: [
       { nome: 'valor', tipo: 'enum', descricao: 'VERDE só se há SIMULADO/treinamento REALIZADO; senão VERMELHO', opcoes: ['verde', 'vermelho'] },
+      { nome: 'simulado_realizado', tipo: 'enum', descricao: 'o plano RELATA um simulado/exercício JÁ REALIZADO (verbo no passado: "foi realizado", "realizou-se", "participaram")? Tarefa no infinitivo ("realizar", "promover") ou futuro = nao', opcoes: ['sim', 'nao', 'N/A'] },
+      { nome: 'data_simulado', tipo: 'texto', descricao: 'data (ou ao menos o ano) do simulado JÁ REALIZADO, como aparece no plano (ou "N/A")' },
+      { nome: 'local_simulado', tipo: 'texto', descricao: 'onde o simulado realizado aconteceu (bairro/comunidade/município) (ou "N/A")' },
       { nome: 'apenas_previsto', tipo: 'enum', descricao: 'o plano APENAS prevê/obriga simulados no futuro? ("deverá realizar" = sim)', opcoes: ['sim', 'nao', 'N/A'] },
       { nome: 'evento_real_nao_simulado', tipo: 'enum', descricao: 'a menção é a RESPOSTA A EVENTO REAL (enchente/desastre de verdade), não a um simulado/treinamento?', opcoes: ['sim', 'nao', 'N/A'] },
     ],
-    // Guard: só é verde se houve simulado realizado — nem futuro/previsto, nem evento real.
+    ancoras: /simulad[oa]s?\b|exerc[íi]cios? simulad/i,
+    // Semáforo determinístico a partir dos componentes (decisão de 23/10/2026): verde só com simulado
+    // relatado como realizado E com data (ano) no passado. Previsto/obrigatório ou evento real → vermelho.
+    // Corrige os verdes por "Realizar simulados"/"Promover treinamentos" (tarefas, não fatos).
     calcular: (c) => {
       const previsto = String(c.apenas_previsto).toLowerCase() === 'sim';
       const eventoReal = String(c.evento_real_nao_simulado).toLowerCase() === 'sim';
-      if (previsto || eventoReal) return 'vermelho';
-      return null;                                            // senão, usa o valor do modelo
+      const realizado = String(c.simulado_realizado).toLowerCase() === 'sim';
+      const ano = Number(String(c.data_simulado ?? '').match(/\b(19|20)\d{2}\b/)?.[0]);
+      // âncora na evidência: obrigação/intenção sem nenhum verbo no passado não é simulado realizado
+      const ev = String(c.evidencia ?? '');
+      // ("devem ser realizados" é obrigação, não passado; o ano de uma lei citada não é data de simulado)
+      const soIntencao = /deverá|deverão|devem\b|\brealizar\b|promover|será|serão|vez(es)? ao ano|prev[êe] a lei/i.test(ev) &&
+        !/\bfoi\b|\bforam\b|(?<!ser |serem )realizad[oa]s?\b|realizou|executad|ocorreu|participaram/i.test(ev);
+      if (previsto || eventoReal || !realizado || soIntencao) return 'vermelho';
+      // o ano informado tem de estar no trecho citado (evita data "emprestada" de outra parte do plano)
+      if (!ano || ano > new Date().getFullYear() || !ev.includes(String(ano))) return 'vermelho';
+      return 'verde';
     },
   },
   {
@@ -182,11 +229,41 @@ export const INDICADORES: IndicadorDef[] = [
       'O PLANCON descreve um TRAJETO de evacuação ESPECÍFICO e JÁ DEFINIDO — ruas/vias NOMEADAS ligando a área de risco a um ponto ' +
       'de encontro/local seguro (ex.: "pela Rua X até o ponto de encontro na Escola Y")? ATENÇÃO, NÃO conte como rota: ' +
       '(a) "ruas a serem definidas de acordo com o evento" ou "principais ruas" (genérico/futuro); (b) só o título "Rotas de Fuga"; ' +
-      '(c) endereços de ABRIGOS (abrigo não é rota); (d) sistema de alerta; (e) rotas de incêndio predial/PPCI.',
+      '(c) endereços de ABRIGOS (abrigo não é rota); (d) sistema de alerta; (e) rotas de incêndio predial/PPCI; ' +
+      '(f) lista de RUAS ATINGIDAS / em área de risco / por cota de inundação (isso é onde está o risco, não o caminho de saída); ' +
+      '(g) ponto de encontro das EQUIPES de resposta (não da população). ' +
+      'CONTAM como rota definida (rota_definida = "sim"): "Sugestão de rota pelas ruas X e Y em direção ao Parque Z", ' +
+      '"Opção 01 — segue pela Rua X em direção à Rua Y", "ROTA 01: siga pela Rua X…", tabelas de rotas com origem/destino, ' +
+      '"a evacuação deverá ocorrer pela Estrada X" — o destino pode ser um local seguro, uma via ou uma direção (ex.: "partes altas").',
     campos: [
       { nome: 'valor', tipo: 'enum', descricao: 'VERDE só se há rota ESPECÍFICA descrita (ruas/trajeto/mapa/ponto de encontro); senão VERMELHO', opcoes: ['verde', 'vermelho'] },
+      { nome: 'rota_definida', tipo: 'enum', descricao: 'o plano descreve um TRAJETO de evacuação concreto e já definido para a população?', opcoes: ['sim', 'nao', 'N/A'] },
+      { nome: 'rota_futura_ou_generica', tipo: 'enum', descricao: 'a menção a rotas é futura/genérica ("a definir conforme o evento", "principais ruas", "não se fez necessária")?', opcoes: ['sim', 'nao', 'N/A'] },
+      { nome: 'vias_da_rota', tipo: 'texto', descricao: 'ruas/vias nomeadas que FORMAM o trajeto de saída (não ruas atingidas, não endereço de abrigo) (ou "N/A")' },
+      { nome: 'destino_da_rota', tipo: 'texto', descricao: 'ponto de encontro, local seguro ou direção para onde o trajeto leva a POPULAÇÃO (ou "N/A")' },
       { nome: 'rotas_descritas', tipo: 'texto', descricao: 'trecho/descrição da(s) rota(s) específica(s), se houver (ou "N/A")' },
     ],
+    ancoras: /rotas? de (fuga|evacua[çc][ãa]o|sa[íi]da)|\bROTA\s*0?\d|op[çc][ãa]o\s*0?\d|evacua[çc][ãa]o\s+(deve|dever[áa])/i,
+    // Semáforo determinístico a partir dos componentes (decisão de 23/10/2026): verde só com trajeto
+    // definido (não futuro/genérico) e com via nomeada. O destino é registrado, mas não exigido:
+    // muitas rotas reais terminam numa direção ("em direção à BR-290", "partes altas").
+    // A evidência serve de âncora nos dois sentidos: (1) o "sim" do modelo só vale se o trecho citado
+    // fala de trajeto (rota, fuga, evacuação, "para a Rua X"…), não de ruas atingidas; (2) o modelo às
+    // vezes cita a rota e responde "nao" — um trecho com "rota" + via nomeada, sem tom futuro, é verde.
+    calcular: (c) => {
+      const preenchido = (v: any) => !!String(v ?? '').trim() && !/^n\/?a$/i.test(String(v).trim());
+      const ev = String(c.evidencia ?? '');
+      const generica =
+        String(c.rota_futura_ou_generica).toLowerCase() === 'sim' ||
+        /ser[áa] (planejad|definid|estabelecid)|ser[ãa]o (planejad|definid|estabelecid)|a definir|a serem definid|definir e revisar|n[ãa]o se fez necess/i.test(ev);
+      if (generica) return 'vermelho';
+      const via = /\b(rua|r\.|av\.|avenida|estrada|rodovia|travessa|tv\.|rst?[- ]?\d{2,3}|br[- ]?\d{2,3})\s*\S/i.test(ev);
+      const falaDeTrajeto = /rota|fuga|evacua|trajeto|percurso|dire[çc][ãa]o|op[çc][ãa]o\s*0?\d|\bsiga\b|\bpara\s+(a\s+)?(rua|av|estrada)/i.test(ev);
+      const modeloSim = String(c.rota_definida).toLowerCase() === 'sim' && preenchido(c.vias_da_rota);
+      if (modeloSim && falaDeTrajeto) return 'verde';
+      if (/\brotas?\b/i.test(ev) && via) return 'verde';
+      return 'vermelho';
+    },
   },
   {
     id: 'P5',
@@ -210,9 +287,13 @@ export const INDICADORES: IndicadorDef[] = [
       { nome: 'n_canais_alerta', tipo: 'numero', descricao: 'nº de canais de EMISSÃO DE ALERTA à população (exclui contatos internos; 0 se nenhum)' },
       { nome: 'meios_alerta', tipo: 'texto', descricao: 'lista dos canais de emissão à população (ou "N/A")' },
     ],
-    // Semáforo determinístico a partir da contagem corrigida de canais de emissão.
+    // Semáforo determinístico a partir da LISTA de canais (decisão de 23/10/2026): antes de contar,
+    // descarta o que o critério exclui e os modelos insistem em contar — telefones, e-mails,
+    // números de contato, ofícios, "assessoria", títulos de seção ("Emitir alertas", "Alarme").
+    // Sem lista utilizável, cai na contagem n_canais_alerta do modelo.
     calcular: (c) => {
-      const n = paraNumero(c.n_canais_alerta);
+      const meios = listaDeMeios(c.meios_alerta);
+      const n = meios.length ? meios.filter((m) => !NAO_CANAL.test(m)).length : paraNumero(c.n_canais_alerta);
       if (n === null) return null;
       if (n > 3) return 'verde';
       if (n >= 1) return 'amarelo';

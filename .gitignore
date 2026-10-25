@@ -27,3 +27,9 @@ backend/vagas_abrigos.csv
 # Config local de ferramentas de IA (não deve ser versionada)
 .claude/
 
+
+# Resultados por município (rag-cache/indicadores-v2 no Garage) e backups: dado, não código.
+# Exceção: os ajustes manuais são registro de revisão e ficam versionados.
+backend/indicadores/*.json
+!backend/indicadores/_ajustes_manuais.json
+backend/indicadores/_backup-*/

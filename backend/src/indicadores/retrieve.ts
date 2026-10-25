@@ -7,7 +7,8 @@
  * Configuração (endpoint, índice, chave) compartilhada com o proxy via ../config.
  */
 
-import { SEARCH_KS, SEARCH_KEY, RETRIEVE_ENDPOINT } from '../config';
+import { SEARCH_KS, SEARCH_KEY, RETRIEVE_ENDPOINT, RAG_PROVIDER } from '../config';
+import { retrieveLocal } from './retrieve-local';
 
 export interface RetrieveResult {
   /** Texto sintetizado pelo modelo (esperado: um objeto JSON). */
@@ -27,9 +28,12 @@ export async function retrieve(
   municipio: string,
   filterAddOn: string,
   pergunta: string,
-  opts: { tentativas?: number } = {}
+  opts: { tentativas?: number; ancoras?: RegExp } = {}
 ): Promise<RetrieveResult> {
   const tentativas = opts.tentativas ?? 4;
+
+  // RAG local (llama.cpp no cluster LAD): filtra pelo nome do município, não por blob_url.
+  if (RAG_PROVIDER === 'local') return retrieveLocal(municipio, pergunta, opts.ancoras);
 
   const userText = `Município da consulta: ${municipio}.\n\n${pergunta}`;
   const payload = {

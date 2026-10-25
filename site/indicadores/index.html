@@ -370,6 +370,7 @@
                         <div class="bg-gray-950/50 border border-gray-800/80 p-3.5 rounded-xl text-xs text-gray-300 leading-relaxed italic" id="detail-evidence">
                             Nenhuma observação informada.
                         </div>
+                        <span class="text-[10px] text-gray-500 block" id="detail-origem"></span>
                     </div>
 
                     <!-- Detalhamento Semafórico Integrado dos 7 Indicadores -->
@@ -420,69 +421,6 @@
         </section>
 
     </main>
-
-    <!-- BOTÃO FLUTUANTE DO CHATBOT -->
-    <button id="chat-toggle-btn"
-            class="fixed bottom-6 right-6 z-[1000] w-14 h-14 rounded-full bg-gradient-to-tr from-[#a5597c] via-[#d7453c] to-[#f09f48] hover:opacity-90 text-white shadow-2xl shadow-black/80 flex items-center justify-center border border-[#f09f48]/40 transition-all duration-300 transform hover:scale-105 active:scale-95 group focus:outline-none cursor-grab active:cursor-grabbing select-none touch-none"
-            title="Clique para abrir o Assistente · Arraste para mover">
-        <i class="fa-solid fa-comments text-2xl group-hover:rotate-12 transition-transform" id="chat-btn-icon"></i>
-        <span class="absolute -top-1 -right-1 flex h-4 w-4">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#f09f48] opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-4 w-4 bg-[#f09f48] border-2 border-gray-950"></span>
-        </span>
-    </button>
-
-    <!-- CAIXA DE MENSAGENS DO CHATBOT -->
-    <div id="chat-window" class="hidden fixed inset-0 sm:inset-auto sm:bottom-24 sm:right-6 w-full sm:w-[420px] h-full sm:h-[520px] sm:max-h-[80vh] bg-gray-900 border-0 sm:border border-gray-800 rounded-none sm:rounded-2xl shadow-2xl z-[1000] flex-col overflow-hidden transition-all duration-300">
-        
-        <!-- Cabeçalho do Chat -->
-        <div class="p-3.5 bg-gradient-to-r from-gray-900 via-[#a5597c]/30 to-gray-900 border-b border-gray-800 flex items-center justify-between shrink-0">
-            <div class="flex items-center space-x-3">
-                <div class="w-9 h-9 rounded-xl bg-[#a5597c]/20 border border-[#a5597c]/40 flex items-center justify-center text-[#f05f61] shrink-0">
-                    <i class="fa-solid fa-robot text-lg"></i>
-                </div>
-                <div>
-                    <h3 class="text-xs font-bold text-white tracking-wide flex items-center gap-2">
-                        Assistente Observatório
-                        <span class="w-2 h-2 rounded-full bg-[#f09f48] animate-pulse"></span>
-                    </h3>
-                    <p class="text-[10px] text-gray-400">Consulta aos Planos de Contingência do RS</p>
-                </div>
-            </div>
-            <div class="flex items-center space-x-1">
-                <button onclick="clearChatHistory()" class="p-1.5 text-gray-400 hover:text-gray-200 hover:bg-gray-800/60 rounded-lg transition text-xs" title="Limpar conversa">
-                    <i class="fa-solid fa-trash-can"></i>
-                </button>
-                <button onclick="toggleChatWindow()" class="p-1.5 text-gray-400 hover:text-white hover:bg-gray-800/60 rounded-lg transition text-sm" title="Fechar">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- Área de Histórico de Mensagens -->
-        <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3.5 bg-gray-950/90 text-xs">
-            <div class="bg-[#a5597c]/15 border border-[#a5597c]/30 p-3.5 rounded-xl space-y-2 text-gray-300 leading-relaxed shadow-sm">
-                <div class="flex items-center space-x-2 text-[#f05f61] font-semibold text-xs">
-                    <i class="fa-solid fa-circle-info"></i>
-                    <span>Consulta Orientada por IA</span>
-                </div>
-                <p class="text-xs text-gray-200">
-                    Faça uma pergunta aos planos de contingência do estado. Solução baseada em Inteligência Artificial, sujeita a erros. Em caso de dúvida, entre em contato com <a href="mailto:contato@observatoriodaresiliencia.org" class="text-[#f09f48] hover:underline font-medium">contato@observatoriodaresiliencia.org</a>
-                </p>
-            </div>
-        </div>
-
-        <!-- Formulário de Envio de Pergunta -->
-        <form id="chat-form" onsubmit="sendChatMessage(event)" class="p-3 bg-gray-900 border-t border-gray-800 shrink-0 flex items-center gap-2">
-            <input type="text" id="chat-input" placeholder="Pergunte sobre os planos de contingência..." 
-                   class="flex-1 bg-gray-950 border border-gray-800 rounded-xl px-3.5 py-2.5 text-xs text-gray-100 placeholder-gray-500 focus:outline-none focus:border-[#a5597c] transition-colors"
-                   required autocomplete="off" />
-            <button type="submit" id="chat-send-btn" 
-                    class="bg-[#d7453c] hover:bg-[#f05f61] text-white p-2.5 rounded-xl transition shadow-md flex items-center justify-center shrink-0">
-                <i class="fa-solid fa-paper-plane text-xs"></i>
-            </button>
-        </form>
-    </div>
 
     <!-- Scripts do Leaflet e PapaParse -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
@@ -614,7 +552,8 @@
         // Utilitário para normalizar os nomes dos municípios
         const normalizeString = (str) => {
             if (!str) return '';
-            return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+            // "Sant' Ana do Livramento" (malha/CSV) e "Sant'Ana do Livramento" (regioes.json) s\u00e3o o mesmo munic\u00edpio
+            return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s*['\u2019]\s*/g, "'").toLowerCase().trim();
         };
 
         const COLORS = {
@@ -701,7 +640,8 @@
                         valor: validVal,
                         populacao_total: row.populacao_total || 'N/A',
                         evidencia: row.evidencia || 'Declarada no PlanCon.',
-                        confianca: row.confianca || 'N/A'
+                        confianca: row.confianca || 'N/A',
+                        origem: row.origem || ''
                     };
                 }
             });
@@ -947,6 +887,13 @@
 
             document.getElementById('detail-name').textContent = indicator.municipio;
             document.getElementById('detail-evidence').textContent = indicator.evidencia || 'Sem observações declaradas.';
+            // De onde veio a classificação: extração automática (Azure / RAG local no LAD) ou revisão manual
+            const ORIGENS = {
+                azure: 'Fonte: extração automática (Azure, gpt-5.1-mini)',
+                gemma: 'Fonte: extração automática (RAG local LAD/PUCRS, Gemma 3)',
+                manual: 'Fonte: revisão manual da equipe'
+            };
+            document.getElementById('detail-origem').textContent = ORIGENS[indicator.origem] || '';
 
             const badge = document.getElementById('detail-badge');
             const valKey = indicator.valor ? indicator.valor.toLowerCase() : 'n/a';
@@ -1295,318 +1242,6 @@
             switchMobileView('indicators');
         };
 
-        function toggleChatWindow() {
-            const chatWin = document.getElementById('chat-window');
-            const icon = document.getElementById('chat-btn-icon');
-            if (chatWin.classList.contains('hidden')) {
-                chatWin.classList.remove('hidden');
-                chatWin.classList.add('flex');
-                icon.className = 'fa-solid fa-xmark text-2xl';
-                document.getElementById('chat-input').focus();
-            } else {
-                chatWin.classList.add('hidden');
-                chatWin.classList.remove('flex');
-                icon.className = 'fa-solid fa-comments text-2xl';
-            }
-        }
-
-        // Torna o botão do chat arrastável (mouse + toque), para sair da frente
-        // do conteúdo. Distingue arraste de clique por um limiar de movimento.
-        (function makeChatButtonDraggable() {
-            const btn = document.getElementById('chat-toggle-btn');
-            if (!btn) return;
-
-            const THRESHOLD = 6;     // px mínimos para considerar arraste
-            const MARGIN = 8;        // px de folga das bordas
-            let dragging = false, moved = false;
-            let startX = 0, startY = 0, originLeft = 0, originTop = 0;
-
-            function anchorToLeftTop() {
-                const rect = btn.getBoundingClientRect();
-                btn.style.left = rect.left + 'px';
-                btn.style.top = rect.top + 'px';
-                btn.style.right = 'auto';
-                btn.style.bottom = 'auto';
-                btn.classList.remove('bottom-6', 'right-6');
-            }
-
-            btn.addEventListener('pointerdown', (e) => {
-                if (e.button && e.button !== 0) return; // só botão primário
-                dragging = true;
-                moved = false;
-                startX = e.clientX;
-                startY = e.clientY;
-                anchorToLeftTop();
-                originLeft = parseFloat(btn.style.left);
-                originTop = parseFloat(btn.style.top);
-                btn.style.transition = 'none';
-                try { btn.setPointerCapture(e.pointerId); } catch (_) {}
-            });
-
-            btn.addEventListener('pointermove', (e) => {
-                if (!dragging) return;
-                const dx = e.clientX - startX;
-                const dy = e.clientY - startY;
-                if (!moved && Math.hypot(dx, dy) > THRESHOLD) moved = true;
-                if (!moved) return;
-                e.preventDefault();
-                const size = btn.offsetWidth;
-                let nl = Math.min(Math.max(MARGIN, originLeft + dx), window.innerWidth - size - MARGIN);
-                let nt = Math.min(Math.max(MARGIN, originTop + dy), window.innerHeight - size - MARGIN);
-                btn.style.left = nl + 'px';
-                btn.style.top = nt + 'px';
-            });
-
-            function endDrag(e) {
-                if (!dragging) return;
-                dragging = false;
-                btn.style.transition = '';
-                try { btn.releasePointerCapture(e.pointerId); } catch (_) {}
-            }
-            btn.addEventListener('pointerup', endDrag);
-            btn.addEventListener('pointercancel', endDrag);
-
-            // Clique real (sem arraste) abre/fecha o chat; arraste não dispara toggle.
-            btn.addEventListener('click', (e) => {
-                if (moved) {
-                    e.preventDefault();
-                    e.stopImmediatePropagation();
-                    moved = false;
-                    return;
-                }
-                toggleChatWindow();
-            });
-
-            // Reposiciona para dentro da tela se a janela for redimensionada/girada.
-            window.addEventListener('resize', () => {
-                if (btn.style.left === '' && btn.style.top === '') return;
-                const size = btn.offsetWidth;
-                const curLeft = parseFloat(btn.style.left);
-                const curTop = parseFloat(btn.style.top);
-                if (isNaN(curLeft) || isNaN(curTop)) return;
-                btn.style.left = Math.min(Math.max(MARGIN, curLeft), window.innerWidth - size - MARGIN) + 'px';
-                btn.style.top = Math.min(Math.max(MARGIN, curTop), window.innerHeight - size - MARGIN) + 'px';
-            });
-        })();
-
-        function appendChatMessage(sender, text, isError = false, references = []) {
-            const container = document.getElementById('chat-messages');
-            const msgDiv = document.createElement('div');
-            
-            if (sender === 'user') {
-                msgDiv.className = 'flex justify-end';
-                msgDiv.innerHTML = `
-                    <div class="bg-gradient-to-r from-[#a5597c] to-[#d7453c] text-white p-3 rounded-2xl rounded-tr-none max-w-[85%] text-xs leading-relaxed shadow-md">
-                        ${escapeHtml(text)}
-                    </div>
-                `;
-            } else {
-                msgDiv.className = 'flex justify-start space-x-2';
-                const bgStyle = isError ? 'bg-red-950/50 border border-red-500/30 text-red-200' : 'bg-gray-850 border border-gray-800 text-gray-200';
-                msgDiv.innerHTML = `
-                    <div class="w-6 h-6 rounded-lg bg-[#a5597c]/20 border border-[#a5597c]/40 text-[#f05f61] flex items-center justify-center shrink-0 text-[10px] mt-0.5">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-                    <div class="${bgStyle} p-3 rounded-2xl rounded-tl-none max-w-[85%] text-xs leading-relaxed shadow-md whitespace-pre-wrap">
-                        ${formatBotResponse(text, references)}
-                    </div>
-                `;
-            }
-
-            container.appendChild(msgDiv);
-            container.scrollTop = container.scrollHeight;
-        }
-
-        function appendChatLoader() {
-            const container = document.getElementById('chat-messages');
-            const id = 'loader-' + Date.now();
-            const loaderDiv = document.createElement('div');
-            loaderDiv.id = id;
-            loaderDiv.className = 'flex justify-start space-x-2';
-            loaderDiv.innerHTML = `
-                <div class="w-6 h-6 rounded-lg bg-[#a5597c]/20 border border-[#a5597c]/40 text-[#f05f61] flex items-center justify-center shrink-0 text-[10px] mt-0.5">
-                    <i class="fa-solid fa-robot"></i>
-                </div>
-                <div class="bg-gray-850 border border-gray-800 p-3 rounded-2xl rounded-tl-none text-xs text-gray-400 flex items-center space-x-1.5">
-                    <span class="w-1.5 h-1.5 bg-[#f09f48] rounded-full animate-bounce"></span>
-                    <span class="w-1.5 h-1.5 bg-[#f09f48] rounded-full animate-bounce [animation-delay:0.2s]"></span>
-                    <span class="w-1.5 h-1.5 bg-[#f09f48] rounded-full animate-bounce [animation-delay:0.4s]"></span>
-                    <span class="ml-1 text-[10px] text-gray-500">Consultando planos de contingência...</span>
-                </div>
-            `;
-            container.appendChild(loaderDiv);
-            container.scrollTop = container.scrollHeight;
-            return id;
-        }
-
-        function removeChatLoader(id) {
-            const el = document.getElementById(id);
-            if (el) el.remove();
-        }
-
-        function formatBotResponse(text, references = []) {
-            if (!text) return '';
-            
-            let formatted = escapeHtml(text);
-            formatted = formatted.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-emerald-400 underline hover:text-emerald-300">$1</a>');
-
-            if (references && references.length > 0) {
-                formatted = formatarCitacoesInline(formatted, references);
-            }
-
-            formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-
-            return formatted;
-        }
-
-        function escapeHtml(str) {
-            const p = document.createElement('p');
-            p.textContent = str;
-            return p.innerHTML;
-        }
-
-        function clearChatHistory() {
-            conversationHistory = [];
-            const container = document.getElementById('chat-messages');
-            container.innerHTML = `
-                <div class="bg-[#a5597c]/15 border border-[#a5597c]/30 p-3.5 rounded-xl space-y-2 text-gray-300 leading-relaxed shadow-sm">
-                    <div class="flex items-center space-x-2 text-[#f05f61] font-semibold text-xs">
-                        <i class="fa-solid fa-circle-info"></i>
-                        <span>Consulta Orientada por IA</span>
-                    </div>
-                    <p class="text-xs text-gray-200">
-                        Faça uma pergunta aos planos de contingência do estado. Solução baseada em Inteligência Artificial, sujeita a erros. Em caso de dúvida, entre em contato com <a href="mailto:contato@observatoriodaresiliencia.org" class="text-[#f09f48] hover:underline font-medium">contato@observatoriodaresiliencia.org</a>
-                    </p>
-                </div>
-            `;
-        }
-
-        async function sendChatMessage(event) {
-            if (event) event.preventDefault();
-            const inputEl = document.getElementById('chat-input');
-            const queryText = inputEl.value.trim();
-            if (!queryText) return;
-
-            appendChatMessage('user', queryText);
-            inputEl.value = '';
-
-            conversationHistory.push({ role: "user", text: queryText });
-
-            const loaderId = appendChatLoader();
-            const sendBtn = document.getElementById('chat-send-btn');
-            sendBtn.disabled = true;
-
-            try {
-                const payload = {
-                    messages: conversationHistory.slice(-12)
-                };
-
-                if (selectedMunicipality && selectedMunicipality.municipio) {
-                    payload.municipio = selectedMunicipality.municipio;
-                }
-
-                const response = await fetch('https://observatorio-backend.blacksand-ccf12c68.westus2.azurecontainerapps.io/api/retrieve', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(payload)
-                });
-
-                removeChatLoader(loaderId);
-
-                if (!response.ok) {
-                    throw new Error(`Servidor respondeu com código ${response.status}`);
-                }
-
-                const data = await response.json();
-
-                let answerText = "";
-                let referencesList = [];
-
-                if (data.response && data.response.length > 0 && data.response[0].content && data.response[0].content.length > 0) {
-                    const contentItem = data.response[0].content[0];
-                    if (contentItem.type === "text") {
-                        answerText = contentItem.text;
-                    }
-                    
-                    if (data.references && Array.isArray(data.references)) {
-                        referencesList = data.references;
-                    }
-                }
-                else if (data.choices && data.choices.length > 0) {
-                    const topChoice = data.choices[0];
-                    answerText = topChoice.message?.content || "";
-                }
-                else if (data.answers && data.answers.length > 0) {
-                    const topAnswer = data.answers[0];
-                    answerText = topAnswer.answer || "";
-                }
-                else if (typeof data === "string") {
-                    answerText = data;
-                }
-
-                if (answerText) {
-                    conversationHistory.push({ role: "assistant", text: answerText });
-                }
-
-                appendChatMessage('bot', answerText, false, referencesList);
-            } catch (err) {
-                conversationHistory.pop();
-                removeChatLoader(loaderId);
-                console.error("Erro na requisição ao chatbot:", err);
-                appendChatMessage('bot', `Não foi possível obter a resposta dos planos de contingência no momento (${err.message}). Por favor, verifique sua conexão ou tente novamente em instantes.`, true);
-            } finally {
-                sendBtn.disabled = false;
-            }
-        }
-
-        function formatarCitacoesInline(texto, references) {
-            if (!references || !Array.isArray(references) || references.length === 0) return texto;
-            
-            const refMap = {};
-            references.forEach(ref => {
-                refMap[ref.id] = ref;
-            });
-
-            const regex = /\[ref_id:\s*(\d+)\]/g;
-            const urlCitadasNoTexto = new Set();
-            
-            let resultado = texto.replace(regex, (match, id) => {
-                const ref = refMap[id];
-                if (ref && ref.blob_url) {
-                    if (urlCitadasNoTexto.has(ref.blob_url)) {
-                        return "";
-                    }
-                    urlCitadasNoTexto.add(ref.blob_url);
-                    
-                    const nomeCompleto = ref.documentName || extrairNomeArquivo(ref.blob_url);
-                    
-                    return `<a href="${ref.blob_url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-[#f09f48] hover:text-[#f05f61] font-semibold bg-[#a5597c]/25 hover:bg-[#a5597c]/40 px-2 py-0.5 my-0.5 rounded border border-[#a5597c]/40 transition-colors text-[11px] shadow-sm" title="Baixar Plano Oficial: ${escapeHtml(nomeCompleto)}"><i class="fa-solid fa-file-pdf text-[#f05f61] text-[10px]"></i> ${escapeHtml(nomeCompleto)}</a>`;
-                }
-                return "";
-            });
-
-            resultado = resultado.replace(/[ \t]+/g, " ");
-            resultado = resultado.replace(/\s+([.,;!?\)])/g, "$1");
-            
-            return resultado;
-        }
-
-        function extrairNomeArquivo(url) {
-            if (!url) return "Documento de Referência";
-            try {
-                const descodificado = decodeURIComponent(url);
-                let nome = descodificado.substring(descodificado.lastIndexOf('/') + 1);
-                nome = nome.replace(/\.[^/.]+$/, "");
-                nome = nome.replace(/%20/g, " ");
-                nome = nome.replace(/_/g, " ");
-                nome = nome.replace(/-/g, " ");
-                return nome.trim();
-            } catch (e) {
-                return "Plano de Contingência";
-            }
-        }
     </script>
 </body>
 </html>

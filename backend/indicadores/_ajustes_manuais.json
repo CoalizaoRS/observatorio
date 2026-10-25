@@ -1,0 +1,62 @@
+[
+  {
+    "municipio": "Capitão",
+    "indicador": "P4",
+    "valor": "verde",
+    "evidencia": "Rotas de Fuga Sugeridas: 1. Linha Marinheira e Cascata — Rota: Estrada principal de Linha Marinheira sentido a Sede → Rua 20 de Março → Rua Balduino Blatt → Ginásio Municipal. Ponto de Encontro: Capela de Linha Marinheira.",
+    "pagina": 25,
+    "justificativa": "trajeto completo com origem, vias nomeadas, destino e ponto de encontro (seção 9.2.4); o modelo oscilou entre as rodadas.",
+    "revisado_por": "Fausto Vanin",
+    "data": "2026-10-25"
+  },
+  {
+    "municipio": "São Sebastião do Caí",
+    "indicador": "P4",
+    "valor": "verde",
+    "evidencia": "ROTAS DE ACESSO: A partir do Bairro Navegantes (Centro Integrado Navegantes) ROTA 01: 1. Siga na direção norte na R. Gen. Câmara em direção à R. Tiradentes 2. Vire à direita na 1ª rua transversal para R. Tiradentes 3. Vire à esquerda na Av. Dr. Bruno Cassel 4. Vire à direita na ERS-122…",
+    "pagina": "68-71",
+    "justificativa": "rotas passo a passo dos bairros de risco até cada abrigo, no anexo de abrigos (fora do alcance da busca automática).",
+    "revisado_por": "Fausto Vanin",
+    "data": "2026-10-25"
+  },
+  {
+    "municipio": "Marcelino Ramos",
+    "indicador": "P4",
+    "valor": "verde",
+    "evidencia": "o município de Marcelino Ramos está contemplado por duas rotas de fuga, um ponto de encontro e um sistema sonoro… Figura 3 – Região contemplada com sistema de alerta, rotas de fuga e pontos de encontro da ZAS da UHMA",
+    "pagina": "54-55, 72",
+    "justificativa": "mapa de rotas de fuga com sentido de circulação e pontos de encontro (atlas da ZAS da UH Machadinho), válido para a zona da usina.",
+    "revisado_por": "Fausto Vanin",
+    "data": "2026-10-25"
+  },
+  {
+    "municipio": "Barão do Triunfo",
+    "indicador": "P4",
+    "valor": "vermelho",
+    "evidencia": "Mapa Temático Defesa Civil — legenda \"Rota de saída\" (linha amarela da sede para fora do município)",
+    "pagina": 7,
+    "justificativa": "trajeto regional de saída do município, sem ligação de área de risco a ponto de encontro; não atende ao critério.",
+    "revisado_por": "Fausto Vanin",
+    "data": "2026-10-25"
+  },
+  {
+    "municipio": "Canoas",
+    "indicador": "P4",
+    "valor": "vermelho",
+    "evidencia": "10- ROTAS DE ESCOAMENTO DO TRÂNSITO IDENTIFICADAS EM CADA ÁREA DE RISCO — Vias principais sugeridas: BR-116… BR-448… RS-118… Avenida Boqueirão",
+    "pagina": "37, 40",
+    "justificativa": "vias arteriais sugeridas para escoamento do trânsito, sem trajeto de área de risco a ponto de encontro (\"principais vias\" não conta).",
+    "revisado_por": "Fausto Vanin",
+    "data": "2026-10-25"
+  },
+  {
+    "municipio": "Arroio do Meio",
+    "indicador": "P4",
+    "valor": "vermelho",
+    "evidencia": "27,75 Rua Júlio de Castilhos até esquina das Ruas Bento Gonçalves e São José; Estrada Geral de Palmas",
+    "pagina": 15,
+    "justificativa": "tabela de cotas do Rio Taquari com as ruas ATINGIDAS em cada nível — área de risco, não rota de evacuação.",
+    "revisado_por": "Fausto Vanin",
+    "data": "2026-10-25"
+  }
+]

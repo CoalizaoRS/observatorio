@@ -3,7 +3,15 @@
  * do indicadores/familias.csv original:
  *   - indicadores/_consolidado/_resumo.csv     → matriz município × valor de cada indicador
  *   - indicadores/_consolidado/<Pn>.csv        → detalhe de um indicador em todas as cidades
- *                                                (valor, unidade, componentes, evidência, confiança)
+ *                                                (valor, unidade, componentes, evidência, confiança,
+ *                                                origem: azure | gemma | manual)
+ *
+ * Ajustes manuais (indicadores/_ajustes_manuais.json) são aplicados POR CIMA dos resultados
+ * automáticos na consolidação — os <Município>.json continuam sendo a saída dos modelos, e uma
+ * reextração não apaga a revisão. Cada ajuste:
+ *   { "municipio": "Capitão", "indicador": "P4", "valor": "verde",
+ *     "evidencia": "<trecho literal>", "pagina": 25, "justificativa": "...",
+ *     "revisado_por": "...", "data": "2026-10-25" }
  *
  * Uso:  npm run consolidar
  */
@@ -19,6 +27,37 @@ const CONS_DIR = path.join(OUT_DIR, '_consolidado');
 function csv(v: any): string {
   const s = v === null || v === undefined ? '' : String(v);
   return `"${s.replace(/"/g, '""').replace(/\s+/g, ' ').trim()}"`;
+}
+
+const AJUSTES = path.join(OUT_DIR, '_ajustes_manuais.json');
+
+interface Ajuste {
+  municipio: string;
+  indicador: string;
+  valor: string;
+  evidencia: string;
+  pagina?: number | string;
+  justificativa: string;
+  revisado_por: string;
+  data: string;
+}
+
+/** azure | gemma | manual, a partir do método gravado no indicador (ou no arquivo). */
+function origem(r: any, c: any): string {
+  const m = String(r?.metodo ?? c?.metodo ?? '');
+  if (/revis[ãa]o manual/i.test(m)) return 'manual';
+  if (/azure/i.test(m)) return 'azure';
+  if (/llama\.cpp|gemma|qwen/i.test(m)) return 'gemma';
+  return '';
+}
+
+async function carregaAjustes(): Promise<Ajuste[]> {
+  try {
+    return JSON.parse(await fs.readFile(AJUSTES, 'utf-8'));
+  } catch (e) {
+    if ((e as NodeJS.ErrnoException).code === 'ENOENT') return [];
+    throw new Error(`_ajustes_manuais.json inválido: ${(e as Error).message}`);
+  }
 }
 
 async function main() {
@@ -41,6 +80,23 @@ async function main() {
     }
   }
 
+  // Ajustes manuais por cima do resultado automático (o valor automático fica registrado)
+  const ajustes = await carregaAjustes();
+  for (const a of ajustes) {
+    const c = cidades.find((x) => x.municipio === a.municipio);
+    const r = c?.indicadores?.[a.indicador];
+    if (!r) throw new Error(`ajuste manual sem resultado correspondente: ${a.municipio} · ${a.indicador}`);
+    Object.assign(r, {
+      valor_automatico: r.valor,
+      metodo_automatico: r.metodo ?? c.metodo,
+      valor: a.valor,
+      evidencia: `${a.evidencia}${a.pagina ? ` (p. ${a.pagina})` : ''} — Revisão manual: ${a.justificativa}`,
+      confianca: 'alta',
+      metodo: `revisão manual (${a.revisado_por}, ${a.data})`,
+    });
+  }
+  if (ajustes.length) console.log(`[Consolidar] ${ajustes.length} ajuste(s) manual(is) aplicado(s).`);
+
   // 1) Matriz resumo: município × valor de cada indicador
   const cabResumo = ['municipio', ...INDICADORES.map((i) => `${i.id} (${i.unidade})`)];
   const linhasResumo = [cabResumo.map(csv).join(',')];
@@ -53,7 +109,7 @@ async function main() {
   // 2) Um CSV por indicador com detalhe e componentes
   for (const ind of INDICADORES) {
     const compKeys = ind.campos.filter((k) => k.nome !== 'valor').map((k) => k.nome);
-    const cab = ['municipio', 'valor', 'unidade', ...compKeys, 'evidencia', 'confianca', 'erro'];
+    const cab = ['municipio', 'valor', 'unidade', ...compKeys, 'evidencia', 'confianca', 'erro', 'origem'];
     const linhas = [cab.map(csv).join(',')];
     for (const c of cidades) {
       const r = c.indicadores?.[ind.id];
@@ -66,6 +122,7 @@ async function main() {
         r.evidencia,
         r.confianca,
         r.erro ?? '',
+        origem(r, c),
       ];
       linhas.push(linha.map(csv).join(','));
     }

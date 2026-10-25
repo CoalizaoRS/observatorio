@@ -20,6 +20,10 @@ export const INDEX_API_VERSION = process.env.AZURE_SEARCH_INDEX_API_VERSION || '
 
 export const RETRIEVE_ENDPOINT = `${SEARCH_BASE}/knowledgebases/${SEARCH_KB}/retrieve?api-version=${SEARCH_API_VERSION}`;
 
-if (!SEARCH_KEY) {
+// Provedor do RAG do pipeline de indicadores: 'azure' (Azure AI Search) ou 'local'
+// (llama.cpp + índice por município gerado em rag-local/, rodando no cluster LAD).
+export const RAG_PROVIDER = (process.env.RAG_PROVIDER || 'azure').toLowerCase();
+
+if (!SEARCH_KEY && RAG_PROVIDER === 'azure') {
   console.warn('[AzureSearch] ATENÇÃO: AZURE_SEARCH_KEY não definido. As chamadas de busca vão falhar até configurar a variável/secret.');
 }

@@ -14,15 +14,29 @@
  *   npm run extrair -- --cidade "Porto Alegre,Canoas"
  *   npm run extrair -- --indicador P1,P4   # só alguns indicadores
  *   npm run extrair -- --force             # reprocessa cidades já geradas
+ *   npm run extrair -- --cidades-arquivo lista.txt   # um município por linha
+ *
+ * RAG_PROVIDER=local usa o RAG do laboratório (retrieve-local.ts) e a lista de
+ * municípios/documentos do Garage (rag-local/municipios.json) no lugar do Azure.
  */
 
-import { promises as fs } from 'fs';
+import { promises as fs, readFileSync } from 'fs';
 import * as path from 'path';
 import { MUNICIPIOS, buildFilterAddOn, MunicipioMatch } from '../municipios';
 import { INDICADORES, IndicadorDef, CampoDef, paraNumero } from './definicoes';
 import { retrieve } from './retrieve';
+import { RAG_PROVIDER } from '../config';
 
 const OUT_DIR = path.resolve(__dirname, '../../indicadores');
+const LOCAL = RAG_PROVIDER === 'local';
+
+// Documentos por município: blob_urls do índice Azure, ou chaves do bucket `plancon` no Garage.
+const DOCUMENTOS: Record<string, string[]> = LOCAL
+  ? JSON.parse(readFileSync(path.resolve(__dirname, '../../../rag-local/municipios.json'), 'utf-8'))
+  : MUNICIPIOS;
+const METODO = LOCAL
+  ? `RAG local (llama.cpp ${process.env.RAG_CHAT_MODEL || ''}) com índice por município (Garage/plancon)`.replace('  ', ' ')
+  : 'Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)';
 
 // ---------------------------------------------------------------------------
 // Argumentos de linha de comando
@@ -37,6 +51,8 @@ function parseArgs(argv: string[]) {
     if (a === '--force') out.force = true;
     else if (a === '--cidade' || a === '--cidades') out.cidades = argv[++i]?.split(',').map((s) => s.trim());
     else if (a === '--indicador' || a === '--indicadores') out.indicadores = argv[++i]?.split(',').map((s) => s.trim().toUpperCase());
+    else if (a === '--cidades-arquivo')
+      out.cidades = readFileSync(argv[++i], 'utf-8').split('\n').map((s) => s.trim()).filter(Boolean);
     else if (a === '--limit') out.limit = Number(argv[++i]);
     else if (a === '--conc') out.conc = Math.max(1, Number(argv[++i]) || 4);
   }
@@ -123,7 +139,7 @@ async function extraiIndicador(
   const ehSemaforo = ind.unidade.startsWith('semáforo');
   const semNA = (v: any) => (ehSemaforo ? 'vermelho' : 'N/A');
   try {
-    const { text, tokens } = await retrieve(municipio, filterAddOn, montaPergunta(ind));
+    const { text, tokens } = await retrieve(municipio, filterAddOn, montaPergunta(ind), { ancoras: ind.ancoras });
     const json = extraiJson(text);
     if (!json) {
       return { ...base, valor: semNA('N/A'), componentes: {}, evidencia: text.slice(0, 300), confianca: 'baixa', tokens, erro: 'JSON não parseável' };
@@ -205,9 +221,11 @@ async function main() {
     : INDICADORES;
   if (indicadores.length === 0) throw new Error(`Nenhum indicador corresponde a: ${args.indicadores}`);
 
-  let cidades = Object.keys(MUNICIPIOS).sort();
+  let cidades = Object.keys(DOCUMENTOS).sort();
   if (args.cidades) {
-    const alvo = new Set(args.cidades.map((c) => c.toLowerCase()));
+    const alvo = new Set(args.cidades.map((c) => c.normalize('NFC').toLowerCase()));
+    const desconhecidas = [...alvo].filter((c) => !cidades.some((x) => x.toLowerCase() === c));
+    if (desconhecidas.length) console.warn(`[Extrator] Sem documentos para: ${desconhecidas.join(', ')}`);
     cidades = cidades.filter((c) => alvo.has(c.toLowerCase()));
   }
   if (args.limit) cidades = cidades.slice(0, args.limit);
@@ -224,9 +242,10 @@ async function main() {
       console.log(`• ${municipio}: já existe (use --force para refazer) — pulando`);
       continue;
     }
-    const match: MunicipioMatch = { canonical: municipio, urls: MUNICIPIOS[municipio] };
-    const filterAddOn = buildFilterAddOn([match]);
-    if (!filterAddOn) {
+    const match: MunicipioMatch = { canonical: municipio, urls: DOCUMENTOS[municipio] };
+    // No RAG local o filtro é o próprio município (índice por cidade); o filterAddOn não se aplica.
+    const filterAddOn = LOCAL ? '' : buildFilterAddOn([match]);
+    if (filterAddOn === null) {
       console.warn(`• ${municipio}: sem blob_url — pulando`);
       continue;
     }
@@ -250,7 +269,8 @@ async function main() {
     let tokensCidade = 0;
     for (const ind of INDICADORES) {
       if (porId[ind.id]) {
-        mesclado[ind.id] = porId[ind.id];
+        // método por indicador: num mesmo arquivo podem conviver indicadores de passes diferentes
+        mesclado[ind.id] = { ...porId[ind.id], metodo: METODO };
       } else {
         const prev = anterior?.indicadores?.[ind.id] ?? (ind.idAntigo ? anterior?.indicadores?.[ind.idAntigo] : undefined);
         if (!prev) continue;
@@ -265,6 +285,7 @@ async function main() {
           evidencia: prev.evidencia,
           confianca: prev.confianca,
           tokens: prev.tokens ?? 0,
+          metodo: prev.metodo ?? anterior?.metodo,
           obs: 'valor mantido do passe anterior; regra refinada não reprocessada (métrica idêntica)',
           ...(prev.erro ? { erro: prev.erro } : {}),
         };
@@ -274,11 +295,11 @@ async function main() {
 
     const doc = {
       municipio,
-      fonte_documentos: MUNICIPIOS[municipio],
+      fonte_documentos: DOCUMENTOS[municipio],
       gerado_em: new Date().toISOString(),
       regras_versao: 'planilha IRM · aba "simplificado" (semáforo)',
       indicadores_reprocessados_neste_passe: indicadores.map((i) => i.id),
-      metodo: 'Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)',
+      metodo: METODO,
       tokens_consumidos: tokensCidade,
       indicadores: mesclado,
     };

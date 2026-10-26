@@ -68,5 +68,38 @@
     "justificativa": "simulado realizado e datado na ZAS da UH Machadinho, que inclui famílias de Marcelino Ramos; conta para o município mesmo tendo ocorrido em Piratuba/SC (decisão da equipe, issue #6).",
     "revisado_por": "Fausto Vanin",
     "data": "2026-10-25"
+  },
+  {
+    "municipio": "Capitão",
+    "indicador": "P4",
+    "valor": "verde",
+    "fonte_plano": "Site Municipal",
+    "evidencia": "Rotas de Fuga Sugeridas: 1. Linha Marinheira e Cascata — Rota: Estrada principal de Linha Marinheira sentido a Sede — Rua 20 de Março — Rua Balduino Blatt — Ginásio Municipal. Ponto de Encontro: Capela de Linha Marinheira.",
+    "pagina": 26,
+    "justificativa": "PLACON 2026 mantém as rotas de fuga com vias nomeadas e pontos de encontro já validadas no plano anterior; o modelo não as recuperou.",
+    "revisado_por": "Claude (pendente de confirmação)",
+    "data": "2026-10-26"
+  },
+  {
+    "municipio": "Barra do Ribeiro",
+    "indicador": "P1",
+    "valor": "vermelho",
+    "fonte_plano": "Site Municipal",
+    "evidencia": "Nome: Município de Barra do Ribeiro — População: 12.225 habitantes",
+    "pagina": 1,
+    "justificativa": "o número usado é a população total do município (critério exclui); o plano descreve áreas de risco junto aos arroios sem quantificar moradores.",
+    "revisado_por": "Claude (pendente de confirmação)",
+    "data": "2026-10-26"
+  },
+  {
+    "municipio": "São Sepé",
+    "indicador": "P2",
+    "valor": "verde",
+    "fonte_plano": "Site Municipal",
+    "evidencia": "11 LISTA DE ABRIGOS — GINÁSIO MUNICIPAL DE SÃO SEPÉ/RS, Av. Julio Vargas, nº 3112 … Capacidade: Até 1000 pessoas",
+    "pagina": 19,
+    "justificativa": "abrigo listado com capacidade (regra do P2: lista + vagas → verde); o OCR do plano escaneado impediu a leitura automática.",
+    "revisado_por": "Claude (pendente de confirmação)",
+    "data": "2026-10-26"
   }
 ]

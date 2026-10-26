@@ -371,6 +371,7 @@
                             Nenhuma observação informada.
                         </div>
                         <span class="text-[10px] text-gray-500 block" id="detail-origem"></span>
+                        <span class="text-[10px] text-gray-500 block" id="detail-fonte-plano"></span>
                     </div>
 
                     <!-- Detalhamento Semafórico Integrado dos 7 Indicadores -->
@@ -641,7 +642,9 @@
                         populacao_total: row.populacao_total || 'N/A',
                         evidencia: row.evidencia || 'Declarada no PlanCon.',
                         confianca: row.confianca || 'N/A',
-                        origem: row.origem || ''
+                        origem: row.origem || '',
+                        fonte_plano: row.fonte_plano || '',
+                        url_plano: row.url_plano || ''
                     };
                 }
             });
@@ -894,6 +897,18 @@
                 manual: 'Fonte: revisão manual da equipe'
             };
             document.getElementById('detail-origem').textContent = ORIGENS[indicator.origem] || '';
+            // De onde veio o plano analisado: Prepara RS ou publicação no site da prefeitura (monitor)
+            const fontePlano = document.getElementById('detail-fonte-plano');
+            fontePlano.textContent = indicator.fonte_plano ? `Plano analisado: ${indicator.fonte_plano}` : '';
+            if (indicator.url_plano && /^https?:\/\//.test(indicator.url_plano)) {
+                const link = document.createElement('a');
+                link.href = indicator.url_plano;
+                link.target = '_blank';
+                link.rel = 'noopener';
+                link.className = 'underline hover:text-gray-300 ml-1';
+                link.textContent = '(abrir)';
+                fontePlano.appendChild(link);
+            }
 
             const badge = document.getElementById('detail-badge');
             const valKey = indicator.valor ? indicator.valor.toLowerCase() : 'n/a';

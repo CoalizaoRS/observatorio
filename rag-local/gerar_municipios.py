@@ -7,8 +7,12 @@ Uso: python3 gerar_municipios.py <lista-de-chaves.txt> <geojson-municipios-RS>
 - Casamento pelo nome do arquivo (sem acentos/pontuação, nome mais longo primeiro);
   arquivos com grafia errada ou sem o município no nome vão em CORRECOES.
 - Arquivos .url (links mortos da Casa Militar) não entram: não há conteúdo.
+- Planos do site da prefeitura (prefixo site-municipal/) não entram pelo nome do arquivo: vêm do
+  registro fontes_site_municipal.json (site_municipal.py), que substitui os do Prepara RS.
 """
 import json, re, sys, unicodedata
+
+import site_municipal
 from pathlib import Path
 
 AQUI = Path(__file__).resolve().parent
@@ -35,7 +39,7 @@ CORRECOES = {
     "CREPDEC 09/Plano de Contingência São Valentin do Sul.pdf": "São Valentim do Sul",
     "CREPDEC 09/plano de contingência 2025 Pinto Bandeira.pdf": "Pinto Bandeira",
 }
-IGNORAR_PREFIXOS = ("teste/", ".DS_Store")
+IGNORAR_PREFIXOS = ("teste/", ".DS_Store", "site-municipal/")
 
 
 def norm(s):
@@ -68,6 +72,8 @@ def main(chaves_txt, geojson):
             sem_municipio.append(key)
             continue
         mapa.setdefault(muni, []).append(key)
+
+    site_municipal.aplicar_mapa(mapa)
 
     saida = AQUI / "municipios.json"
     saida.write_text(json.dumps(dict(sorted(mapa.items())), ensure_ascii=False, indent=1) + "\n")

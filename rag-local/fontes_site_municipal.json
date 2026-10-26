@@ -1,0 +1,206 @@
+{
+ "Agudo": {
+  "url": "https://cdn-gw.webdehost.com.br/264/DocumentAssets/818967/images/original/Plano_Municipal_de_Contigencia 27-07-2026 (1).pdf",
+  "sha256": "707e34781dac255f7d4adb340ea5b46d50b89f470fa3a58085f4261e156feb4d",
+  "detectado_em": "2026-09-21",
+  "situacao": "atualizacao",
+  "versao_plano": "27/07/2026 (registro de alterações: reformulação 01/03/2025, adequação à LGPD 27/07/2026)",
+  "chave": "site-municipal/Agudo/707e34781dac.pdf",
+  "substitui": [
+   "CREPDEC 03/Plano de Contingência Municipal 2025_Agudo.pdf",
+   "CREPDEC 03/Plano de Contingência Municipal 2025_Agudo1.pdf"
+  ],
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ },
+ "Almirante Tamandaré do Sul": {
+  "url": "https://br-gru-1.linodeobjects.com/prefeitura-almirante-tamandare-do-sul/1_Plano_ALMIRANTE_CORONA_2020_05983bd25a.pdf",
+  "sha256": "14608ff5424d168bd5de42ccfa6c531aec69d135bc2f6029493aa6ee53728649",
+  "detectado_em": "2026-09-21",
+  "situacao": "descartado",
+  "motivo": "plano de contingência de COVID-19 (Secretaria da Saúde, 2020), não é o PLANCON de Defesa Civil",
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ },
+ "Barra do Ribeiro": {
+  "url": "https://www.barradoribeiro.rs.gov.br/uploads/pagina/arquivos/Decreto-4158-2026-com-anexos.pdf",
+  "sha256": "3ca0b1c498a13bb38744816c13652dd30165297f9c5dd71359c98695c67fdb3b",
+  "detectado_em": "2026-10-01",
+  "situacao": "atualizacao",
+  "versao_plano": "2026 (Decreto 4.158/2026 com anexos)",
+  "chave": "site-municipal/Barra do Ribeiro/3ca0b1c498a1.pdf",
+  "substitui": [
+   "CREPDEC 01/PLANCON_BARRADORIBEIRO_2024.pdf"
+  ],
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ },
+ "Capitão": {
+  "url": "https://www.capitao.rs.gov.br/wp-content/uploads/Plano-de-Contingencia-2026-aprovado.pdf",
+  "sha256": "7c7628245e444876934726c99dca637a564f77ab4475da596f3151ca85f4dd9b",
+  "detectado_em": "2026-09-21",
+  "situacao": "atualizacao",
+  "versao_plano": "16/04/2026 (Decreto 029/2026, PLACON 2026)",
+  "chave": "site-municipal/Capitão/7c7628245e44.pdf",
+  "substitui": [
+   "CREPDEC 08/CAPITÃO - PLANCON v1.pdf"
+  ],
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ },
+ "Capão Bonito do Sul": {
+  "url": "https://www.capaobonitodosul.rs.gov.br/wp-content/uploads/2026/10/PLANO-DE-CONTINGENCIA-DE-DEFESA-CIVIL-atualizado-1.pdf",
+  "sha256": "b51eb89878468478f3df0645a995e1128853c5ffc3e077ee2608e9f20ff4d8cc",
+  "detectado_em": "2026-10-22",
+  "situacao": "atualizacao",
+  "versao_plano": "2026 (publicado em 10/2026, \"atualizado\")",
+  "chave": "site-municipal/Capão Bonito do Sul/b51eb8987846.pdf",
+  "substitui": [
+   "CREPDEC 02/PlanCon CAPÃO BONITO DO SUL_2025.pdf"
+  ],
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ },
+ "Cerrito": {
+  "url": "https://www.cerrito.rs.gov.br/arquivos/193316_plano_contingencia_2025_22013959.pdf",
+  "sha256": "db7d958531b113592115775860de4b82456bf9ef108330b878adfff4e10be727",
+  "detectado_em": "2026-09-21",
+  "situacao": "mesma_versao",
+  "versao_plano": "22/07/2025 — mesma versão do Prepara RS",
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ },
+ "Faxinal do Soturno": {
+  "url": "https://www.faxinaldosoturno.rs.gov.br/arqs/17139.pdf",
+  "sha256": "142487a934d8941b632260980ee74477b95f993cb5b3255c0dae69a91007b91c",
+  "detectado_em": "2026-09-21",
+  "situacao": "mesma_versao",
+  "versao_plano": "Julho/2025 — versão resumida (7 p.) do plano 2025 já recebido via Prepara RS",
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ },
+ "Itaara": {
+  "url": "https://itaara.rs.gov.br/wp-content/uploads/2026/04/plano-de-contingencia-2025-pdf.pdf",
+  "sha256": "4e0054486f41e3807b8eb18a0ed377a73d61235b7d5525c8354ee5bd20e7a460",
+  "detectado_em": "2026-10-03",
+  "situacao": "atualizacao",
+  "versao_plano": "26/03/2025 (PLACON 2024-2025, versão 1.2)",
+  "chave": "site-municipal/Itaara/4e0054486f41.pdf",
+  "substitui": [
+   "CREPDEC 03/Plano de Contingência Municipal 2023_Itaara.pdf"
+  ],
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ },
+ "Montenegro": {
+  "url": "https://www.montenegro.rs.gov.br/municipio/secretarias-1/gabinete-do-prefeito/orgaos-de-cooperacao/cartilha-defesa-civil.pdf",
+  "sha256": "2e80f44f98ab837dfb8af65c3c864b6b51655dfa35dc24409e90ce4df2f641a6",
+  "detectado_em": "2026-09-21",
+  "situacao": "descartado",
+  "motivo": "cartilha de orientação aos voluntários da Defesa Civil, não é o plano",
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ },
+ "Nova Petrópolis": {
+  "url": "https://cdn-gw.webdehost.com.br/6/PhotoAssets/827558/images/original/wamid.HBgMNTU1NDk5MzUxNzI3FQIAEhggQUM3MDQzQkQ0QTVCQUJFMEQ5MTU3OUU5MEM0OTM1RUMA.pdf",
+  "sha256": "4fda20c750808ec9b0874e5f0664528ca96206a5289210776afdeb9097708e2e",
+  "detectado_em": "2026-09-21",
+  "situacao": "mesma_versao",
+  "versao_plano": "07/08/2025 (ofício 23/10/2025) — mesma versão do Prepara RS",
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ },
+ "Não-Me-Toque": {
+  "url": "https://naometoque.rs.gov.br/wp-content/uploads/sites/22/2026/09/PLACON2026.pdf",
+  "sha256": "3d2af95ffcd66b131c9e319e8eab74a8607ea4c8eaf20d66572055a76aad11b5",
+  "detectado_em": "2026-10-25",
+  "situacao": "atualizacao",
+  "versao_plano": "2026 (PLACON 2026)",
+  "chave": "site-municipal/Não-Me-Toque/3d2af95ffcd6.pdf",
+  "substitui": [
+   "CREPDEC 03/Plano de Contingência Municipal 2025_NãoMeToque.pdf"
+  ],
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ },
+ "Restinga Sêca": {
+  "url": "https://gsaude-prod.s3.us-east-2.amazonaws.com/363a1845-pmrs-4ec5-a1c8-63198b6b74fa/website/files/3493/2026/10/Plano-de-Contingencia-Assinado-66405943.pdf",
+  "sha256": "d374335182f88613cc5bc4f40affe15ab8983ee4b8e90b1e8c5464187e23852f",
+  "detectado_em": "2026-09-21",
+  "situacao": "atualizacao",
+  "versao_plano": "Julho/2026",
+  "chave": "site-municipal/Restinga Sêca/d374335182f8.pdf",
+  "substitui": [
+   "CREPDEC 03/Plano de Contingência Municipal 2025_Restinga_Sêca.pdf"
+  ],
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ },
+ "Roca Sales": {
+  "url": "https://www.rocasales.rs.gov.br/uploads/arquivo/e7099881-4a39-4a84-a987-b2545f21e176.pdf",
+  "sha256": "393d623df8faa4bd3e0e5b2f32f1782000c7531cafe988f47acaeb0bd5157558",
+  "detectado_em": "2026-09-29",
+  "situacao": "atualizacao",
+  "versao_plano": "Julho de 2026",
+  "chave": "site-municipal/Roca Sales/393d623df8fa.pdf",
+  "substitui": [
+   "CREPDEC 08/ROCA SALES - PLANCON.pdf"
+  ],
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ },
+ "Sapucaia do Sul": {
+  "url": "https://www.sapucaiadosul.rs.gov.br/wp-content/uploads/2026/08/Plano-de-Contingencia-Sapucaia-2026.pdf",
+  "sha256": "8e74440a94327374ad34941c2fd875649b09e8ebed26adcb6f2a11d18f10b558",
+  "detectado_em": "2026-09-21",
+  "situacao": "atualizacao",
+  "versao_plano": "2026 (PLANCON 2026)",
+  "chave": "site-municipal/Sapucaia do Sul/8e74440a9432.pdf",
+  "substitui": [
+   "CREPDEC 01/PLANCON SAPUCAIA DO SUL 2025.pdf"
+  ],
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ },
+ "São Sepé": {
+  "url": "https://saosepe.rs.gov.br/wp-content/uploads/2026/05/Plano-de-Contingencia_Final.pdf",
+  "sha256": "1611e0f73031cd11187c542ecd12f16b0d45883d993274c9699fd8a6ac05fddf",
+  "detectado_em": "2026-09-21",
+  "situacao": "atualizacao",
+  "versao_plano": "v.5/2026",
+  "chave": "site-municipal/São Sepé/1611e0f73031.pdf",
+  "substitui": [
+   "CREPDEC 03/Plano de Contingência Municipal 2025_São Sepé.pdf",
+   "CREPDEC 03/Plano de Contingência Municipal 2025_São Sepé1.pdf"
+  ],
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ },
+ "São Vendelino": {
+  "url": "https://www.saovendelino.rs.gov.br/uploads/blocos/plano-municipal-de-contingencia-para-eventos-climaticos1788378176.pdf",
+  "sha256": "c91a6b295aa1844b5ce195dc2492e078f0d875475fbe62ef7cabc138997f3f13",
+  "detectado_em": "2026-09-21",
+  "situacao": "mesma_versao",
+  "versao_plano": "versão 1.1, sem data — mesmo conteúdo do Prepara RS",
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ },
+ "Trindade do Sul": {
+  "url": "https://www.trindadedosul.rs.gov.br/wp-content/uploads/2025/06/Plano-de-Contingencia.pdf",
+  "sha256": "09f8e8c977dfe43fd79879cda9ef58ee76f08a1ae4a64f147e9e7013ee98090b",
+  "detectado_em": "2026-09-21",
+  "situacao": "mesma_versao",
+  "versao_plano": "28/05/2025 — mesma versão do Prepara RS",
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ },
+ "Vila Flores": {
+  "url": "https://cdn-gw.webdehost.com.br/269/PhotoAssets/807317/images/original/PLANO DE CONTINGÊNCIA MUNICIPAL DE PROTEÇÃO E DEFESA CIVIL.pdf",
+  "sha256": "50d385a7ba05a37a3d79dbbc2a976a2d54fd3ec66c0918c48c82bd4035b00392",
+  "detectado_em": "2026-09-21",
+  "situacao": "mesma_versao",
+  "versao_plano": "Maio/2024 — mesma versão do Prepara RS",
+  "revisado_por": "Fausto Vanin",
+  "data_revisao": "2026-10-26"
+ }
+}

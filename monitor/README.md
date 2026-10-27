@@ -140,6 +140,26 @@ O workflow já tem `permissions: contents: write` para commitar o
 Sem esses secrets configurados, o monitor roda normalmente e só imprime o
 relatório no log da Action (nenhum e-mail é enviado).
 
+## Integração com o painel de indicadores (fonte "Site Municipal")
+
+Os planos do painel vieram do Prepara RS. Quando o monitor encontra um plano no site da
+prefeitura, ele passa por triagem antes de entrar nos indicadores:
+
+1. `python rag-local/site_municipal.py pendentes --baixar <pasta>` lista (e baixa) os planos do
+   `state.json` ainda sem triagem — novos ou com hash diferente do registrado.
+2. A triagem fica em `rag-local/fontes_site_municipal.json`, por município:
+   `atualizacao` (versão mais nova que a do Prepara RS — substitui os documentos do município),
+   `mesma_versao` (nada muda) ou `descartado` (não é o PLANCON: plano de COVID, cartilha etc.).
+3. Os PDFs de `atualizacao` sobem para o bucket `plancon` em `site-municipal/<Município>/<sha256[:12]>.pdf`;
+   `python rag-local/site_municipal.py aplicar` atualiza `rag-local/municipios.json`.
+4. Reextração dos municípios no RAG local (`rodar.sbatch` com `FORCE=1`) e `npm run consolidar`.
+   Os CSVs ganham `fonte_plano` (Prepara RS | Site Municipal) e `url_plano`, derivados dos
+   documentos efetivamente processados — o painel mostra a fonte no detalhe do município.
+
+Ajustes manuais (`backend/indicadores/_ajustes_manuais.json`) feitos sobre o plano do Prepara RS
+deixam de valer quando o município passa a usar o plano do site, até serem revistos (o
+`consolidar` avisa).
+
 ## Corrigindo a URL de um município
 
 Edite `overrides.json`:

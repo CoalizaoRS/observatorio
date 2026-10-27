@@ -68,5 +68,59 @@
     "justificativa": "simulado realizado e datado na ZAS da UH Machadinho, que inclui famílias de Marcelino Ramos; conta para o município mesmo tendo ocorrido em Piratuba/SC (decisão da equipe, issue #6).",
     "revisado_por": "Fausto Vanin",
     "data": "2026-10-25"
+  },
+  {
+    "municipio": "Capitão",
+    "indicador": "P4",
+    "valor": "verde",
+    "fonte_plano": "Site Municipal",
+    "evidencia": "Rotas de Fuga Sugeridas: 1. Linha Marinheira e Cascata — Rota: Estrada principal de Linha Marinheira sentido a Sede — Rua 20 de Março — Rua Balduino Blatt — Ginásio Municipal. Ponto de Encontro: Capela de Linha Marinheira.",
+    "pagina": 26,
+    "justificativa": "PLACON 2026 mantém as rotas de fuga com vias nomeadas e pontos de encontro já validadas no plano anterior; o modelo não as recuperou.",
+    "revisado_por": "Fausto Vanin",
+    "data": "2026-10-27"
+  },
+  {
+    "municipio": "Barra do Ribeiro",
+    "indicador": "P1",
+    "valor": "vermelho",
+    "fonte_plano": "Site Municipal",
+    "evidencia": "Nome: Município de Barra do Ribeiro — População: 12.225 habitantes",
+    "pagina": 1,
+    "justificativa": "o número usado é a população total do município (critério exclui); o plano descreve áreas de risco junto aos arroios sem quantificar moradores.",
+    "revisado_por": "Fausto Vanin",
+    "data": "2026-10-27"
+  },
+  {
+    "municipio": "São Sepé",
+    "indicador": "P2",
+    "valor": "verde",
+    "fonte_plano": "Site Municipal",
+    "evidencia": "11 LISTA DE ABRIGOS — GINÁSIO MUNICIPAL DE SÃO SEPÉ/RS, Av. Julio Vargas, nº 3112 … Capacidade: Até 1000 pessoas",
+    "pagina": 19,
+    "justificativa": "abrigo listado com capacidade (regra do P2: lista + vagas → verde); o OCR do plano escaneado impediu a leitura automática.",
+    "revisado_por": "Fausto Vanin",
+    "data": "2026-10-27"
+  },
+  {
+    "municipio": "Não-Me-Toque",
+    "indicador": "P6",
+    "valor": "verde",
+    "fonte_plano": "Site Municipal",
+    "evidencia": "PLACON 2026 publicado no site da prefeitura em setembro de 2026 (https://naometoque.rs.gov.br/wp-content/uploads/sites/22/2026/09/PLACON2026.pdf; Last-Modified 02/09/2026)",
+    "justificativa": "o texto do plano não traz data; por decisão da equipe vale a data de publicação no site municipal (2026, < 2 anos).",
+    "revisado_por": "Fausto Vanin",
+    "data": "2026-10-27"
+  },
+  {
+    "municipio": "São Sepé",
+    "indicador": "P7",
+    "valor": "amarelo",
+    "fonte_plano": "Site Municipal",
+    "evidencia": "15 VOLUNTÁRIOS RESPONSÁVEIS PELOS DISTRITOS DO MUNICÍPIO DE SÃO SEPÉ/RS — 1º DISTRITO (SEDE MUNICIPAL): 15 responsáveis com telefone; 2º e 3º distritos: agentes de saúde",
+    "pagina": 21,
+    "justificativa": "lista nominal de voluntários por distrito, sem NUPDEC (regra do P7: voluntários → amarelo); o OCR do plano escaneado impediu a leitura automática.",
+    "revisado_por": "Claude (pendente de confirmação)",
+    "data": "2026-10-27"
   }
 ]

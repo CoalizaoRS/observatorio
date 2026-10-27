@@ -32,7 +32,7 @@ export async function retrieve(
 ): Promise<RetrieveResult> {
   const tentativas = opts.tentativas ?? 4;
 
-  // RAG local (llama.cpp no cluster LAD): filtra pelo nome do município, não por blob_url.
+  // RAG do LAD/PUCRS (llama.cpp no cluster): filtra pelo nome do município, não por blob_url.
   if (RAG_PROVIDER === 'local') return retrieveLocal(municipio, pergunta, opts.ancoras);
 
   const userText = `Município da consulta: ${municipio}.\n\n${pergunta}`;

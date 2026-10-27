@@ -36,7 +36,7 @@ export interface IndicadorDef {
   /** Deriva o valor final. number|string → valor; 'N/A' → sem valor; null → usar json.valor. */
   calcular?: (campos: Record<string, any>) => number | string | 'N/A' | null;
   /**
-   * RAG local: trechos que casam com esta expressão entram sempre no contexto (até um limite).
+   * RAG do LAD: trechos que casam com esta expressão entram sempre no contexto (até um limite).
    * Para termos que a busca semântica dilui em planos longos (ex.: "ROTA 01", "Rotas de fuga").
    */
   ancoras?: RegExp;

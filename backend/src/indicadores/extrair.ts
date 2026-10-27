@@ -35,7 +35,7 @@ const DOCUMENTOS: Record<string, string[]> = LOCAL
   ? JSON.parse(readFileSync(path.resolve(__dirname, '../../../rag-local/municipios.json'), 'utf-8'))
   : MUNICIPIOS;
 const METODO = LOCAL
-  ? `RAG local (llama.cpp ${process.env.RAG_CHAT_MODEL || ''}) com índice por município (Garage/plancon)`.replace('  ', ' ')
+  ? `RAG no LAD/PUCRS (llama.cpp ${process.env.RAG_CHAT_MODEL || ''}) com índice por município (Garage/plancon)`.replace('  ', ' ')
   : 'Azure AI Search retrieve (kb-plancon-filtered) com filtro por município (blob_url)';
 
 // ---------------------------------------------------------------------------
@@ -243,7 +243,7 @@ async function main() {
       continue;
     }
     const match: MunicipioMatch = { canonical: municipio, urls: DOCUMENTOS[municipio] };
-    // No RAG local o filtro é o próprio município (índice por cidade); o filterAddOn não se aplica.
+    // No RAG do LAD o filtro é o próprio município (índice por cidade); o filterAddOn não se aplica.
     const filterAddOn = LOCAL ? '' : buildFilterAddOn([match]);
     if (filterAddOn === null) {
       console.warn(`• ${municipio}: sem blob_url — pulando`);

@@ -1,4 +1,4 @@
-"""Compara indicadores do RAG local com os do Azure (grupo de controle).
+"""Compara indicadores do RAG do LAD/PUCRS com os do Azure (grupo de controle).
 
 Uso: python3 comparar.py <dir-azure> <dir-local> <lista.txt>
   <dir-azure>/<Município>.json e <dir-local>/<Município>.json no formato de extrair.ts.

@@ -152,7 +152,7 @@ prefeitura, ele passa por triagem antes de entrar nos indicadores:
    `mesma_versao` (nada muda) ou `descartado` (não é o PLANCON: plano de COVID, cartilha etc.).
 3. Os PDFs de `atualizacao` sobem para o bucket `plancon` em `site-municipal/<Município>/<sha256[:12]>.pdf`;
    `python rag-local/site_municipal.py aplicar` atualiza `rag-local/municipios.json`.
-4. Reextração dos municípios no RAG local (`rodar.sbatch` com `FORCE=1`) e `npm run consolidar`.
+4. Reextração dos municípios no LAD/PUCRS (`rodar.sbatch` com `FORCE=1`) e `npm run consolidar`.
    Os CSVs ganham `fonte_plano` (Prepara RS | Site Municipal) e `url_plano`, derivados dos
    documentos efetivamente processados — o painel mostra a fonte no detalhe do município.
 

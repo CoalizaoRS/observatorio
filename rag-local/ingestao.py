@@ -1,4 +1,4 @@
-"""Ingestão dos PLANCONs do Garage para o índice do RAG local (um arquivo por município).
+"""Ingestão dos PLANCONs do Garage para o índice do RAG do LAD/PUCRS (um arquivo por município).
 
 Etapas (cada uma pula o que já está feito):
   texto   baixa cada documento do bucket `plancon` e extrai o texto para <cache>/texto/<chave>.txt

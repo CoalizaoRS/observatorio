@@ -1,5 +1,5 @@
 /**
- * RAG local (laboratório LAD/PUCRS): substitui o endpoint `retrieve` do Azure AI Search
+ * RAG no laboratório LAD/PUCRS: substitui o endpoint `retrieve` do Azure AI Search
  * quando RAG_PROVIDER=local. Mesma interface de ./retrieve.ts — devolve { text, tokens }.
  *
  * - Índice: um arquivo por município em RAG_INDEX_DIR/<Município>.json, gerado por

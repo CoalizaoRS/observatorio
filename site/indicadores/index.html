@@ -890,10 +890,10 @@
 
             document.getElementById('detail-name').textContent = indicator.municipio;
             document.getElementById('detail-evidence').textContent = indicator.evidencia || 'Sem observações declaradas.';
-            // De onde veio a classificação: extração automática (Azure / RAG local no LAD) ou revisão manual
+            // De onde veio a classificação: extração automática (Azure / processamento no LAD/PUCRS) ou revisão manual
             const ORIGENS = {
                 azure: 'Fonte: extração automática (Azure, gpt-5.1-mini)',
-                gemma: 'Fonte: extração automática (RAG local LAD/PUCRS, Gemma 3)',
+                gemma: 'Fonte: extração automática (processamento no LAD/PUCRS, Gemma 3)',
                 manual: 'Fonte: revisão manual da equipe'
             };
             document.getElementById('detail-origem').textContent = ORIGENS[indicator.origem] || '';

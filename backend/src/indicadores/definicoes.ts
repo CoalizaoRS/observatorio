@@ -89,6 +89,75 @@ function listaDeMeios(v: any): string[] {
     .filter((s) => s && !/^n\/?a$/i.test(s));
 }
 
+/**
+ * P1S4: itens de `areas_risco` ("local | ameaça | população") → áreas e se cada uma tem população.
+ * Aceita array ou texto separado por ";"/quebra de linha.
+ */
+function areasDeRisco(v: any): { local: string; populacao: string }[] {
+  const itens = Array.isArray(v) ? v.map((x) => (typeof x === 'string' ? x : Object.values(x ?? {}).join(' | '))) : typeof v === 'string' ? v.split(/[;\n]/) : [];
+  return itens
+    .map((s) => String(s).split('|').map((p) => p.trim()))
+    .filter((p) => p[0] && !/^n\/?a$/i.test(p[0]))
+    .map((p) => ({ local: p[0], populacao: p[p.length - 1] ?? '' }));
+}
+/** População informada para a área: número, e não só imóveis (residências/domicílios/casas sem pessoas ou famílias). */
+function temPopulacao(p: string): boolean {
+  if (!/\d/.test(p) || /^\s*n\/?a\s*$/i.test(p)) return false;
+  return !/resid[êe]ncia|domic[íi]lio|casas?\b|im[óo]ve(l|is)|edifica/i.test(p) || /pessoa|fam[íi]lia|morador|habitante|afetad|residente/i.test(p);
+}
+
+/**
+ * Cenários de critério em avaliação. Não entram no painel nem no consolidar: só são extraídos
+ * quando pedidos explicitamente (--indicadores P1S4), e ficam ao lado dos oficiais no JSON.
+ */
+export const EXPERIMENTAIS: IndicadorDef[] = [
+  {
+    id: 'P1S4',
+    grupo: 'G1 · Pessoas e Equidade',
+    nome: 'Áreas de risco mapeadas e população dimensionada (cenário S4)',
+    mede: 'Mapeamento das áreas de risco e dimensionamento da população exposta',
+    unidade: 'semáforo (verde/amarelo/vermelho)',
+    formula: 'áreas de risco citadas no PLANCON e população (pessoas/famílias) informada para cada uma',
+    criterio:
+      'VERDE: o PLANCON cita áreas de risco e informa a população em risco (pessoas ou famílias) de TODAS elas. ' +
+      'AMARELO: cita áreas de risco, mas sem a população de todas. ' +
+      'VERMELHO: não cita nenhuma área de risco. ' +
+      'Conta como área: um local NOMEADO com sua ameaça (bairro, rua, localidade, vila, linha, morro, margem de rio…) ' +
+      'ou o MUNICÍPIO INTEIRO citado como em risco (ex.: estiagem ou vendaval em todo o território). ' +
+      'Se o plano diz que não há áreas pontuais/específicas porque os eventos podem ocorrer em QUALQUER parte do município, ' +
+      'isso conta como o MUNICÍPIO INTEIRO em risco. ' +
+      'Não conta: menção genérica ("fiscalizar construções em áreas de risco") sem dizer qual é a área.',
+    pergunta:
+      'Quais ÁREAS DE RISCO o PLANCON identifica (local nomeado e ameaça, ou o município inteiro em risco), e qual a POPULAÇÃO ' +
+      'em risco (nº de pessoas ou famílias) informada para CADA área? ' +
+      'A população precisa estar ligada àquela área (ex.: "Vila X — deslizamento — 40 famílias"; no formato SEGIRD, o ' +
+      '"Nº de afetados" da área). NÃO use a população geral do município da seção de dados do município, nem números de ' +
+      'residências/domicílios sem pessoas ou famílias.',
+    campos: [
+      { nome: 'valor', tipo: 'enum', descricao: 'semáforo (será recalculado a partir da lista de áreas)', opcoes: SEMAFORO },
+      {
+        nome: 'areas_risco',
+        tipo: 'texto',
+        descricao:
+          'lista de TODAS as áreas de risco citadas (até 30), um item por área no formato "local | ameaça | população", ' +
+          'onde população é o nº de pessoas ou famílias informado para a área (com a unidade) ou "N/A"; [] se nenhuma área for citada',
+      },
+      { nome: 'municipio_todo_em_risco', tipo: 'enum', descricao: 'o plano cita o município inteiro como área de risco (inclui "não há áreas específicas; os eventos podem ocorrer em todo o município")?', opcoes: ['sim', 'nao'] },
+    ],
+    ancoras: /[áa]reas? de risco|CLASSIFICA[ÇC][ÃA]O DO RISCO|N[º°o]\.? de afetados|Local\s*\|?\s*Risco|setor(es)? de risco/i,
+    // Determinístico a partir da lista: nenhuma área → vermelho; todas com população → verde; senão amarelo.
+    calcular: (c) => {
+      const areas = areasDeRisco(c.areas_risco);
+      if (areas.length === 0) return /^sim$/i.test(String(c.municipio_todo_em_risco ?? '')) ? 'amarelo' : 'vermelho';
+      return areas.every((a) => temPopulacao(a.populacao)) ? 'verde' : 'amarelo';
+    },
+    derivar: (c) => {
+      const areas = areasDeRisco(c.areas_risco);
+      return { n_areas: areas.length, n_areas_com_populacao: areas.filter((a) => temPopulacao(a.populacao)).length };
+    },
+  },
+];
+
 export const INDICADORES: IndicadorDef[] = [
   {
     id: 'P1',

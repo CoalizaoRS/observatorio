@@ -30,6 +30,7 @@ CORRECOES = {
     "CREPDEC 04/Plano de Contingência - SJN (outubro).pdf": "São José do Norte",
     "CREPDEC 05/Boa Vista Buricá.pdf": "Boa Vista do Buricá",
     "CREPDEC 05/Santo Augsto1.pdf": "Santo Augusto",
+    "CREPDEC 05/São Jose Inhacorá.pdf": "São José do Inhacorá",  # sem o "do", casava com Inhacorá
     "CREPDEC 05/Sçao Valério do Sul.pdf": "São Valério do Sul",
     "CREPDEC 07/Plancom_PinhalzinhodoVale.pdf": "Pinheirinho do Vale",
     "CREPDEC 08/22 Plancon Vernancio Aires .pdf": "Venâncio Aires",
@@ -40,6 +41,10 @@ CORRECOES = {
     "CREPDEC 09/plano de contingência 2025 Pinto Bandeira.pdf": "Pinto Bandeira",
 }
 IGNORAR_PREFIXOS = ("teste/", ".DS_Store", "site-municipal/")
+# arquivos com conteúdo de OUTRO município (conferido pelo texto); ficam fora até chegar o plano certo
+IGNORAR_ARQUIVOS = {
+    "CREPDEC 02/PlanCon VIADUTOS_2025.pdf",  # é o plano de Três Arroios (que tem o próprio arquivo)
+}
 
 
 def norm(s):
@@ -61,7 +66,7 @@ def main(chaves_txt, geojson):
     # a forma NFC só é usada para comparar.
     for key in sorted(k.strip("\n") for k in open(chaves_txt) if k.strip()):
         nfc = unicodedata.normalize("NFC", key)
-        if nfc.startswith(IGNORAR_PREFIXOS) or nfc.lower().endswith((".url", ".ds_store")):
+        if nfc.startswith(IGNORAR_PREFIXOS) or nfc in IGNORAR_ARQUIVOS or nfc.lower().endswith((".url", ".ds_store")):
             continue
         muni = CORRECOES.get(nfc)
         if muni is None:

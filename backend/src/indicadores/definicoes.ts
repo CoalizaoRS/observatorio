@@ -40,6 +40,11 @@ export interface IndicadorDef {
    * Para termos que a busca semântica dilui em planos longos (ex.: "ROTA 01", "Rotas de fuga").
    */
   ancoras?: RegExp;
+  /**
+   * Varredura do plano inteiro em partes (RAG do LAD): o modelo responde por parte e esta função
+   * funde as respostas num único JSON, antes de `calcular`/`derivar`. Sem ela, usa a busca por trechos.
+   */
+  varredura?: (partes: Record<string, any>[]) => Record<string, any>;
   /** Componentes numéricos derivados (ex.: razões de apoio) mesclados aos extraídos. */
   derivar?: (campos: Record<string, any>) => Record<string, any>;
 }
@@ -90,18 +95,33 @@ function listaDeMeios(v: any): string[] {
 }
 
 /**
- * P1S4: itens de `areas_risco` ("local | ameaça | população") → áreas e se cada uma tem população.
- * Aceita array ou texto separado por ";"/quebra de linha.
+ * P1S4: itens de `areas_risco` ("local | ameaça | população | trecho") → áreas e se cada uma tem população.
+ * `base` é o trecho literal de onde veio a população. Aceita array ou texto separado por ";"/quebra de linha.
+ * Descarta locais genéricos (sem nome próprio), como "áreas planas junto aos arroios", "escolas", "encostas".
  */
-function areasDeRisco(v: any): { local: string; populacao: string }[] {
+const AREA_AMPLA = /munic[íi]pio|territ[óo]rio|\bsede\b|zona (rural|urbana)|[áa]rea (rural|urbana)|interior|^(rural|urbana)/i;
+function areaNomeada(local: string): boolean {
+  if (AREA_AMPLA.test(local) || local === local.toUpperCase()) return true;
+  return local.split(/\s+/).slice(1).some((w) => /^[A-ZÀ-Ý0-9]/.test(w)) || /^[A-ZÀ-Ý]/.test(local) && !/^(Á|A)reas?\b|^Locais\b|^Regi(ão|ões)\b|^Pontos\b|^Bairros\b|^Escolas?\b|^Hospita/i.test(local);
+}
+function areasDeRisco(v: any): { local: string; ameaca: string; populacao: string; base: string }[] {
   const itens = Array.isArray(v) ? v.map((x) => (typeof x === 'string' ? x : Object.values(x ?? {}).join(' | '))) : typeof v === 'string' ? v.split(/[;\n]/) : [];
   return itens
     .map((s) => String(s).split('|').map((p) => p.trim()))
-    .filter((p) => p[0] && !/^n\/?a$/i.test(p[0]))
-    .map((p) => ({ local: p[0], populacao: p[p.length - 1] ?? '' }));
+    .filter((p) => p[0] && !/^n\/?a$/i.test(p[0]) && areaNomeada(p[0]))
+    // "local | ameaça | população | base"; sem a 4ª coluna, a população é a última
+    .map((p) => (p.length >= 4 ? { local: p[0], ameaca: p[1], populacao: p[2], base: p[3] } : { local: p[0], ameaca: p.length >= 3 ? p[1] : '', populacao: p[p.length - 1] ?? '', base: '' }));
 }
-/** População informada para a área: número, e não só imóveis (residências/domicílios/casas sem pessoas ou famílias). */
-function temPopulacao(p: string): boolean {
+/**
+ * População em risco ATUAL informada para a área: número, não só imóveis (residências/domicílios/casas sem
+ * pessoas ou famílias), e não o impacto de um evento passado (atingidos/danos de um desastre já ocorrido).
+ */
+function temPopulacao(a: { populacao: string; base: string }): boolean {
+  const p = a.populacao;
+  // evento passado, pelo trecho citado (o modelo não distingue bem sozinho)
+  if (/passad|tiveram|foram (atingid|afetad|desabrig|desaloj)|atingiu|atingidas? (pel|na|no|em)|ocorrid|tiveram danos|desabrigad|desalojad|enchente de|\b(19|20)\d{2}\b/i.test(a.base)) return false;
+  // capacidade de abrigo/local de acolhimento não é população em risco
+  if (/abrigo|capacidade|vagas|gin[áa]sio|sal[ãa]o|escola|acolhimento/i.test(a.base)) return false;
   if (!/\d/.test(p) || /^\s*n\/?a\s*$/i.test(p)) return false;
   return !/resid[êe]ncia|domic[íi]lio|casas?\b|im[óo]ve(l|is)|edifica/i.test(p) || /pessoa|fam[íi]lia|morador|habitante|afetad|residente/i.test(p);
 }
@@ -126,6 +146,7 @@ export const EXPERIMENTAIS: IndicadorDef[] = [
       'ou o MUNICÍPIO INTEIRO citado como em risco (ex.: estiagem ou vendaval em todo o território). ' +
       'Se o plano diz que não há áreas pontuais/específicas porque os eventos podem ocorrer em QUALQUER parte do município, ' +
       'isso conta como o MUNICÍPIO INTEIRO em risco. ' +
+      'A população precisa ser a ATUAL em risco: número de atingidos/danos de um evento PASSADO não dimensiona a área. ' +
       'Não conta: menção genérica ("fiscalizar construções em áreas de risco") sem dizer qual é a área.',
     pergunta:
       'Quais ÁREAS DE RISCO o PLANCON identifica (local nomeado e ameaça, ou o município inteiro em risco), e qual a POPULAÇÃO ' +
@@ -139,21 +160,46 @@ export const EXPERIMENTAIS: IndicadorDef[] = [
         nome: 'areas_risco',
         tipo: 'texto',
         descricao:
-          'lista de TODAS as áreas de risco citadas (até 30), um item por área no formato "local | ameaça | população", ' +
-          'onde população é o nº de pessoas ou famílias informado para a área (com a unidade) ou "N/A"; [] se nenhuma área for citada',
+          'lista das áreas de risco DESTE município citadas (até 30), um item por área no formato "local | ameaça | população | trecho", ' +
+          'onde população é o nº de pessoas ou famílias informado para a área (com a unidade) ou "N/A", e trecho é a citação ' +
+          'LITERAL curta do documento de onde saiu a população (ou "N/A"). Só locais com NOME (bairro, vila, rua, linha, ' +
+          'localidade, distrito, morro, arroio…), zona urbana/rural ou o município inteiro; NÃO liste categorias genéricas ' +
+          '(escolas, hospitais, encostas, "áreas planas"), exemplos de outros lugares ou textos teóricos. [] se nenhuma área for citada',
       },
       { nome: 'municipio_todo_em_risco', tipo: 'enum', descricao: 'o plano cita o município inteiro como área de risco (inclui "não há áreas específicas; os eventos podem ocorrer em todo o município")?', opcoes: ['sim', 'nao'] },
     ],
+    // Áreas espalhadas por planos longos: lê o plano todo em partes e junta as listas.
+    // A mesma área em duas partes (resumo + detalhe) conta uma vez, ficando a versão com população atual.
+    varredura: (partes) => {
+      const porLocal = new Map<string, string>();
+      const chave = (l: string) => l.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+      for (const p of partes) {
+        for (const a of areasDeRisco(p.areas_risco)) {
+          const k = chave(a.local);
+          const item = [a.local, a.ameaca, a.populacao, a.base].join(' | ');
+          const antes = porLocal.get(k);
+          if (!antes || (!temPopulacao(areasDeRisco([antes])[0]) && temPopulacao(a))) porLocal.set(k, item);
+        }
+      }
+      const evid = partes.map((p) => p.evidencia).filter((e) => typeof e === 'string' && e && !/^n\/?a$/i.test(e));
+      return {
+        areas_risco: [...porLocal.values()],
+        municipio_todo_em_risco: partes.some((p) => /^sim$/i.test(String(p.municipio_todo_em_risco ?? ''))) ? 'sim' : 'nao',
+        evidencia: evid.slice(0, 3).join(' … ') || 'N/A',
+        confianca: 'media',
+        partes_lidas: partes.length,
+      };
+    },
     ancoras: /[áa]reas? de risco|CLASSIFICA[ÇC][ÃA]O DO RISCO|N[º°o]\.? de afetados|Local\s*\|?\s*Risco|setor(es)? de risco/i,
     // Determinístico a partir da lista: nenhuma área → vermelho; todas com população → verde; senão amarelo.
     calcular: (c) => {
       const areas = areasDeRisco(c.areas_risco);
       if (areas.length === 0) return /^sim$/i.test(String(c.municipio_todo_em_risco ?? '')) ? 'amarelo' : 'vermelho';
-      return areas.every((a) => temPopulacao(a.populacao)) ? 'verde' : 'amarelo';
+      return areas.every(temPopulacao) ? 'verde' : 'amarelo';
     },
     derivar: (c) => {
       const areas = areasDeRisco(c.areas_risco);
-      return { n_areas: areas.length, n_areas_com_populacao: areas.filter((a) => temPopulacao(a.populacao)).length };
+      return { n_areas: areas.length, n_areas_com_populacao: areas.filter(temPopulacao).length };
     },
   },
 ];

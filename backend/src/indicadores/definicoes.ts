@@ -104,11 +104,17 @@ function areaNomeada(local: string): boolean {
   if (AREA_AMPLA.test(local) || local === local.toUpperCase()) return true;
   return local.split(/\s+/).slice(1).some((w) => /^[A-ZÀ-Ý0-9]/.test(w)) || /^[A-ZÀ-Ý]/.test(local) && !/^(Á|A)reas?\b|^Locais\b|^Regi(ão|ões)\b|^Pontos\b|^Bairros\b|^Escolas?\b|^Hospita/i.test(local);
 }
+const ABRIGO_LOCAL = /^(gin[áa]sio|escola|E\.?\s?M\.?\s?E\.?\s?[FIM]|EMEI|EMEF|sal[ãa]o|est[áa]dio|igreja|par[óo]quia|CTG|clube|centro comunit|abrigo)/i;
+const ABRIGO_TRECHO = /\babrigo|alojamento|capacidade/i;
+// ano de um evento ("em outubro de 2021", "nos anos de 2022 e 2023"); não o ano da fonte ("IBGE 2022", "SGB-CPRM 2025")
+const EVENTO_DATADO = /\b(em|nos anos de|no ano de|desde)\s+(\p{L}+\s+de\s+)?(19|20)\d{2}\b/iu;
 function areasDeRisco(v: any): { local: string; ameaca: string; populacao: string; base: string }[] {
   const itens = Array.isArray(v) ? v.map((x) => (typeof x === 'string' ? x : Object.values(x ?? {}).join(' | '))) : typeof v === 'string' ? v.split(/[;\n]/) : [];
   return itens
     .map((s) => String(s).split('|').map((p) => p.trim()))
     .filter((p) => p[0] && !/^n\/?a$/i.test(p[0]) && areaNomeada(p[0]))
+    // abrigos/pontos de acolhimento não são áreas de risco (a capacidade não é população exposta)
+    .filter((p) => !ABRIGO_LOCAL.test(p[0]) && !ABRIGO_TRECHO.test(p.slice(3).join(' ')))
     // "local | ameaça | população | base"; sem a 4ª coluna, a população é a última
     .map((p) => (p.length >= 4 ? { local: p[0], ameaca: p[1], populacao: p[2], base: p[3] } : { local: p[0], ameaca: p.length >= 3 ? p[1] : '', populacao: p[p.length - 1] ?? '', base: '' }));
 }
@@ -119,7 +125,7 @@ function areasDeRisco(v: any): { local: string; ameaca: string; populacao: strin
 function temPopulacao(a: { populacao: string; base: string }): boolean {
   const p = a.populacao;
   // evento passado, pelo trecho citado (o modelo não distingue bem sozinho)
-  if (/passad|tiveram|foram (atingid|afetad|desabrig|desaloj)|atingiu|atingidas? (pel|na|no|em)|ocorrid|tiveram danos|desabrigad|desalojad|enchente de|\b(19|20)\d{2}\b/i.test(a.base)) return false;
+  if (/passad|tiveram|foram (atingid|afetad|desabrig|desaloj)|atingiu|atingidas? (pel|na|no|em)|ocorrid|tiveram danos|desabrigad|desalojad|enchente de/i.test(a.base) || EVENTO_DATADO.test(a.base)) return false;
   // capacidade de abrigo/local de acolhimento não é população em risco
   if (/abrigo|capacidade|vagas|gin[áa]sio|sal[ãa]o|escola|acolhimento/i.test(a.base)) return false;
   if (!/\d/.test(p) || /^\s*n\/?a\s*$/i.test(p)) return false;

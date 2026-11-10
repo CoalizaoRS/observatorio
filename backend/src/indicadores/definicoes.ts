@@ -1,5 +1,5 @@
 /**
- * Definição dos 8 indicadores da Fase de Preparação, conforme a aba "simplificado"
+ * Definição dos indicadores da Fase de Preparação, conforme a aba "simplificado"
  * da planilha do Observatório:
  *   https://docs.google.com/spreadsheets/d/1ck5WJv7X2ifg9cwEp299d1Een-LmjzvVYTHiyKZVOt8/
  *
@@ -42,6 +42,11 @@ export interface IndicadorDef {
   ancoras?: RegExp;
   /** Componentes numéricos derivados (ex.: razões de apoio) mesclados aos extraídos. */
   derivar?: (campos: Record<string, any>) => Record<string, any>;
+  /**
+   * Indicador que NÃO vem do texto do PLANCON: os campos são gravados por uma coleta externa
+   * (o valor indica o script). O extrator do modelo o ignora; a cor sai de `calcular`.
+   */
+  coleta?: string;
 }
 
 /** Converte para número aceitando "1.234", "1.234,56", "R$ 10.000,00", etc. */
@@ -369,5 +374,38 @@ export const INDICADORES: IndicadorDef[] = [
     },
   },
   // P8 (Investimento em Defesa Civil) REMOVIDO na revisão de 23/07/26: não é extraível do
-  // PLANCON em V1 (sem dados). Fica para V2 com fonte SICONFI. São 7 indicadores (P1–P7).
+  // PLANCON em V1 (sem dados). Fica para V2 com fonte SICONFI.
+  {
+    id: 'P9',
+    grupo: 'G4 · Governança e Capacidade Institucional',
+    nome: 'Plano de Contingência público e acessível',
+    mede: 'Se a população encontra o Plano de Contingência no site da prefeitura',
+    unidade: 'semáforo (verde/amarelo/vermelho)',
+    formula: 'cliques da página inicial do site da prefeitura até o documento do plano (coleta automática + conferência manual)',
+    criterio:
+      'VERDE: plano no site da prefeitura em até 5 cliques a partir da página inicial. ' +
+      'AMARELO: no site com mais de 5 cliques, só pela busca interna do site, ou em versão mais antiga que a do Prepara RS. ' +
+      'VERMELHO: plano disponível apenas no Prepara RS.',
+    pergunta: '',
+    coleta: 'monitor/acessibilidade.py → npm run p9',
+    campos: [
+      { nome: 'situacao_site', tipo: 'enum', descricao: 'acesso ao site na coleta', opcoes: ['ok', 'inacessivel', 'acesso_recusado', 'robots_veta'] },
+      { nome: 'via', tipo: 'enum', descricao: 'como o plano foi encontrado', opcoes: ['navegacao', 'busca_interna', 'nao_encontrado'] },
+      { nome: 'cliques', tipo: 'numero', descricao: 'cliques da página inicial até o documento (navegação)' },
+      { nome: 'versao', tipo: 'enum', descricao: 'versão do plano do site frente à analisada (Prepara RS)', opcoes: ['mesma', 'mais_recente', 'mais_antiga', 'indeterminada'] },
+      { nome: 'url_documento', tipo: 'texto', descricao: 'endereço do plano no site' },
+      { nome: 'caminho', tipo: 'texto', descricao: 'links clicados a partir da página inicial' },
+      { nome: 'conferencia', tipo: 'texto', descricao: 'motivo para conferência manual (ou vazio)' },
+    ],
+    // Site fora do ar, que recusa acesso automatizado ou veta robôs: sem cor até a conferência
+    // manual (_ajustes_manuais.json). Nunca vira vermelho sem verificação.
+    calcular: (c) => {
+      if (c.via === 'navegacao' || c.via === 'busca_interna') {
+        if (c.via === 'busca_interna' || c.versao === 'mais_antiga') return 'amarelo';
+        const n = paraNumero(c.cliques);
+        return n !== null && n <= 5 ? 'verde' : 'amarelo';
+      }
+      return c.situacao_site === 'ok' && !c.conferencia ? 'vermelho' : 'N/A';
+    },
+  },
 ];

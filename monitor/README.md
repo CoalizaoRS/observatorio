@@ -105,6 +105,30 @@ python monitor.py
 Para enviar e-mail localmente, exporte as variáveis antes de rodar (veja
 "Configuração de e-mail" abaixo) e não use `--dry-run`.
 
+## Indicador P9: plano público e acessível
+
+`acessibilidade.py` navega no site de cada prefeitura a partir da página inicial e grava em
+`acessibilidade.json` quantos cliques levam até o PDF do Plano de Contingência e o caminho
+clicado (a evidência do P9). O documento só vale se o texto for o plano de Defesa Civil
+(planos da COVID-19, da dengue, de contingenciamento de gastos etc. são descartados).
+
+- Coleta educada: uma requisição por segundo em cada site, identificação própria no
+  User-Agent e respeito ao `robots.txt`. Site que veta robôs ou recusa o acesso
+  automatizado não é contornado: vai para conferência manual.
+- Páginas iniciais montadas em JavaScript são abertas com navegador (Playwright).
+- Muitos sites recusam acessos de fora do Brasil: rode a partir de uma conexão no país
+  (por isso a coleta não roda no GitHub Actions).
+
+```bash
+pip install -r requirements.txt playwright && playwright install chromium
+python acessibilidade.py --municipio "Agudo"                     # teste
+python acessibilidade.py                                         # todos (retoma de onde parou)
+python acessibilidade.py --situacao inacessivel --workers 4      # refaz os que não responderam
+python acessibilidade.py --lentos --prazo 15                     # refaz os que esgotaram o prazo
+```
+
+A cor é calculada no backend (`npm run p9` em `../backend`).
+
 ## Rodando automaticamente (GitHub Actions)
 
 O workflow `../.github/workflows/monitor.yml` (na raiz do repo) já está

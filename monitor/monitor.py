@@ -96,6 +96,11 @@ OCR_MAX_PAGINAS = 10
 OCR_DPI = 200
 OCR_IDIOMA = "por"
 
+# De onde a rodada é executada: "github" (workflow) ou "local" (máquina no Brasil). Muitos sites
+# de prefeitura recusam acessos de fora do país; com duas origens, o estado guarda o acesso
+# de cada uma e uma origem que não alcança o site não apaga o que a outra encontrou.
+ORIGEM = os.environ.get("MONITOR_ORIGEM", "local")
+
 SITE_URL_CANDIDATES_TEMPLATE = [
     "https://www.{slug}.rs.gov.br",
     "https://{slug}.rs.gov.br",
@@ -410,15 +415,35 @@ def process_municipio(m: dict, overrides: dict, state: dict) -> MunicipioResult:
 
 
 def build_new_state_entry(prev: dict, r: MunicipioResult) -> dict:
-    prev_plano = (prev or {}).get("plano") or {}
+    prev = prev or {}
+    prev_plano = prev.get("plano") or {}
+    acesso = dict(prev.get("acesso") or {})
+    acesso[ORIGEM] = {"status": r.site_status, "em": now_iso()}
+
+    if r.site_status != "ok" and prev:
+        # Esta origem não alcançou o site: mantém o que já se sabia (inclusive o plano achado
+        # por outra origem) e só registra a tentativa.
+        entry = dict(prev)
+        entry["acesso"] = acesso
+        entry["last_checked"] = now_iso()
+        if r.error:
+            entry["last_error"] = f"{r.error} [{ORIGEM}]"
+        return entry
+
     entry = {
         "codigo_ibge": r.codigo_ibge,
         "site_base": r.site_base,
         "site_status": r.site_status,
         "last_checked": now_iso(),
     }
+    entry["acesso"] = acesso
     if r.error:
         entry["last_error"] = r.error
+
+    if r.plano_status == "not_found" and r.error and prev_plano:
+        # link do plano conhecido, mas o download falhou nesta rodada: não apaga o plano
+        entry["plano"] = prev_plano
+        return entry
 
     if r.plano_status == "false_positive":
         entry["plano"] = None
@@ -488,7 +513,7 @@ def send_email_digest(changes: list[dict], unreachable_count: int, total: int):
             json={
                 "from": email_from,
                 "to": destinatarios,
-                "subject": f"[Planos de Contingência RS] {len(changes)} atualização(ões) detectada(s)",
+                "subject": f"[Planos de Contingência RS] {len(changes)} atualização(ões) detectada(s) (execução: {ORIGEM})",
                 "text": corpo,
             },
             timeout=30,

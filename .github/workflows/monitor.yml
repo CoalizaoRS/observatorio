@@ -35,6 +35,7 @@ jobs:
 
       - name: Rodar monitor
         env:
+          MONITOR_ORIGEM: github
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}

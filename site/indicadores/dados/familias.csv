@@ -1,0 +1,11 @@
+"município","estimativa","tipo_contagem_existente","observação",
+"Alvorada","N/A","N/A","Plano Municipal indica presença significativa de população em moradias em áreas de risco de inundação, sem número explícito ",
+"Cachoeirinha","N/A","N/A","Plano de Contingências e documentos da Defesa Civil listam áreas de muito alto risco e ações, sem número de famílias nas páginas recuperadas ",
+"Canoas","N/A","N/A","Planos e relatórios indicam 9 dos 18 bairros afetados em 2024 e relatos de pessoas afetadas no evento; não há número de famílias/pessoas/domicílios/imóveis em áreas de risco nas páginas recuperadas ",
+"Eldorado do Sul","4563","pessoas (setor analisado)","Relatório setorial indica ~4.563 pessoas expostas no setor da planície de inundação analisado; o mesmo setor registra ~1.598 domicílios — selecionei 'pessoas' por prioridade (famílias>pessoas>domicílios>imóveis) ",
+"Glorinha","N/A","N/A","Documento de defesa civil/planos locais mencionam áreas de risco (enchentes/encostas), sem número de famílias/pessoas/domicílios/imóveis nas páginas recuperadas ",
+"Gravataí","N/A","N/A","Documentos mencionam riscos e várzeas, sem número de famílias/pessoas/domicílios/imóveis nas páginas recuperadas ",
+"Guaíba","N/A","N/A","Sem número de famílias/pessoas/domicílios/imóveis em áreas de risco nas páginas recuperadas (documentos locais mencionam fatores de risco) ",
+"Nova Santa Rita","N/A","N/A","Mapa de zoneamento de risco disponível, porém cartográfico: não lista número de famílias/pessoas/domicílios/imóveis nas páginas recuperadas ",
+"Porto Alegre","84460","pessoas","PLACON indica ~84.460 pessoas em 20.800 imóveis expostos; por prioridade selecionei 'pessoas' como estimativa (famílias não informadas nas páginas recuperadas) ",
+"Viamão","N/A","N/A","Plano de Contingência descreve mapeamento de áreas sujeitas a enchentes, sem número consolidado de famílias/pessoas/domicílios/imóveis nas páginas recuperadas "

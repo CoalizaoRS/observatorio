@@ -472,7 +472,8 @@
             }
         };
 
-        const BASE_AZURE_URL = 'https://plancon.blob.core.windows.net/indicadores';
+        // CSVs publicados junto com o site (backend/publicar-csv.sh copia para site/indicadores/dados)
+        const BASE_CSV_URL = 'dados';
         const RS_GEOJSON_URL = 'https://raw.githubusercontent.com/tbrugz/geodata-br/master/geojson/geojs-43-mun.json';
         // Chave pública do CARTO Basemaps, restrita ao domínio observatoriodaresiliencia.org
         // (restrição configurada no painel do CARTO — não protege se usada em outro domínio).
@@ -1181,10 +1182,10 @@
                 const geojsonRaw = await geojsonResponse.json();
                 geojsonData = geojsonRaw;
 
-                updateLoader(40, "Baixando indicadores de prevenção e resumo consolidado do Azure...");
+                updateLoader(40, "Baixando indicadores de prevenção e resumo consolidado...");
                 const loadPromises = [];
 
-                const resumoUrl = `${BASE_AZURE_URL}/_resumo.csv`;
+                const resumoUrl = `${BASE_CSV_URL}/_resumo.csv`;
                 const resumoPromise = fetch(resumoUrl, { cache: 'no-cache' })
                     .then(async (res) => {
                         if (!res.ok) throw new Error("_resumo.csv ausente no servidor.");
@@ -1194,12 +1195,12 @@
                     })
                     .catch(err => {
                         // Sem dado sintético: se o CSV falhar, o indicador fica como "Dado Indisponível".
-                        console.error("[Observatório] Falha ao obter _resumo.csv do Azure.", err);
+                        console.error("[Observatório] Falha ao obter _resumo.csv.", err);
                     });
                 loadPromises.push(resumoPromise);
 
                 for (let i = 1; i <= 7; i++) {
-                    const csvUrl = `${BASE_AZURE_URL}/P${i}.csv`;
+                    const csvUrl = `${BASE_CSV_URL}/P${i}.csv`;
                     const loadPromise = fetch(csvUrl, { cache: 'no-cache' })
                         .then(async (res) => {
                             if (!res.ok) throw new Error(`P${i} ausente no servidor.`);
@@ -1209,7 +1210,7 @@
                         })
                         .catch(err => {
                             // Sem dado sintético: se o CSV falhar, o indicador fica como "Dado Indisponível".
-                            console.error(`[Observatório] Falha ao obter o indicador P${i} do Azure.`, err);
+                            console.error(`[Observatório] Falha ao obter o indicador P${i}.`, err);
                         });
                     loadPromises.push(loadPromise);
                 }

@@ -254,7 +254,9 @@ def texto_pdf(dados: bytes) -> tuple[str, dict]:
 # "Plano de contingência" também nomeia planos da COVID-19, da dengue, de energia, decretos de
 # contingenciamento de gastos etc. O PLANCON de Defesa Civil fala de desastres naturais.
 OUTRO_PLANO = re.compile(r"covid|coronav|pandemi|dengue|influenza|energia eletrica|contingenciamento|racionamento|vacina")
-OUTRO_NOME = re.compile(r"covid|corona|dengue|energia|contingenciamento|racionamento|cartilha|\bata\b|protocolo|vacina")
+# no nome do arquivo: documentos que citam o plano sem sê-lo (contratação de assessoria, edital…)
+OUTRO_NOME = re.compile(r"covid|corona|dengue|energia|contingenciamento|racionamento|cartilha|\bata\b|protocolo|vacina|"
+                        r"assessoria|edital|licitac|contrat|termo de referencia|pregao|\bprd\b")
 DESASTRE = re.compile(r"inundac|enchente|enxurrad|alagament|deslizament|moviment\w* de massa|estiagem|seca|vendava|granizo|"
                       r"tempestade|desastre|area de risco|defesa civil|desabrigad|desalojad|cobrade|ciclone")
 
@@ -290,6 +292,8 @@ def valida_documento(site: Site, url: str, municipio: str) -> dict | None:
     if not eh_plancon_defesa_civil(norm, normalizar_texto(f"{r.url} {meta.get('title', '')}")):
         return None
     nome_ok = normalizar_texto(municipio) in norm
+    if not nome_ok:
+        return None  # plano de outro município (ex.: modelo baixado de outra prefeitura)
     return {
         "url": r.url,
         "sha256": hashlib.sha256(dados).hexdigest(),
@@ -453,8 +457,30 @@ def le_sitemaps(site: Site, home_url: str) -> list[str]:
     return urls[:MAX_URLS_SITEMAP]
 
 
+def pdfs_wordpress(site: Site, home_url: str) -> list[str]:
+    """Sites WordPress: a API pública de mídia lista os PDFs enviados ao site."""
+    raiz = f"{urlparse(home_url).scheme}://{urlparse(home_url).netloc}"
+    achados = []
+    for termo in ("contingencia", "contigencia", "plancon", "defesa civil"):
+        r = site.get(f"{raiz}/wp-json/wp/v2/media?search={termo}&per_page=20&_fields=source_url,mime_type")
+        if r is None or r.status_code >= 400 or not r.text.lstrip().startswith("["):
+            if termo == "contingencia":
+                return []  # não é WordPress (ou API desligada)
+            continue
+        try:
+            achados += [x["source_url"] for x in json.loads(r.text) if "pdf" in str(x.get("mime_type", ""))]
+        except Exception:
+            continue
+    return list(dict.fromkeys(achados))
+
+
 def descobre_por_sitemap(site: Site, home_url: str, municipio: str) -> dict:
-    """Usa o sitemap só para localizar o plano (o destino); os cliques são medidos depois."""
+    """Localiza o plano (o destino) pela API de mídia do WordPress ou pelo sitemap; os cliques
+    são medidos depois, a partir da página inicial."""
+    for u in pdfs_wordpress(site, home_url)[:8]:
+        doc = valida_documento(site, u, municipio)
+        if doc:
+            return {"urls_sitemap": 0, "alvo": {"doc": u, "pagina": None, "documento": doc}, "fonte": "wordpress"}
     urls = le_sitemaps(site, home_url)
     info = {"urls_sitemap": len(urls)}
     if not urls:
@@ -467,6 +493,7 @@ def descobre_por_sitemap(site: Site, home_url: str, municipio: str) -> dict:
         doc = valida_documento(site, u, municipio)
         if doc:
             info["alvo"] = {"doc": u, "pagina": None, "documento": doc}
+            info["fonte"] = "sitemap"
             return info
     for pg in paginas[:8]:
         r = site.get(pg)
@@ -477,6 +504,7 @@ def descobre_por_sitemap(site: Site, home_url: str, municipio: str) -> dict:
                 doc = valida_documento(site, u, municipio)
                 if doc:
                     info["alvo"] = {"doc": u, "pagina": r.url, "documento": doc}
+                    info["fonte"] = "sitemap"
                     return info
     return info
 
@@ -589,15 +617,15 @@ def coleta(m: dict, overrides: dict, anterior: dict | None = None) -> dict:
             res["sitemap"] = {"urls": sm["urls_sitemap"]}
             if sm.get("alvo"):
                 alvo = sm["alvo"]
-                res["sitemap"].update(doc=alvo["doc"], pagina=alvo["pagina"])
+                res["sitemap"].update(doc=alvo["doc"], pagina=alvo["pagina"], fonte=sm["fonte"])
                 nav2 = navega(site, home.url, home.text, m["nome"], alvo)
                 res["paginas_visitadas"] += nav2["paginas"]
                 if nav2["melhor"]:
                     nav = nav2
-                    res["descoberto_por"] = "sitemap"
+                    res["descoberto_por"] = sm["fonte"]
                 else:
                     res.update(via="sitemap", documento=alvo["documento"],
-                               caminho=[{"url": alvo["pagina"] or alvo["doc"], "texto": "localizado pelo sitemap"}])
+                               caminho=[{"url": alvo["pagina"] or alvo["doc"], "texto": f"localizado pelo {sm['fonte']}"}])
         if nav["melhor"]:
             res.update(via="navegacao", cliques=len(nav["melhor"]["caminho"]), caminho=nav["melhor"]["caminho"],
                        documento=nav["melhor"]["documento"])
@@ -630,7 +658,7 @@ def main():
     ap.add_argument("--refazer", action="store_true")
     ap.add_argument("--nao-encontrados", action="store_true", help="recoleta os sites acessíveis em que o plano não foi achado")
     ap.add_argument("--so-sitemap", action="store_true",
-                    help="com --nao-encontrados: mantém a navegação já feita e roda só a etapa do sitemap")
+                    help="com --nao-encontrados: mantém a navegação já feita e roda só a localização (WordPress/sitemap)")
     ap.add_argument("--lentos", action="store_true", help="recoleta só os que esgotaram o prazo sem achar o plano")
     ap.add_argument("--situacao", action="append",
                     help="recoleta só os já coletados com esta situação (ex.: acesso_recusado, inacessivel)")

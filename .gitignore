@@ -11,6 +11,8 @@ venv/
 # Monitor: PDFs baixados a cada rodada — não versionados, ficam só localmente
 # e como artefato do workflow do GitHub Actions.
 monitor/changed_pdfs/
+# Variáveis locais do monitor (chave de e-mail etc.) — nunca versionar.
+monitor/.env
 
 # Indicadores: CSVs gerados pelo pipeline (backend/src/indicadores/) — dado, não
 # código. Ficam fora do git para não inchar o repo a cada rodada; versionados à

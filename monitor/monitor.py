@@ -36,7 +36,7 @@ import unicodedata
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 import pymupdf
 import pytesseract
@@ -262,7 +262,31 @@ def ocr_pdf_texto(pdf_bytes: bytes, max_paginas: int = OCR_MAX_PAGINAS, dpi: int
     return " ".join(partes)
 
 
-def validar_conteudo_pdf(pdf_bytes: bytes, termo: str = TERMO_OBRIGATORIO) -> dict:
+# "Plano de contingência" também nomeia planos da COVID-19, da dengue, de energia, decretos de
+# contingenciamento de gastos etc. O PLANCON de Defesa Civil fala de desastres naturais.
+OUTRO_PLANO = re.compile(r"covid|coronav|pandemi|dengue|influenza|energia eletrica|contingenciamento|racionamento|vacina")
+# no nome do arquivo: documentos que citam o plano sem sê-lo (contratação de assessoria, edital…)
+OUTRO_NOME = re.compile(r"covid|corona|dengue|energia|contingenciamento|racionamento|cartilha|\bata\b|protocolo|vacina|"
+                        r"assessoria|edital|licitac|contrat|termo de referencia|pregao|\bprd\b")
+DESASTRE = re.compile(r"inundac|enchente|enxurrad|alagament|deslizament|moviment\w* de massa|estiagem|seca|vendava|granizo|"
+                      r"tempestade|desastre|area de risco|defesa civil|desabrigad|desalojad|cobrade|ciclone")
+
+
+def eh_plancon_defesa_civil(texto: str, nome: str) -> bool:
+    if OUTRO_NOME.search(nome):
+        return False
+    outro = len(OUTRO_PLANO.findall(texto))
+    desastre = len(DESASTRE.findall(texto))
+    return desastre >= 5 and outro * 2 < desastre
+
+
+# Versão das regras de validação gravada em state.json; planos validados por regra mais antiga
+# são baixados e revalidados uma vez.
+VALIDACAO_VERSAO = 2
+
+
+def validar_conteudo_pdf(pdf_bytes: bytes, termo: str = TERMO_OBRIGATORIO, municipio: str | None = None,
+                         nome_arquivo: str = "") -> dict:
     """Confirma que o PDF baixado de fato contém o termo obrigatório no texto,
     para filtrar falsos positivos da busca por palavra-chave em links/HTML.
     Quando a extração nativa não encontra o termo e trouxe pouco/nenhum texto
@@ -271,7 +295,7 @@ def validar_conteudo_pdf(pdf_bytes: bytes, termo: str = TERMO_OBRIGATORIO) -> di
         reader = PdfReader(io.BytesIO(pdf_bytes))
         paginas = reader.pages
     except Exception as e:
-        return {"termo_encontrado": False, "chars_extraidos": 0, "erro": f"PDF ilegível: {e}", "ocr_usado": False}
+        return {"termo_encontrado": False, "valido": False, "chars_extraidos": 0, "erro": f"PDF ilegível: {e}", "ocr_usado": False}
 
     partes = []
     chars_extraidos = 0
@@ -295,10 +319,19 @@ def validar_conteudo_pdf(pdf_bytes: bytes, termo: str = TERMO_OBRIGATORIO) -> di
         texto_ocr = ocr_pdf_texto(pdf_bytes)
         if texto_ocr:
             chars_extraidos = len(texto_ocr)
-            termo_encontrado = termo_normalizado in normalizar_texto(texto_ocr)
+            texto_normalizado = normalizar_texto(texto_ocr)
+            termo_encontrado = termo_normalizado in texto_normalizado
+
+    # Além do termo: tem de ser o plano de Defesa Civil (não o da COVID-19, da dengue, um edital…)
+    # e do próprio município (não um modelo de outra prefeitura).
+    outro_documento = termo_encontrado and not eh_plancon_defesa_civil(texto_normalizado, normalizar_texto(nome_arquivo))
+    outro_municipio = termo_encontrado and bool(municipio) and normalizar_texto(municipio) not in texto_normalizado
 
     return {
         "termo_encontrado": termo_encontrado,
+        "valido": termo_encontrado and not outro_documento and not outro_municipio,
+        "outro_documento": outro_documento,
+        "outro_municipio": outro_municipio,
         "chars_extraidos": chars_extraidos,
         "erro": None,
         "ocr_usado": ocr_usado,
@@ -308,6 +341,10 @@ def validar_conteudo_pdf(pdf_bytes: bytes, termo: str = TERMO_OBRIGATORIO) -> di
 def motivo_falso_positivo(validacao: dict) -> str:
     if validacao["erro"]:
         return validacao["erro"]
+    if validacao.get("outro_documento"):
+        return "cita o plano de contingência, mas não é o plano de Defesa Civil (COVID-19, dengue, edital, cartilha etc.)"
+    if validacao.get("outro_municipio"):
+        return "plano de contingência de outro município (o nome do município não aparece no texto)"
     motivo = 'termo "Plano de Contingência" não encontrado no texto do PDF'
     if validacao["ocr_usado"]:
         motivo += " (tentativa via OCR também não encontrou o termo)"
@@ -337,7 +374,23 @@ def metadata_suggests_change(prev: dict, meta_resp: requests.Response) -> bool:
     return True
 
 
-def process_municipio(m: dict, overrides: dict, state: dict) -> MunicipioResult:
+def find_plan_link_profundo(m: dict, overrides: dict) -> str | None:
+    """Navegação do coletor do P9 (acessibilidade.py): resolve o site como ele (páginas iniciais
+    em JavaScript ou que só redirecionam são abertas com navegador), segue menus até vários
+    cliques, aceita a grafia "contigencia", portais de fornecedor e PDFs sem extensão, e valida
+    o documento. Bem mais lenta que a busca rasa — usada com --profundo."""
+    from acessibilidade import navega, resolve_site  # import tardio: acessibilidade importa este módulo
+    site, home, _ = resolve_site(m, overrides)
+    if site is None:
+        return None
+    try:
+        nav = navega(site, home.url, home.text, m["nome"])
+        return nav["melhor"]["documento"]["url"] if nav["melhor"] else None
+    finally:
+        site.fecha()
+
+
+def process_municipio(m: dict, overrides: dict, state: dict, profundo: bool = False) -> MunicipioResult:
     nome = m["nome"]
     slug = m["slug"]
     override = overrides.get(nome, {})
@@ -358,6 +411,10 @@ def process_municipio(m: dict, overrides: dict, state: dict) -> MunicipioResult:
     result.site_status = "ok"
 
     plano_url = find_plan_link(base_url, home_resp)
+    if not plano_url and (prev.get("plano") or {}).get("url"):
+        plano_url = prev["plano"]["url"]  # o link conhecido segue valendo se o PDF ainda existe
+    if not plano_url and profundo:
+        plano_url = find_plan_link_profundo(m, overrides)
     if not plano_url:
         result.plano_status = "not_found"
         return result
@@ -370,6 +427,8 @@ def process_municipio(m: dict, overrides: dict, state: dict) -> MunicipioResult:
     suspeita_mudanca = True
     if meta_resp is not None:
         suspeita_mudanca = metadata_suggests_change(prev_plano, meta_resp)
+    if prev_plano.get("validacao", 1) < VALIDACAO_VERSAO:
+        suspeita_mudanca = True  # validado por regra antiga: baixa e revalida uma vez
 
     if not suspeita_mudanca:
         result.plano_status = "unchanged"
@@ -391,12 +450,12 @@ def process_municipio(m: dict, overrides: dict, state: dict) -> MunicipioResult:
     result.last_modified_header = pdf_resp.headers.get("Last-Modified")
     result.etag = pdf_resp.headers.get("ETag")
 
-    validacao = validar_conteudo_pdf(pdf_resp.content)
+    validacao = validar_conteudo_pdf(pdf_resp.content, municipio=nome, nome_arquivo=plano_url)
     result.termo_encontrado = validacao["termo_encontrado"]
     result.chars_extraidos = validacao["chars_extraidos"]
     result.ocr_usado = validacao["ocr_usado"]
 
-    if not validacao["termo_encontrado"]:
+    if not validacao["valido"]:
         result.plano_status = "false_positive"
         result.pdf_bytes = pdf_resp.content
         result.error = motivo_falso_positivo(validacao)
@@ -467,6 +526,7 @@ def build_new_state_entry(prev: dict, r: MunicipioResult) -> dict:
             "last_modified_header": r.last_modified_header,
             "etag": r.etag,
             "termo_confirmado": True,
+            "validacao": VALIDACAO_VERSAO,
             "validado_via_ocr": r.ocr_usado,
             "first_seen": first_seen or now_iso(),
             "last_changed": last_changed or now_iso(),
@@ -603,6 +663,7 @@ def revalidar_existentes():
                     "last_modified_header": None,
                     "etag": None,
                     "termo_confirmado": True,
+            "validacao": VALIDACAO_VERSAO,
                     "validado_via_ocr": validacao["ocr_usado"],
                     "first_seen": now_iso(),
                     "last_changed": now_iso(),
@@ -655,6 +716,9 @@ def main():
     parser.add_argument("--limit", type=int, default=None, help="Processa só os N primeiros municípios (teste)")
     parser.add_argument("--municipio", type=str, default=None, help="Processa só um município específico")
     parser.add_argument("--dry-run", action="store_true", help="Não envia e-mail, só imprime o relatório")
+    parser.add_argument("--profundo", action="store_true",
+                        help="Nos sites sem plano achado pela busca rasa, navega como o coletor do P9 "
+                             "(vários cliques; bem mais lento — para rodadas locais/semanais)")
     parser.add_argument("--validar-existentes", action="store_true",
                          help="Reavalia o conteúdo dos PDFs já baixados em changed_pdfs/ (sem acessar a rede) "
                               "e sai, sem rodar a varredura normal")
@@ -690,7 +754,7 @@ def main():
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         futures = {
-            executor.submit(process_municipio, m, overrides, state): m for m in municipios
+            executor.submit(process_municipio, m, overrides, state, args.profundo): m for m in municipios
         }
         done = 0
         for future in concurrent.futures.as_completed(futures):

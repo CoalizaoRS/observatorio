@@ -31,50 +31,25 @@ de dados entre cidades e mantém o contexto pequeno, **reduzindo o consumo de to
 
 ## Como rodar
 
-## Publicação dos CSVs (Azure Blob + proxy)
+## Publicação dos CSVs (junto com o site)
 
-Os CSVs consolidados são publicados em um **container público** do Azure Blob Storage e
-também servidos pelo **proxy** por nome.
-
-**Blob público** (container `indicadores` na conta `plancon`), uma URL por arquivo:
+Os CSVs consolidados são publicados **com o site** (GitHub Pages), em
+`site/indicadores/dados/`, e o painel os lê do próprio domínio:
 
 ```
-https://plancon.blob.core.windows.net/indicadores/_resumo.csv
-https://plancon.blob.core.windows.net/indicadores/P1.csv   ... P8.csv
-https://plancon.blob.core.windows.net/indicadores/manifest.json   # índice p/ o front-end
+https://observatoriodaresiliencia.org/indicadores/dados/_resumo.csv
+https://observatoriodaresiliencia.org/indicadores/dados/P1.csv   ... P7.csv
+https://observatoriodaresiliencia.org/indicadores/dados/manifest.json   # índice
 ```
 
-`Content-Type: text/csv` e CORS `GET *` já configurados — o front-end pode dar `fetch()`
-direto. Para (re)publicar após rodar `npm run consolidar`:
+Para (re)publicar após rodar `npm run consolidar`:
 
 ```bash
-cd backend && ./publicar-csv.sh          # az login necessário
+cd backend && ./publicar-csv.sh   # copia para site/indicadores/dados e gera o manifest.json
 ```
 
-**Proxy (servidor Docker)** entrega os mesmos CSVs por nome (arquivos embutidos na imagem
-em `dados/csv`, copiados no Dockerfile):
-
-```
-GET /api/csv            -> { count, arquivos:[{ nome, url_local, url_blob }] }
-GET /api/csv/_resumo.csv -> text/csv        (nome sanitizado; só *.csv; sem path traversal)
-```
-
-Servido em produção pelo Container App `observatorio-backend`
-(`https://observatorio-backend.blacksand-ccf12c68.westus2.azurecontainerapps.io`).
-
-### Deploy completo (um comando)
-
-`backend/deploy.sh` encadeia tudo: consolidar → publicar no Blob → build+push
-(`linux/amd64` no ACR, tag `vN` auto-incrementada) → `az containerapp update` → smoke test.
-Requer `az login` e Docker em execução.
-
-```bash
-cd backend
-./deploy.sh                     # pipeline completo (tag auto: v8 -> v9 -> ...)
-./deploy.sh --tag v9            # força a tag
-./deploy.sh --skip-consolidar   # dados já consolidados
-./deploy.sh --skip-build --skip-deploy   # só consolida e publica no Blob
-```
+Depois, commit de `site/indicadores/dados` numa branch, PR e merge na `main`: o workflow
+`pages.yml` põe o site no ar.
 
 ## Extração
 

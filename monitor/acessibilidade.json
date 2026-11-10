@@ -5,15 +5,18 @@
       "formulario": null
     },
     "codigo_ibge": 4300034,
-    "coletado_em": "2026-11-10T03:56:34Z",
+    "coletado_em": "2026-11-10T08:57:03Z",
     "documentos_testados": 0,
     "home": "https://acegua.rs.gov.br/",
     "navegador": true,
     "paginas_visitadas": 0,
-    "requisicoes": 2,
-    "segundos": 16.4,
+    "requisicoes": 5,
+    "segundos": 18.6,
     "site_base": "https://acegua.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Agudo": {
@@ -64,33 +67,38 @@
       "formulario": null
     },
     "codigo_ibge": 4300307,
-    "coletado_em": "2026-11-10T02:13:06Z",
+    "coletado_em": "2026-11-10T08:57:03Z",
     "documentos_testados": 0,
     "home": "https://alecrim.atende.net/",
     "navegador": true,
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 339.7,
+    "requisicoes": 6,
+    "segundos": 23.6,
     "site_base": "https://www.alecrim.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 1,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Alegrete": {
     "busca_interna": {
       "achou": false,
-      "formulario": null
+      "formulario": "https://www.alegrete.rs.gov.br/pesquisar"
     },
     "codigo_ibge": 4300406,
-    "coletado_em": "2026-11-10T03:56:34Z",
+    "coletado_em": "2026-11-10T08:57:03Z",
     "documentos_testados": 0,
     "home": "https://www.alegrete.rs.gov.br/",
     "navegador": true,
     "paginas_visitadas": 0,
-    "requisicoes": 2,
-    "segundos": 16.0,
+    "requisicoes": 6,
+    "segundos": 27.2,
     "site_base": "https://www.alegrete.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Alegria": {
@@ -106,14 +114,17 @@
       "formulario": null
     },
     "codigo_ibge": 4300471,
-    "coletado_em": "2026-11-10T02:02:31Z",
+    "coletado_em": "2026-11-10T08:57:03Z",
     "documentos_testados": 0,
     "home": "https://almirantetamandaredosul.rs.gov.br/",
     "paginas_visitadas": 75,
-    "requisicoes": 76,
-    "segundos": 82.3,
+    "requisicoes": 4,
+    "segundos": 7.3,
     "site_base": "https://almirantetamandaredosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Alpestre": {
@@ -129,7 +140,7 @@
       "formulario": "https://altoalegre.rs.gov.br/busca.php"
     },
     "codigo_ibge": 4300554,
-    "coletado_em": "2026-11-10T02:04:46Z",
+    "coletado_em": "2026-11-10T08:57:03Z",
     "documentos_testados": 2,
     "documentos_vetados_robots": [
       "https://altoalegre.rs.gov.br/uploads/publicacao-1955-20250417154746.pdf",
@@ -137,11 +148,13 @@
     ],
     "home": "https://altoalegre.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 84,
-    "segundos": 88.0,
+    "requisicoes": 8,
+    "segundos": 11.3,
     "site_base": "https://www.altoalegre.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 2,
+    "sitemap": {
+      "urls": 24
+    },
     "via": "nao_encontrado"
   },
   "Alto Feliz": {
@@ -150,14 +163,17 @@
       "formulario": "https://www.altofeliz.rs.gov.br/web/pesquisa"
     },
     "codigo_ibge": 4300570,
-    "coletado_em": "2026-11-10T02:02:38Z",
+    "coletado_em": "2026-11-10T08:57:03Z",
     "documentos_testados": 0,
     "home": "https://www.altofeliz.rs.gov.br/web/",
     "paginas_visitadas": 111,
-    "requisicoes": 113,
-    "segundos": 122.9,
+    "requisicoes": 5,
+    "segundos": 7.2,
     "site_base": "https://www.altofeliz.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Alvorada": {
@@ -198,14 +214,17 @@
       "formulario": null
     },
     "codigo_ibge": 4300638,
-    "coletado_em": "2026-11-10T02:04:46Z",
+    "coletado_em": "2026-11-10T08:57:03Z",
     "documentos_testados": 0,
     "home": "https://www.amaralferrador.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 115.2,
+    "requisicoes": 4,
+    "segundos": 5.8,
     "site_base": "https://www.amaralferrador.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Ametista do Sul": {
@@ -214,14 +233,17 @@
       "formulario": null
     },
     "codigo_ibge": 4300646,
-    "coletado_em": "2026-11-10T02:04:46Z",
+    "coletado_em": "2026-11-10T08:57:03Z",
     "documentos_testados": 0,
     "home": "https://www.ametistadosul.rs.gov.br/",
     "paginas_visitadas": 36,
-    "requisicoes": 37,
-    "segundos": 39.5,
+    "requisicoes": 5,
+    "segundos": 7.3,
     "site_base": "https://www.ametistadosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "André da Rocha": {
@@ -253,7 +275,7 @@
       "formulario": "https://www.google.com/search"
     },
     "codigo_ibge": 4300802,
-    "coletado_em": "2026-11-10T02:04:46Z",
+    "coletado_em": "2026-11-10T08:57:11Z",
     "documentos_testados": 10,
     "documentos_vetados_robots": [
       "https://www.antonioprado.rs.gov.br/UPLarquivos/190820261008425.pdf",
@@ -269,11 +291,14 @@
     ],
     "home": "https://www.antonioprado.rs.gov.br/",
     "paginas_visitadas": 45,
-    "requisicoes": 46,
-    "segundos": 55.3,
+    "requisicoes": 4,
+    "segundos": 9.0,
     "site_base": "https://www.antonioprado.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 11,
+    "sitemap": {
+      "urls": 88
+    },
+    "urls_vetadas_robots": 1,
     "via": "nao_encontrado"
   },
   "Arambaré": {
@@ -320,14 +345,17 @@
       "formulario": "https://www.ararica.rs.gov.br/busca"
     },
     "codigo_ibge": 4300877,
-    "coletado_em": "2026-11-10T02:08:51Z",
+    "coletado_em": "2026-11-10T08:57:11Z",
     "documentos_testados": 10,
     "home": "https://www.ararica.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 92,
-    "segundos": 104.6,
+    "requisicoes": 5,
+    "segundos": 9.4,
     "site_base": "https://www.ararica.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Aratiba": {
@@ -343,14 +371,17 @@
       "formulario": null
     },
     "codigo_ibge": 4301305,
-    "coletado_em": "2026-11-10T02:04:48Z",
+    "coletado_em": "2026-11-10T08:57:11Z",
     "documentos_testados": 0,
     "home": "https://www.arroiogrande.rs.gov.br/",
     "paginas_visitadas": 22,
-    "requisicoes": 23,
-    "segundos": 23.8,
+    "requisicoes": 5,
+    "segundos": 6.8,
     "site_base": "https://www.arroiogrande.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Arroio do Meio": {
@@ -394,15 +425,17 @@
       "formulario": null
     },
     "codigo_ibge": 4301073,
-    "coletado_em": "2026-11-10T02:04:48Z",
+    "coletado_em": "2026-11-10T08:57:15Z",
     "documentos_testados": 0,
     "home": "https://www.arroiodopadre.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 58,
-    "segundos": 77.4,
+    "requisicoes": 4,
+    "segundos": 5.2,
     "site_base": "https://www.arroiodopadre.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 23,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Arroio do Sal": {
@@ -411,14 +444,17 @@
       "formulario": null
     },
     "codigo_ibge": 4301057,
-    "coletado_em": "2026-11-10T02:04:48Z",
+    "coletado_em": "2026-11-10T08:57:17Z",
     "documentos_testados": 0,
     "home": "https://arroiodosal.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 152.4,
+    "requisicoes": 21,
+    "segundos": 43.7,
     "site_base": "https://www.arroiodosal.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 12000
+    },
     "via": "nao_encontrado"
   },
   "Arroio do Tigre": {
@@ -427,15 +463,18 @@
       "formulario": "http://www.arroiodotigre.rs.gov.br/site"
     },
     "codigo_ibge": 4301206,
-    "coletado_em": "2026-11-10T02:04:50Z",
+    "coletado_em": "2026-11-10T08:57:20Z",
     "documentos_testados": 0,
     "home": "http://www.arroiodotigre.rs.gov.br/site/",
     "navegador": true,
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 132.7,
+    "requisicoes": 6,
+    "segundos": 20.6,
     "site_base": "https://www.arroiodotigre.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Arroio dos Ratos": {
@@ -458,15 +497,17 @@
       "formulario": "https://www.augustopestana.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4301503,
-    "coletado_em": "2026-11-10T02:08:51Z",
+    "coletado_em": "2026-11-10T08:57:20Z",
     "documentos_testados": 0,
     "home": "https://www.augustopestana.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 87.7,
+    "requisicoes": 5,
+    "segundos": 7.4,
     "site_base": "https://www.augustopestana.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 1,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Bagé": {
@@ -475,14 +516,17 @@
       "formulario": "https://www.bage.rs.gov.br/@@search"
     },
     "codigo_ibge": 4301602,
-    "coletado_em": "2026-11-10T02:05:04Z",
+    "coletado_em": "2026-11-10T08:57:20Z",
     "documentos_testados": 0,
     "home": "https://www.bage.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 109.3,
+    "requisicoes": 15,
+    "segundos": 19.5,
     "site_base": "https://www.bage.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 5955
+    },
     "via": "nao_encontrado"
   },
   "Balneário Pinhal": {
@@ -491,14 +535,17 @@
       "formulario": "https://balneariopinhal.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4301636,
-    "coletado_em": "2026-11-10T02:08:51Z",
+    "coletado_em": "2026-11-10T08:57:22Z",
     "documentos_testados": 0,
     "home": "https://balneariopinhal.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 88.9,
+    "requisicoes": 5,
+    "segundos": 11.4,
     "site_base": "https://www.balneariopinhal.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Barra Funda": {
@@ -507,14 +554,17 @@
       "formulario": "https://www.barrafunda.rs.gov.br/busca"
     },
     "codigo_ibge": 4301958,
-    "coletado_em": "2026-11-10T02:08:51Z",
+    "coletado_em": "2026-11-10T08:57:27Z",
     "documentos_testados": 9,
     "home": "https://www.barrafunda.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 91,
-    "segundos": 139.6,
+    "requisicoes": 5,
+    "segundos": 8.8,
     "site_base": "https://www.barrafunda.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Barra do Guarita": {
@@ -530,14 +580,17 @@
       "formulario": "https://barradoquarai.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4301875,
-    "coletado_em": "2026-11-10T02:08:51Z",
+    "coletado_em": "2026-11-10T08:57:27Z",
     "documentos_testados": 0,
     "home": "https://barradoquarai.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 85.1,
+    "requisicoes": 5,
+    "segundos": 8.7,
     "site_base": "https://www.barradoquarai.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Barra do Ribeiro": {
@@ -616,14 +669,17 @@
       "formulario": null
     },
     "codigo_ibge": 4301701,
-    "coletado_em": "2026-11-10T02:05:39Z",
+    "coletado_em": "2026-11-10T08:57:33Z",
     "documentos_testados": 0,
     "home": "https://www.baraodecotegipe.rs.gov.br/site/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 108.0,
+    "requisicoes": 4,
+    "segundos": 7.1,
     "site_base": "https://www.baraodecotegipe.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 385
+    },
     "via": "nao_encontrado"
   },
   "Barão do Triunfo": {
@@ -655,14 +711,17 @@
       "formulario": "https://www.bentogoncalves.rs.gov.br"
     },
     "codigo_ibge": 4302105,
-    "coletado_em": "2026-11-10T02:08:52Z",
+    "coletado_em": "2026-11-10T08:57:36Z",
     "documentos_testados": 0,
     "home": "https://www.bentogoncalves.rs.gov.br/",
     "paginas_visitadas": 58,
-    "requisicoes": 61,
-    "segundos": 107.1,
+    "requisicoes": 27,
+    "segundos": 34.7,
     "site_base": "https://www.bentogoncalves.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 8954
+    },
     "via": "nao_encontrado"
   },
   "Boa Vista das Missões": {
@@ -671,14 +730,17 @@
       "formulario": null
     },
     "codigo_ibge": 4302154,
-    "coletado_em": "2026-11-10T02:08:53Z",
+    "coletado_em": "2026-11-10T08:57:40Z",
     "documentos_testados": 0,
     "home": "https://www.boavistadasmissoes.rs.gov.br/",
     "paginas_visitadas": 35,
-    "requisicoes": 36,
-    "segundos": 37.9,
+    "requisicoes": 4,
+    "segundos": 6.2,
     "site_base": "https://www.boavistadasmissoes.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 47
+    },
     "via": "nao_encontrado"
   },
   "Boa Vista do Buricá": {
@@ -687,14 +749,17 @@
       "formulario": "https://www.boavistadoburica.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4302204,
-    "coletado_em": "2026-11-10T02:08:53Z",
+    "coletado_em": "2026-11-10T08:57:40Z",
     "documentos_testados": 0,
     "home": "https://www.boavistadoburica.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 88.8,
+    "requisicoes": 5,
+    "segundos": 8.1,
     "site_base": "https://www.boavistadoburica.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Boa Vista do Cadeado": {
@@ -703,14 +768,17 @@
       "formulario": "https://www.boavistadocadeado.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4302220,
-    "coletado_em": "2026-11-10T02:08:53Z",
+    "coletado_em": "2026-11-10T08:57:40Z",
     "documentos_testados": 0,
     "home": "https://www.boavistadocadeado.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 85.5,
+    "requisicoes": 5,
+    "segundos": 7.3,
     "site_base": "https://www.boavistadocadeado.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Boa Vista do Incra": {
@@ -719,14 +787,17 @@
       "formulario": null
     },
     "codigo_ibge": 4302238,
-    "coletado_em": "2026-11-10T02:08:58Z",
+    "coletado_em": "2026-11-10T08:57:46Z",
     "documentos_testados": 0,
     "home": "https://www.boavistadoincra.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 83.8,
+    "requisicoes": 4,
+    "segundos": 5.7,
     "site_base": "https://www.boavistadoincra.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Boa Vista do Sul": {
@@ -742,15 +813,17 @@
       "formulario": null
     },
     "codigo_ibge": 4302303,
-    "coletado_em": "2026-11-10T02:13:06Z",
+    "coletado_em": "2026-11-10T08:57:48Z",
     "documentos_testados": 0,
     "home": "https://www.bomjesus.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 80,
-    "segundos": 140.0,
+    "requisicoes": 4,
+    "segundos": 7.9,
     "site_base": "https://www.bomjesus.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 1,
+    "sitemap": {
+      "urls": 51
+    },
     "via": "nao_encontrado"
   },
   "Bom Princípio": {
@@ -759,15 +832,17 @@
       "formulario": "https://www.bomprincipio.rs.gov.br/busca"
     },
     "codigo_ibge": 4302352,
-    "coletado_em": "2026-11-10T02:09:09Z",
+    "coletado_em": "2026-11-10T08:57:48Z",
     "documentos_testados": 0,
     "home": "https://www.bomprincipio.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 72,
-    "segundos": 103.9,
+    "requisicoes": 5,
+    "segundos": 8.4,
     "site_base": "https://www.bomprincipio.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 10,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Bom Progresso": {
@@ -776,15 +851,18 @@
       "formulario": null
     },
     "codigo_ibge": 4302378,
-    "coletado_em": "2026-11-10T02:09:30Z",
+    "coletado_em": "2026-11-10T08:57:51Z",
     "documentos_testados": 0,
     "home": "https://bomprogresso.atende.net/",
     "navegador": true,
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 215.1,
+    "requisicoes": 6,
+    "segundos": 19.9,
     "site_base": "https://www.bomprogresso.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Bom Retiro do Sul": {
@@ -863,14 +941,17 @@
       "formulario": "https://www.bossoroca.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4302501,
-    "coletado_em": "2026-11-10T02:13:06Z",
+    "coletado_em": "2026-11-10T08:57:56Z",
     "documentos_testados": 0,
     "home": "https://www.bossoroca.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 86.2,
+    "requisicoes": 5,
+    "segundos": 8.4,
     "site_base": "https://www.bossoroca.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Bozano": {
@@ -886,14 +967,17 @@
       "formulario": "https://www.braga.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4302600,
-    "coletado_em": "2026-11-10T02:13:06Z",
+    "coletado_em": "2026-11-10T08:57:57Z",
     "documentos_testados": 1,
     "home": "https://www.braga.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 91.9,
+    "requisicoes": 5,
+    "segundos": 8.0,
     "site_base": "https://www.braga.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Brochier": {
@@ -902,15 +986,17 @@
       "formulario": null
     },
     "codigo_ibge": 4302659,
-    "coletado_em": "2026-11-10T02:10:13Z",
+    "coletado_em": "2026-11-10T08:58:01Z",
     "documentos_testados": 0,
     "home": "https://www.brochier.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 80,
-    "segundos": 90.8,
+    "requisicoes": 4,
+    "segundos": 6.6,
     "site_base": "https://www.brochier.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 1,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Butiá": {
@@ -919,14 +1005,17 @@
       "formulario": "https://butia.rs.gov.br"
     },
     "codigo_ibge": 4302709,
-    "coletado_em": "2026-11-10T02:06:54Z",
+    "coletado_em": "2026-11-10T08:58:04Z",
     "documentos_testados": 1,
     "home": "https://butia.rs.gov.br/",
     "paginas_visitadas": 27,
-    "requisicoes": 30,
-    "segundos": 91.8,
+    "requisicoes": 9,
+    "segundos": 20.7,
     "site_base": "https://www.butia.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 91
+    },
     "via": "nao_encontrado"
   },
   "Cacequi": {
@@ -935,14 +1024,17 @@
       "formulario": "https://www.cacequi.rs.gov.br/filtrarTudo"
     },
     "codigo_ibge": 4302907,
-    "coletado_em": "2026-11-10T02:07:03Z",
+    "coletado_em": "2026-11-10T08:58:05Z",
     "documentos_testados": 0,
     "home": "https://www.cacequi.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 100.8,
+    "requisicoes": 5,
+    "segundos": 6.8,
     "site_base": "https://www.cacequi.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Cachoeira do Sul": {
@@ -951,7 +1043,7 @@
       "formulario": null
     },
     "codigo_ibge": 4303004,
-    "coletado_em": "2026-11-10T02:07:16Z",
+    "coletado_em": "2026-11-10T08:58:08Z",
     "documentos_testados": 5,
     "documentos_vetados_robots": [
       "https://www.cachoeiradosul.rs.gov.br/arquivos/organograma_02025126.pdf",
@@ -962,11 +1054,13 @@
     ],
     "home": "https://www.cachoeiradosul.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 60,
-    "segundos": 80.7,
+    "requisicoes": 4,
+    "segundos": 5.8,
     "site_base": "https://www.cachoeiradosul.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 26,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Cachoeirinha": {
@@ -975,15 +1069,17 @@
       "formulario": null
     },
     "codigo_ibge": 4303103,
-    "coletado_em": "2026-11-10T02:13:06Z",
+    "coletado_em": "2026-11-10T08:58:11Z",
     "documentos_testados": 0,
     "home": "https://cachoeirinha.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 56,
-    "segundos": 216.0,
+    "requisicoes": 5,
+    "segundos": 12.0,
     "site_base": "https://cachoeirinha.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 25,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Cacique Doble": {
@@ -1008,14 +1104,17 @@
       "formulario": "https://www.caibate.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4303301,
-    "coletado_em": "2026-11-10T02:13:06Z",
+    "coletado_em": "2026-11-10T08:58:12Z",
     "documentos_testados": 0,
     "home": "https://www.caibate.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 86.0,
+    "requisicoes": 5,
+    "segundos": 7.3,
     "site_base": "https://www.caibate.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Caiçara": {
@@ -1031,15 +1130,17 @@
       "formulario": null
     },
     "codigo_ibge": 4303509,
-    "coletado_em": "2026-11-10T02:13:06Z",
+    "coletado_em": "2026-11-10T08:58:14Z",
     "documentos_testados": 0,
     "home": "https://camaqua.atende.net/",
     "paginas_visitadas": 42,
-    "requisicoes": 34,
-    "segundos": 112.1,
+    "requisicoes": 5,
+    "segundos": 10.8,
     "site_base": "https://www.camaqua.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 9,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Camargo": {
@@ -1062,14 +1163,17 @@
       "formulario": null
     },
     "codigo_ibge": 4303673,
-    "coletado_em": "2026-11-10T06:04:51Z",
+    "coletado_em": "2026-11-10T08:58:19Z",
     "documentos_testados": 0,
     "home": "https://www.campestredaserra.rs.gov.br/",
     "paginas_visitadas": 56,
-    "requisicoes": 57,
-    "segundos": 79.3,
+    "requisicoes": 4,
+    "segundos": 8.6,
     "site_base": "https://www.campestredaserra.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 103
+    },
     "via": "nao_encontrado"
   },
   "Campina das Missões": {
@@ -1078,15 +1182,17 @@
       "formulario": null
     },
     "codigo_ibge": 4303707,
-    "coletado_em": "2026-11-10T02:13:06Z",
+    "coletado_em": "2026-11-10T08:58:23Z",
     "documentos_testados": 0,
     "home": "https://www.campinadasmissoes.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 80,
-    "segundos": 136.5,
+    "requisicoes": 4,
+    "segundos": 8.9,
     "site_base": "https://www.campinadasmissoes.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 1,
+    "sitemap": {
+      "urls": 60
+    },
     "via": "nao_encontrado"
   },
   "Campinas do Sul": {
@@ -1102,14 +1208,17 @@
       "formulario": "https://www.campobom.rs.gov.br"
     },
     "codigo_ibge": 4303905,
-    "coletado_em": "2026-11-10T02:13:06Z",
+    "coletado_em": "2026-11-10T08:58:24Z",
     "documentos_testados": 3,
     "home": "https://www.campobom.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 87,
-    "segundos": 408.7,
+    "requisicoes": 20,
+    "segundos": 25.5,
     "site_base": "https://www.campobom.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 1732
+    },
     "via": "nao_encontrado"
   },
   "Campo Novo": {
@@ -1118,14 +1227,17 @@
       "formulario": null
     },
     "codigo_ibge": 4304002,
-    "coletado_em": "2026-11-10T02:13:06Z",
+    "coletado_em": "2026-11-10T08:58:25Z",
     "documentos_testados": 0,
     "home": "https://camponovo.atende.net/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 281.2,
+    "requisicoes": 5,
+    "segundos": 11.6,
     "site_base": "https://www.camponovo.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Campos Borges": {
@@ -1172,14 +1284,17 @@
       "formulario": null
     },
     "codigo_ibge": 4304200,
-    "coletado_em": "2026-11-10T02:14:11Z",
+    "coletado_em": "2026-11-10T08:58:26Z",
     "documentos_testados": 0,
     "home": "http://portal.candelaria.rs.gov.br",
     "paginas_visitadas": 59,
-    "requisicoes": 60,
-    "segundos": 71.3,
+    "requisicoes": 4,
+    "segundos": 10.3,
     "site_base": "https://www.candelaria.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Candiota": {
@@ -1188,14 +1303,17 @@
       "formulario": null
     },
     "codigo_ibge": 4304358,
-    "coletado_em": "2026-11-10T02:14:32Z",
+    "coletado_em": "2026-11-10T08:58:28Z",
     "documentos_testados": 1,
     "home": "https://candiota.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 93.5,
+    "requisicoes": 9,
+    "segundos": 17.6,
     "site_base": "https://www.candiota.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 1220
+    },
     "via": "nao_encontrado"
   },
   "Canela": {
@@ -1204,15 +1322,18 @@
       "formulario": null
     },
     "codigo_ibge": 4304408,
-    "coletado_em": "2026-11-10T02:14:32Z",
+    "coletado_em": "2026-11-10T08:58:31Z",
     "documentos_testados": 4,
     "home": "https://canela.rs.gov.br/sitenovo/",
     "navegador": true,
     "paginas_visitadas": 80,
-    "requisicoes": 86,
-    "segundos": 260.1,
+    "requisicoes": 5,
+    "segundos": 15.1,
     "site_base": "https://www.canela.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Canguçu": {
@@ -1221,14 +1342,17 @@
       "formulario": null
     },
     "codigo_ibge": 4304507,
-    "coletado_em": "2026-11-10T02:14:38Z",
+    "coletado_em": "2026-11-10T08:58:36Z",
     "documentos_testados": 0,
     "home": "https://www.cangucu.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 83.9,
+    "requisicoes": 4,
+    "segundos": 8.6,
     "site_base": "https://www.cangucu.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Canoas": {
@@ -1237,14 +1361,17 @@
       "formulario": "https://www.canoas.rs.gov.br/"
     },
     "codigo_ibge": 4304606,
-    "coletado_em": "2026-11-10T02:14:38Z",
+    "coletado_em": "2026-11-10T08:58:37Z",
     "documentos_testados": 0,
     "home": "https://www.canoas.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 113.6,
+    "requisicoes": 25,
+    "segundos": 29.2,
     "site_base": "https://www.canoas.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 7711
+    },
     "via": "nao_encontrado"
   },
   "Canudos do Vale": {
@@ -1253,14 +1380,17 @@
       "formulario": null
     },
     "codigo_ibge": 4304614,
-    "coletado_em": "2026-11-10T02:14:58Z",
+    "coletado_em": "2026-11-10T08:58:45Z",
     "documentos_testados": 0,
     "home": "https://www.canudosdovale.rs.gov.br/",
     "paginas_visitadas": 4,
     "requisicoes": 5,
-    "segundos": 8.4,
+    "segundos": 10.2,
     "site_base": "https://www.canudosdovale.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 160
+    },
     "via": "nao_encontrado"
   },
   "Capela de Santana": {
@@ -1269,14 +1399,17 @@
       "formulario": "https://www.capeladesantana.rs.gov.br/search"
     },
     "codigo_ibge": 4304689,
-    "coletado_em": "2026-11-10T02:15:06Z",
+    "coletado_em": "2026-11-10T08:58:45Z",
     "documentos_testados": 6,
     "home": "https://www.capeladesantana.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 88,
-    "segundos": 97.6,
+    "requisicoes": 5,
+    "segundos": 7.9,
     "site_base": "https://www.capeladesantana.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Capitão": {
@@ -1359,14 +1492,17 @@
       "formulario": "https://www.capaodacanoa.rs.gov.br/busca"
     },
     "codigo_ibge": 4304630,
-    "coletado_em": "2026-11-10T02:15:35Z",
+    "coletado_em": "2026-11-10T08:58:47Z",
     "documentos_testados": 7,
     "home": "https://www.capaodacanoa.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 89,
-    "segundos": 139.4,
+    "requisicoes": 5,
+    "segundos": 11.6,
     "site_base": "https://www.capaodacanoa.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Capão do Cipó": {
@@ -1375,14 +1511,17 @@
       "formulario": "https://www.capaodocipo.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4304655,
-    "coletado_em": "2026-11-10T02:16:02Z",
+    "coletado_em": "2026-11-10T08:58:47Z",
     "documentos_testados": 0,
     "home": "https://www.capaodocipo.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 85.6,
+    "requisicoes": 5,
+    "segundos": 8.0,
     "site_base": "https://www.capaodocipo.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Capão do Leão": {
@@ -1391,15 +1530,17 @@
       "formulario": null
     },
     "codigo_ibge": 4304663,
-    "coletado_em": "2026-11-10T02:16:05Z",
+    "coletado_em": "2026-11-10T08:58:50Z",
     "documentos_testados": 0,
     "home": "https://www.capaodoleao.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 80,
-    "segundos": 81.8,
+    "requisicoes": 4,
+    "segundos": 6.0,
     "site_base": "https://www.capaodoleao.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 1,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Carazinho": {
@@ -1408,15 +1549,18 @@
       "formulario": null
     },
     "codigo_ibge": 4304705,
-    "coletado_em": "2026-11-10T02:16:14Z",
+    "coletado_em": "2026-11-10T08:58:52Z",
     "documentos_testados": 0,
     "home": "https://www.carazinho.rs.gov.br/",
     "navegador": true,
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 421.6,
+    "requisicoes": 6,
+    "segundos": 20.2,
     "site_base": "https://www.carazinho.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Caraá": {
@@ -1425,14 +1569,17 @@
       "formulario": null
     },
     "codigo_ibge": 4304713,
-    "coletado_em": "2026-11-10T02:16:17Z",
+    "coletado_em": "2026-11-10T08:58:53Z",
     "documentos_testados": 0,
     "home": "https://www.caraa.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 82.6,
+    "requisicoes": 4,
+    "segundos": 6.0,
     "site_base": "https://www.caraa.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Carlos Barbosa": {
@@ -1441,14 +1588,17 @@
       "formulario": null
     },
     "codigo_ibge": 4304804,
-    "coletado_em": "2026-11-10T02:16:31Z",
+    "coletado_em": "2026-11-10T08:58:55Z",
     "documentos_testados": 0,
     "home": "https://www.carlosbarbosa.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 130.1,
+    "requisicoes": 5,
+    "segundos": 26.5,
     "site_base": "https://www.carlosbarbosa.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 500
+    },
     "via": "nao_encontrado"
   },
   "Carlos Gomes": {
@@ -1494,15 +1644,17 @@
       "formulario": null
     },
     "codigo_ibge": 4304903,
-    "coletado_em": "2026-11-10T02:16:44Z",
+    "coletado_em": "2026-11-10T08:58:55Z",
     "documentos_testados": 0,
     "home": "https://www.casca.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 45,
-    "segundos": 47.4,
+    "requisicoes": 4,
+    "segundos": 5.8,
     "site_base": "https://www.casca.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 36,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Caseiros": {
@@ -1541,14 +1693,17 @@
       "formulario": "https://cacapavadosul.rs.gov.br/"
     },
     "codigo_ibge": 4302808,
-    "coletado_em": "2026-11-10T02:17:29Z",
+    "coletado_em": "2026-11-10T08:58:58Z",
     "documentos_testados": 0,
     "home": "https://cacapavadosul.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 85.0,
+    "requisicoes": 25,
+    "segundos": 28.9,
     "site_base": "https://www.cacapavadosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 16372
+    },
     "urls_vetadas_robots": 1,
     "via": "nao_encontrado"
   },
@@ -1574,7 +1729,7 @@
       "formulario": null
     },
     "codigo_ibge": 4305124,
-    "coletado_em": "2026-11-10T02:17:40Z",
+    "coletado_em": "2026-11-10T08:59:01Z",
     "documentos_testados": 7,
     "documentos_vetados_robots": [
       "https://www.cerrito.rs.gov.br/arquivos/193316_plano_contingencia_2025_22013959.pdf",
@@ -1582,11 +1737,13 @@
     ],
     "home": "https://www.cerrito.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 68,
-    "segundos": 77.7,
+    "requisicoes": 4,
+    "segundos": 5.9,
     "site_base": "https://www.cerrito.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 20,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Cerro Branco": {
@@ -1602,14 +1759,17 @@
       "formulario": "https://cerrogrande.rs.gov.br"
     },
     "codigo_ibge": 4305157,
-    "coletado_em": "2026-11-10T02:17:48Z",
+    "coletado_em": "2026-11-10T08:59:06Z",
     "documentos_testados": 0,
     "home": "https://cerrogrande.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 146.0,
+    "requisicoes": 11,
+    "segundos": 20.1,
     "site_base": "https://www.cerrogrande.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 507
+    },
     "via": "nao_encontrado"
   },
   "Cerro Grande do Sul": {
@@ -1618,14 +1778,17 @@
       "formulario": "https://www.cerrograndedosul.rs.gov.br/"
     },
     "codigo_ibge": 4305173,
-    "coletado_em": "2026-11-10T02:17:54Z",
+    "coletado_em": "2026-11-10T08:59:07Z",
     "documentos_testados": 2,
     "home": "https://www.cerrograndedosul.rs.gov.br/",
     "paginas_visitadas": 67,
-    "requisicoes": 71,
-    "segundos": 113.8,
+    "requisicoes": 10,
+    "segundos": 18.0,
     "site_base": "https://www.cerrograndedosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 542
+    },
     "via": "nao_encontrado"
   },
   "Cerro Largo": {
@@ -1634,14 +1797,17 @@
       "formulario": "https://www.cerrolargo.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4305207,
-    "coletado_em": "2026-11-10T02:18:22Z",
+    "coletado_em": "2026-11-10T08:59:13Z",
     "documentos_testados": 0,
     "home": "https://www.cerrolargo.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 86.7,
+    "requisicoes": 5,
+    "segundos": 7.8,
     "site_base": "https://www.cerrolargo.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Chapada": {
@@ -1650,14 +1816,17 @@
       "formulario": "https://www.chapada.rs.gov.br/search"
     },
     "codigo_ibge": 4305306,
-    "coletado_em": "2026-11-10T02:18:42Z",
+    "coletado_em": "2026-11-10T08:59:20Z",
     "documentos_testados": 6,
     "home": "https://www.chapada.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 89,
-    "segundos": 113.5,
+    "requisicoes": 6,
+    "segundos": 8.0,
     "site_base": "https://www.chapada.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Charqueadas": {
@@ -1666,15 +1835,18 @@
       "formulario": "https://www.charqueadas.rs.gov.br/"
     },
     "codigo_ibge": 4305355,
-    "coletado_em": "2026-11-10T02:18:46Z",
+    "coletado_em": "2026-11-10T08:59:22Z",
     "documentos_testados": 0,
     "home": "https://www.charqueadas.rs.gov.br/",
     "navegador": true,
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 323.2,
+    "requisicoes": 6,
+    "segundos": 21.5,
     "site_base": "https://www.charqueadas.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Charrua": {
@@ -1683,14 +1855,17 @@
       "formulario": "https://www.charrua.rs.gov.br/pesquisa.php"
     },
     "codigo_ibge": 4305371,
-    "coletado_em": "2026-11-10T02:18:52Z",
+    "coletado_em": "2026-11-10T08:59:25Z",
     "documentos_testados": 0,
     "home": "https://www.charrua.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 87.2,
+    "requisicoes": 5,
+    "segundos": 7.1,
     "site_base": "https://www.charrua.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 169
+    },
     "via": "nao_encontrado"
   },
   "Chiapetta": {
@@ -1699,14 +1874,17 @@
       "formulario": "https://chiapetta.rs.gov.br/"
     },
     "codigo_ibge": 4305405,
-    "coletado_em": "2026-11-10T06:06:19Z",
+    "coletado_em": "2026-11-10T08:59:26Z",
     "documentos_testados": 0,
     "home": "https://chiapetta.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 512.0,
+    "requisicoes": 21,
+    "segundos": 102.5,
     "site_base": "https://www.chiapetta.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 3100
+    },
     "via": "nao_encontrado"
   },
   "Chuvisca": {
@@ -1715,14 +1893,17 @@
       "formulario": "https://www.chuvisca.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4305447,
-    "coletado_em": "2026-11-10T02:18:54Z",
+    "coletado_em": "2026-11-10T08:59:27Z",
     "documentos_testados": 0,
     "home": "https://www.chuvisca.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 85.8,
+    "requisicoes": 5,
+    "segundos": 7.7,
     "site_base": "https://www.chuvisca.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Chuí": {
@@ -1731,14 +1912,17 @@
       "formulario": "https://chui.rs.gov.br/"
     },
     "codigo_ibge": 4305439,
-    "coletado_em": "2026-11-10T02:18:58Z",
+    "coletado_em": "2026-11-10T08:59:28Z",
     "documentos_testados": 0,
     "home": "https://chui.rs.gov.br/",
     "paginas_visitadas": 76,
-    "requisicoes": 79,
-    "segundos": 93.4,
+    "requisicoes": 13,
+    "segundos": 18.7,
     "site_base": "https://www.chui.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 617
+    },
     "via": "nao_encontrado"
   },
   "Cidreira": {
@@ -1747,14 +1931,17 @@
       "formulario": "https://cidreira.rs.gov.br/busca"
     },
     "codigo_ibge": 4305454,
-    "coletado_em": "2026-11-10T02:19:07Z",
+    "coletado_em": "2026-11-10T08:59:29Z",
     "documentos_testados": 0,
     "home": "https://cidreira.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 87.5,
+    "requisicoes": 5,
+    "segundos": 9.9,
     "site_base": "https://www.cidreira.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 701
+    },
     "via": "nao_encontrado"
   },
   "Ciríaco": {
@@ -1763,14 +1950,17 @@
       "formulario": null
     },
     "codigo_ibge": 4305504,
-    "coletado_em": "2026-11-10T02:19:48Z",
+    "coletado_em": "2026-11-10T08:59:32Z",
     "documentos_testados": 0,
     "home": "https://www.ciriaco.rs.gov.br/",
     "paginas_visitadas": 32,
-    "requisicoes": 33,
-    "segundos": 44.5,
-    "site_base": "https://www.ciriaco.rs.gov.br",
+    "requisicoes": 4,
+    "segundos": 59.8,
+    "site_base": "http://www.ciriaco.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 432
+    },
     "via": "nao_encontrado"
   },
   "Colinas": {
@@ -1779,14 +1969,17 @@
       "formulario": "https://colinas.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4305587,
-    "coletado_em": "2026-11-10T02:19:48Z",
+    "coletado_em": "2026-11-10T08:59:35Z",
     "documentos_testados": 0,
     "home": "https://colinas.rs.gov.br/",
     "paginas_visitadas": 76,
-    "requisicoes": 78,
-    "segundos": 85.1,
+    "requisicoes": 5,
+    "segundos": 9.8,
     "site_base": "https://www.colinas.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Colorado": {
@@ -1795,14 +1988,17 @@
       "formulario": "https://colorado.rs.gov.br/pt_BR/busca"
     },
     "codigo_ibge": 4305603,
-    "coletado_em": "2026-11-10T02:19:55Z",
+    "coletado_em": "2026-11-10T08:59:39Z",
     "documentos_testados": 0,
     "home": "https://colorado.rs.gov.br/pt_BR",
     "paginas_visitadas": 27,
-    "requisicoes": 29,
-    "segundos": 37.9,
+    "requisicoes": 5,
+    "segundos": 13.6,
     "site_base": "https://www.colorado.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Condor": {
@@ -1811,14 +2007,17 @@
       "formulario": "https://www.condor.rs.gov.br/"
     },
     "codigo_ibge": 4305702,
-    "coletado_em": "2026-11-10T02:20:14Z",
+    "coletado_em": "2026-11-10T08:59:43Z",
     "documentos_testados": 0,
     "home": "https://www.condor.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 182.3,
+    "requisicoes": 14,
+    "segundos": 36.1,
     "site_base": "https://www.condor.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 1355
+    },
     "via": "nao_encontrado"
   },
   "Constantina": {
@@ -1827,14 +2026,17 @@
       "formulario": "https://constantina.rs.gov.br/"
     },
     "codigo_ibge": 4305801,
-    "coletado_em": "2026-11-10T03:34:34Z",
+    "coletado_em": "2026-11-10T08:59:45Z",
     "documentos_testados": 0,
     "home": "https://constantina.rs.gov.br/",
     "paginas_visitadas": 20,
-    "requisicoes": 23,
-    "segundos": 51.7,
+    "requisicoes": 35,
+    "segundos": 77.2,
     "site_base": "https://www.constantina.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 6683
+    },
     "via": "nao_encontrado"
   },
   "Coqueiro Baixo": {
@@ -1843,15 +2045,17 @@
       "formulario": "https://www.coqueirobaixo.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4305835,
-    "coletado_em": "2026-11-10T03:34:43Z",
+    "coletado_em": "2026-11-10T08:59:47Z",
     "documentos_testados": 1,
     "home": "https://www.coqueirobaixo.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 89.2,
+    "requisicoes": 6,
+    "segundos": 7.7,
     "site_base": "https://www.coqueirobaixo.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 2,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Coqueiros do Sul": {
@@ -1860,14 +2064,17 @@
       "formulario": null
     },
     "codigo_ibge": 4305850,
-    "coletado_em": "2026-11-10T02:20:26Z",
+    "coletado_em": "2026-11-10T08:59:52Z",
     "documentos_testados": 0,
     "home": "https://www.coqueirosdosul.rs.gov.br/",
     "paginas_visitadas": 13,
-    "requisicoes": 14,
-    "segundos": 23.0,
+    "requisicoes": 4,
+    "segundos": 18.8,
     "site_base": "https://www.coqueirosdosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Coronel Barros": {
@@ -1883,15 +2090,18 @@
       "formulario": null
     },
     "codigo_ibge": 4305900,
-    "coletado_em": "2026-11-10T02:20:32Z",
+    "coletado_em": "2026-11-10T08:59:55Z",
     "documentos_testados": 0,
     "home": "https://coronelbicaco.atende.net/cidadao",
     "navegador": true,
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 403.1,
+    "requisicoes": 6,
+    "segundos": 22.8,
     "site_base": "https://www.coronelbicaco.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Coronel Pilar": {
@@ -1907,14 +2117,17 @@
       "formulario": "https://www.cotipora.rs.gov.br/busca/index"
     },
     "codigo_ibge": 4305959,
-    "coletado_em": "2026-11-10T02:20:33Z",
+    "coletado_em": "2026-11-10T09:00:11Z",
     "documentos_testados": 0,
     "home": "https://www.cotipora.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 84.5,
+    "requisicoes": 5,
+    "segundos": 8.7,
     "site_base": "https://www.cotipora.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Coxilha": {
@@ -1937,14 +2150,17 @@
       "formulario": null
     },
     "codigo_ibge": 4306056,
-    "coletado_em": "2026-11-10T02:20:35Z",
+    "coletado_em": "2026-11-10T09:00:14Z",
     "documentos_testados": 0,
     "home": "https://www.cristal.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 112.7,
+    "requisicoes": 4,
+    "segundos": 23.0,
     "site_base": "https://www.cristal.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 107
+    },
     "via": "nao_encontrado"
   },
   "Cristal do Sul": {
@@ -1971,15 +2187,18 @@
       "formulario": null
     },
     "codigo_ibge": 4306106,
-    "coletado_em": "2026-11-10T03:56:36Z",
+    "coletado_em": "2026-11-10T09:00:18Z",
     "documentos_testados": 0,
     "home": "https://cruzalta.rs.gov.br/",
     "navegador": true,
     "paginas_visitadas": 0,
-    "requisicoes": 2,
-    "segundos": 13.2,
+    "requisicoes": 6,
+    "segundos": 18.5,
     "site_base": "https://cruzalta.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Cruzaltense": {
@@ -2002,14 +2221,17 @@
       "formulario": "https://www.candidogodoi.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4304309,
-    "coletado_em": "2026-11-10T02:20:50Z",
+    "coletado_em": "2026-11-10T09:00:19Z",
     "documentos_testados": 0,
     "home": "https://www.candidogodoi.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 85.3,
+    "requisicoes": 5,
+    "segundos": 7.8,
     "site_base": "https://www.candidogodoi.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "David Canabarro": {
@@ -2018,14 +2240,17 @@
       "formulario": null
     },
     "codigo_ibge": 4306304,
-    "coletado_em": "2026-11-10T02:20:50Z",
+    "coletado_em": "2026-11-10T09:00:20Z",
     "documentos_testados": 0,
     "home": "https://www.davidcanabarro.rs.gov.br/",
     "paginas_visitadas": 44,
-    "requisicoes": 45,
-    "segundos": 63.0,
+    "requisicoes": 8,
+    "segundos": 16.8,
     "site_base": "https://www.davidcanabarro.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 500
+    },
     "via": "nao_encontrado"
   },
   "Derrubadas": {
@@ -2034,15 +2259,18 @@
       "formulario": null
     },
     "codigo_ibge": 4306320,
-    "coletado_em": "2026-11-10T03:56:36Z",
+    "coletado_em": "2026-11-10T09:00:24Z",
     "documentos_testados": 0,
     "home": "https://www.derrubadas.rs.gov.br/",
     "navegador": true,
     "paginas_visitadas": 0,
-    "requisicoes": 2,
-    "segundos": 9.8,
+    "requisicoes": 5,
+    "segundos": 12.6,
     "site_base": "https://www.derrubadas.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Dezesseis de Novembro": {
@@ -2051,14 +2279,17 @@
       "formulario": "https://www.dezesseisdenovembro.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4306353,
-    "coletado_em": "2026-11-10T03:34:44Z",
+    "coletado_em": "2026-11-10T09:00:27Z",
     "documentos_testados": 4,
     "home": "https://www.dezesseisdenovembro.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 86,
-    "segundos": 101.9,
+    "requisicoes": 5,
+    "segundos": 7.8,
     "site_base": "https://www.dezesseisdenovembro.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Dilermando de Aguiar": {
@@ -2067,14 +2298,17 @@
       "formulario": "https://dilermandodeaguiar.rs.gov.br"
     },
     "codigo_ibge": 4306379,
-    "coletado_em": "2026-11-10T02:21:24Z",
+    "coletado_em": "2026-11-10T09:00:32Z",
     "documentos_testados": 0,
     "home": "https://dilermandodeaguiar.rs.gov.br/",
     "paginas_visitadas": 73,
-    "requisicoes": 76,
-    "segundos": 113.5,
+    "requisicoes": 27,
+    "segundos": 41.7,
     "site_base": "https://www.dilermandodeaguiar.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 4403
+    },
     "via": "nao_encontrado"
   },
   "Dois Irmãos": {
@@ -2083,15 +2317,18 @@
       "formulario": null
     },
     "codigo_ibge": 4306403,
-    "coletado_em": "2026-11-10T03:56:36Z",
+    "coletado_em": "2026-11-10T09:00:35Z",
     "documentos_testados": 0,
     "home": "https://doisirmaos.rs.gov.br/",
     "navegador": true,
     "paginas_visitadas": 0,
-    "requisicoes": 2,
-    "segundos": 13.0,
+    "requisicoes": 6,
+    "segundos": 18.2,
     "site_base": "https://doisirmaos.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Dois Irmãos das Missões": {
@@ -2100,14 +2337,17 @@
       "formulario": "https://www.doisirmaosdasmissoes.rs.gov.br/"
     },
     "codigo_ibge": 4306429,
-    "coletado_em": "2026-11-10T03:34:49Z",
+    "coletado_em": "2026-11-10T09:00:36Z",
     "documentos_testados": 1,
     "home": "https://www.doisirmaosdasmissoes.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 92.8,
+    "requisicoes": 5,
+    "segundos": 12.1,
     "site_base": "https://www.doisirmaosdasmissoes.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Dois Lajeados": {
@@ -2116,15 +2356,17 @@
       "formulario": null
     },
     "codigo_ibge": 4306452,
-    "coletado_em": "2026-11-10T02:21:57Z",
+    "coletado_em": "2026-11-10T09:00:36Z",
     "documentos_testados": 0,
     "home": "https://www.doislajeados.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 59,
-    "segundos": 76.1,
+    "requisicoes": 4,
+    "segundos": 9.2,
     "site_base": "https://www.doislajeados.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 22,
+    "sitemap": {
+      "urls": 98
+    },
     "via": "nao_encontrado"
   },
   "Dom Feliciano": {
@@ -2182,14 +2424,17 @@
       "formulario": "https://dompedrodealcantara.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4306551,
-    "coletado_em": "2026-11-10T02:22:10Z",
+    "coletado_em": "2026-11-10T09:00:37Z",
     "documentos_testados": 2,
     "home": "https://dompedrodealcantara.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 84,
-    "segundos": 87.9,
+    "requisicoes": 5,
+    "segundos": 9.4,
     "site_base": "https://www.dompedrodealcantara.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Dona Francisca": {
@@ -2198,15 +2443,18 @@
       "formulario": null
     },
     "codigo_ibge": 4306700,
-    "coletado_em": "2026-11-10T02:22:15Z",
+    "coletado_em": "2026-11-10T09:00:37Z",
     "documentos_testados": 0,
     "home": "https://www.donafrancisca.rs.gov.br/",
     "navegador": true,
     "paginas_visitadas": 10,
-    "requisicoes": 12,
-    "segundos": 56.1,
+    "requisicoes": 5,
+    "segundos": 16.0,
     "site_base": "https://www.donafrancisca.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Doutor Maurício Cardoso": {
@@ -2301,15 +2549,17 @@
       "formulario": null
     },
     "codigo_ibge": 4306908,
-    "coletado_em": "2026-11-10T02:23:11Z",
+    "coletado_em": "2026-11-10T09:00:46Z",
     "documentos_testados": 2,
     "home": "https://www.encruzilhadadosul.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 75,
-    "segundos": 77.6,
+    "requisicoes": 4,
+    "segundos": 7.3,
     "site_base": "https://www.encruzilhadadosul.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 8,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Engenho Velho": {
@@ -2318,14 +2568,17 @@
       "formulario": null
     },
     "codigo_ibge": 4306924,
-    "coletado_em": "2026-11-10T02:23:13Z",
+    "coletado_em": "2026-11-10T09:00:46Z",
     "documentos_testados": 5,
     "home": "https://engenhovelho.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 86,
-    "segundos": 163.0,
+    "requisicoes": 8,
+    "segundos": 15.9,
     "site_base": "https://www.engenhovelho.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 190
+    },
     "via": "nao_encontrado"
   },
   "Entre Rios do Sul": {
@@ -2334,14 +2587,17 @@
       "formulario": "https://entreriosdosul.rs.gov.br"
     },
     "codigo_ibge": 4306957,
-    "coletado_em": "2026-11-10T02:23:15Z",
+    "coletado_em": "2026-11-10T09:00:48Z",
     "documentos_testados": 0,
     "home": "https://entreriosdosul.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 95.1,
+    "requisicoes": 13,
+    "segundos": 19.6,
     "site_base": "https://www.entreriosdosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 415
+    },
     "via": "nao_encontrado"
   },
   "Entre-Ijuís": {
@@ -2357,14 +2613,17 @@
       "formulario": "https://erebango.rs.gov.br"
     },
     "codigo_ibge": 4306973,
-    "coletado_em": "2026-11-10T02:23:18Z",
+    "coletado_em": "2026-11-10T09:00:53Z",
     "documentos_testados": 0,
     "home": "https://erebango.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 85,
-    "segundos": 118.4,
+    "requisicoes": 27,
+    "segundos": 37.9,
     "site_base": "https://www.erebango.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 1462
+    },
     "via": "nao_encontrado"
   },
   "Erechim": {
@@ -2373,15 +2632,18 @@
       "formulario": null
     },
     "codigo_ibge": 4307005,
-    "coletado_em": "2026-11-10T03:56:39Z",
+    "coletado_em": "2026-11-10T09:00:53Z",
     "documentos_testados": 0,
     "home": "https://www.erechim.rs.gov.br/",
     "navegador": true,
     "paginas_visitadas": 0,
-    "requisicoes": 2,
-    "segundos": 7.2,
+    "requisicoes": 5,
+    "segundos": 9.9,
     "site_base": "https://www.erechim.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Ernestina": {
@@ -2390,14 +2652,17 @@
       "formulario": "https://ernestina.rs.gov.br"
     },
     "codigo_ibge": 4307054,
-    "coletado_em": "2026-11-10T02:23:24Z",
+    "coletado_em": "2026-11-10T09:00:53Z",
     "documentos_testados": 3,
     "home": "https://ernestina.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 85,
-    "segundos": 144.2,
+    "requisicoes": 29,
+    "segundos": 75.0,
     "site_base": "https://www.ernestina.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 7835
+    },
     "via": "nao_encontrado"
   },
   "Erval Grande": {
@@ -2422,14 +2687,17 @@
       "formulario": "https://www.ervalseco.rs.gov.br/"
     },
     "codigo_ibge": 4307302,
-    "coletado_em": "2026-11-10T02:23:38Z",
+    "coletado_em": "2026-11-10T09:01:02Z",
     "documentos_testados": 2,
     "home": "https://www.ervalseco.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 85,
-    "segundos": 132.4,
+    "requisicoes": 27,
+    "segundos": 42.8,
     "site_base": "https://www.ervalseco.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 7335
+    },
     "via": "nao_encontrado"
   },
   "Esmeralda": {
@@ -2438,14 +2706,17 @@
       "formulario": null
     },
     "codigo_ibge": 4307401,
-    "coletado_em": "2026-11-10T02:23:50Z",
+    "coletado_em": "2026-11-10T09:01:03Z",
     "documentos_testados": 0,
     "home": "https://www.esmeralda.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 88.7,
+    "requisicoes": 5,
+    "segundos": 7.5,
     "site_base": "https://www.esmeralda.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Esperança do Sul": {
@@ -2454,14 +2725,17 @@
       "formulario": "https://www.esperancadosul.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4307450,
-    "coletado_em": "2026-11-10T02:24:09Z",
+    "coletado_em": "2026-11-10T09:01:08Z",
     "documentos_testados": 0,
     "home": "https://www.esperancadosul.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 87.6,
+    "requisicoes": 5,
+    "segundos": 7.9,
     "site_base": "https://www.esperancadosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Espumoso": {
@@ -2470,14 +2744,17 @@
       "formulario": "https://espumoso.rs.gov.br"
     },
     "codigo_ibge": 4307500,
-    "coletado_em": "2026-11-10T02:24:15Z",
+    "coletado_em": "2026-11-10T09:01:09Z",
     "documentos_testados": 0,
     "home": "https://espumoso.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 155.3,
+    "requisicoes": 22,
+    "segundos": 51.6,
     "site_base": "https://www.espumoso.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 4382
+    },
     "via": "nao_encontrado"
   },
   "Estação": {
@@ -2493,14 +2770,17 @@
       "formulario": null
     },
     "codigo_ibge": 4307708,
-    "coletado_em": "2026-11-10T02:24:30Z",
+    "coletado_em": "2026-11-10T09:01:10Z",
     "documentos_testados": 0,
     "home": "https://www.esteio.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 90.3,
+    "requisicoes": 4,
+    "segundos": 6.2,
     "site_base": "https://www.esteio.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Estrela": {
@@ -2509,15 +2789,17 @@
       "formulario": null
     },
     "codigo_ibge": 4307807,
-    "coletado_em": "2026-11-10T02:24:51Z",
+    "coletado_em": "2026-11-10T09:01:14Z",
     "documentos_testados": 1,
     "home": "https://estrela.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 64,
-    "segundos": 241.3,
+    "requisicoes": 5,
+    "segundos": 11.8,
     "site_base": "https://estrela.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 18,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Estrela Velha": {
@@ -2526,15 +2808,18 @@
       "formulario": "https://estrelavelha.rs.gov.br/portal/"
     },
     "codigo_ibge": 4307815,
-    "coletado_em": "2026-11-10T02:25:16Z",
+    "coletado_em": "2026-11-10T09:01:16Z",
     "documentos_testados": 0,
     "home": "https://estrelavelha.rs.gov.br/portal/",
     "navegador": true,
     "paginas_visitadas": 28,
-    "requisicoes": 32,
-    "segundos": 67.1,
+    "requisicoes": 7,
+    "segundos": 18.5,
     "site_base": "https://www.estrelavelha.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Estância Velha": {
@@ -2543,14 +2828,17 @@
       "formulario": "https://estanciavelha.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4307609,
-    "coletado_em": "2026-11-10T02:25:18Z",
+    "coletado_em": "2026-11-10T09:01:16Z",
     "documentos_testados": 0,
     "home": "https://estanciavelha.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 114.7,
+    "requisicoes": 5,
+    "segundos": 11.5,
     "site_base": "https://www.estanciavelha.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Eugênio de Castro": {
@@ -2573,16 +2861,18 @@
       "formulario": null
     },
     "codigo_ibge": 4307906,
-    "coletado_em": "2026-11-10T02:25:41Z",
+    "coletado_em": "2026-11-10T09:01:25Z",
     "documentos_testados": 0,
     "home": "https://www.farroupilha.rs.gov.br/",
     "navegador": true,
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 413.1,
+    "requisicoes": 6,
+    "segundos": 21.4,
     "site_base": "https://www.farroupilha.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 1,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Faxinal do Soturno": {
@@ -2644,14 +2934,17 @@
       "formulario": "https://www.fazendavilanova.rs.gov.br/search"
     },
     "codigo_ibge": 4308078,
-    "coletado_em": "2026-11-10T02:25:56Z",
+    "coletado_em": "2026-11-10T09:01:31Z",
     "documentos_testados": 2,
     "home": "https://www.fazendavilanova.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 84,
-    "segundos": 102.1,
+    "requisicoes": 5,
+    "segundos": 7.4,
     "site_base": "https://www.fazendavilanova.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Feliz": {
@@ -2660,18 +2953,21 @@
       "formulario": null
     },
     "codigo_ibge": 4308102,
-    "coletado_em": "2026-11-10T02:26:00Z",
+    "coletado_em": "2026-11-10T09:01:34Z",
     "documentos_testados": 1,
     "documentos_vetados_robots": [
       "https://www.feliz.rs.gov.br/web/imgs/arquivos/plano-de-contingencia-felizrs1786621806.pdf"
     ],
     "home": "https://www.feliz.rs.gov.br/site/",
     "paginas_visitadas": 80,
-    "requisicoes": 80,
-    "segundos": 255.0,
+    "requisicoes": 8,
+    "segundos": 53.4,
     "site_base": "https://www.feliz.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 2,
+    "sitemap": {
+      "urls": 430
+    },
+    "urls_vetadas_robots": 1,
     "via": "nao_encontrado"
   },
   "Flores da Cunha": {
@@ -2680,15 +2976,17 @@
       "formulario": null
     },
     "codigo_ibge": 4308201,
-    "coletado_em": "2026-11-10T02:26:23Z",
+    "coletado_em": "2026-11-10T09:01:38Z",
     "documentos_testados": 0,
     "home": "https://www.floresdacunha.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 79,
-    "segundos": 133.1,
+    "requisicoes": 4,
+    "segundos": 7.6,
     "site_base": "https://www.floresdacunha.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 2,
+    "sitemap": {
+      "urls": 406
+    },
     "via": "nao_encontrado"
   },
   "Floriano Peixoto": {
@@ -2697,14 +2995,17 @@
       "formulario": null
     },
     "codigo_ibge": 4308250,
-    "coletado_em": "2026-11-10T02:26:39Z",
+    "coletado_em": "2026-11-10T09:01:45Z",
     "documentos_testados": 0,
     "home": "https://www.florianopeixoto.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 87.0,
+    "requisicoes": 4,
+    "segundos": 5.6,
     "site_base": "https://www.florianopeixoto.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 34
+    },
     "via": "nao_encontrado"
   },
   "Fontoura Xavier": {
@@ -2713,14 +3014,17 @@
       "formulario": "https://fontouraxavier.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4308300,
-    "coletado_em": "2026-11-10T02:26:50Z",
+    "coletado_em": "2026-11-10T09:01:46Z",
     "documentos_testados": 0,
     "home": "https://fontouraxavier.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 87.0,
+    "requisicoes": 5,
+    "segundos": 11.7,
     "site_base": "https://www.fontouraxavier.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Formigueiro": {
@@ -2736,15 +3040,17 @@
       "formulario": null
     },
     "codigo_ibge": 4308433,
-    "coletado_em": "2026-11-10T02:27:04Z",
+    "coletado_em": "2026-11-10T09:01:47Z",
     "documentos_testados": 0,
     "home": "https://www.forquetinha.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 49,
-    "segundos": 51.3,
+    "requisicoes": 4,
+    "segundos": 5.6,
     "site_base": "https://www.forquetinha.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 32,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Fortaleza dos Valos": {
@@ -2760,14 +3066,17 @@
       "formulario": "https://www.fredericowestphalen-rs.com.br/busca"
     },
     "codigo_ibge": 4308508,
-    "coletado_em": "2026-11-10T02:27:15Z",
+    "coletado_em": "2026-11-10T09:01:51Z",
     "documentos_testados": 1,
     "home": "https://www.fredericowestphalen-rs.com.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 92.5,
+    "requisicoes": 5,
+    "segundos": 11.1,
     "site_base": "https://www.fredericowestphalen.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Garibaldi": {
@@ -2776,15 +3085,17 @@
       "formulario": null
     },
     "codigo_ibge": 4308607,
-    "coletado_em": "2026-11-10T02:27:16Z",
+    "coletado_em": "2026-11-10T09:01:52Z",
     "documentos_testados": 2,
     "home": "https://www.garibaldi.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 77,
-    "segundos": 154.2,
+    "requisicoes": 4,
+    "segundos": 7.0,
     "site_base": "https://www.garibaldi.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 6,
+    "sitemap": {
+      "urls": 95
+    },
     "via": "nao_encontrado"
   },
   "Garruchos": {
@@ -2800,14 +3111,17 @@
       "formulario": null
     },
     "codigo_ibge": 4308706,
-    "coletado_em": "2026-11-10T02:27:17Z",
+    "coletado_em": "2026-11-10T09:01:57Z",
     "documentos_testados": 0,
     "home": "https://www.gaurama.rs.gov.br/site/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 155.4,
+    "requisicoes": 4,
+    "segundos": 7.2,
     "site_base": "https://www.gaurama.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 500
+    },
     "via": "nao_encontrado"
   },
   "General Câmara": {
@@ -2816,14 +3130,17 @@
       "formulario": "https://www.generalcamara.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4308805,
-    "coletado_em": "2026-11-10T02:27:19Z",
+    "coletado_em": "2026-11-10T09:02:00Z",
     "documentos_testados": 0,
     "home": "https://www.generalcamara.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 91.0,
+    "requisicoes": 5,
+    "segundos": 8.7,
     "site_base": "https://www.generalcamara.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Gentil": {
@@ -2832,15 +3149,18 @@
       "formulario": null
     },
     "codigo_ibge": 4308854,
-    "coletado_em": "2026-11-10T03:56:42Z",
+    "coletado_em": "2026-11-10T09:02:00Z",
     "documentos_testados": 0,
     "home": "https://www.gentil.rs.gov.br/",
     "navegador": true,
     "paginas_visitadas": 0,
-    "requisicoes": 2,
-    "segundos": 4.3,
+    "requisicoes": 5,
+    "segundos": 6.9,
     "site_base": "https://www.gentil.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Getúlio Vargas": {
@@ -2896,14 +3216,17 @@
       "formulario": "https://glorinha.rs.gov.br"
     },
     "codigo_ibge": 4309050,
-    "coletado_em": "2026-11-10T02:27:55Z",
+    "coletado_em": "2026-11-10T09:02:02Z",
     "documentos_testados": 1,
     "home": "https://glorinha.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 113.9,
+    "requisicoes": 19,
+    "segundos": 24.7,
     "site_base": "https://glorinha.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 2019
+    },
     "via": "nao_encontrado"
   },
   "Gramado": {
@@ -2912,16 +3235,18 @@
       "formulario": null
     },
     "codigo_ibge": 4309100,
-    "coletado_em": "2026-11-10T06:06:19Z",
+    "coletado_em": "2026-11-10T09:02:05Z",
     "documentos_testados": 1,
     "home": "https://www.gramado.rs.gov.br/",
     "navegador": true,
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 407.7,
+    "requisicoes": 6,
+    "segundos": 20.3,
     "site_base": "https://www.gramado.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 1,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Gramado Xavier": {
@@ -2937,14 +3262,17 @@
       "formulario": null
     },
     "codigo_ibge": 4309126,
-    "coletado_em": "2026-11-10T02:28:20Z",
+    "coletado_em": "2026-11-10T09:02:07Z",
     "documentos_testados": 0,
     "home": "https://gramadodosloureiros.rs.gov.br/",
     "paginas_visitadas": 28,
-    "requisicoes": 29,
-    "segundos": 67.1,
+    "requisicoes": 16,
+    "segundos": 30.2,
     "site_base": "https://www.gramadodosloureiros.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 236
+    },
     "via": "nao_encontrado"
   },
   "Gravataí": {
@@ -2953,15 +3281,18 @@
       "formulario": null
     },
     "codigo_ibge": 4309209,
-    "coletado_em": "2026-11-10T03:56:45Z",
+    "coletado_em": "2026-11-10T09:02:08Z",
     "documentos_testados": 0,
     "home": "https://gravatai.rs.gov.br/",
     "navegador": true,
     "paginas_visitadas": 0,
-    "requisicoes": 2,
-    "segundos": 12.0,
+    "requisicoes": 6,
+    "segundos": 17.8,
     "site_base": "https://gravatai.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Guabiju": {
@@ -2970,14 +3301,17 @@
       "formulario": "https://www.guabiju.rs.gov.br/busca/index"
     },
     "codigo_ibge": 4309258,
-    "coletado_em": "2026-11-10T02:28:48Z",
+    "coletado_em": "2026-11-10T09:02:08Z",
     "documentos_testados": 0,
     "home": "https://www.guabiju.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 85.1,
+    "requisicoes": 5,
+    "segundos": 8.6,
     "site_base": "https://www.guabiju.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Guaporé": {
@@ -3000,15 +3334,17 @@
       "formulario": null
     },
     "codigo_ibge": 4309308,
-    "coletado_em": "2026-11-10T06:06:19Z",
+    "coletado_em": "2026-11-10T09:02:17Z",
     "documentos_testados": 0,
     "home": "https://guaiba.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 75,
-    "segundos": 304.1,
+    "requisicoes": 5,
+    "segundos": 12.2,
     "site_base": "https://guaiba.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 6,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Harmonia": {
@@ -3017,14 +3353,17 @@
       "formulario": "https://www.harmonia.rs.gov.br/web/pesquisar"
     },
     "codigo_ibge": 4309555,
-    "coletado_em": "2026-11-10T02:28:52Z",
+    "coletado_em": "2026-11-10T09:02:19Z",
     "documentos_testados": 0,
     "home": "https://www.harmonia.rs.gov.br/web/",
     "paginas_visitadas": 20,
-    "requisicoes": 22,
-    "segundos": 25.1,
+    "requisicoes": 5,
+    "segundos": 9.5,
     "site_base": "https://www.harmonia.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Herval": {
@@ -3033,14 +3372,17 @@
       "formulario": "https://herval.rs.gov.br/busca"
     },
     "codigo_ibge": 4307104,
-    "coletado_em": "2026-11-10T02:28:52Z",
+    "coletado_em": "2026-11-10T09:02:25Z",
     "documentos_testados": 8,
     "home": "https://herval.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 90,
-    "segundos": 99.3,
+    "requisicoes": 5,
+    "segundos": 7.1,
     "site_base": "https://herval.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Herveiras": {
@@ -3072,14 +3414,17 @@
       "formulario": "https://hulhanegra.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4309654,
-    "coletado_em": "2026-11-10T02:29:27Z",
+    "coletado_em": "2026-11-10T09:02:26Z",
     "documentos_testados": 0,
     "home": "https://hulhanegra.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 85.6,
+    "requisicoes": 5,
+    "segundos": 9.0,
     "site_base": "https://www.hulhanegra.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Humaitá": {
@@ -3088,14 +3433,17 @@
       "formulario": "https://humaita.rs.gov.br"
     },
     "codigo_ibge": 4309704,
-    "coletado_em": "2026-11-10T02:29:36Z",
+    "coletado_em": "2026-11-10T09:02:28Z",
     "documentos_testados": 0,
     "home": "https://humaita.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 91.2,
+    "requisicoes": 20,
+    "segundos": 27.0,
     "site_base": "https://www.humaita.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 522
+    },
     "via": "nao_encontrado"
   },
   "Ibarama": {
@@ -3104,14 +3452,17 @@
       "formulario": null
     },
     "codigo_ibge": 4309753,
-    "coletado_em": "2026-11-10T02:29:49Z",
+    "coletado_em": "2026-11-10T09:02:29Z",
     "documentos_testados": 0,
     "home": "https://ibarama.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 84.7,
+    "requisicoes": 5,
+    "segundos": 9.0,
     "site_base": "https://www.ibarama.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Ibiaçá": {
@@ -3175,14 +3526,17 @@
       "formulario": "https://ibirapuita.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4309951,
-    "coletado_em": "2026-11-10T02:30:13Z",
+    "coletado_em": "2026-11-10T09:02:32Z",
     "documentos_testados": 0,
     "home": "https://ibirapuita.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 87.6,
+    "requisicoes": 5,
+    "segundos": 11.1,
     "site_base": "https://www.ibirapuita.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Ibirubá": {
@@ -3191,14 +3545,17 @@
       "formulario": "https://ibiruba.rs.gov.br"
     },
     "codigo_ibge": 4310009,
-    "coletado_em": "2026-11-10T02:30:15Z",
+    "coletado_em": "2026-11-10T09:02:35Z",
     "documentos_testados": 0,
     "home": "https://ibiruba.rs.gov.br/",
     "paginas_visitadas": 76,
-    "requisicoes": 78,
-    "segundos": 86.5,
+    "requisicoes": 22,
+    "segundos": 25.7,
     "site_base": "https://www.ibiruba.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 2203
+    },
     "via": "nao_encontrado"
   },
   "Igrejinha": {
@@ -3207,14 +3564,17 @@
       "formulario": "https://www.igrejinha.rs.gov.br/pesquisa.php"
     },
     "codigo_ibge": 4310108,
-    "coletado_em": "2026-11-10T02:30:31Z",
+    "coletado_em": "2026-11-10T09:02:37Z",
     "documentos_testados": 0,
     "home": "https://www.igrejinha.rs.gov.br/",
     "paginas_visitadas": 7,
-    "requisicoes": 9,
-    "segundos": 12.4,
+    "requisicoes": 5,
+    "segundos": 7.7,
     "site_base": "https://www.igrejinha.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Ijuí": {
@@ -3237,14 +3597,17 @@
       "formulario": null
     },
     "codigo_ibge": 4310330,
-    "coletado_em": "2026-11-10T03:56:48Z",
+    "coletado_em": "2026-11-10T09:02:38Z",
     "documentos_testados": 0,
     "home": "https://www.imbe.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 127.7,
+    "requisicoes": 4,
+    "segundos": 8.0,
     "site_base": "https://www.imbe.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Imigrante": {
@@ -3260,14 +3623,17 @@
       "formulario": "https://www.independencia.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4310405,
-    "coletado_em": "2026-11-10T02:30:47Z",
+    "coletado_em": "2026-11-10T09:02:43Z",
     "documentos_testados": 1,
     "home": "https://www.independencia.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 90.3,
+    "requisicoes": 5,
+    "segundos": 8.0,
     "site_base": "https://www.independencia.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Inhacorá": {
@@ -3283,14 +3649,17 @@
       "formulario": "https://ipirangadosul.rs.gov.br"
     },
     "codigo_ibge": 4310462,
-    "coletado_em": "2026-11-10T03:56:49Z",
+    "coletado_em": "2026-11-10T09:02:45Z",
     "documentos_testados": 0,
     "home": "https://ipirangadosul.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 140.5,
+    "requisicoes": 19,
+    "segundos": 24.9,
     "site_base": "https://www.ipirangadosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 773
+    },
     "via": "nao_encontrado"
   },
   "Ipê": {
@@ -3299,14 +3668,17 @@
       "formulario": null
     },
     "codigo_ibge": 4310439,
-    "coletado_em": "2026-11-10T03:56:49Z",
+    "coletado_em": "2026-11-10T09:02:45Z",
     "documentos_testados": 0,
     "home": "http://www.ipe.rs.gov.br/",
     "paginas_visitadas": 0,
-    "requisicoes": 1,
-    "segundos": 22.4,
+    "requisicoes": 4,
+    "segundos": 28.0,
     "site_base": "http://www.ipe.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Iraí": {
@@ -3357,14 +3729,17 @@
       "formulario": "https://www.itacurubi.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4310553,
-    "coletado_em": "2026-11-10T03:56:50Z",
+    "coletado_em": "2026-11-10T09:02:46Z",
     "documentos_testados": 0,
     "home": "https://www.itacurubi.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 86.0,
+    "requisicoes": 5,
+    "segundos": 7.3,
     "site_base": "https://www.itacurubi.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Itapuca": {
@@ -3373,14 +3748,17 @@
       "formulario": null
     },
     "codigo_ibge": 4310579,
-    "coletado_em": "2026-11-10T06:06:19Z",
+    "coletado_em": "2026-11-10T09:02:51Z",
     "documentos_testados": 0,
     "home": "https://www.itapuca.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 89.0,
+    "requisicoes": 4,
+    "segundos": 5.1,
     "site_base": "https://www.itapuca.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 21
+    },
     "via": "nao_encontrado"
   },
   "Itaqui": {
@@ -3389,14 +3767,17 @@
       "formulario": "https://www.itaqui.rs.gov.br/"
     },
     "codigo_ibge": 4310603,
-    "coletado_em": "2026-11-10T06:07:48Z",
+    "coletado_em": "2026-11-10T09:02:53Z",
     "documentos_testados": 0,
     "home": "https://www.itaqui.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 196.8,
+    "requisicoes": 5,
+    "segundos": 11.5,
     "site_base": "https://www.itaqui.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Itati": {
@@ -3428,14 +3809,17 @@
       "formulario": "https://www.ivora.rs.gov.br/busca"
     },
     "codigo_ibge": 4310751,
-    "coletado_em": "2026-11-10T03:57:12Z",
+    "coletado_em": "2026-11-10T09:02:56Z",
     "documentos_testados": 2,
     "home": "https://www.ivora.rs.gov.br/home",
     "paginas_visitadas": 80,
-    "requisicoes": 84,
-    "segundos": 91.3,
+    "requisicoes": 5,
+    "segundos": 12.6,
     "site_base": "https://www.ivora.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Ivoti": {
@@ -3444,15 +3828,17 @@
       "formulario": null
     },
     "codigo_ibge": 4310801,
-    "coletado_em": "2026-11-10T06:11:05Z",
+    "coletado_em": "2026-11-10T09:03:01Z",
     "documentos_testados": 0,
     "home": "https://www.ivoti.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 80,
-    "segundos": 163.3,
+    "requisicoes": 4,
+    "segundos": 10.5,
     "site_base": "https://www.ivoti.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 1,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Jaboticaba": {
@@ -3468,14 +3854,17 @@
       "formulario": "https://www.jacuizinho.rs.gov.br/"
     },
     "codigo_ibge": 4310876,
-    "coletado_em": "2026-11-10T06:11:23Z",
+    "coletado_em": "2026-11-10T09:03:05Z",
     "documentos_testados": 0,
     "home": "https://www.jacuizinho.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 85.3,
+    "requisicoes": 21,
+    "segundos": 25.6,
     "site_base": "https://www.jacuizinho.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 6234
+    },
     "via": "nao_encontrado"
   },
   "Jacutinga": {
@@ -3484,14 +3873,17 @@
       "formulario": "https://jacutinga.rs.gov.br"
     },
     "codigo_ibge": 4310900,
-    "coletado_em": "2026-11-10T06:12:49Z",
+    "coletado_em": "2026-11-10T09:03:09Z",
     "documentos_testados": 1,
     "home": "https://jacutinga.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 109.0,
+    "requisicoes": 23,
+    "segundos": 39.8,
     "site_base": "https://www.jacutinga.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 2159
+    },
     "via": "nao_encontrado"
   },
   "Jaguari": {
@@ -3595,14 +3987,17 @@
       "formulario": "https://www.joia.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4311155,
-    "coletado_em": "2026-11-10T02:39:52Z",
+    "coletado_em": "2026-11-10T09:03:10Z",
     "documentos_testados": 0,
     "home": "https://www.joia.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 85.2,
+    "requisicoes": 5,
+    "segundos": 7.3,
     "site_base": "https://www.joia.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Júlio de Castilhos": {
@@ -3611,15 +4006,17 @@
       "formulario": null
     },
     "codigo_ibge": 4311205,
-    "coletado_em": "2026-11-10T02:39:53Z",
+    "coletado_em": "2026-11-10T09:03:12Z",
     "documentos_testados": 0,
     "home": "https://www.juliodecastilhos.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 59,
-    "segundos": 62.5,
+    "requisicoes": 4,
+    "segundos": 5.6,
     "site_base": "https://www.juliodecastilhos.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 22,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Lagoa Bonita do Sul": {
@@ -3635,14 +4032,17 @@
       "formulario": null
     },
     "codigo_ibge": 4311304,
-    "coletado_em": "2026-11-10T02:39:54Z",
+    "coletado_em": "2026-11-10T09:03:13Z",
     "documentos_testados": 0,
     "home": "https://lagoavermelha.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 102.6,
+    "requisicoes": 5,
+    "segundos": 10.8,
     "site_base": "https://lagoavermelha.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Lagoa dos Três Cantos": {
@@ -3674,14 +4074,17 @@
       "formulario": null
     },
     "codigo_ibge": 4311403,
-    "coletado_em": "2026-11-10T02:39:55Z",
+    "coletado_em": "2026-11-10T09:03:17Z",
     "documentos_testados": 0,
     "home": "https://www.lajeado.rs.gov.br/",
     "paginas_visitadas": 69,
-    "requisicoes": 70,
-    "segundos": 83.4,
+    "requisicoes": 4,
+    "segundos": 5.7,
     "site_base": "https://www.lajeado.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Lajeado do Bugre": {
@@ -3690,14 +4093,17 @@
       "formulario": "https://lajeadodobugre.rs.gov.br/"
     },
     "codigo_ibge": 4311429,
-    "coletado_em": "2026-11-10T02:39:55Z",
+    "coletado_em": "2026-11-10T09:03:23Z",
     "documentos_testados": 3,
     "home": "https://lajeadodobugre.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 85,
-    "segundos": 222.0,
+    "requisicoes": 19,
+    "segundos": 47.5,
     "site_base": "https://www.lajeadodobugre.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 1848
+    },
     "via": "nao_encontrado"
   },
   "Lavras do Sul": {
@@ -3706,14 +4112,17 @@
       "formulario": "https://www.lavrasdosul.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4311502,
-    "coletado_em": "2026-11-10T02:40:08Z",
+    "coletado_em": "2026-11-10T09:03:24Z",
     "documentos_testados": 0,
     "home": "https://www.lavrasdosul.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 87.2,
+    "requisicoes": 5,
+    "segundos": 7.2,
     "site_base": "https://www.lavrasdosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Liberato Salzano": {
@@ -3722,17 +4131,19 @@
       "formulario": null
     },
     "codigo_ibge": 4311601,
-    "coletado_em": "2026-11-10T06:13:07Z",
+    "coletado_em": "2026-11-10T09:03:30Z",
     "documentos_testados": 0,
     "home": "https://liberatosalzano.atende.net/",
     "navegador": true,
     "paginas_visitadas": 79,
     "prazo_esgotado": true,
-    "requisicoes": 80,
-    "segundos": 1864.8,
+    "requisicoes": 6,
+    "segundos": 17.6,
     "site_base": "https://www.liberatosalzano.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 1,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Lindolfo Collor": {
@@ -3741,15 +4152,17 @@
       "formulario": null
     },
     "codigo_ibge": 4311627,
-    "coletado_em": "2026-11-10T02:40:22Z",
+    "coletado_em": "2026-11-10T09:03:31Z",
     "documentos_testados": 4,
     "home": "https://www.lindolfocollor.rs.gov.br/",
     "paginas_visitadas": 60,
-    "requisicoes": 63,
-    "segundos": 125.8,
+    "requisicoes": 5,
+    "segundos": 12.5,
     "site_base": "https://www.lindolfocollor.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 2,
+    "sitemap": {
+      "urls": 67
+    },
     "via": "nao_encontrado"
   },
   "Linha Nova": {
@@ -3758,14 +4171,17 @@
       "formulario": "https://www.linhanova.rs.gov.br/busca"
     },
     "codigo_ibge": 4311643,
-    "coletado_em": "2026-11-10T02:40:34Z",
+    "coletado_em": "2026-11-10T09:03:44Z",
     "documentos_testados": 0,
     "home": "https://www.linhanova.rs.gov.br/",
     "paginas_visitadas": 40,
-    "requisicoes": 42,
-    "segundos": 58.7,
+    "requisicoes": 5,
+    "segundos": 9.8,
     "site_base": "https://www.linhanova.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 103
+    },
     "via": "nao_encontrado"
   },
   "Machadinho": {
@@ -3774,14 +4190,17 @@
       "formulario": "https://machadinho.rs.gov.br"
     },
     "codigo_ibge": 4311700,
-    "coletado_em": "2026-11-10T02:40:41Z",
+    "coletado_em": "2026-11-10T09:03:44Z",
     "documentos_testados": 0,
     "home": "https://machadinho.rs.gov.br/",
     "paginas_visitadas": 60,
-    "requisicoes": 63,
-    "segundos": 94.7,
+    "requisicoes": 15,
+    "segundos": 23.6,
     "site_base": "https://www.machadinho.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 1159
+    },
     "via": "nao_encontrado"
   },
   "Mampituba": {
@@ -3790,14 +4209,17 @@
       "formulario": null
     },
     "codigo_ibge": 4311734,
-    "coletado_em": "2026-11-10T02:40:56Z",
+    "coletado_em": "2026-11-10T09:03:47Z",
     "documentos_testados": 0,
     "home": "https://mampituba.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 167.8,
+    "requisicoes": 9,
+    "segundos": 16.4,
     "site_base": "https://www.mampituba.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 596
+    },
     "via": "nao_encontrado"
   },
   "Manoel Viana": {
@@ -3806,15 +4228,18 @@
       "formulario": null
     },
     "codigo_ibge": 4311759,
-    "coletado_em": "2026-11-10T03:58:56Z",
+    "coletado_em": "2026-11-10T09:03:48Z",
     "documentos_testados": 0,
     "home": "https://www.manoelviana.rs.gov.br/",
     "navegador": true,
     "paginas_visitadas": 0,
-    "requisicoes": 2,
-    "segundos": 4.4,
+    "requisicoes": 5,
+    "segundos": 6.7,
     "site_base": "https://www.manoelviana.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Maquiné": {
@@ -3823,14 +4248,17 @@
       "formulario": "https://www.maquine.rs.gov.br/search"
     },
     "codigo_ibge": 4311775,
-    "coletado_em": "2026-11-10T02:41:18Z",
+    "coletado_em": "2026-11-10T09:03:49Z",
     "documentos_testados": 1,
     "home": "https://www.maquine.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 84,
-    "segundos": 91.7,
+    "requisicoes": 6,
+    "segundos": 9.7,
     "site_base": "https://www.maquine.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Maratá": {
@@ -3892,15 +4320,17 @@
       "formulario": null
     },
     "codigo_ibge": 4312054,
-    "coletado_em": "2026-11-10T02:41:29Z",
+    "coletado_em": "2026-11-10T09:03:58Z",
     "documentos_testados": 1,
     "home": "https://www.marquesdesouza.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 80,
-    "segundos": 84.0,
+    "requisicoes": 4,
+    "segundos": 7.0,
     "site_base": "https://www.marquesdesouza.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 2,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Mata": {
@@ -3909,14 +4339,17 @@
       "formulario": "https://mata.rs.gov.br"
     },
     "codigo_ibge": 4312104,
-    "coletado_em": "2026-11-10T02:41:33Z",
+    "coletado_em": "2026-11-10T09:04:03Z",
     "documentos_testados": 0,
     "home": "https://mata.rs.gov.br/",
     "paginas_visitadas": 68,
-    "requisicoes": 70,
-    "segundos": 85.5,
+    "requisicoes": 5,
+    "segundos": 13.7,
     "site_base": "https://www.mata.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Mato Castelhano": {
@@ -3958,14 +4391,17 @@
       "formulario": "https://matoleitao.rs.gov.br/"
     },
     "codigo_ibge": 4312153,
-    "coletado_em": "2026-11-10T02:41:37Z",
+    "coletado_em": "2026-11-10T09:04:05Z",
     "documentos_testados": 0,
     "home": "https://matoleitao.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 175.5,
+    "requisicoes": 26,
+    "segundos": 44.8,
     "site_base": "https://www.matoleitao.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 14006
+    },
     "via": "nao_encontrado"
   },
   "Mato Queimado": {
@@ -3974,15 +4410,18 @@
       "formulario": null
     },
     "codigo_ibge": 4312179,
-    "coletado_em": "2026-11-10T03:59:10Z",
+    "coletado_em": "2026-11-10T09:04:07Z",
     "documentos_testados": 0,
     "home": "https://www.matoqueimado.rs.gov.br/",
     "navegador": true,
     "paginas_visitadas": 0,
-    "requisicoes": 2,
-    "segundos": 762.8,
+    "requisicoes": 5,
+    "segundos": 9.7,
     "site_base": "https://www.matoqueimado.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Maximiliano de Almeida": {
@@ -4007,17 +4446,19 @@
       "formulario": null
     },
     "codigo_ibge": 4311718,
-    "coletado_em": "2026-11-10T06:13:48Z",
+    "coletado_em": "2026-11-10T09:04:12Z",
     "documentos_testados": 0,
     "home": "https://macambara.atende.net/",
     "navegador": true,
     "paginas_visitadas": 61,
     "prazo_esgotado": true,
-    "requisicoes": 56,
-    "segundos": 1823.4,
+    "requisicoes": 6,
+    "segundos": 22.5,
     "site_base": "https://www.macambara.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 7,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Minas do Leão": {
@@ -4026,14 +4467,17 @@
       "formulario": null
     },
     "codigo_ibge": 4312252,
-    "coletado_em": "2026-11-10T02:42:16Z",
+    "coletado_em": "2026-11-10T09:04:17Z",
     "documentos_testados": 0,
     "home": "https://www.minasdoleao.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 83.5,
+    "requisicoes": 4,
+    "segundos": 5.4,
     "site_base": "https://www.minasdoleao.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Miraguaí": {
@@ -4056,14 +4500,17 @@
       "formulario": null
     },
     "codigo_ibge": 4312377,
-    "coletado_em": "2026-11-10T02:42:32Z",
+    "coletado_em": "2026-11-10T09:04:17Z",
     "documentos_testados": 6,
     "home": "https://www.montealegredoscampos.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 87,
-    "segundos": 148.1,
+    "requisicoes": 4,
+    "segundos": 9.1,
     "site_base": "https://www.montealegredoscampos.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 45
+    },
     "via": "nao_encontrado"
   },
   "Monte Belo do Sul": {
@@ -4072,14 +4519,17 @@
       "formulario": "https://www.montebelodosul.rs.gov.br/busca/index"
     },
     "codigo_ibge": 4312385,
-    "coletado_em": "2026-11-10T02:42:50Z",
+    "coletado_em": "2026-11-10T09:04:22Z",
     "documentos_testados": 0,
     "home": "https://www.montebelodosul.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 84.5,
+    "requisicoes": 5,
+    "segundos": 8.0,
     "site_base": "https://www.montebelodosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Montenegro": {
@@ -4088,14 +4538,28 @@
       "formulario": "https://www.montenegro.rs.gov.br/@@search"
     },
     "codigo_ibge": 4312401,
-    "coletado_em": "2026-11-10T04:11:49Z",
+    "coletado_em": "2026-11-10T09:04:26Z",
     "documentos_testados": 2,
+    "documentos_vetados_robots": [
+      "https://api.whatsapp.com/send?text=https://www.montenegro.rs.gov.br/cidadao/legislacao/decreto-no-9-151-2023-defesa-civil.pdf",
+      "http://www.facebook.com/sharer.php?u=https://www.montenegro.rs.gov.br/cidadao/legislacao/decreto-no-9-151-2023-defesa-civil.pdf",
+      "https://www.linkedin.com/shareArticle?mini=true&url=https://www.montenegro.rs.gov.br/cidadao/legislacao/decreto-no-9-151-2023-defesa-civil.pdf&title=Decreto%20n%C2%BA%209.151-2023%20-%20Defesa%20Civil.pdf",
+      "https://pinterest.com/pin/create/button/?url=https://www.montenegro.rs.gov.br/cidadao/legislacao/decreto-no-9-151-2023-defesa-civil.pdf&description=Decreto%20n%C2%BA%209.151-2023%20-%20Defesa%20Civil.pdf",
+      "https://api.whatsapp.com/send?text=https://www.montenegro.rs.gov.br/municipio/secretarias-1/gabinete-do-prefeito/orgaos-de-cooperacao/cartilha-defesa-civil.pdf",
+      "http://www.facebook.com/sharer.php?u=https://www.montenegro.rs.gov.br/municipio/secretarias-1/gabinete-do-prefeito/orgaos-de-cooperacao/cartilha-defesa-civil.pdf",
+      "https://www.linkedin.com/shareArticle?mini=true&url=https://www.montenegro.rs.gov.br/municipio/secretarias-1/gabinete-do-prefeito/orgaos-de-cooperacao/cartilha-defesa-civil.pdf&title=Cartilha%20Defesa%20Civil.pdf",
+      "https://pinterest.com/pin/create/button/?url=https://www.montenegro.rs.gov.br/municipio/secretarias-1/gabinete-do-prefeito/orgaos-de-cooperacao/cartilha-defesa-civil.pdf&description=Cartilha%20Defesa%20Civil.pdf"
+    ],
     "home": "https://www.montenegro.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 86,
-    "segundos": 132.4,
+    "requisicoes": 21,
+    "segundos": 50.4,
     "site_base": "https://www.montenegro.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 6408
+    },
+    "urls_vetadas_robots": 8,
     "via": "nao_encontrado"
   },
   "Mormaço": {
@@ -4104,14 +4568,17 @@
       "formulario": "https://www.mormaco.rs.gov.br/"
     },
     "codigo_ibge": 4312427,
-    "coletado_em": "2026-11-10T04:11:50Z",
+    "coletado_em": "2026-11-10T09:04:30Z",
     "documentos_testados": 0,
     "home": "https://www.mormaco.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 191.8,
+    "requisicoes": 7,
+    "segundos": 19.1,
     "site_base": "https://www.mormaco.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 410
+    },
     "via": "nao_encontrado"
   },
   "Morrinhos do Sul": {
@@ -4120,14 +4587,17 @@
       "formulario": "https://www.morrinhosdosul.rs.gov.br/busca/index"
     },
     "codigo_ibge": 4312443,
-    "coletado_em": "2026-11-10T02:42:58Z",
+    "coletado_em": "2026-11-10T09:04:35Z",
     "documentos_testados": 0,
     "home": "https://www.morrinhosdosul.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 85.9,
+    "requisicoes": 5,
+    "segundos": 8.0,
     "site_base": "https://www.morrinhosdosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Morro Redondo": {
@@ -4136,14 +4606,17 @@
       "formulario": null
     },
     "codigo_ibge": 4312450,
-    "coletado_em": "2026-11-10T02:42:59Z",
+    "coletado_em": "2026-11-10T09:04:35Z",
     "documentos_testados": 0,
     "home": "https://www.morroredondo.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 82.9,
+    "requisicoes": 4,
+    "segundos": 5.5,
     "site_base": "https://www.morroredondo.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Morro Reuter": {
@@ -4159,14 +4632,17 @@
       "formulario": null
     },
     "codigo_ibge": 4312500,
-    "coletado_em": "2026-11-10T04:11:52Z",
+    "coletado_em": "2026-11-10T09:04:40Z",
     "documentos_testados": 0,
     "home": "https://www.mostardas.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 110.5,
+    "requisicoes": 4,
+    "segundos": 5.7,
     "site_base": "https://www.mostardas.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Muitos Capões": {
@@ -4175,14 +4651,17 @@
       "formulario": "https://www.muitoscapoes.rs.gov.br/busca"
     },
     "codigo_ibge": 4312617,
-    "coletado_em": "2026-11-10T04:11:52Z",
+    "coletado_em": "2026-11-10T09:04:43Z",
     "documentos_testados": 0,
     "home": "https://www.muitoscapoes.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 154.9,
+    "requisicoes": 6,
+    "segundos": 9.9,
     "site_base": "https://www.muitoscapoes.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Muliterno": {
@@ -4259,14 +4738,17 @@
       "formulario": null
     },
     "codigo_ibge": 4312674,
-    "coletado_em": "2026-11-10T04:11:53Z",
+    "coletado_em": "2026-11-10T09:04:46Z",
     "documentos_testados": 2,
     "home": "https://www.nicolauvergueiro.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 86.8,
+    "requisicoes": 4,
+    "segundos": 5.7,
     "site_base": "https://www.nicolauvergueiro.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Nonoai": {
@@ -4275,14 +4757,17 @@
       "formulario": null
     },
     "codigo_ibge": 4312708,
-    "coletado_em": "2026-11-10T04:11:53Z",
+    "coletado_em": "2026-11-10T09:04:49Z",
     "documentos_testados": 2,
     "home": "https://www.nonoai.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 137.2,
+    "requisicoes": 4,
+    "segundos": 7.7,
     "site_base": "https://www.nonoai.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Nova Alvorada": {
@@ -4291,14 +4776,17 @@
       "formulario": null
     },
     "codigo_ibge": 4312757,
-    "coletado_em": "2026-11-10T02:44:14Z",
+    "coletado_em": "2026-11-10T09:04:50Z",
     "documentos_testados": 0,
     "home": "https://www.novaalvorada.rs.gov.br/",
     "paginas_visitadas": 17,
-    "requisicoes": 18,
-    "segundos": 20.3,
+    "requisicoes": 4,
+    "segundos": 6.9,
     "site_base": "https://www.novaalvorada.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Nova Araçá": {
@@ -4307,14 +4795,17 @@
       "formulario": null
     },
     "codigo_ibge": 4312807,
-    "coletado_em": "2026-11-10T04:11:56Z",
+    "coletado_em": "2026-11-10T09:04:52Z",
     "documentos_testados": 0,
     "home": "https://www.novaaraca.rs.gov.br/",
     "paginas_visitadas": 46,
-    "requisicoes": 47,
-    "segundos": 62.2,
+    "requisicoes": 5,
+    "segundos": 12.1,
     "site_base": "https://www.novaaraca.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 135
+    },
     "via": "nao_encontrado"
   },
   "Nova Bassano": {
@@ -4323,15 +4814,17 @@
       "formulario": "https://www.novabassano.rs.gov.br/busca"
     },
     "codigo_ibge": 4312906,
-    "coletado_em": "2026-11-10T04:12:02Z",
+    "coletado_em": "2026-11-10T09:04:53Z",
     "documentos_testados": 3,
     "home": "https://www.novabassano.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 106.4,
+    "requisicoes": 5,
+    "segundos": 8.8,
     "site_base": "https://www.novabassano.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 2,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Nova Boa Vista": {
@@ -4340,15 +4833,18 @@
       "formulario": null
     },
     "codigo_ibge": 4312955,
-    "coletado_em": "2026-11-10T04:12:06Z",
+    "coletado_em": "2026-11-10T09:04:57Z",
     "documentos_testados": 0,
     "home": "https://www.novaboavista.rs.gov.br/cgi-sys/suspendedpage.cgi",
     "navegador": true,
     "paginas_visitadas": 0,
-    "requisicoes": 2,
-    "segundos": 9.4,
+    "requisicoes": 5,
+    "segundos": 15.7,
     "site_base": "https://www.novaboavista.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Nova Bréscia": {
@@ -4357,15 +4853,17 @@
       "formulario": "https://novabrescia.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4313003,
-    "coletado_em": "2026-11-10T04:12:13Z",
+    "coletado_em": "2026-11-10T09:04:57Z",
     "documentos_testados": 0,
     "home": "https://novabrescia.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 80,
-    "segundos": 87.8,
+    "requisicoes": 5,
+    "segundos": 11.5,
     "site_base": "https://www.novabrescia.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 2,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Nova Candelária": {
@@ -4374,14 +4872,17 @@
       "formulario": "https://www.novacandelaria.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4313011,
-    "coletado_em": "2026-11-10T04:12:15Z",
+    "coletado_em": "2026-11-10T09:05:01Z",
     "documentos_testados": 0,
     "home": "https://www.novacandelaria.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 88.3,
+    "requisicoes": 5,
+    "segundos": 8.8,
     "site_base": "https://www.novacandelaria.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Nova Esperança do Sul": {
@@ -4390,14 +4891,17 @@
       "formulario": "https://www.novaesperancadosul.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4313037,
-    "coletado_em": "2026-11-10T04:12:35Z",
+    "coletado_em": "2026-11-10T09:05:04Z",
     "documentos_testados": 0,
     "home": "https://www.novaesperancadosul.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 85.0,
+    "requisicoes": 5,
+    "segundos": 7.9,
     "site_base": "https://www.novaesperancadosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Nova Hartz": {
@@ -4406,14 +4910,17 @@
       "formulario": "https://www.novahartz.rs.gov.br/busca"
     },
     "codigo_ibge": 4313060,
-    "coletado_em": "2026-11-10T02:55:33Z",
+    "coletado_em": "2026-11-10T09:05:09Z",
     "documentos_testados": 0,
     "home": "https://www.novahartz.rs.gov.br/",
     "paginas_visitadas": 33,
-    "requisicoes": 35,
-    "segundos": 66.4,
+    "requisicoes": 5,
+    "segundos": 11.9,
     "site_base": "https://www.novahartz.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 45
+    },
     "via": "nao_encontrado"
   },
   "Nova Palma": {
@@ -4422,14 +4929,17 @@
       "formulario": "https://www.novapalma.rs.gov.br/busca"
     },
     "codigo_ibge": 4313102,
-    "coletado_em": "2026-11-10T02:55:33Z",
+    "coletado_em": "2026-11-10T09:05:10Z",
     "documentos_testados": 15,
     "home": "https://www.novapalma.rs.gov.br/home",
     "paginas_visitadas": 80,
-    "requisicoes": 97,
-    "segundos": 114.9,
+    "requisicoes": 5,
+    "segundos": 8.6,
     "site_base": "https://www.novapalma.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Nova Petrópolis": {
@@ -4471,14 +4981,17 @@
       "formulario": "https://www.novaprata.rs.gov.br/search"
     },
     "codigo_ibge": 4313300,
-    "coletado_em": "2026-11-10T02:55:34Z",
+    "coletado_em": "2026-11-10T09:05:11Z",
     "documentos_testados": 0,
     "home": "https://www.novaprata.rs.gov.br/",
     "paginas_visitadas": 27,
-    "requisicoes": 29,
-    "segundos": 32.4,
+    "requisicoes": 5,
+    "segundos": 7.5,
     "site_base": "https://www.novaprata.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Nova Pádua": {
@@ -4487,14 +5000,17 @@
       "formulario": null
     },
     "codigo_ibge": 4313086,
-    "coletado_em": "2026-11-10T02:55:34Z",
+    "coletado_em": "2026-11-10T09:05:12Z",
     "documentos_testados": 0,
     "home": "https://www.novapadua.rs.gov.br/",
     "paginas_visitadas": 19,
-    "requisicoes": 20,
-    "segundos": 26.7,
+    "requisicoes": 4,
+    "segundos": 7.4,
     "site_base": "https://www.novapadua.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 500
+    },
     "via": "nao_encontrado"
   },
   "Nova Ramada": {
@@ -4544,14 +5060,17 @@
       "formulario": "https://www.novasantarita.rs.gov.br/"
     },
     "codigo_ibge": 4313375,
-    "coletado_em": "2026-11-10T02:55:37Z",
+    "coletado_em": "2026-11-10T09:05:12Z",
     "documentos_testados": 0,
     "home": "https://www.novasantarita.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 88.8,
+    "requisicoes": 21,
+    "segundos": 25.4,
     "site_base": "https://www.novasantarita.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 4086
+    },
     "via": "nao_encontrado"
   },
   "Novo Barreiro": {
@@ -4560,15 +5079,18 @@
       "formulario": "https://www.novobarreiro.rs.gov.br/portal/"
     },
     "codigo_ibge": 4313490,
-    "coletado_em": "2026-11-10T02:55:38Z",
+    "coletado_em": "2026-11-10T09:05:13Z",
     "documentos_testados": 0,
     "home": "https://www.novobarreiro.rs.gov.br/portal/",
     "navegador": true,
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 228.6,
+    "requisicoes": 6,
+    "segundos": 20.8,
     "site_base": "https://www.novobarreiro.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Novo Cabrais": {
@@ -4584,14 +5106,17 @@
       "formulario": null
     },
     "codigo_ibge": 4313409,
-    "coletado_em": "2026-11-10T02:55:48Z",
+    "coletado_em": "2026-11-10T09:05:17Z",
     "documentos_testados": 15,
     "home": "https://www.novohamburgo.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 96,
-    "segundos": 128.2,
+    "requisicoes": 24,
+    "segundos": 35.7,
     "site_base": "https://www.novohamburgo.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 11228
+    },
     "via": "nao_encontrado"
   },
   "Novo Machado": {
@@ -4600,14 +5125,17 @@
       "formulario": "https://www.novomachado.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4313425,
-    "coletado_em": "2026-11-10T02:55:49Z",
+    "coletado_em": "2026-11-10T09:05:19Z",
     "documentos_testados": 0,
     "home": "https://www.novomachado.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 88.0,
+    "requisicoes": 5,
+    "segundos": 8.0,
     "site_base": "https://www.novomachado.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Novo Tiradentes": {
@@ -4616,14 +5144,17 @@
       "formulario": "https://www.novotiradentesrs.com.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4313441,
-    "coletado_em": "2026-11-10T02:55:49Z",
+    "coletado_em": "2026-11-10T09:05:19Z",
     "documentos_testados": 0,
     "home": "https://www.novotiradentesrs.com.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 98.1,
+    "requisicoes": 5,
+    "segundos": 9.5,
     "site_base": "https://www.novotiradentes.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Novo Xingu": {
@@ -4632,14 +5163,17 @@
       "formulario": null
     },
     "codigo_ibge": 4313466,
-    "coletado_em": "2026-11-10T02:55:49Z",
+    "coletado_em": "2026-11-10T09:05:19Z",
     "documentos_testados": 0,
     "home": "https://www.novoxingu.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 99.6,
+    "requisicoes": 4,
+    "segundos": 8.4,
     "site_base": "https://www.novoxingu.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Não-Me-Toque": {
@@ -4705,15 +5239,17 @@
       "formulario": "https://palmaresdosul.rs.gov.br/novosite/"
     },
     "codigo_ibge": 4313656,
-    "coletado_em": "2026-11-10T02:55:59Z",
+    "coletado_em": "2026-11-10T09:05:27Z",
     "documentos_testados": 12,
     "home": "https://palmaresdosul.rs.gov.br/novosite/",
     "paginas_visitadas": 80,
-    "requisicoes": 92,
-    "segundos": 177.8,
+    "requisicoes": 5,
+    "segundos": 30.9,
     "site_base": "https://www.palmaresdosul.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 2,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Palmeira das Missões": {
@@ -4722,15 +5258,18 @@
       "formulario": null
     },
     "codigo_ibge": 4313706,
-    "coletado_em": "2026-11-10T06:14:38Z",
+    "coletado_em": "2026-11-10T09:05:27Z",
     "documentos_testados": 0,
     "home": "https://palmeiradasmissoes.atende.net/",
     "paginas_visitadas": 68,
     "prazo_esgotado": true,
-    "requisicoes": 69,
-    "segundos": 1788.8,
+    "requisicoes": 5,
+    "segundos": 14.0,
     "site_base": "https://www.palmeiradasmissoes.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Palmitinho": {
@@ -4753,15 +5292,17 @@
       "formulario": null
     },
     "codigo_ibge": 4313953,
-    "coletado_em": "2026-11-10T02:56:39Z",
+    "coletado_em": "2026-11-10T09:05:28Z",
     "documentos_testados": 0,
     "home": "https://www.pantanogrande.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 70,
-    "segundos": 72.6,
+    "requisicoes": 4,
+    "segundos": 7.8,
     "site_base": "https://www.pantanogrande.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 11,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Paraí": {
@@ -4770,14 +5311,17 @@
       "formulario": "https://www.parai.rs.gov.br/resultados-busca/"
     },
     "codigo_ibge": 4314001,
-    "coletado_em": "2026-11-10T02:56:39Z",
+    "coletado_em": "2026-11-10T09:05:28Z",
     "documentos_testados": 0,
     "home": "https://www.parai.rs.gov.br/",
     "paginas_visitadas": 74,
-    "requisicoes": 76,
-    "segundos": 82.3,
+    "requisicoes": 7,
+    "segundos": 13.2,
     "site_base": "https://www.parai.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 978
+    },
     "via": "nao_encontrado"
   },
   "Paraíso do Sul": {
@@ -4793,15 +5337,17 @@
       "formulario": null
     },
     "codigo_ibge": 4314035,
-    "coletado_em": "2026-11-10T02:57:07Z",
+    "coletado_em": "2026-11-10T09:05:33Z",
     "documentos_testados": 0,
     "home": "https://www.parecinovo.rs.gov.br/site/",
     "paginas_visitadas": 24,
-    "requisicoes": 23,
-    "segundos": 26.9,
+    "requisicoes": 4,
+    "segundos": 8.5,
     "site_base": "https://www.parecinovo.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 2,
+    "sitemap": {
+      "urls": 73
+    },
     "via": "nao_encontrado"
   },
   "Parobé": {
@@ -4810,16 +5356,19 @@
       "formulario": null
     },
     "codigo_ibge": 4314050,
-    "coletado_em": "2026-11-10T06:14:51Z",
+    "coletado_em": "2026-11-10T09:05:36Z",
     "documentos_testados": 0,
     "home": "https://parobe.atende.net/",
     "navegador": true,
     "paginas_visitadas": 54,
     "prazo_esgotado": true,
-    "requisicoes": 56,
-    "segundos": 1764.6,
+    "requisicoes": 6,
+    "segundos": 25.5,
     "site_base": "https://parobe.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Passa Sete": {
@@ -4828,15 +5377,18 @@
       "formulario": "http://passasete.rs.gov.br/portal/"
     },
     "codigo_ibge": 4314068,
-    "coletado_em": "2026-11-10T02:57:27Z",
+    "coletado_em": "2026-11-10T09:05:38Z",
     "documentos_testados": 0,
     "home": "http://passasete.rs.gov.br/portal/",
     "navegador": true,
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 137.7,
+    "requisicoes": 6,
+    "segundos": 20.0,
     "site_base": "https://www.passasete.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Passo Fundo": {
@@ -4852,14 +5404,17 @@
       "formulario": "https://passodosobrado.rs.gov.br"
     },
     "codigo_ibge": 4314076,
-    "coletado_em": "2026-11-10T02:57:29Z",
+    "coletado_em": "2026-11-10T09:05:41Z",
     "documentos_testados": 3,
     "home": "https://passodosobrado.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 85,
-    "segundos": 105.7,
+    "requisicoes": 28,
+    "segundos": 38.5,
     "site_base": "https://www.passodosobrado.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 7153
+    },
     "via": "nao_encontrado"
   },
   "Paulo Bento": {
@@ -4884,14 +5439,17 @@
       "formulario": "https://paverama.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4314159,
-    "coletado_em": "2026-11-10T02:57:34Z",
+    "coletado_em": "2026-11-10T09:05:42Z",
     "documentos_testados": 0,
     "home": "https://paverama.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 85.2,
+    "requisicoes": 5,
+    "segundos": 9.6,
     "site_base": "https://paverama.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Pedras Altas": {
@@ -4900,14 +5458,17 @@
       "formulario": "https://www.pedrasaltas.rs.gov.br/busca"
     },
     "codigo_ibge": 4314175,
-    "coletado_em": "2026-11-10T02:57:51Z",
+    "coletado_em": "2026-11-10T09:05:52Z",
     "documentos_testados": 0,
     "home": "https://www.pedrasaltas.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 83.9,
+    "requisicoes": 5,
+    "segundos": 6.7,
     "site_base": "https://www.pedrasaltas.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Pedro Osório": {
@@ -4930,14 +5491,17 @@
       "formulario": "https://www.pelotas.rs.gov.br/listar-noticias"
     },
     "codigo_ibge": 4314407,
-    "coletado_em": "2026-11-10T02:57:59Z",
+    "coletado_em": "2026-11-10T09:05:52Z",
     "documentos_testados": 0,
     "home": "https://www.pelotas.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 85,
-    "segundos": 100.3,
+    "requisicoes": 8,
+    "segundos": 10.7,
     "site_base": "https://www.pelotas.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Picada Café": {
@@ -4953,14 +5517,17 @@
       "formulario": null
     },
     "codigo_ibge": 4314456,
-    "coletado_em": "2026-11-10T02:58:04Z",
+    "coletado_em": "2026-11-10T09:05:58Z",
     "documentos_testados": 0,
     "home": "https://pinhal.atende.net/",
     "paginas_visitadas": 32,
-    "requisicoes": 33,
-    "segundos": 109.1,
+    "requisicoes": 5,
+    "segundos": 10.4,
     "site_base": "https://www.pinhal.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Pinhal Grande": {
@@ -4969,14 +5536,17 @@
       "formulario": null
     },
     "codigo_ibge": 4314472,
-    "coletado_em": "2026-11-10T02:58:46Z",
+    "coletado_em": "2026-11-10T09:05:58Z",
     "documentos_testados": 0,
     "home": "https://www.pinhalgrande.rs.gov.br/home",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 83.6,
+    "requisicoes": 4,
+    "segundos": 6.6,
     "site_base": "https://www.pinhalgrande.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Pinhal da Serra": {
@@ -4985,14 +5555,17 @@
       "formulario": null
     },
     "codigo_ibge": 4314464,
-    "coletado_em": "2026-11-10T04:13:47Z",
+    "coletado_em": "2026-11-10T09:05:58Z",
     "documentos_testados": 0,
     "home": "https://www.pinhaldaserra.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 85.2,
+    "requisicoes": 5,
+    "segundos": 7.8,
     "site_base": "https://www.pinhaldaserra.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 1000
+    },
     "via": "nao_encontrado"
   },
   "Pinheirinho do Vale": {
@@ -5001,15 +5574,17 @@
       "formulario": "https://pinheirinhodovale.rs.gov.br/#"
     },
     "codigo_ibge": 4314498,
-    "coletado_em": "2026-11-10T02:58:59Z",
+    "coletado_em": "2026-11-10T09:06:02Z",
     "documentos_testados": 0,
     "home": "https://pinheirinhodovale.rs.gov.br/",
     "paginas_visitadas": 22,
-    "requisicoes": 23,
-    "segundos": 42.7,
+    "requisicoes": 19,
+    "segundos": 27.8,
     "site_base": "https://www.pinheirinhodovale.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 1,
+    "sitemap": {
+      "urls": 515
+    },
     "via": "nao_encontrado"
   },
   "Pinheiro Machado": {
@@ -5018,15 +5593,17 @@
       "formulario": null
     },
     "codigo_ibge": 4314506,
-    "coletado_em": "2026-11-10T02:59:07Z",
+    "coletado_em": "2026-11-10T09:06:03Z",
     "documentos_testados": 0,
     "home": "https://www.pinheiromachado.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 75,
-    "segundos": 77.6,
+    "requisicoes": 4,
+    "segundos": 5.6,
     "site_base": "https://www.pinheiromachado.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 6,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Pinto Bandeira": {
@@ -5035,7 +5612,7 @@
       "formulario": null
     },
     "codigo_ibge": 4314548,
-    "coletado_em": "2026-11-10T02:59:14Z",
+    "coletado_em": "2026-11-10T09:06:04Z",
     "documentos_testados": 10,
     "documentos_vetados_robots": [
       "https://www.pintobandeira.rs.gov.br/UPLarquivos/021020261627415.pdf",
@@ -5051,11 +5628,13 @@
     ],
     "home": "https://www.pintobandeira.rs.gov.br/",
     "paginas_visitadas": 40,
-    "requisicoes": 41,
-    "segundos": 43.7,
+    "requisicoes": 4,
+    "segundos": 7.1,
     "site_base": "https://www.pintobandeira.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 10,
+    "sitemap": {
+      "urls": 83
+    },
     "via": "nao_encontrado"
   },
   "Pirapó": {
@@ -5064,14 +5643,17 @@
       "formulario": "https://www.pirapo.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4314555,
-    "coletado_em": "2026-11-10T02:59:15Z",
+    "coletado_em": "2026-11-10T09:06:06Z",
     "documentos_testados": 1,
     "home": "https://www.pirapo.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 89.0,
+    "requisicoes": 5,
+    "segundos": 7.6,
     "site_base": "https://www.pirapo.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Piratini": {
@@ -5087,14 +5669,17 @@
       "formulario": "https://planalto.rs.gov.br"
     },
     "codigo_ibge": 4314704,
-    "coletado_em": "2026-11-10T02:59:16Z",
+    "coletado_em": "2026-11-10T09:06:08Z",
     "documentos_testados": 0,
     "home": "https://planalto.rs.gov.br/",
     "paginas_visitadas": 36,
-    "requisicoes": 38,
-    "segundos": 67.6,
+    "requisicoes": 15,
+    "segundos": 26.4,
     "site_base": "https://www.planalto.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 472
+    },
     "via": "nao_encontrado"
   },
   "Ponte Preta": {
@@ -5103,14 +5688,17 @@
       "formulario": null
     },
     "codigo_ibge": 4314787,
-    "coletado_em": "2026-11-10T04:13:48Z",
+    "coletado_em": "2026-11-10T09:06:09Z",
     "documentos_testados": 0,
     "home": "https://www.pontepreta.rs.gov.br/site/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 114.0,
+    "requisicoes": 4,
+    "segundos": 7.2,
     "site_base": "https://www.pontepreta.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 500
+    },
     "via": "nao_encontrado"
   },
   "Pontão": {
@@ -5201,14 +5789,17 @@
       "formulario": "https://www.portolucena.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4315008,
-    "coletado_em": "2026-11-10T04:14:02Z",
+    "coletado_em": "2026-11-10T09:06:11Z",
     "documentos_testados": 1,
     "home": "https://www.portolucena.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 93.7,
+    "requisicoes": 5,
+    "segundos": 7.7,
     "site_base": "https://www.portolucena.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Porto Mauá": {
@@ -5217,14 +5808,17 @@
       "formulario": "https://www.portomaua.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4315057,
-    "coletado_em": "2026-11-10T04:14:10Z",
+    "coletado_em": "2026-11-10T09:06:14Z",
     "documentos_testados": 14,
     "home": "https://www.portomaua.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 96,
-    "segundos": 121.6,
+    "requisicoes": 5,
+    "segundos": 7.9,
     "site_base": "https://www.portomaua.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Porto Vera Cruz": {
@@ -5233,14 +5827,17 @@
       "formulario": "https://www.portoveracruz.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4315073,
-    "coletado_em": "2026-11-10T04:14:27Z",
+    "coletado_em": "2026-11-10T09:06:16Z",
     "documentos_testados": 0,
     "home": "https://www.portoveracruz.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 89.0,
+    "requisicoes": 5,
+    "segundos": 8.0,
     "site_base": "https://www.portoveracruz.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Porto Xavier": {
@@ -5249,14 +5846,17 @@
       "formulario": "https://www.portoxavier.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4315107,
-    "coletado_em": "2026-11-10T04:15:01Z",
+    "coletado_em": "2026-11-10T09:06:19Z",
     "documentos_testados": 0,
     "home": "https://www.portoxavier.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 89.1,
+    "requisicoes": 5,
+    "segundos": 7.7,
     "site_base": "https://www.portoxavier.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Portão": {
@@ -5265,15 +5865,17 @@
       "formulario": null
     },
     "codigo_ibge": 4314803,
-    "coletado_em": "2026-11-10T04:15:02Z",
+    "coletado_em": "2026-11-10T09:06:20Z",
     "documentos_testados": 2,
     "home": "https://www.portao.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 100.9,
+    "requisicoes": 4,
+    "segundos": 7.5,
     "site_base": "https://www.portao.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 2,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Pouso Novo": {
@@ -5282,15 +5884,17 @@
       "formulario": "https://www.pousonovo.rs.gov.br/filtrarTudo"
     },
     "codigo_ibge": 4315131,
-    "coletado_em": "2026-11-10T04:15:12Z",
+    "coletado_em": "2026-11-10T09:06:22Z",
     "documentos_testados": 0,
     "home": "https://www.pousonovo.rs.gov.br/",
     "paginas_visitadas": 51,
-    "requisicoes": 51,
-    "segundos": 69.4,
+    "requisicoes": 5,
+    "segundos": 9.2,
     "site_base": "https://www.pousonovo.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 2,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Poço das Antas": {
@@ -5299,15 +5903,17 @@
       "formulario": null
     },
     "codigo_ibge": 4314753,
-    "coletado_em": "2026-11-10T04:15:35Z",
+    "coletado_em": "2026-11-10T09:06:24Z",
     "documentos_testados": 0,
     "home": "https://www.pocodasantas.rs.gov.br/",
     "paginas_visitadas": 46,
-    "requisicoes": 44,
-    "segundos": 66.0,
+    "requisicoes": 4,
+    "segundos": 8.4,
     "site_base": "https://www.pocodasantas.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 3,
+    "sitemap": {
+      "urls": 95
+    },
     "via": "nao_encontrado"
   },
   "Presidente Lucena": {
@@ -5346,15 +5952,17 @@
       "formulario": "https://progresso.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4315156,
-    "coletado_em": "2026-11-10T03:13:15Z",
+    "coletado_em": "2026-11-10T09:06:27Z",
     "documentos_testados": 0,
     "home": "https://progresso.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 72,
-    "segundos": 79.2,
+    "requisicoes": 5,
+    "segundos": 11.8,
     "site_base": "https://www.progresso.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 10,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Protásio Alves": {
@@ -5363,14 +5971,17 @@
       "formulario": null
     },
     "codigo_ibge": 4315172,
-    "coletado_em": "2026-11-10T03:13:15Z",
+    "coletado_em": "2026-11-10T09:06:27Z",
     "documentos_testados": 0,
     "home": "https://www.protasioalves.rs.gov.br/",
     "paginas_visitadas": 13,
-    "requisicoes": 14,
-    "segundos": 16.7,
+    "requisicoes": 4,
+    "segundos": 5.4,
     "site_base": "https://www.protasioalves.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Putinga": {
@@ -5379,14 +5990,17 @@
       "formulario": "https://putinga.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4315206,
-    "coletado_em": "2026-11-10T03:13:16Z",
+    "coletado_em": "2026-11-10T09:06:29Z",
     "documentos_testados": 0,
     "home": "https://putinga.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 89.4,
+    "requisicoes": 5,
+    "segundos": 16.9,
     "site_base": "https://www.putinga.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Quaraí": {
@@ -5402,14 +6016,17 @@
       "formulario": null
     },
     "codigo_ibge": 4315313,
-    "coletado_em": "2026-11-10T03:13:16Z",
+    "coletado_em": "2026-11-10T09:06:31Z",
     "documentos_testados": 0,
     "home": "https://www.quatroirmaos.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 85.7,
+    "requisicoes": 5,
+    "segundos": 30.7,
     "site_base": "https://www.quatroirmaos.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 302
+    },
     "via": "nao_encontrado"
   },
   "Quevedos": {
@@ -5418,14 +6035,17 @@
       "formulario": "https://quevedos.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4315321,
-    "coletado_em": "2026-11-10T03:13:18Z",
+    "coletado_em": "2026-11-10T09:06:32Z",
     "documentos_testados": 0,
     "home": "https://quevedos.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 86.1,
+    "requisicoes": 5,
+    "segundos": 11.3,
     "site_base": "https://www.quevedos.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Quinze de Novembro": {
@@ -5434,14 +6054,17 @@
       "formulario": "https://www.quinzedenovembro.rs.gov.br/search"
     },
     "codigo_ibge": 4315354,
-    "coletado_em": "2026-11-10T03:13:18Z",
+    "coletado_em": "2026-11-10T09:06:33Z",
     "documentos_testados": 5,
     "home": "https://www.quinzedenovembro.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 87,
-    "segundos": 89.0,
+    "requisicoes": 5,
+    "segundos": 7.5,
     "site_base": "https://www.quinzedenovembro.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Redentora": {
@@ -5450,14 +6073,17 @@
       "formulario": "https://www.redentora.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4315404,
-    "coletado_em": "2026-11-10T06:44:12Z",
+    "coletado_em": "2026-11-10T09:06:34Z",
     "documentos_testados": 3,
     "home": "https://www.redentora.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 95,
-    "segundos": 130.5,
+    "requisicoes": 15,
+    "segundos": 28.4,
     "site_base": "https://www.redentora.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Relvado": {
@@ -5466,14 +6092,17 @@
       "formulario": "https://relvado.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4315453,
-    "coletado_em": "2026-11-10T03:13:19Z",
+    "coletado_em": "2026-11-10T09:06:38Z",
     "documentos_testados": 0,
     "home": "https://relvado.rs.gov.br/",
     "paginas_visitadas": 64,
-    "requisicoes": 66,
-    "segundos": 71.3,
+    "requisicoes": 5,
+    "segundos": 9.4,
     "site_base": "https://www.relvado.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Restinga Sêca": {
@@ -5518,14 +6147,17 @@
       "formulario": null
     },
     "codigo_ibge": 4315602,
-    "coletado_em": "2026-11-10T06:44:12Z",
+    "coletado_em": "2026-11-10T09:06:39Z",
     "documentos_testados": 15,
     "home": "https://www2.riogrande.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 96,
-    "segundos": 152.9,
+    "requisicoes": 4,
+    "segundos": 10.5,
     "site_base": "https://www.riogrande.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Rio Pardo": {
@@ -5534,18 +6166,20 @@
       "formulario": null
     },
     "codigo_ibge": 4315701,
-    "coletado_em": "2026-11-10T03:13:28Z",
+    "coletado_em": "2026-11-10T09:06:40Z",
     "documentos_testados": 1,
     "documentos_vetados_robots": [
       "https://www.riopardo.rs.gov.br/arquivos/901b54a4b40eb1f80e0490dc9eae0b8e_19020736.pdf"
     ],
     "home": "https://www.riopardo.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 110.7,
+    "requisicoes": 4,
+    "segundos": 5.6,
     "site_base": "https://www.riopardo.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 1,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Rio dos Índios": {
@@ -5561,15 +6195,17 @@
       "formulario": "https://riozinho.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4315750,
-    "coletado_em": "2026-11-10T03:13:32Z",
+    "coletado_em": "2026-11-10T09:06:44Z",
     "documentos_testados": 0,
     "home": "https://riozinho.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 87.1,
+    "requisicoes": 5,
+    "segundos": 11.5,
     "site_base": "https://www.riozinho.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 1,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Roca Sales": {
@@ -5619,14 +6255,17 @@
       "formulario": "https://www.rolador.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4315958,
-    "coletado_em": "2026-11-10T03:13:42Z",
+    "coletado_em": "2026-11-10T09:06:46Z",
     "documentos_testados": 0,
     "home": "https://www.rolador.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 91.4,
+    "requisicoes": 5,
+    "segundos": 13.9,
     "site_base": "https://www.rolador.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Rolante": {
@@ -5673,14 +6312,17 @@
       "formulario": "https://www.rondaalta.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4316105,
-    "coletado_em": "2026-11-10T03:14:12Z",
+    "coletado_em": "2026-11-10T09:06:46Z",
     "documentos_testados": 0,
     "home": "https://www.rondaalta.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 84,
-    "segundos": 89.4,
+    "requisicoes": 7,
+    "segundos": 9.5,
     "site_base": "https://www.rondaalta.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Rondinha": {
@@ -5689,14 +6331,17 @@
       "formulario": "https://www.rondinha.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4316204,
-    "coletado_em": "2026-11-10T03:14:14Z",
+    "coletado_em": "2026-11-10T09:06:47Z",
     "documentos_testados": 0,
     "home": "https://www.rondinha.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 86.2,
+    "requisicoes": 5,
+    "segundos": 7.5,
     "site_base": "https://www.rondinha.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Roque Gonzales": {
@@ -5705,14 +6350,17 @@
       "formulario": "https://www.roquegonzales.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4316303,
-    "coletado_em": "2026-11-10T03:14:30Z",
+    "coletado_em": "2026-11-10T09:06:49Z",
     "documentos_testados": 0,
     "home": "https://www.roquegonzales.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 87.1,
+    "requisicoes": 5,
+    "segundos": 7.6,
     "site_base": "https://www.roquegonzales.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Rosário do Sul": {
@@ -5721,14 +6369,17 @@
       "formulario": "https://www.rosariodosul.rs.gov.br/busca"
     },
     "codigo_ibge": 4316402,
-    "coletado_em": "2026-11-10T03:14:35Z",
+    "coletado_em": "2026-11-10T09:06:55Z",
     "documentos_testados": 3,
     "home": "https://www.rosariodosul.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 85,
-    "segundos": 88.6,
+    "requisicoes": 5,
+    "segundos": 9.6,
     "site_base": "https://www.rosariodosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Sagrada Família": {
@@ -5737,14 +6388,17 @@
       "formulario": null
     },
     "codigo_ibge": 4316428,
-    "coletado_em": "2026-11-10T03:14:42Z",
+    "coletado_em": "2026-11-10T09:06:55Z",
     "documentos_testados": 0,
     "home": "https://www.sagradafamilia.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 108.1,
+    "requisicoes": 4,
+    "segundos": 6.6,
     "site_base": "https://www.sagradafamilia.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Saldanha Marinho": {
@@ -5753,15 +6407,18 @@
       "formulario": null
     },
     "codigo_ibge": 4316436,
-    "coletado_em": "2026-11-10T03:14:44Z",
+    "coletado_em": "2026-11-10T09:06:56Z",
     "documentos_testados": 0,
     "home": "https://saldanhamarinho.prefeitura.rs/",
     "navegador": true,
     "paginas_visitadas": 51,
-    "requisicoes": 53,
-    "segundos": 233.1,
+    "requisicoes": 5,
+    "segundos": 15.6,
     "site_base": "https://www.saldanhamarinho.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Salto do Jacuí": {
@@ -5770,14 +6427,17 @@
       "formulario": "https://www.saltodojacui.rs.gov.br/"
     },
     "codigo_ibge": 4316451,
-    "coletado_em": "2026-11-10T03:14:45Z",
+    "coletado_em": "2026-11-10T09:06:57Z",
     "documentos_testados": 0,
     "home": "https://www.saltodojacui.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 84,
-    "segundos": 88.8,
+    "requisicoes": 28,
+    "segundos": 32.1,
     "site_base": "https://www.saltodojacui.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 9284
+    },
     "via": "nao_encontrado"
   },
   "Salvador das Missões": {
@@ -5786,14 +6446,17 @@
       "formulario": null
     },
     "codigo_ibge": 4316477,
-    "coletado_em": "2026-11-10T03:14:47Z",
+    "coletado_em": "2026-11-10T09:07:00Z",
     "documentos_testados": 0,
     "home": "https://www.salvadordasmissoes.rs.gov.br/?pg=principal",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 85.0,
+    "requisicoes": 4,
+    "segundos": 5.8,
     "site_base": "https://www.salvadordasmissoes.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Salvador do Sul": {
@@ -5843,14 +6506,17 @@
       "formulario": "https://sisprem.santanadolivramento.rs.gov.br/busca"
     },
     "codigo_ibge": 4317103,
-    "coletado_em": "2026-11-10T03:14:59Z",
+    "coletado_em": "2026-11-10T09:07:00Z",
     "documentos_testados": 0,
     "home": "https://sisprem.santanadolivramento.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 85.1,
+    "requisicoes": 5,
+    "segundos": 8.4,
     "site_base": "https://www.santanadolivramento.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Santa Bárbara do Sul": {
@@ -5859,14 +6525,17 @@
       "formulario": "https://www.santabarbaradosul.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4316709,
-    "coletado_em": "2026-11-10T06:45:33Z",
+    "coletado_em": "2026-11-10T09:07:02Z",
     "documentos_testados": 2,
     "home": "https://www.santabarbaradosul.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 84,
-    "segundos": 95.7,
+    "requisicoes": 5,
+    "segundos": 8.1,
     "site_base": "https://www.santabarbaradosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Santa Cecília do Sul": {
@@ -5882,14 +6551,17 @@
       "formulario": null
     },
     "codigo_ibge": 4316758,
-    "coletado_em": "2026-11-10T03:15:40Z",
+    "coletado_em": "2026-11-10T09:07:02Z",
     "documentos_testados": 0,
     "home": "https://www.santaclaradosul.rs.gov.br/",
     "paginas_visitadas": 11,
-    "requisicoes": 12,
-    "segundos": 20.6,
+    "requisicoes": 24,
+    "segundos": 41.8,
     "site_base": "https://www.santaclaradosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 2661
+    },
     "via": "nao_encontrado"
   },
   "Santa Cruz do Sul": {
@@ -5990,15 +6662,17 @@
       "formulario": null
     },
     "codigo_ibge": 4316956,
-    "coletado_em": "2026-11-10T03:16:01Z",
+    "coletado_em": "2026-11-10T09:07:03Z",
     "documentos_testados": 0,
     "home": "https://www.santamariadoherval.rs.gov.br/",
     "paginas_visitadas": 65,
-    "requisicoes": 61,
-    "segundos": 85.1,
+    "requisicoes": 4,
+    "segundos": 8.6,
     "site_base": "https://www.santamariadoherval.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 5,
+    "sitemap": {
+      "urls": 117
+    },
     "via": "nao_encontrado"
   },
   "Santa Rosa": {
@@ -6007,14 +6681,17 @@
       "formulario": "https://prefeitura.santarosa.rs.gov.br/"
     },
     "codigo_ibge": 4317202,
-    "coletado_em": "2026-11-10T03:16:03Z",
+    "coletado_em": "2026-11-10T09:07:05Z",
     "documentos_testados": 0,
     "home": "https://prefeitura.santarosa.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 241.5,
+    "requisicoes": 8,
+    "segundos": 13.6,
     "site_base": "https://www.santarosa.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Santa Tereza": {
@@ -6023,15 +6700,17 @@
       "formulario": "https://www.santatereza.rs.gov.br/search"
     },
     "codigo_ibge": 4317251,
-    "coletado_em": "2026-11-10T03:16:10Z",
+    "coletado_em": "2026-11-10T09:07:05Z",
     "documentos_testados": 0,
     "home": "https://www.santatereza.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 78,
-    "segundos": 81.9,
+    "requisicoes": 5,
+    "segundos": 7.6,
     "site_base": "https://www.santatereza.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 4,
+    "sitemap": {
+      "urls": 500
+    },
     "via": "nao_encontrado"
   },
   "Santa Vitória do Palmar": {
@@ -6047,14 +6726,17 @@
       "formulario": "https://www.santanadaboavista.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4317004,
-    "coletado_em": "2026-11-10T03:16:14Z",
+    "coletado_em": "2026-11-10T09:07:08Z",
     "documentos_testados": 0,
     "home": "https://www.santanadaboavista.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 84.5,
+    "requisicoes": 5,
+    "segundos": 7.2,
     "site_base": "https://www.santanadaboavista.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Santiago": {
@@ -6063,14 +6745,17 @@
       "formulario": null
     },
     "codigo_ibge": 4317400,
-    "coletado_em": "2026-11-10T03:16:14Z",
+    "coletado_em": "2026-11-10T09:07:10Z",
     "documentos_testados": 0,
     "home": "https://www.santiago.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 114.3,
+    "requisicoes": 4,
+    "segundos": 5.6,
     "site_base": "https://www.santiago.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Santo Antônio da Patrulha": {
@@ -6079,14 +6764,17 @@
       "formulario": null
     },
     "codigo_ibge": 4317608,
-    "coletado_em": "2026-11-10T03:16:24Z",
+    "coletado_em": "2026-11-10T09:07:11Z",
     "documentos_testados": 0,
     "home": "https://www.santoantoniodapatrulha.rs.gov.br/",
     "paginas_visitadas": 21,
-    "requisicoes": 22,
-    "segundos": 55.0,
+    "requisicoes": 21,
+    "segundos": 34.4,
     "site_base": "https://www.santoantoniodapatrulha.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 1502
+    },
     "via": "nao_encontrado"
   },
   "Santo Antônio das Missões": {
@@ -6095,14 +6783,17 @@
       "formulario": "https://www.santoantoniodasmissoes.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4317707,
-    "coletado_em": "2026-11-10T03:51:37Z",
+    "coletado_em": "2026-11-10T09:07:11Z",
     "documentos_testados": 4,
     "home": "https://www.santoantoniodasmissoes.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 86,
-    "segundos": 118.9,
+    "requisicoes": 5,
+    "segundos": 7.9,
     "site_base": "https://www.santoantoniodasmissoes.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Santo Antônio do Palma": {
@@ -6118,14 +6809,17 @@
       "formulario": "https://santoantoniodoplanalto.rs.gov.br"
     },
     "codigo_ibge": 4317756,
-    "coletado_em": "2026-11-10T06:46:23Z",
+    "coletado_em": "2026-11-10T09:07:13Z",
     "documentos_testados": 0,
     "home": "https://santoantoniodoplanalto.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 150.7,
+    "requisicoes": 28,
+    "segundos": 61.3,
     "site_base": "https://www.santoantoniodoplanalto.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 8744
+    },
     "via": "nao_encontrado"
   },
   "Santo Augusto": {
@@ -6134,14 +6828,17 @@
       "formulario": "https://santoaugusto.rs.gov.br/"
     },
     "codigo_ibge": 4317806,
-    "coletado_em": "2026-11-10T03:16:40Z",
+    "coletado_em": "2026-11-10T09:07:15Z",
     "documentos_testados": 0,
     "home": "https://santoaugusto.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 91.8,
+    "requisicoes": 25,
+    "segundos": 32.6,
     "site_base": "https://www.santoaugusto.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 2401
+    },
     "via": "nao_encontrado"
   },
   "Santo Cristo": {
@@ -6150,14 +6847,17 @@
       "formulario": "https://www.santocristo.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4317905,
-    "coletado_em": "2026-11-10T03:16:41Z",
+    "coletado_em": "2026-11-10T09:07:15Z",
     "documentos_testados": 2,
     "home": "https://www.santocristo.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 84,
-    "segundos": 93.0,
+    "requisicoes": 5,
+    "segundos": 8.3,
     "site_base": "https://www.santocristo.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Santo Expedito do Sul": {
@@ -6173,14 +6873,17 @@
       "formulario": null
     },
     "codigo_ibge": 4317509,
-    "coletado_em": "2026-11-10T06:47:00Z",
+    "coletado_em": "2026-11-10T09:07:18Z",
     "documentos_testados": 1,
     "home": "https://www.santoangelo.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 93.8,
+    "requisicoes": 4,
+    "segundos": 6.7,
     "site_base": "https://www.santoangelo.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Sapiranga": {
@@ -6304,16 +7007,18 @@
       "formulario": null
     },
     "codigo_ibge": 4320206,
-    "coletado_em": "2026-11-10T03:17:37Z",
+    "coletado_em": "2026-11-10T09:07:19Z",
     "documentos_testados": 0,
-    "home": "https://seberi.atende.net/cidadao",
+    "home": "https://seberi.atende.net/",
     "navegador": true,
     "paginas_visitadas": 80,
-    "requisicoes": 62,
-    "segundos": 352.6,
+    "requisicoes": 6,
+    "segundos": 21.8,
     "site_base": "https://www.seberi.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 20,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Sede Nova": {
@@ -6336,14 +7041,17 @@
       "formulario": "https://selbach.rs.gov.br/pt_BR/busca"
     },
     "codigo_ibge": 4320305,
-    "coletado_em": "2026-11-10T03:17:41Z",
+    "coletado_em": "2026-11-10T09:07:24Z",
     "documentos_testados": 0,
     "home": "https://selbach.rs.gov.br/pt_BR",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 90.5,
+    "requisicoes": 5,
+    "segundos": 13.6,
     "site_base": "https://www.selbach.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Senador Salgado Filho": {
@@ -6352,15 +7060,17 @@
       "formulario": null
     },
     "codigo_ibge": 4320321,
-    "coletado_em": "2026-11-10T03:18:01Z",
+    "coletado_em": "2026-11-10T09:07:25Z",
     "documentos_testados": 0,
     "home": "https://senadorsalgadofilho.atende.net/",
     "paginas_visitadas": 80,
-    "requisicoes": 66,
-    "segundos": 236.0,
+    "requisicoes": 5,
+    "segundos": 13.0,
     "site_base": "https://www.senadorsalgadofilho.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 15,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Sentinela do Sul": {
@@ -6411,14 +7121,17 @@
       "formulario": "https://www.sertao.rs.gov.br/busca"
     },
     "codigo_ibge": 4320503,
-    "coletado_em": "2026-11-10T03:18:11Z",
+    "coletado_em": "2026-11-10T09:07:29Z",
     "documentos_testados": 0,
     "home": "https://www.sertao.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 97.1,
+    "requisicoes": 5,
+    "segundos": 6.7,
     "site_base": "https://www.sertao.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Sertão Santana": {
@@ -6434,14 +7147,17 @@
       "formulario": "https://www.setedesetembro.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4320578,
-    "coletado_em": "2026-11-10T03:18:13Z",
+    "coletado_em": "2026-11-10T09:07:36Z",
     "documentos_testados": 0,
     "home": "https://www.setedesetembro.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 86.5,
+    "requisicoes": 5,
+    "segundos": 8.1,
     "site_base": "https://www.setedesetembro.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Severiano de Almeida": {
@@ -6450,14 +7166,17 @@
       "formulario": null
     },
     "codigo_ibge": 4320602,
-    "coletado_em": "2026-11-10T03:18:14Z",
+    "coletado_em": "2026-11-10T09:07:37Z",
     "documentos_testados": 0,
     "home": "https://www.severianodealmeida.rs.gov.br/site/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 83.1,
+    "requisicoes": 4,
+    "segundos": 6.2,
     "site_base": "https://www.severianodealmeida.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 22
+    },
     "via": "nao_encontrado"
   },
   "Silveira Martins": {
@@ -6508,15 +7227,18 @@
       "formulario": "http://www.sobradinho.rs.gov.br/portal"
     },
     "codigo_ibge": 4320701,
-    "coletado_em": "2026-11-10T03:18:25Z",
+    "coletado_em": "2026-11-10T09:07:38Z",
     "documentos_testados": 0,
     "home": "http://www.sobradinho.rs.gov.br/portal/",
     "navegador": true,
     "paginas_visitadas": 78,
-    "requisicoes": 82,
-    "segundos": 155.5,
+    "requisicoes": 7,
+    "segundos": 19.7,
     "site_base": "https://www.sobradinho.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Soledade": {
@@ -6532,14 +7254,17 @@
       "formulario": null
     },
     "codigo_ibge": 4318002,
-    "coletado_em": "2026-11-10T03:18:30Z",
+    "coletado_em": "2026-11-10T09:07:41Z",
     "documentos_testados": 0,
     "home": "https://portal.saoborja.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 91.6,
+    "requisicoes": 4,
+    "segundos": 7.0,
     "site_base": "https://www.saoborja.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 94
+    },
     "via": "nao_encontrado"
   },
   "São Domingos do Sul": {
@@ -6555,15 +7280,17 @@
       "formulario": null
     },
     "codigo_ibge": 4318101,
-    "coletado_em": "2026-11-10T03:19:12Z",
+    "coletado_em": "2026-11-10T09:07:43Z",
     "documentos_testados": 1,
     "home": "https://www.saofranciscodeassis.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 65,
-    "segundos": 67.1,
+    "requisicoes": 4,
+    "segundos": 5.5,
     "site_base": "https://www.saofranciscodeassis.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 17,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "São Francisco de Paula": {
@@ -6572,7 +7299,7 @@
       "formulario": null
     },
     "codigo_ibge": 4318200,
-    "coletado_em": "2026-11-10T03:19:37Z",
+    "coletado_em": "2026-11-10T09:07:44Z",
     "documentos_testados": 2,
     "documentos_vetados_robots": [
       "https://www.saofranc.instarbr.com.br/arquivos/plano-de-manejo_07042525.pdf",
@@ -6580,11 +7307,13 @@
     ],
     "home": "https://www.saofranciscodepaula.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 91.0,
+    "requisicoes": 4,
+    "segundos": 5.8,
     "site_base": "https://www.saofranciscodepaula.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 2,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "São Gabriel": {
@@ -6593,14 +7322,17 @@
       "formulario": null
     },
     "codigo_ibge": 4318309,
-    "coletado_em": "2026-11-10T03:19:39Z",
+    "coletado_em": "2026-11-10T09:07:44Z",
     "documentos_testados": 0,
     "home": "https://www.saogabriel.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 120.9,
+    "requisicoes": 4,
+    "segundos": 9.9,
     "site_base": "https://www.saogabriel.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 108
+    },
     "via": "nao_encontrado"
   },
   "São Jerônimo": {
@@ -6692,14 +7424,17 @@
       "formulario": "https://www.saojosedoherval.rs.gov.br/"
     },
     "codigo_ibge": 4318465,
-    "coletado_em": "2026-11-10T03:52:01Z",
+    "coletado_em": "2026-11-10T09:07:46Z",
     "documentos_testados": 0,
     "home": "https://www.saojosedoherval.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 84,
-    "segundos": 89.3,
+    "requisicoes": 28,
+    "segundos": 30.0,
     "site_base": "https://www.saojosedoherval.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 3025
+    },
     "via": "nao_encontrado"
   },
   "São José do Hortêncio": {
@@ -6708,15 +7443,17 @@
       "formulario": null
     },
     "codigo_ibge": 4318481,
-    "coletado_em": "2026-11-10T03:20:05Z",
+    "coletado_em": "2026-11-10T09:07:48Z",
     "documentos_testados": 0,
     "home": "https://www.saojosedohortencio.rs.gov.br/",
     "paginas_visitadas": 56,
-    "requisicoes": 53,
-    "segundos": 106.6,
+    "requisicoes": 4,
+    "segundos": 7.9,
     "site_base": "https://www.saojosedohortencio.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 4,
+    "sitemap": {
+      "urls": 48
+    },
     "via": "nao_encontrado"
   },
   "São José do Inhacorá": {
@@ -6759,14 +7496,17 @@
       "formulario": "https://www.saojosedonorte.rs.gov.br/busca"
     },
     "codigo_ibge": 4318507,
-    "coletado_em": "2026-11-10T03:20:19Z",
+    "coletado_em": "2026-11-10T09:07:48Z",
     "documentos_testados": 0,
     "home": "https://www.saojosedonorte.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 167.6,
+    "requisicoes": 6,
+    "segundos": 13.7,
     "site_base": "https://www.saojosedonorte.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 8
+    },
     "via": "nao_encontrado"
   },
   "São José do Ouro": {
@@ -6782,14 +7522,17 @@
       "formulario": "https://www.saojosedosul.rs.gov.br/web/pesquisa"
     },
     "codigo_ibge": 4318614,
-    "coletado_em": "2026-11-10T03:21:00Z",
+    "coletado_em": "2026-11-10T09:07:49Z",
     "documentos_testados": 0,
     "home": "https://www.saojosedosul.rs.gov.br/web/",
     "paginas_visitadas": 31,
-    "requisicoes": 33,
-    "segundos": 37.6,
+    "requisicoes": 5,
+    "segundos": 10.2,
     "site_base": "https://www.saojosedosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "São José dos Ausentes": {
@@ -6798,14 +7541,17 @@
       "formulario": "https://www.saojosedosausentes.rs.gov.br/"
     },
     "codigo_ibge": 4318622,
-    "coletado_em": "2026-11-10T03:21:02Z",
+    "coletado_em": "2026-11-10T09:07:49Z",
     "documentos_testados": 0,
     "home": "https://www.saojosedosausentes.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 175.1,
+    "requisicoes": 18,
+    "segundos": 40.1,
     "site_base": "https://www.saojosedosausentes.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 1879
+    },
     "via": "nao_encontrado"
   },
   "São João da Urtiga": {
@@ -6821,14 +7567,17 @@
       "formulario": null
     },
     "codigo_ibge": 4318432,
-    "coletado_em": "2026-11-10T03:21:09Z",
+    "coletado_em": "2026-11-10T09:07:54Z",
     "documentos_testados": 0,
     "home": "https://saojoaodopolesine.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 86.4,
+    "requisicoes": 5,
+    "segundos": 9.0,
     "site_base": "https://www.saojoaodopolesine.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 16
+    },
     "via": "nao_encontrado"
   },
   "São Leopoldo": {
@@ -6837,14 +7586,17 @@
       "formulario": null
     },
     "codigo_ibge": 4318705,
-    "coletado_em": "2026-11-10T03:21:28Z",
+    "coletado_em": "2026-11-10T09:07:56Z",
     "documentos_testados": 0,
     "home": "https://www.saoleopoldo.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 107.8,
+    "requisicoes": 4,
+    "segundos": 8.0,
     "site_base": "https://www.saoleopoldo.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "São Lourenço do Sul": {
@@ -6853,7 +7605,7 @@
       "formulario": null
     },
     "codigo_ibge": 4318804,
-    "coletado_em": "2026-11-10T03:21:37Z",
+    "coletado_em": "2026-11-10T09:07:58Z",
     "documentos_testados": 2,
     "documentos_vetados_robots": [
       "https://www.saolourencodosul.rs.gov.br/arquivos/01_unimed.pdf",
@@ -6861,11 +7613,13 @@
     ],
     "home": "https://www.saolourencodosul.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 59,
-    "segundos": 63.4,
+    "requisicoes": 4,
+    "segundos": 5.6,
     "site_base": "https://www.saolourencodosul.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 24,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "São Luiz Gonzaga": {
@@ -6874,14 +7628,17 @@
       "formulario": "https://www.saoluizgonzaga.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4318903,
-    "coletado_em": "2026-11-10T03:21:38Z",
+    "coletado_em": "2026-11-10T09:07:59Z",
     "documentos_testados": 0,
     "home": "https://www.saoluizgonzaga.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 89.8,
+    "requisicoes": 5,
+    "segundos": 8.0,
     "site_base": "https://www.saoluizgonzaga.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "São Marcos": {
@@ -6922,14 +7679,17 @@
       "formulario": "https://www.saomartinho.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4319109,
-    "coletado_em": "2026-11-10T03:21:51Z",
+    "coletado_em": "2026-11-10T09:08:02Z",
     "documentos_testados": 0,
     "home": "https://www.saomartinho.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 88.4,
+    "requisicoes": 6,
+    "segundos": 8.6,
     "site_base": "https://www.saomartinho.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "São Martinho da Serra": {
@@ -6952,14 +7712,17 @@
       "formulario": "https://www.saonicolau.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4319208,
-    "coletado_em": "2026-11-10T03:22:00Z",
+    "coletado_em": "2026-11-10T09:08:03Z",
     "documentos_testados": 0,
     "home": "https://www.saonicolau.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 87.3,
+    "requisicoes": 5,
+    "segundos": 8.8,
     "site_base": "https://www.saonicolau.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "São Paulo das Missões": {
@@ -6968,14 +7731,17 @@
       "formulario": "https://www.saopaulodasmissoes.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4319307,
-    "coletado_em": "2026-11-10T03:52:18Z",
+    "coletado_em": "2026-11-10T09:08:03Z",
     "documentos_testados": 0,
     "home": "https://www.saopaulodasmissoes.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 84,
-    "segundos": 98.5,
+    "requisicoes": 7,
+    "segundos": 14.3,
     "site_base": "https://www.saopaulodasmissoes.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "São Pedro da Serra": {
@@ -6984,15 +7750,17 @@
       "formulario": null
     },
     "codigo_ibge": 4319356,
-    "coletado_em": "2026-11-10T03:22:22Z",
+    "coletado_em": "2026-11-10T09:08:04Z",
     "documentos_testados": 0,
     "home": "https://www.saopedrodaserra.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 80,
-    "segundos": 86.5,
+    "requisicoes": 4,
+    "segundos": 4.7,
     "site_base": "https://www.saopedrodaserra.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 1,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "São Pedro das Missões": {
@@ -7001,14 +7769,17 @@
       "formulario": "https://saopedrodasmissoes.rs.gov.br/"
     },
     "codigo_ibge": 4319364,
-    "coletado_em": "2026-11-10T03:22:25Z",
+    "coletado_em": "2026-11-10T09:08:07Z",
     "documentos_testados": 2,
     "home": "https://saopedrodasmissoes.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 84,
-    "segundos": 137.2,
+    "requisicoes": 10,
+    "segundos": 30.7,
     "site_base": "https://www.saopedrodasmissoes.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 898
+    },
     "via": "nao_encontrado"
   },
   "São Pedro do Butiá": {
@@ -7017,14 +7788,17 @@
       "formulario": "https://www.saopedrodobutia.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4319372,
-    "coletado_em": "2026-11-10T03:22:35Z",
+    "coletado_em": "2026-11-10T09:08:09Z",
     "documentos_testados": 0,
     "home": "https://www.saopedrodobutia.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 86.0,
+    "requisicoes": 5,
+    "segundos": 7.7,
     "site_base": "https://www.saopedrodobutia.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "São Pedro do Sul": {
@@ -7040,15 +7814,18 @@
       "formulario": null
     },
     "codigo_ibge": 4319505,
-    "coletado_em": "2026-11-10T05:06:38Z",
+    "coletado_em": "2026-11-10T09:08:10Z",
     "documentos_testados": 0,
     "home": "https://www.saosebastiaodocai.rs.gov.br/",
     "navegador": true,
     "paginas_visitadas": 0,
-    "requisicoes": 2,
-    "segundos": 5.7,
+    "requisicoes": 5,
+    "segundos": 9.1,
     "site_base": "https://www.saosebastiaodocai.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "São Sepé": {
@@ -7092,14 +7869,17 @@
       "formulario": null
     },
     "codigo_ibge": 4319703,
-    "coletado_em": "2026-11-10T03:23:05Z",
+    "coletado_em": "2026-11-10T09:08:12Z",
     "documentos_testados": 0,
     "home": "https://www.saovalentim.rs.gov.br/site/",
     "paginas_visitadas": 59,
-    "requisicoes": 60,
-    "segundos": 64.4,
+    "requisicoes": 4,
+    "segundos": 8.0,
     "site_base": "https://www.saovalentim.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "São Valentim do Sul": {
@@ -7108,14 +7888,17 @@
       "formulario": null
     },
     "codigo_ibge": 4319711,
-    "coletado_em": "2026-11-10T03:23:06Z",
+    "coletado_em": "2026-11-10T09:08:14Z",
     "documentos_testados": 3,
     "home": "https://www.saovalentimdosul.rs.gov.br/",
     "paginas_visitadas": 33,
-    "requisicoes": 37,
-    "segundos": 64.7,
+    "requisicoes": 4,
+    "segundos": 8.8,
     "site_base": "https://www.saovalentimdosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 246
+    },
     "via": "nao_encontrado"
   },
   "São Valério do Sul": {
@@ -7124,14 +7907,17 @@
       "formulario": "https://www.saovaleriodosul.rs.gov.br/site/Busca/Index"
     },
     "codigo_ibge": 4319737,
-    "coletado_em": "2026-11-10T03:23:08Z",
+    "coletado_em": "2026-11-10T09:08:16Z",
     "documentos_testados": 0,
     "home": "https://www.saovaleriodosul.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 86.6,
+    "requisicoes": 5,
+    "segundos": 7.6,
     "site_base": "https://www.saovaleriodosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "São Vendelino": {
@@ -7147,14 +7933,17 @@
       "formulario": "https://saovicentedosul.rs.gov.br/site"
     },
     "codigo_ibge": 4319802,
-    "coletado_em": "2026-11-10T03:52:28Z",
+    "coletado_em": "2026-11-10T09:08:16Z",
     "documentos_testados": 0,
     "home": "https://saovicentedosul.rs.gov.br/site/",
     "paginas_visitadas": 80,
-    "requisicoes": 85,
-    "segundos": 139.2,
+    "requisicoes": 8,
+    "segundos": 20.5,
     "site_base": "https://www.saovicentedosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Sério": {
@@ -7170,14 +7959,17 @@
       "formulario": "https://tabai.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4320859,
-    "coletado_em": "2026-11-10T03:23:23Z",
+    "coletado_em": "2026-11-10T09:08:18Z",
     "documentos_testados": 0,
     "home": "https://tabai.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 85.1,
+    "requisicoes": 5,
+    "segundos": 8.8,
     "site_base": "https://www.tabai.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Tapejara": {
@@ -7186,14 +7978,17 @@
       "formulario": "https://tapejara.rs.gov.br/busca"
     },
     "codigo_ibge": 4320909,
-    "coletado_em": "2026-11-10T03:23:27Z",
+    "coletado_em": "2026-11-10T09:08:20Z",
     "documentos_testados": 0,
     "home": "https://www.tapejara.rs.gov.br/",
     "paginas_visitadas": 68,
-    "requisicoes": 70,
-    "segundos": 72.6,
+    "requisicoes": 5,
+    "segundos": 6.5,
     "site_base": "https://www.tapejara.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Tapera": {
@@ -7209,7 +8004,7 @@
       "formulario": null
     },
     "codigo_ibge": 4321105,
-    "coletado_em": "2026-11-10T03:23:32Z",
+    "coletado_em": "2026-11-10T09:08:20Z",
     "documentos_testados": 2,
     "documentos_vetados_robots": [
       "https://www.tapesrsg.instartecnologia.com.br/arquivos/lei-no-13460-lei-dos-direitos-dos-usuarios-do-servico-public_19024832.pdf",
@@ -7217,11 +8012,13 @@
     ],
     "home": "https://www.tapes.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 84.0,
+    "requisicoes": 4,
+    "segundos": 5.7,
     "site_base": "https://www.tapes.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 2,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Taquara": {
@@ -7230,14 +8027,17 @@
       "formulario": null
     },
     "codigo_ibge": 4321204,
-    "coletado_em": "2026-11-10T03:23:40Z",
+    "coletado_em": "2026-11-10T09:08:23Z",
     "documentos_testados": 0,
     "home": "https://www.taquara.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 85.3,
+    "requisicoes": 4,
+    "segundos": 6.5,
     "site_base": "https://www.taquara.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Taquari": {
@@ -7280,14 +8080,17 @@
       "formulario": null
     },
     "codigo_ibge": 4321329,
-    "coletado_em": "2026-11-10T03:23:55Z",
+    "coletado_em": "2026-11-10T09:08:23Z",
     "documentos_testados": 0,
     "home": "https://www.taquarucudosul.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 89.0,
+    "requisicoes": 4,
+    "segundos": 6.6,
     "site_base": "https://www.taquarucudosul.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Tavares": {
@@ -7296,14 +8099,17 @@
       "formulario": "https://tavares.rs.gov.br"
     },
     "codigo_ibge": 4321352,
-    "coletado_em": "2026-11-10T03:23:57Z",
+    "coletado_em": "2026-11-10T09:08:25Z",
     "documentos_testados": 0,
     "home": "https://tavares.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 166.4,
+    "requisicoes": 9,
+    "segundos": 21.1,
     "site_base": "https://www.tavares.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 543
+    },
     "via": "nao_encontrado"
   },
   "Tenente Portela": {
@@ -7319,14 +8125,17 @@
       "formulario": "https://www.terradeareia.rs.gov.br/search"
     },
     "codigo_ibge": 4321436,
-    "coletado_em": "2026-11-10T03:24:02Z",
+    "coletado_em": "2026-11-10T09:08:26Z",
     "documentos_testados": 0,
     "home": "https://www.terradeareia.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 114.3,
+    "requisicoes": 5,
+    "segundos": 6.6,
     "site_base": "https://www.terradeareia.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Teutônia": {
@@ -7335,15 +8144,17 @@
       "formulario": "https://teutonia.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4321451,
-    "coletado_em": "2026-11-10T03:24:10Z",
+    "coletado_em": "2026-11-10T09:08:26Z",
     "documentos_testados": 0,
     "home": "https://teutonia.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 80,
-    "segundos": 94.7,
+    "requisicoes": 5,
+    "segundos": 10.9,
     "site_base": "https://www.teutonia.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 2,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Tio Hugo": {
@@ -7352,14 +8163,17 @@
       "formulario": "https://tiohugo.rs.gov.br/"
     },
     "codigo_ibge": 4321469,
-    "coletado_em": "2026-11-10T06:48:57Z",
+    "coletado_em": "2026-11-10T09:08:29Z",
     "documentos_testados": 0,
     "home": "https://tiohugo.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 84,
-    "segundos": 157.6,
+    "requisicoes": 25,
+    "segundos": 72.0,
     "site_base": "https://www.tiohugo.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 8166
+    },
     "via": "nao_encontrado"
   },
   "Tiradentes do Sul": {
@@ -7402,14 +8216,17 @@
       "formulario": null
     },
     "codigo_ibge": 4321493,
-    "coletado_em": "2026-11-10T03:24:19Z",
+    "coletado_em": "2026-11-10T09:08:30Z",
     "documentos_testados": 0,
     "home": "https://toropi.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 85.1,
+    "requisicoes": 4,
+    "segundos": 7.5,
     "site_base": "https://www.toropi.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Torres": {
@@ -7418,20 +8235,28 @@
       "formulario": "https://torres.rs.gov.br"
     },
     "codigo_ibge": 4321501,
-    "coletado_em": "2026-11-10T03:24:35Z",
+    "coletado_em": "2026-11-10T09:08:30Z",
     "documentos_testados": 3,
     "documentos_vetados_robots": [
       "https://torres.rs.gov.br/wp-content/uploads/2018/03/horarios_urbano.pdf",
-      "https://torres.rs.gov.br/wp-content/uploads/2022/10/607-20-ALTERA-Conselho-de-Defesa-Civil.pdf",
-      "https://torres.rs.gov.br/wp-content/uploads/2022/01/517-20-ALTERA-Conselho-de-Defesa-Civil.pdf"
+      "https://torres.rs.gov.br/wp-content/uploads/2018/03/horarios_urbano.pdf",
+      "https://torres.rs.gov.br/wp-content/uploads/2018/03/horarios_urbano.pdf",
+      "https://torres.rs.gov.br/wp-content/uploads/2018/03/horarios_urbano.pdf",
+      "https://torres.rs.gov.br/wp-content/uploads/2018/03/horarios_urbano.pdf",
+      "https://torres.rs.gov.br/wp-content/uploads/2018/03/horarios_urbano.pdf",
+      "https://torres.rs.gov.br/wp-content/uploads/2018/03/horarios_urbano.pdf",
+      "https://torres.rs.gov.br/wp-content/uploads/2018/03/horarios_urbano.pdf"
     ],
     "home": "https://torres.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 83,
-    "segundos": 165.9,
+    "requisicoes": 27,
+    "segundos": 74.0,
     "site_base": "https://www.torres.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 3,
+    "sitemap": {
+      "urls": 9992
+    },
+    "urls_vetadas_robots": 8,
     "via": "nao_encontrado"
   },
   "Tramandaí": {
@@ -7440,14 +8265,17 @@
       "formulario": "https://tramandai.rs.gov.br/busca"
     },
     "codigo_ibge": 4321600,
-    "coletado_em": "2026-11-10T03:24:40Z",
+    "coletado_em": "2026-11-10T09:08:33Z",
     "documentos_testados": 0,
     "home": "https://www.tramandai.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 120.9,
+    "requisicoes": 6,
+    "segundos": 8.3,
     "site_base": "https://www.tramandai.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 763
+    },
     "via": "nao_encontrado"
   },
   "Travesseiro": {
@@ -7456,15 +8284,17 @@
       "formulario": "https://travesseiro.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4321626,
-    "coletado_em": "2026-11-10T03:24:42Z",
+    "coletado_em": "2026-11-10T09:08:37Z",
     "documentos_testados": 0,
     "home": "https://travesseiro.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 79,
-    "segundos": 86.0,
+    "requisicoes": 5,
+    "segundos": 11.3,
     "site_base": "https://www.travesseiro.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 3,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Trindade do Sul": {
@@ -7503,14 +8333,17 @@
       "formulario": null
     },
     "codigo_ibge": 4322004,
-    "coletado_em": "2026-11-10T03:24:54Z",
+    "coletado_em": "2026-11-10T09:08:37Z",
     "documentos_testados": 0,
     "home": "https://www.triunfo.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 83.5,
+    "requisicoes": 4,
+    "segundos": 5.5,
     "site_base": "https://www.triunfo.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Três Arroios": {
@@ -7519,14 +8352,17 @@
       "formulario": "https://tresarroios.rs.gov.br/"
     },
     "codigo_ibge": 4321634,
-    "coletado_em": "2026-11-10T03:24:56Z",
+    "coletado_em": "2026-11-10T09:08:37Z",
     "documentos_testados": 0,
     "home": "https://tresarroios.rs.gov.br/",
     "paginas_visitadas": 26,
-    "requisicoes": 28,
-    "segundos": 39.4,
+    "requisicoes": 19,
+    "segundos": 25.8,
     "site_base": "https://www.tresarroios.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 554
+    },
     "via": "nao_encontrado"
   },
   "Três Cachoeiras": {
@@ -7570,14 +8406,17 @@
       "formulario": "https://www.trescoroas.rs.gov.br/"
     },
     "codigo_ibge": 4321709,
-    "coletado_em": "2026-11-10T03:25:18Z",
+    "coletado_em": "2026-11-10T09:08:38Z",
     "documentos_testados": 1,
     "home": "https://www.trescoroas.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 84,
-    "segundos": 137.2,
+    "requisicoes": 22,
+    "segundos": 30.0,
     "site_base": "https://www.trescoroas.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 4103
+    },
     "via": "nao_encontrado"
   },
   "Três Forquilhas": {
@@ -7586,14 +8425,17 @@
       "formulario": null
     },
     "codigo_ibge": 4321832,
-    "coletado_em": "2026-11-10T03:25:24Z",
+    "coletado_em": "2026-11-10T09:08:41Z",
     "documentos_testados": 0,
     "home": "https://www.tresforquilhas.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 86.1,
+    "requisicoes": 4,
+    "segundos": 6.3,
     "site_base": "https://www.tresforquilhas.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Três Palmeiras": {
@@ -7602,14 +8444,17 @@
       "formulario": null
     },
     "codigo_ibge": 4321857,
-    "coletado_em": "2026-11-10T03:25:29Z",
+    "coletado_em": "2026-11-10T09:08:43Z",
     "documentos_testados": 0,
     "home": "https://www.trespalmeiras.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 85.1,
+    "requisicoes": 4,
+    "segundos": 6.2,
     "site_base": "https://www.trespalmeiras.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Três Passos": {
@@ -7618,14 +8463,17 @@
       "formulario": "https://www.trespassos.rs.gov.br/novo/pesquisa.php"
     },
     "codigo_ibge": 4321907,
-    "coletado_em": "2026-11-10T03:25:35Z",
+    "coletado_em": "2026-11-10T09:08:46Z",
     "documentos_testados": 4,
     "home": "https://www.trespassos.rs.gov.br/novo/",
     "paginas_visitadas": 80,
-    "requisicoes": 87,
-    "segundos": 98.7,
+    "requisicoes": 6,
+    "segundos": 8.0,
     "site_base": "https://www.trespassos.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 8835
+    },
     "via": "nao_encontrado"
   },
   "Três de Maio": {
@@ -7634,14 +8482,17 @@
       "formulario": "https://www.tresdemaio.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4321808,
-    "coletado_em": "2026-11-10T03:52:52Z",
+    "coletado_em": "2026-11-10T09:08:47Z",
     "documentos_testados": 0,
     "home": "https://www.tresdemaio.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 84,
-    "segundos": 93.1,
+    "requisicoes": 7,
+    "segundos": 12.2,
     "site_base": "https://www.tresdemaio.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Tucunduva": {
@@ -7650,15 +8501,17 @@
       "formulario": "https://www.tucunduva.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4322103,
-    "coletado_em": "2026-11-10T03:25:45Z",
+    "coletado_em": "2026-11-10T09:08:48Z",
     "documentos_testados": 15,
     "home": "https://www.tucunduva.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 96,
-    "segundos": 172.6,
+    "requisicoes": 5,
+    "segundos": 7.8,
     "site_base": "https://www.tucunduva.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 1,
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Tunas": {
@@ -7667,14 +8520,17 @@
       "formulario": "https://www.tunas.rs.gov.br/"
     },
     "codigo_ibge": 4322152,
-    "coletado_em": "2026-11-10T03:25:57Z",
+    "coletado_em": "2026-11-10T09:08:49Z",
     "documentos_testados": 0,
     "home": "https://www.tunas.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 84.4,
+    "requisicoes": 18,
+    "segundos": 21.2,
     "site_base": "https://www.tunas.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 1600
+    },
     "via": "nao_encontrado"
   },
   "Tupanci do Sul": {
@@ -7690,18 +8546,20 @@
       "formulario": null
     },
     "codigo_ibge": 4322202,
-    "coletado_em": "2026-11-10T03:26:17Z",
+    "coletado_em": "2026-11-10T09:08:54Z",
     "documentos_testados": 1,
     "documentos_vetados_robots": [
       "https://www.tupancireta.rs.gov.br/imgeditor/file/emissao_D62528499119D6474A1761A1_memorando-67--9_964-2025_assinado_versaoImpressao.pdf"
     ],
     "home": "https://www.tupancireta.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 76,
-    "segundos": 80.9,
+    "requisicoes": 4,
+    "segundos": 5.6,
     "site_base": "https://www.tupancireta.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 6,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Tupandi": {
@@ -7710,15 +8568,17 @@
       "formulario": "https://www.tupandi.rs.gov.br/web/pesquisar"
     },
     "codigo_ibge": 4322251,
-    "coletado_em": "2026-11-10T03:26:41Z",
+    "coletado_em": "2026-11-10T09:08:56Z",
     "documentos_testados": 0,
     "home": "https://www.tupandi.rs.gov.br/web/",
     "paginas_visitadas": 76,
-    "requisicoes": 76,
-    "segundos": 86.3,
+    "requisicoes": 5,
+    "segundos": 7.9,
     "site_base": "https://www.tupandi.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 2,
+    "sitemap": {
+      "urls": 123
+    },
     "via": "nao_encontrado"
   },
   "Tuparendi": {
@@ -7727,14 +8587,17 @@
       "formulario": "https://www.tuparendi.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4322301,
-    "coletado_em": "2026-11-10T03:26:44Z",
+    "coletado_em": "2026-11-10T09:09:00Z",
     "documentos_testados": 8,
     "home": "https://www.tuparendi.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 90,
-    "segundos": 115.5,
+    "requisicoes": 5,
+    "segundos": 8.7,
     "site_base": "https://www.tuparendi.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Turuçu": {
@@ -7743,15 +8606,17 @@
       "formulario": null
     },
     "codigo_ibge": 4322327,
-    "coletado_em": "2026-11-10T03:26:50Z",
+    "coletado_em": "2026-11-10T09:09:00Z",
     "documentos_testados": 3,
     "home": "https://www.turucu.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 61,
-    "segundos": 63.9,
+    "requisicoes": 4,
+    "segundos": 5.7,
     "site_base": "https://www.turucu.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 23,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Ubiretama": {
@@ -7760,14 +8625,17 @@
       "formulario": "https://www.ubiretama.rs.gov.br/site/Pesquisa/Index"
     },
     "codigo_ibge": 4322343,
-    "coletado_em": "2026-11-10T03:26:54Z",
+    "coletado_em": "2026-11-10T09:09:03Z",
     "documentos_testados": 0,
     "home": "https://www.ubiretama.rs.gov.br/site",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 85.3,
+    "requisicoes": 5,
+    "segundos": 7.1,
     "site_base": "https://www.ubiretama.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 834
+    },
     "via": "nao_encontrado"
   },
   "Unistalda": {
@@ -7776,14 +8644,18 @@
       "formulario": "https://unistalda.rs.gov.br/"
     },
     "codigo_ibge": 4322376,
-    "coletado_em": "2026-11-10T03:27:14Z",
+    "coletado_em": "2026-11-10T09:09:04Z",
     "documentos_testados": 0,
     "home": "https://unistalda.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 186.3,
+    "requisicoes": 4,
+    "segundos": 15.1,
     "site_base": "https://www.unistalda.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
+    "urls_vetadas_robots": 40,
     "via": "nao_encontrado"
   },
   "União da Serra": {
@@ -7792,14 +8664,17 @@
       "formulario": null
     },
     "codigo_ibge": 4322350,
-    "coletado_em": "2026-11-10T03:53:02Z",
+    "coletado_em": "2026-11-10T09:09:06Z",
     "documentos_testados": 1,
     "home": "https://www.uniaodaserra.rs.gov.br/",
     "paginas_visitadas": 51,
-    "requisicoes": 53,
-    "segundos": 71.1,
+    "requisicoes": 4,
+    "segundos": 8.6,
     "site_base": "https://www.uniaodaserra.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 58
+    },
     "via": "nao_encontrado"
   },
   "Uruguaiana": {
@@ -7808,14 +8683,17 @@
       "formulario": null
     },
     "codigo_ibge": 4322400,
-    "coletado_em": "2026-11-10T03:27:20Z",
+    "coletado_em": "2026-11-10T09:09:08Z",
     "documentos_testados": 0,
     "home": "https://www.uruguaiana.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 82.9,
+    "requisicoes": 4,
+    "segundos": 5.8,
     "site_base": "https://www.uruguaiana.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Vacaria": {
@@ -7831,15 +8709,17 @@
       "formulario": null
     },
     "codigo_ibge": 4322541,
-    "coletado_em": "2026-11-10T03:27:23Z",
+    "coletado_em": "2026-11-10T09:09:08Z",
     "documentos_testados": 0,
     "home": "https://www.valereal.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 48,
-    "segundos": 77.3,
+    "requisicoes": 4,
+    "segundos": 6.5,
     "site_base": "https://www.valereal.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 33,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Vale Verde": {
@@ -7855,14 +8735,17 @@
       "formulario": null
     },
     "codigo_ibge": 4322533,
-    "coletado_em": "2026-11-10T03:27:29Z",
+    "coletado_em": "2026-11-10T09:09:10Z",
     "documentos_testados": 0,
     "home": "https://www.valedosol.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 83.6,
+    "requisicoes": 4,
+    "segundos": 5.9,
     "site_base": "https://www.valedosol.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Vanini": {
@@ -7878,14 +8761,17 @@
       "formulario": null
     },
     "codigo_ibge": 4322608,
-    "coletado_em": "2026-11-10T03:27:36Z",
+    "coletado_em": "2026-11-10T09:09:10Z",
     "documentos_testados": 0,
     "home": "https://www.venancioaires.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 109.2,
+    "requisicoes": 4,
+    "segundos": 5.5,
     "site_base": "https://www.venancioaires.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Vera Cruz": {
@@ -7894,15 +8780,17 @@
       "formulario": null
     },
     "codigo_ibge": 4322707,
-    "coletado_em": "2026-11-10T03:27:38Z",
+    "coletado_em": "2026-11-10T09:09:14Z",
     "documentos_testados": 1,
     "home": "https://www.veracruz.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 79,
-    "segundos": 84.0,
+    "requisicoes": 4,
+    "segundos": 5.8,
     "site_base": "https://www.veracruz.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 3,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Veranópolis": {
@@ -7911,14 +8799,17 @@
       "formulario": null
     },
     "codigo_ibge": 4322806,
-    "coletado_em": "2026-11-10T03:27:54Z",
+    "coletado_em": "2026-11-10T09:09:14Z",
     "documentos_testados": 0,
     "home": "https://www.veranopolis.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 88.8,
+    "requisicoes": 4,
+    "segundos": 5.7,
     "site_base": "https://www.veranopolis.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Vespasiano Corrêa": {
@@ -7927,14 +8818,17 @@
       "formulario": "https://vespasianocorrea.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4322855,
-    "coletado_em": "2026-11-10T03:28:05Z",
+    "coletado_em": "2026-11-10T09:09:15Z",
     "documentos_testados": 0,
     "home": "https://vespasianocorrea.rs.gov.br/",
     "paginas_visitadas": 64,
-    "requisicoes": 66,
-    "segundos": 69.3,
+    "requisicoes": 5,
+    "segundos": 8.9,
     "site_base": "https://www.vespasianocorrea.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Viadutos": {
@@ -7943,14 +8837,17 @@
       "formulario": "https://www.viadutos.rs.gov.br/filtrarTudo"
     },
     "codigo_ibge": 4322905,
-    "coletado_em": "2026-11-10T03:28:07Z",
+    "coletado_em": "2026-11-10T09:09:16Z",
     "documentos_testados": 0,
     "home": "https://www.viadutos.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 84.6,
+    "requisicoes": 5,
+    "segundos": 8.7,
     "site_base": "https://www.viadutos.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Viamão": {
@@ -7959,7 +8856,7 @@
       "formulario": null
     },
     "codigo_ibge": 4323002,
-    "coletado_em": "2026-11-10T03:28:19Z",
+    "coletado_em": "2026-11-10T09:09:16Z",
     "documentos_testados": 2,
     "documentos_vetados_robots": [
       "https://www.viamao.rs.gov.br/arquivos/farmacia_18103919.pdf",
@@ -7967,11 +8864,13 @@
     ],
     "home": "https://www.viamao.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 80,
-    "segundos": 113.1,
+    "requisicoes": 4,
+    "segundos": 5.9,
     "site_base": "https://www.viamao.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 3,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Vicente Dutra": {
@@ -7980,14 +8879,17 @@
       "formulario": null
     },
     "codigo_ibge": 4323101,
-    "coletado_em": "2026-11-10T03:28:37Z",
+    "coletado_em": "2026-11-10T09:09:19Z",
     "documentos_testados": 0,
     "home": "https://www.vicentedutra.rs.gov.br/",
     "paginas_visitadas": 45,
-    "requisicoes": 46,
-    "segundos": 52.7,
+    "requisicoes": 4,
+    "segundos": 6.0,
     "site_base": "https://www.vicentedutra.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Victor Graeff": {
@@ -7996,14 +8898,17 @@
       "formulario": "https://victorgraeff.rs.gov.br/"
     },
     "codigo_ibge": 4323200,
-    "coletado_em": "2026-11-10T06:49:51Z",
+    "coletado_em": "2026-11-10T09:09:19Z",
     "documentos_testados": 0,
     "home": "https://victorgraeff.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 85,
-    "segundos": 152.8,
+    "requisicoes": 74,
+    "segundos": 146.3,
     "site_base": "https://www.victorgraeff.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 7632
+    },
     "via": "nao_encontrado"
   },
   "Vila Flores": {
@@ -8081,15 +8986,18 @@
       "formulario": null
     },
     "codigo_ibge": 4323705,
-    "coletado_em": "2026-11-10T05:22:46Z",
+    "coletado_em": "2026-11-10T09:09:20Z",
     "documentos_testados": 0,
     "home": "https://www.vistagaucha.rs.gov.br/",
     "navegador": true,
     "paginas_visitadas": 0,
-    "requisicoes": 2,
-    "segundos": 13.5,
+    "requisicoes": 5,
+    "segundos": 15.9,
     "site_base": "https://www.vistagaucha.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Vitória das Missões": {
@@ -8105,15 +9013,17 @@
       "formulario": "https://westfalia.rs.gov.br/pesquisa"
     },
     "codigo_ibge": 4323770,
-    "coletado_em": "2026-11-10T03:28:57Z",
+    "coletado_em": "2026-11-10T09:09:22Z",
     "documentos_testados": 0,
     "home": "https://westfalia.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 76,
-    "segundos": 82.5,
+    "requisicoes": 5,
+    "segundos": 11.0,
     "site_base": "https://www.westfalia.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 6,
+    "sitemap": {
+      "urls": 0
+    },
     "via": "nao_encontrado"
   },
   "Xangri-lá": {
@@ -8122,15 +9032,17 @@
       "formulario": null
     },
     "codigo_ibge": 4323804,
-    "coletado_em": "2026-11-10T03:29:02Z",
+    "coletado_em": "2026-11-10T09:09:24Z",
     "documentos_testados": 1,
     "home": "https://xangrila.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 81,
-    "segundos": 89.5,
+    "requisicoes": 6,
+    "segundos": 12.2,
     "site_base": "https://www.xangrila.rs.gov.br",
     "site_status": "ok",
-    "urls_vetadas_robots": 1,
+    "sitemap": {
+      "urls": 171
+    },
     "via": "nao_encontrado"
   },
   "Água Santa": {
@@ -8179,14 +9091,17 @@
       "formulario": "https://aurea.rs.gov.br"
     },
     "codigo_ibge": 4301552,
-    "coletado_em": "2026-11-10T03:29:14Z",
+    "coletado_em": "2026-11-10T09:09:24Z",
     "documentos_testados": 0,
     "home": "https://aurea.rs.gov.br/",
     "paginas_visitadas": 80,
-    "requisicoes": 82,
-    "segundos": 148.5,
+    "requisicoes": 13,
+    "segundos": 20.6,
     "site_base": "https://www.aurea.rs.gov.br",
     "site_status": "ok",
+    "sitemap": {
+      "urls": 1483
+    },
     "via": "nao_encontrado"
   }
 }

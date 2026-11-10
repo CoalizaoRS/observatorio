@@ -29,6 +29,7 @@ Uso:
 """
 import argparse
 import concurrent.futures
+import gzip
 import hashlib
 import heapq
 import io
@@ -39,7 +40,7 @@ import time
 import urllib.robotparser
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urlencode, urljoin, urlparse, urldefrag, parse_qs
+from urllib.parse import unquote, urlencode, urljoin, urlparse, urldefrag, parse_qs
 
 import requests
 import urllib3
@@ -73,11 +74,14 @@ TIMEOUT = 15
 MAX_PDF_BYTES = 60 * 1024 * 1024
 PAGINAS_TEXTO = 12       # páginas do PDF lidas para validar
 WORKERS = 12             # sites em paralelo (cada site é sequencial)
+MAX_PAGINAS_ALVO = 150   # páginas na busca do caminho até um plano já localizado pelo sitemap
+MAX_SITEMAPS = 15        # arquivos de sitemap lidos por site (índices aninhados incluídos)
+MAX_URLS_SITEMAP = 50000
 
 # Relevância do link (texto + href normalizados). Só links com relevância > 0 são seguidos.
 # "contigencia" (sem n) é grafia comum nos nomes de arquivo (ex.: Agudo)
 FORTE = re.compile(r"conti?ngen|contigen|plancon|plcon|plano municipal de protecao|plano de protecao e defesa")
-DEFESA = re.compile(r"defesa civil|defesa-civil|defesacivil|protecao civil|comdec|compdec|cpdc|cmdc|riscos? e desastres")
+DEFESA = re.compile(r"defesa civil|defesa-civil|defesacivil|protecao civil|\bcomdec\b|compdec|\bcpdc\b|\bcmdc\b|riscos? e desastres")
 GENERICO = re.compile(
     r"documento|publica|legisla|download|arquivo|plano|transparencia|secretaria|servico|"
     r"seguranca|meio ambiente|governo|prefeitura|institucional|acesso a informacao|"
@@ -320,8 +324,38 @@ def mesmo_site(site: Site, url: str) -> bool:
     return host.endswith(site.dominio) or (len(site.slug) >= 4 and site.slug in host.replace("-", ""))
 
 
-def navega(site: Site, home_url: str, home_html: str, municipio: str) -> dict:
-    """Busca guiada pela relevância. Devolve o menor caminho encontrado até o plano."""
+def chave_url(url: str) -> str:
+    p = urlparse(unquote(url))
+    return f"{(p.hostname or '').removeprefix('www.')}{p.path.rstrip('/')}?{p.query}".lower()
+
+
+def segmentos(url: str) -> list[str]:
+    p = urlparse(unquote(url))
+    return [(p.hostname or "").removeprefix("www.")] + [x for x in p.path.lower().split("/") if x]
+
+
+def proximidade(url: str, alvos: list[str]) -> int:
+    """Nº de segmentos iniciais (host + pastas) em comum com o destino mais próximo."""
+    s = segmentos(url)
+    melhor = 0
+    for a in alvos:
+        t = segmentos(a)
+        n = 0
+        while n < min(len(s), len(t)) and s[n] == t[n]:
+            n += 1
+        melhor = max(melhor, n)
+    return melhor
+
+
+def navega(site: Site, home_url: str, home_html: str, municipio: str, alvo: dict | None = None) -> dict:
+    """Busca guiada pela relevância. Devolve o menor caminho encontrado até o plano.
+
+    Com `alvo` (plano já localizado pelo sitemap: {"doc": url, "pagina": url|None, "documento": meta}),
+    a busca prioriza os links cujo endereço se aproxima do destino e aceita o PDF do alvo sem
+    baixá-lo de novo. Os cliques são sempre contados a partir da página inicial."""
+    destinos = [u for u in ((alvo or {}).get("pagina"), (alvo or {}).get("doc")) if u]
+    chave_doc = chave_url(alvo["doc"]) if alvo else None
+    limite = MAX_PAGINAS_ALVO if alvo else MAX_PAGINAS
     # fila: (-relevância acumulada, cliques, ordem, url, caminho)
     fila = []
     ordem = 0
@@ -339,6 +373,10 @@ def navega(site: Site, home_url: str, home_html: str, municipio: str) -> dict:
                 continue
             rel = relevancia(texto, url)
             passo = caminho + [{"url": url, "texto": texto}]
+            if alvo and chave_url(url) == chave_doc:
+                if not melhor or len(passo) < len(melhor["caminho"]):
+                    melhor = {"caminho": passo, "documento": alvo["documento"]}
+                continue
             if eh_documento(url, texto):
                 # PDF com termo do plano, ou qualquer PDF numa página da Defesa Civil/do plano
                 if rel >= 2 or rel_pag >= 2 or FORTE.search(normalizar_texto(texto + " " + url)):
@@ -346,10 +384,13 @@ def navega(site: Site, home_url: str, home_html: str, municipio: str) -> dict:
                 continue
             if EXT_IGNORAR.search(url) or not mesmo_site(site, url) or url in visitadas:
                 continue
-            if rel > 0 and cliques + 1 < MAX_CLIQUES:
+            prox = proximidade(url, destinos) if destinos else 0
+            # com destino conhecido, a proximidade do endereço pesa mais que as palavras do link
+            prio = rel + 2 * max(prox - 1, 0)
+            if prio > 0 and cliques + 1 < MAX_CLIQUES:
                 visitadas.add(url)
                 ordem += 1
-                heapq.heappush(fila, (-rel, cliques + 1, ordem, url, passo, rel))
+                heapq.heappush(fila, (-prio, cliques + 1, ordem, url, passo, rel))
         for rel, url, passo in sorted(candidatos, key=lambda x: -x[0]):
             if melhor and len(passo) >= len(melhor["caminho"]):
                 continue
@@ -361,7 +402,7 @@ def navega(site: Site, home_url: str, home_html: str, municipio: str) -> dict:
 
     processa(home_url, home_html, [])
     inicio = time.time()
-    while fila and paginas < MAX_PAGINAS and time.time() - inicio < PRAZO_SITE:
+    while fila and paginas < limite and time.time() - inicio < PRAZO_SITE:
         _, cliques, _, url, caminho, rel = heapq.heappop(fila)
         if melhor and cliques + 1 >= len(melhor["caminho"]):
             continue  # não há como achar caminho mais curto por aqui
@@ -373,6 +414,71 @@ def navega(site: Site, home_url: str, home_html: str, municipio: str) -> dict:
 
     return {"melhor": melhor, "paginas": paginas, "documentos_testados": len(docs_testados),
             "prazo_esgotado": time.time() - inicio >= PRAZO_SITE}
+
+
+def le_sitemaps(site: Site, home_url: str) -> list[str]:
+    """URLs listadas nos sitemaps do site (robots.txt + endereços usuais; índices aninhados)."""
+    raiz = f"{urlparse(home_url).scheme}://{urlparse(home_url).netloc}"
+    site.permitido(raiz + "/")  # carrega o robots.txt
+    rp = site.robots.get(raiz)
+    fila = list((rp.site_maps() or []) if rp else []) + [raiz + p for p in ("/sitemap.xml", "/sitemap_index.xml", "/wp-sitemap.xml")]
+    vistos, urls = set(), []
+    lidos = 0
+    while fila and lidos < MAX_SITEMAPS and len(urls) < MAX_URLS_SITEMAP:
+        u = fila.pop(0)
+        if u in vistos:
+            continue
+        vistos.add(u)
+        r = site.get(u, stream=True)
+        if r is None or r.status_code >= 400:
+            continue
+        lidos += 1
+        try:
+            corpo = b"".join(r.iter_content(256 * 1024))
+        except Exception:
+            continue
+        if corpo[:2] == b"\x1f\x8b":
+            try:
+                corpo = gzip.decompress(corpo)
+            except Exception:
+                continue
+        texto = corpo.decode("utf-8", "replace")
+        if "<loc>" not in texto:
+            continue
+        locs = [x.strip() for x in re.findall(r"<loc>\s*(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?\s*</loc>", texto, re.S)]
+        if "<sitemapindex" in texto:
+            fila.extend(locs)
+        else:
+            urls.extend(locs)
+    return urls[:MAX_URLS_SITEMAP]
+
+
+def descobre_por_sitemap(site: Site, home_url: str, municipio: str) -> dict:
+    """Usa o sitemap só para localizar o plano (o destino); os cliques são medidos depois."""
+    urls = le_sitemaps(site, home_url)
+    info = {"urls_sitemap": len(urls)}
+    if not urls:
+        return info
+    norm = [(u, normalizar_texto(unquote(u))) for u in urls]
+    docs = [u for u, n in norm if eh_documento(u, "") and FORTE.search(n)]
+    paginas = [u for u, n in norm if not EXT_DOC.search(u) and not EXT_IGNORAR.search(u) and (FORTE.search(n) or DEFESA.search(n))]
+    paginas.sort(key=lambda u: 0 if FORTE.search(normalizar_texto(unquote(u))) else 1)
+    for u in docs[:6]:
+        doc = valida_documento(site, u, municipio)
+        if doc:
+            info["alvo"] = {"doc": u, "pagina": None, "documento": doc}
+            return info
+    for pg in paginas[:8]:
+        r = site.get(pg)
+        if r is None or r.status_code >= 400:
+            continue
+        for u, t in links(r.text, r.url):
+            if eh_documento(u, t):
+                doc = valida_documento(site, u, municipio)
+                if doc:
+                    info["alvo"] = {"doc": u, "pagina": r.url, "documento": doc}
+                    return info
+    return info
 
 
 def busca_interna(site: Site, home_url: str, home_html: str, municipio: str) -> dict:
@@ -447,7 +553,7 @@ def resolve_site(m: dict, overrides: dict):
     return None, None, cands[0]
 
 
-def coleta(m: dict, overrides: dict) -> dict:
+def coleta(m: dict, overrides: dict, anterior: dict | None = None) -> dict:
     t0 = time.time()
     res = {"codigo_ibge": m["codigo_ibge"], "coletado_em": agora()}
     site, home, base = resolve_site(m, overrides)
@@ -461,14 +567,42 @@ def coleta(m: dict, overrides: dict) -> dict:
         res["home"] = home.url
         if site.contexto:
             res["navegador"] = True
-        nav = navega(site, home.url, home.text, m["nome"])
+        if anterior:
+            # só a etapa do sitemap: a navegação anterior (sem plano) é mantida
+            nav = {"melhor": None, "paginas": anterior.get("paginas_visitadas", 0),
+                   "documentos_testados": anterior.get("documentos_testados", 0),
+                   "prazo_esgotado": anterior.get("prazo_esgotado", False)}
+            if anterior.get("busca_interna"):
+                res["busca_interna"] = anterior["busca_interna"]
+            if anterior.get("documentos_vetados_robots"):
+                res["documentos_vetados_robots"] = anterior["documentos_vetados_robots"]
+        else:
+            nav = navega(site, home.url, home.text, m["nome"])
         res["paginas_visitadas"] = nav["paginas"]
         res["documentos_testados"] = nav["documentos_testados"]
         if nav["prazo_esgotado"]:
             res["prazo_esgotado"] = True
+        if not nav["melhor"]:
+            # plano não achado navegando: o sitemap diz onde ele está, e a busca do caminho
+            # a partir da página inicial é refeita mirando esse destino
+            sm = descobre_por_sitemap(site, home.url, m["nome"])
+            res["sitemap"] = {"urls": sm["urls_sitemap"]}
+            if sm.get("alvo"):
+                alvo = sm["alvo"]
+                res["sitemap"].update(doc=alvo["doc"], pagina=alvo["pagina"])
+                nav2 = navega(site, home.url, home.text, m["nome"], alvo)
+                res["paginas_visitadas"] += nav2["paginas"]
+                if nav2["melhor"]:
+                    nav = nav2
+                    res["descoberto_por"] = "sitemap"
+                else:
+                    res.update(via="sitemap", documento=alvo["documento"],
+                               caminho=[{"url": alvo["pagina"] or alvo["doc"], "texto": "localizado pelo sitemap"}])
         if nav["melhor"]:
             res.update(via="navegacao", cliques=len(nav["melhor"]["caminho"]), caminho=nav["melhor"]["caminho"],
                        documento=nav["melhor"]["documento"])
+        elif res.get("via") == "sitemap":
+            pass
         else:
             bi = busca_interna(site, home.url, home.text, m["nome"])
             res["busca_interna"] = {k: bi[k] for k in ("formulario", "achou") if k in bi}
@@ -482,7 +616,7 @@ def coleta(m: dict, overrides: dict) -> dict:
             # documentos candidatos que o robots.txt não deixou baixar: conferência manual
             docs = [u for u in site.vetadas if EXT_DOC.search(u) or FORTE.search(normalizar_texto(u))]
             if docs:
-                res["documentos_vetados_robots"] = docs[:10]
+                res["documentos_vetados_robots"] = list(dict.fromkeys(res.get("documentos_vetados_robots", []) + docs))[:10]
         res["segundos"] = round(time.time() - t0, 1)
         return res
     finally:
@@ -494,6 +628,9 @@ def main():
     ap.add_argument("--municipio", action="append")
     ap.add_argument("--limit", type=int)
     ap.add_argument("--refazer", action="store_true")
+    ap.add_argument("--nao-encontrados", action="store_true", help="recoleta os sites acessíveis em que o plano não foi achado")
+    ap.add_argument("--so-sitemap", action="store_true",
+                    help="com --nao-encontrados: mantém a navegação já feita e roda só a etapa do sitemap")
     ap.add_argument("--lentos", action="store_true", help="recoleta só os que esgotaram o prazo sem achar o plano")
     ap.add_argument("--situacao", action="append",
                     help="recoleta só os já coletados com esta situação (ex.: acesso_recusado, inacessivel)")
@@ -510,6 +647,9 @@ def main():
     if a.municipio:
         alvo = {normalizar_texto(x) for x in a.municipio}
         municipios = [m for m in municipios if normalizar_texto(m["nome"]) in alvo]
+    elif a.nao_encontrados:
+        municipios = [m for m in municipios if estado.get(m["nome"], {}).get("site_status") == "ok"
+                      and estado[m["nome"]].get("via") == "nao_encontrado"]
     elif a.lentos:
         municipios = [m for m in municipios if estado.get(m["nome"], {}).get("prazo_esgotado")
                       and estado[m["nome"]].get("via") == "nao_encontrado"]
@@ -525,7 +665,10 @@ def main():
 
     def tarefa(m):
         try:
-            r = coleta(m, overrides)
+            ant = estado.get(m["nome"]) if a.so_sitemap else None
+            r = coleta(m, overrides, ant)
+            if ant and r.get("site_status") != "ok":
+                r = ant  # site fora do ar agora: não apaga a coleta anterior
         except Exception as e:
             r = {"codigo_ibge": m["codigo_ibge"], "coletado_em": agora(), "via": "erro", "erro": repr(e)[:300]}
         with trava:

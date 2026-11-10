@@ -111,7 +111,9 @@ async function main() {
         ? conferencia
           ? `Não avaliado: ${conferencia}.`
           : `Plano não encontrado no site ${r.home ?? r.site_base} (navegação até ${8} cliques e busca interna).`
-        : `${componentes.caminho} (${via === 'navegacao' ? `${r.cliques} clique(s)` : 'busca interna'}). Documento: ${doc.url}`;
+        : via === 'sitemap'
+          ? `Plano publicado no site, mas sem caminho de navegação a partir da página inicial (localizado pelo sitemap). Documento: ${doc.url}`
+          : `${componentes.caminho} (${via === 'navegacao' ? `${r.cliques} clique(s)` : 'busca interna'}). Documento: ${doc.url}`;
 
     dados.indicadores[P9.id] = {
       grupo: P9.grupo,

@@ -384,13 +384,14 @@ export const INDICADORES: IndicadorDef[] = [
     formula: 'cliques da página inicial do site da prefeitura até o documento do plano (coleta automática + conferência manual)',
     criterio:
       'VERDE: plano no site da prefeitura em até 5 cliques a partir da página inicial. ' +
-      'AMARELO: no site com mais de 5 cliques, só pela busca interna do site, ou em versão mais antiga que a do Prepara RS. ' +
+      'AMARELO: no site com mais de 5 cliques, só pela busca interna do site, publicado sem caminho de navegação a partir da ' +
+      'página inicial (localizado pelo sitemap), ou em versão mais antiga que a do Prepara RS. ' +
       'VERMELHO: plano disponível apenas no Prepara RS.',
     pergunta: '',
     coleta: 'monitor/acessibilidade.py → npm run p9',
     campos: [
       { nome: 'situacao_site', tipo: 'enum', descricao: 'acesso ao site na coleta', opcoes: ['ok', 'inacessivel', 'acesso_recusado', 'robots_veta'] },
-      { nome: 'via', tipo: 'enum', descricao: 'como o plano foi encontrado', opcoes: ['navegacao', 'busca_interna', 'nao_encontrado'] },
+      { nome: 'via', tipo: 'enum', descricao: 'como o plano foi encontrado', opcoes: ['navegacao', 'busca_interna', 'sitemap', 'nao_encontrado'] },
       { nome: 'cliques', tipo: 'numero', descricao: 'cliques da página inicial até o documento (navegação)' },
       { nome: 'versao', tipo: 'enum', descricao: 'versão do plano do site frente à analisada (Prepara RS)', opcoes: ['mesma', 'mais_recente', 'mais_antiga', 'indeterminada'] },
       { nome: 'url_documento', tipo: 'texto', descricao: 'endereço do plano no site' },
@@ -400,8 +401,9 @@ export const INDICADORES: IndicadorDef[] = [
     // Site fora do ar, que recusa acesso automatizado ou veta robôs: sem cor até a conferência
     // manual (_ajustes_manuais.json). Nunca vira vermelho sem verificação.
     calcular: (c) => {
-      if (c.via === 'navegacao' || c.via === 'busca_interna') {
-        if (c.via === 'busca_interna' || c.versao === 'mais_antiga') return 'amarelo';
+      if (c.via === 'navegacao' || c.via === 'busca_interna' || c.via === 'sitemap') {
+        // sitemap: o plano está publicado, mas não se chegou a ele navegando a partir da página inicial
+        if (c.via !== 'navegacao' || c.versao === 'mais_antiga') return 'amarelo';
         const n = paraNumero(c.cliques);
         return n !== null && n <= 5 ? 'verde' : 'amarelo';
       }

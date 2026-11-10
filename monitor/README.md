@@ -116,6 +116,11 @@ clicado (a evidência do P9). O documento só vale se o texto for o plano de Def
   User-Agent e respeito ao `robots.txt`. Site que veta robôs ou recusa o acesso
   automatizado não é contornado: vai para conferência manual.
 - Páginas iniciais montadas em JavaScript são abertas com navegador (Playwright).
+- Se a navegação não acha o plano, o `sitemap.xml` é usado só para localizá-lo; os cliques
+  continuam sendo contados a partir da página inicial, numa busca que mira o endereço
+  encontrado. Plano no sitemap sem caminho a partir da página inicial = amarelo.
+- Para refazer só a etapa do sitemap nos não encontrados:
+  `python acessibilidade.py --nao-encontrados --so-sitemap`.
 - Muitos sites recusam acessos de fora do Brasil: rode a partir de uma conexão no país
   (por isso a coleta não roda no GitHub Actions).
 

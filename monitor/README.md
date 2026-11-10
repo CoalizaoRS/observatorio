@@ -105,6 +105,28 @@ python monitor.py
 Para enviar e-mail localmente, exporte as variáveis antes de rodar (veja
 "Configuração de e-mail" abaixo) e não use `--dry-run`.
 
+## Rodando da sua máquina, além do GitHub
+
+Muitos sites de prefeitura recusam acessos de fora do Brasil, onde roda o GitHub Actions.
+Por isso o monitor também pode ser executado de uma máquina no país, publicando o
+`state.json` na `main` como o workflow faz:
+
+```bash
+monitor/rodar-local.sh               # rodada completa + commit/push do state.json
+monitor/rodar-local.sh --dry-run     # sem enviar e-mail
+SEM_PUSH=1 monitor/rodar-local.sh    # roda, mas não publica
+```
+
+- O script usa uma worktree temporária da `origin/main` (não mexe na sua cópia de
+  trabalho) e cria um ambiente Python em `monitor/.venv` na primeira vez.
+- E-mail: coloque `RESEND_API_KEY`, `EMAIL_FROM` e `EMAIL_TO` em `monitor/.env` (fora do
+  git). Sem elas, o relatório só é impresso.
+- Cada execução registra a origem (`MONITOR_ORIGEM`: `github` no workflow, `local` aqui).
+  O `state.json` guarda o acesso por origem em `acesso` (`{"github": {...}, "local":
+  {...}}`), e uma origem que não alcança o site **não apaga** o plano encontrado pela outra.
+  Uma falha de download também não apaga o plano já conhecido.
+- Para agendar no macOS, use um LaunchAgent (`launchctl`) ou `cron` chamando o script.
+
 ## Indicador P9: plano público e acessível
 
 `acessibilidade.py` navega no site de cada prefeitura a partir da página inicial e grava em

@@ -23,8 +23,9 @@
 import { promises as fs, readFileSync } from 'fs';
 import * as path from 'path';
 import { MUNICIPIOS, buildFilterAddOn, MunicipioMatch } from '../municipios';
-import { INDICADORES, IndicadorDef, CampoDef, paraNumero } from './definicoes';
+import { INDICADORES, EXPERIMENTAIS, IndicadorDef, CampoDef, paraNumero } from './definicoes';
 import { retrieve } from './retrieve';
+import { varreduraLocal } from './retrieve-local';
 import { RAG_PROVIDER } from '../config';
 
 const OUT_DIR = path.resolve(__dirname, '../../indicadores');
@@ -139,8 +140,21 @@ async function extraiIndicador(
   const ehSemaforo = ind.unidade.startsWith('semáforo');
   const semNA = (v: any) => (ehSemaforo ? 'vermelho' : 'N/A');
   try {
-    const { text, tokens } = await retrieve(municipio, filterAddOn, montaPergunta(ind), { ancoras: ind.ancoras });
-    const json = extraiJson(text);
+    let text: string;
+    let tokens: number;
+    let json: Record<string, any> | null;
+    if (LOCAL && ind.varredura) {
+      // plano inteiro em partes; partes com JSON inválido são descartadas (registradas em partes_invalidas)
+      const partes = await varreduraLocal(municipio, montaPergunta(ind));
+      const jsons = partes.map((p) => extraiJson(p.text));
+      tokens = partes.reduce((s, p) => s + p.tokens, 0);
+      text = partes.map((p) => p.text).join('\n');
+      const validos = jsons.filter((j): j is Record<string, any> => !!j);
+      json = validos.length ? { ...ind.varredura(validos), partes_invalidas: jsons.length - validos.length } : null;
+    } else {
+      ({ text, tokens } = await retrieve(municipio, filterAddOn, montaPergunta(ind), { ancoras: ind.ancoras }));
+      json = extraiJson(text);
+    }
     if (!json) {
       return { ...base, valor: semNA('N/A'), componentes: {}, evidencia: text.slice(0, 300), confianca: 'baixa', tokens, erro: 'JSON não parseável' };
     }
@@ -149,6 +163,7 @@ async function extraiIndicador(
     const componentes: Record<string, any> = {};
     for (const c of ind.campos) if (c.nome !== 'valor') componentes[c.nome] = json[c.nome] ?? 'N/A';
     if (ind.derivar) Object.assign(componentes, ind.derivar(json));
+    for (const k of ['partes_lidas', 'partes_invalidas']) if (json[k] !== undefined) componentes[k] = json[k];
 
     // Valor final: razão calculada em TS, ou o `valor` retornado pelo modelo.
     let valor: number | string;
@@ -217,8 +232,8 @@ async function main() {
   await fs.mkdir(OUT_DIR, { recursive: true });
 
   const indicadores = args.indicadores
-    ? INDICADORES.filter((i) => args.indicadores!.includes(i.id))
-    : INDICADORES;
+    ? [...INDICADORES, ...EXPERIMENTAIS].filter((i) => args.indicadores!.includes(i.id))
+    : INDICADORES; // experimentais (cenários) só quando pedidos por --indicadores
   if (indicadores.length === 0) throw new Error(`Nenhum indicador corresponde a: ${args.indicadores}`);
 
   let cidades = Object.keys(DOCUMENTOS).sort();
@@ -267,7 +282,7 @@ async function main() {
     const anterior = await carregaAnterior(municipio);
     const mesclado: Record<string, any> = {};
     let tokensCidade = 0;
-    for (const ind of INDICADORES) {
+    for (const ind of [...INDICADORES, ...EXPERIMENTAIS]) {
       if (porId[ind.id]) {
         // método por indicador: num mesmo arquivo podem conviver indicadores de passes diferentes
         mesclado[ind.id] = { ...porId[ind.id], metodo: METODO };

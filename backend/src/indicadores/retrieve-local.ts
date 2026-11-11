@@ -239,30 +239,82 @@ async function consulta(municipio: string, pergunta: string, MAX_CHARS: number, 
     escolhidos = [...vistos].sort((a, b) => a - b); // ordem do documento ajuda o modelo a ler tabelas e seções em sequência
   }
 
-  const contexto = escolhidos
+  return conversa(municipio, `Trechos do PLANCON:\n\n${monta(indice, escolhidos)}`, pergunta);
+}
+
+/** Trechos escolhidos, na ordem do documento, com arquivo e página. */
+function monta(indice: Indice, escolhidos: number[]): string {
+  return escolhidos
     .map((i, k) => {
       const t = indice.trechos[i];
       const origem = `${path.basename(t.arquivo)}${t.pagina ? `, p. ${t.pagina}` : ''}`;
       return `[Trecho ${k + 1} — ${origem}]\n${t.texto}`;
     })
     .join('\n\n');
+}
 
+async function conversa(municipio: string, contexto: string, pergunta: string, maxTokens = 1024): Promise<RetrieveResult> {
   const data = await postJson(`${CHAT_URL}/v1/chat/completions`, {
     messages: [
       { role: 'system', content: SISTEMA },
       {
         role: 'user',
-        content: `Município da consulta: ${municipio}.\n\nTrechos do PLANCON:\n\n${contexto}\n\n---\n\n${pergunta}`,
+        content: `Município da consulta: ${municipio}.\n\n${contexto}\n\n---\n\n${pergunta}`,
       },
     ],
     // Com raciocínio, a gramática JSON só pode valer para a resposta final; o llama-server
     // separa o <think> em reasoning_content e extrair.ts já recorta o JSON do texto.
     ...(THINKING
       ? { temperature: 0.6, top_p: 0.95, max_tokens: 4096 }
-      : { temperature: 0.1, max_tokens: 1024, response_format: { type: 'json_object' } }),
+      : { temperature: 0.1, max_tokens: maxTokens, response_format: { type: 'json_object' } }),
     chat_template_kwargs: { enable_thinking: THINKING },
   });
   const text: string = data?.choices?.[0]?.message?.content ?? '';
   const tokensUsados = (data?.usage?.prompt_tokens || 0) + (data?.usage?.completion_tokens || 0);
   return { text, tokens: tokensUsados };
+}
+
+// ---------------------------------------------------------------------------
+// Varredura: o plano INTEIRO em partes consecutivas (para indicadores que listam itens
+// espalhados pelo documento, ex.: áreas de risco no P1S4). Cada parte vai com o município,
+// o arquivo/páginas e "parte k de N"; o último trecho de uma parte se repete no início da
+// seguinte, para tabelas que atravessam o corte. A fusão das respostas fica com o indicador.
+// ---------------------------------------------------------------------------
+const VARREDURA_CHARS = Number(process.env.RAG_VARREDURA_CHARS) || 20000; // sobra espaço para respostas longas
+
+export async function varreduraLocal(municipio: string, pergunta: string): Promise<RetrieveResult[]> {
+  const indice = carregaIndice(municipio);
+  const partes: number[][] = [];
+  let atual: number[] = [];
+  let chars = 0;
+  indice.trechos.forEach((t, i) => {
+    if (atual.length && chars + t.texto.length > VARREDURA_CHARS) {
+      partes.push(atual);
+      const ultimo = atual[atual.length - 1];
+      atual = indice.trechos[ultimo].texto.length < VARREDURA_CHARS / 3 ? [ultimo] : []; // sobreposição
+      chars = atual.reduce((s, j) => s + indice.trechos[j].texto.length, 0);
+    }
+    atual.push(i);
+    chars += t.texto.length;
+  });
+  if (atual.length) partes.push(atual);
+
+  const resultados: RetrieveResult[] = [];
+  for (let k = 0; k < partes.length; k++) {
+    const ps = partes[k].map((i) => indice.trechos[i].pagina).filter(Boolean);
+    const onde = ps.length ? ` (páginas ${ps[0]}–${ps[ps.length - 1]})` : '';
+    const cab =
+      `Parte ${k + 1} de ${partes.length} do PLANCON${onde}. Responda SOMENTE com o que estiver nesta parte; ` +
+      `as outras partes são lidas separadamente.\n\nTrechos do PLANCON:\n\n`;
+    for (let limite = VARREDURA_CHARS; ; limite = Math.floor(limite * 0.7)) {
+      try {
+        const texto = monta(indice, partes[k]);
+        resultados.push(await conversa(municipio, cab + texto.slice(0, limite + 2000), pergunta, 2048));
+        break;
+      } catch (e) {
+        if (!/exceed_context_size/.test((e as Error).message) || limite < 4000) throw e;
+      }
+    }
+  }
+  return resultados;
 }

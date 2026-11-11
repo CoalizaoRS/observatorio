@@ -13,6 +13,9 @@
  * filterAddOn), reduzindo o contexto recuperado — e o consumo de tokens.
  */
 
+import { readFileSync } from 'fs';
+import * as path from 'path';
+
 export type TipoCampo = 'numero' | 'texto' | 'enum';
 
 export interface CampoDef {
@@ -20,6 +23,10 @@ export interface CampoDef {
   tipo: TipoCampo;
   descricao: string;
   opcoes?: string[];
+  /** Não é pedido ao modelo: vem de `derivar` ou `complementar` (mas vai para o CSV). */
+  calculado?: boolean;
+  /** Como o valor vai para a coluna do CSV (default: o valor como texto). */
+  paraCsv?: (v: any) => string;
 }
 
 export interface IndicadorDef {
@@ -40,8 +47,17 @@ export interface IndicadorDef {
    * Para termos que a busca semântica dilui em planos longos (ex.: "ROTA 01", "Rotas de fuga").
    */
   ancoras?: RegExp;
+  /**
+   * Varredura do plano inteiro em partes (RAG do LAD): o modelo responde por parte e esta função
+   * funde as respostas num único JSON, antes de `calcular`/`derivar`. Sem ela, usa a busca por trechos.
+   */
+  varredura?: (partes: Record<string, any>[]) => Record<string, any>;
   /** Componentes numéricos derivados (ex.: razões de apoio) mesclados aos extraídos. */
   derivar?: (campos: Record<string, any>) => Record<string, any>;
+  /** Dados de fora do plano (ex.: setorização do SGB) somados aos campos antes de `derivar`/`calcular`. */
+  complementar?: (municipio: string) => Record<string, any>;
+  /** Texto de evidência montado a partir dos componentes, no lugar da citação devolvida pelo modelo. */
+  evidencia?: (componentes: Record<string, any>) => string;
 }
 
 /** Converte para número aceitando "1.234", "1.234,56", "R$ 10.000,00", etc. */
@@ -89,42 +105,190 @@ function listaDeMeios(v: any): string[] {
     .filter((s) => s && !/^n\/?a$/i.test(s));
 }
 
+/**
+ * P1: itens de `areas_risco` ("local | ameaça | população | trecho") → áreas e se cada uma tem população.
+ * `base` é o trecho literal de onde veio a população. Aceita array ou texto separado por ";"/quebra de linha.
+ * Descarta locais genéricos (sem nome próprio), como "áreas planas junto aos arroios", "escolas", "encostas".
+ */
+const AREA_AMPLA = /munic[íi]pio|territ[óo]rio|\bsede\b|zona (rural|urbana)|[áa]rea (rural|urbana)|interior|^(rural|urbana)/i;
+function areaNomeada(local: string): boolean {
+  if (AREA_AMPLA.test(local) || local === local.toUpperCase()) return true;
+  return local.split(/\s+/).slice(1).some((w) => /^[A-ZÀ-Ý0-9]/.test(w)) || /^[A-ZÀ-Ý]/.test(local) && !/^(Á|A)reas?\b|^Locais\b|^Regi(ão|ões)\b|^Pontos\b|^Bairros\b|^Escolas?\b|^Hospita/i.test(local);
+}
+const ABRIGO_LOCAL = /^(gin[áa]sio|escola|E\.?\s?M\.?\s?E\.?\s?[FIM]|EMEI|EMEF|sal[ãa]o|est[áa]dio|igreja|par[óo]quia|CTG|clube|centro comunit|abrigo)/i;
+const ABRIGO_TRECHO = /\babrigo|alojamento|capacidade/i;
+// ano de um evento ("em outubro de 2021", "nos anos de 2022 e 2023"); não o ano da fonte ("IBGE 2022", "SGB-CPRM 2025")
+const EVENTO_DATADO = /\b(em|nos anos de|no ano de|desde)\s+(\p{L}+\s+de\s+)?(19|20)\d{2}\b/iu;
+function areasDeRisco(v: any): { local: string; ameaca: string; populacao: string; base: string }[] {
+  const itens = Array.isArray(v) ? v.map((x) => (typeof x === 'string' ? x : Object.values(x ?? {}).join(' | '))) : typeof v === 'string' ? v.split(/[;\n]/) : [];
+  return itens
+    .map((s) => String(s).split('|').map((p) => p.trim()))
+    .filter((p) => p[0] && !/^n\/?a$/i.test(p[0]) && areaNomeada(p[0]))
+    // abrigos/pontos de acolhimento não são áreas de risco (a capacidade não é população exposta)
+    .filter((p) => !ABRIGO_LOCAL.test(p[0]) && !ABRIGO_TRECHO.test(p.slice(3).join(' ')))
+    // "local | ameaça | população | base"; sem a 4ª coluna, a população é a última
+    .map((p) => (p.length >= 4 ? { local: p[0], ameaca: p[1], populacao: p[2], base: p[3] } : { local: p[0], ameaca: p.length >= 3 ? p[1] : '', populacao: p[p.length - 1] ?? '', base: '' }));
+}
+/**
+ * População em risco ATUAL informada para a área: número, não só imóveis (residências/domicílios/casas sem
+ * pessoas ou famílias), e não o impacto de um evento passado (atingidos/danos de um desastre já ocorrido).
+ */
+function temPopulacao(a: { populacao: string; base: string }): boolean {
+  const p = a.populacao;
+  // evento passado, pelo trecho citado (o modelo não distingue bem sozinho)
+  if (/passad|tiveram|foram (atingid|afetad|desabrig|desaloj)|atingiu|atingidas? (pel|na|no|em)|ocorrid|tiveram danos|desabrigad|desalojad|enchente de/i.test(a.base) || EVENTO_DATADO.test(a.base)) return false;
+  // capacidade de abrigo/local de acolhimento não é população em risco
+  if (/abrigo|capacidade|vagas|gin[áa]sio|sal[ãa]o|escola|acolhimento/i.test(a.base)) return false;
+  if (!/\d/.test(p) || /^\s*n\/?a\s*$/i.test(p)) return false;
+  return !/resid[êe]ncia|domic[íi]lio|casas?\b|im[óo]ve(l|is)|edifica/i.test(p) || /pessoa|fam[íi]lia|morador|habitante|afetad|residente/i.test(p);
+}
+
+/** Setorização de risco do SGB por município (backend/fontes/sgb_areas_risco.csv), lida uma vez. */
+const SGB_CSV = path.resolve(__dirname, '../../fontes/sgb_areas_risco.csv');
+let sgbCache: Map<string, Record<string, string>> | null = null;
+const chaveMunicipio = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+function sgbDoMunicipio(municipio: string): Record<string, string> | undefined {
+  if (!sgbCache) {
+    const [cab, ...linhas] = readFileSync(SGB_CSV, 'utf-8').trim().split('\n').map((l) => l.split(','));
+    sgbCache = new Map(linhas.map((v) => [chaveMunicipio(v[0]), Object.fromEntries(cab.map((k, i) => [k, v[i]]))]));
+  }
+  return sgbCache.get(chaveMunicipio(municipio));
+}
+
+/** P1: cor só pelo plano (regra do cenário S4). */
+function corDoPlano(c: Record<string, any>): string {
+  const areas = areasDeRisco(c.areas_risco);
+  if (areas.length === 0) return /^sim$/i.test(String(c.municipio_todo_em_risco ?? '')) ? 'amarelo' : 'vermelho';
+  return areas.every(temPopulacao) ? 'verde' : 'amarelo';
+}
+
+/** P1: texto de evidência a partir das áreas do plano e da setorização do SGB. */
+function resumoP1(c: Record<string, any>): string {
+  const areas = areasDeRisco(c.areas_risco);
+  const com = areas.filter(temPopulacao);
+  let plano: string;
+  if (areas.length === 0) {
+    plano = /^sim$/i.test(String(c.municipio_todo_em_risco ?? ''))
+      ? 'Plano: trata o município inteiro como área de risco, sem dimensionar a população exposta.'
+      : 'Plano: não identifica áreas de risco.';
+  } else {
+    const quantas = com.length === areas.length ? (areas.length === 1 ? 'com' : 'todas com') : com.length === 0 ? 'nenhuma com' : `${com.length} com`;
+    const ex = (com.length ? com : areas)
+      .slice(0, 3)
+      .map((a) => `${a.local}${a.ameaca && !/^n\/?a$/i.test(a.ameaca) ? ` (${a.ameaca})` : ''}${temPopulacao(a) ? `: ${a.populacao}` : ''}`)
+      .join('; ');
+    plano = `Plano: ${areas.length} área(s) de risco identificada(s), ${quantas} população informada. Ex.: ${ex}.`;
+  }
+  const setores = paraNumero(c.sgb_setores) ?? 0;
+  const pessoas = paraNumero(c.sgb_pessoas);
+  const pct = paraNumero(c.sgb_percentual_pop);
+  const sgb = setores
+    ? `SGB: ${setores} setor(es) de risco alto/muito alto mapeado(s) (${c.sgb_ano})` +
+      (pessoas !== null ? `, cerca de ${Math.round(pessoas).toLocaleString('pt-BR')} pessoas` : '') +
+      (pct !== null ? ` (${pct.toLocaleString('pt-BR', { maximumFractionDigits: 1 })}% da população, estimativa do SGB)` : '') +
+      '.'
+    : 'SGB: município sem setorização de risco do SGB.';
+  return `${plano} ${sgb}`;
+}
+
+/**
+ * Indicadores experimentais (cenários de critério em avaliação). Não entram no painel nem no consolidar:
+ * só são extraídos quando pedidos explicitamente (--indicadores <id>), e ficam ao lado dos oficiais no JSON.
+ * O cenário P1S4 virou a parte "plano" do P1 oficial (critério S5) em 2026-11-11.
+ */
+export const EXPERIMENTAIS: IndicadorDef[] = [];
+
 export const INDICADORES: IndicadorDef[] = [
   {
+    // Critério S5, aprovado pelo comitê em 2026-11 (relatório "Critérios para o P1"):
+    // o melhor entre o plano (áreas de risco e população por área) e a setorização de risco do SGB.
+    // Verde mede o conhecimento da informação, não a ausência de risco.
     id: 'P1',
     grupo: 'G1 · Pessoas e Equidade',
-    nome: '% população em área de risco',
-    mede: 'Grau de conhecimento da população exposta',
-    unidade: 'semáforo (verde/vermelho)',
-    formula: 'pessoas estimadas em área de risco ÷ população total',
+    nome: 'Mapeamento de áreas de risco',
+    mede: 'Conhecimento das áreas de risco e da população exposta',
+    unidade: 'semáforo (verde/amarelo/vermelho)',
+    formula: 'áreas de risco e população informadas no PLANCON, ou setorização de risco do SGB (vale a melhor)',
+    // critério do plano (é o que o modelo avalia); a setorização do SGB entra depois, em `complementar`
     criterio:
-      'VERDE: SOMENTE se o PLANCON declara um número (ou estimativa) ESPECÍFICO de pessoas/famílias que RESIDEM/VIVEM em ÁREAS DE RISCO. ' +
-      'VERMELHO: qualquer outro caso. NÃO contam como população em área de risco: (a) a POPULAÇÃO TOTAL do município (censo/IBGE); ' +
-      '(b) o número de pessoas ATINGIDAS / AFETADAS / DESALOJADAS por um evento passado (ex.: "a enchente de 2024 atingiu X pessoas") — ' +
-      'afetados por um desastre NÃO é o mesmo que residentes em área de risco. Não há AMARELO.',
+      'VERDE: o PLANCON cita áreas de risco e informa a população em risco (pessoas ou famílias) de TODAS elas. ' +
+      'AMARELO: cita áreas de risco, mas sem a população de todas. ' +
+      'VERMELHO: não cita nenhuma área de risco. ' +
+      'Conta como área: um local NOMEADO com sua ameaça (bairro, rua, localidade, vila, linha, morro, margem de rio…) ' +
+      'ou o MUNICÍPIO INTEIRO citado como em risco (ex.: estiagem ou vendaval em todo o território). ' +
+      'Se o plano diz que não há áreas pontuais/específicas porque os eventos podem ocorrer em QUALQUER parte do município, ' +
+      'isso conta como o MUNICÍPIO INTEIRO em risco. ' +
+      'A população precisa ser a ATUAL em risco: número de atingidos/danos de um evento PASSADO não dimensiona a área. ' +
+      'Não conta: menção genérica ("fiscalizar construções em áreas de risco") sem dizer qual é a área.',
     pergunta:
-      'O PLANCON declara um número (ou estimativa) ESPECÍFICO de pessoas/famílias que RESIDEM/VIVEM em ÁREAS DE RISCO do município? ' +
-      'ATENÇÃO, NÃO conte: (a) a população TOTAL do município ("o município tem X habitantes/IBGE"); ' +
-      '(b) pessoas ATINGIDAS/AFETADAS/DESALOJADAS por um evento ("a enchente atingiu X", "X desabrigados") — isso é impacto de um ' +
-      'desastre, não quem mora em área de risco. Só vale um número de RESIDENTES em áreas de risco (mapeamento/estimativa). ' +
-      'Se o documento só traz população total ou afetados, informe populacao_area_risco = "N/A".',
+      'Quais ÁREAS DE RISCO o PLANCON identifica (local nomeado e ameaça, ou o município inteiro em risco), e qual a POPULAÇÃO ' +
+      'em risco (nº de pessoas ou famílias) informada para CADA área? ' +
+      'A população precisa estar ligada àquela área (ex.: "Vila X — deslizamento — 40 famílias"; no formato SEGIRD, o ' +
+      '"Nº de afetados" da área). NÃO use a população geral do município da seção de dados do município, nem números de ' +
+      'residências/domicílios sem pessoas ou famílias. Informe também a população total do município, se o plano trouxer.',
     campos: [
-      { nome: 'valor', tipo: 'enum', descricao: 'VERDE só com nº de RESIDENTES em área de risco; senão VERMELHO', opcoes: ['verde', 'vermelho'] },
-      { nome: 'populacao_area_risco', tipo: 'numero', descricao: 'nº/estimativa de pessoas que RESIDEM em áreas de risco ("N/A" se só houver população total OU número de afetados/atingidos por evento)' },
-      { nome: 'populacao_total', tipo: 'numero', descricao: 'população total do município (ou "N/A")' },
-      { nome: 'tipo_do_numero', tipo: 'texto', descricao: 'a que se refere o número informado: "residentes em area de risco", "populacao total", "afetados por evento" ou "N/A"' },
+      { nome: 'valor', tipo: 'enum', descricao: 'semáforo (será recalculado a partir da lista de áreas)', opcoes: SEMAFORO },
+      {
+        nome: 'areas_risco',
+        tipo: 'texto',
+        descricao:
+          'lista das áreas de risco DESTE município citadas (até 30), um item por área no formato "local | ameaça | população | trecho", ' +
+          'onde população é o nº de pessoas ou famílias informado para a área (com a unidade) ou "N/A", e trecho é a citação ' +
+          'LITERAL curta do documento de onde saiu a população (ou "N/A"). Só locais com NOME (bairro, vila, rua, linha, ' +
+          'localidade, distrito, morro, arroio…), zona urbana/rural ou o município inteiro; NÃO liste categorias genéricas ' +
+          '(escolas, hospitais, encostas, "áreas planas"), exemplos de outros lugares ou textos teóricos. [] se nenhuma área for citada',
+        // no CSV, sem o trecho citado: "local (ameaça): população; …"
+        paraCsv: (v) =>
+          areasDeRisco(v)
+            .map((a) => `${a.local}${a.ameaca && !/^n\/?a$/i.test(a.ameaca) ? ` (${a.ameaca})` : ''}${temPopulacao(a) ? `: ${a.populacao}` : ''}`)
+            .join('; '),
+      },
+      { nome: 'municipio_todo_em_risco', tipo: 'enum', descricao: 'o plano cita o município inteiro como área de risco (inclui "não há áreas específicas; os eventos podem ocorrer em todo o município")?', opcoes: ['sim', 'nao'] },
+      { nome: 'populacao_total', tipo: 'numero', descricao: 'população total do município informada no plano (ou "N/A")' },
+      { nome: 'n_areas', tipo: 'numero', descricao: 'áreas de risco identificadas no plano', calculado: true },
+      { nome: 'n_areas_com_populacao', tipo: 'numero', descricao: 'áreas com população em risco informada', calculado: true },
+      { nome: 'cor_plano', tipo: 'enum', descricao: 'semáforo só pelo plano', opcoes: SEMAFORO, calculado: true },
+      { nome: 'sgb_setores', tipo: 'numero', descricao: 'setores de risco alto/muito alto mapeados pelo SGB (0 = sem setorização)', calculado: true },
+      { nome: 'sgb_pessoas', tipo: 'numero', descricao: 'pessoas nos setores de risco (estimativa do SGB)', calculado: true },
+      { nome: 'sgb_percentual_pop', tipo: 'numero', descricao: 'pessoas nos setores do SGB ÷ população do Censo 2022, em %', calculado: true },
+      { nome: 'sgb_ano', tipo: 'texto', descricao: 'ano(s) da setorização do SGB', calculado: true },
     ],
-    // Determinístico: verde só se há nº de RESIDENTES em área de risco (≠ total, ≠ afetados).
-    calcular: (c) => {
-      const par = paraNumero(c.populacao_area_risco);
-      const tot = paraNumero(c.populacao_total);
-      const tipo = String(c.tipo_do_numero || '').toLowerCase();
-      if (par === null) return 'vermelho';                    // sem número
-      if (tot !== null && par === tot) return 'vermelho';     // usou a população total
-      if (/afetad|atingid|desaloj|desabrig|total/.test(tipo)) return 'vermelho'; // não são residentes
-      return 'verde';
+    // Áreas espalhadas por planos longos: lê o plano todo em partes e junta as listas.
+    // A mesma área em duas partes (resumo + detalhe) conta uma vez, ficando a versão com população atual.
+    varredura: (partes) => {
+      const porLocal = new Map<string, string>();
+      for (const p of partes) {
+        for (const a of areasDeRisco(p.areas_risco)) {
+          const k = chaveMunicipio(a.local);
+          const item = [a.local, a.ameaca, a.populacao, a.base].join(' | ');
+          const antes = porLocal.get(k);
+          if (!antes || (!temPopulacao(areasDeRisco([antes])[0]) && temPopulacao(a))) porLocal.set(k, item);
+        }
+      }
+      const evid = partes.map((p) => p.evidencia).filter((e) => typeof e === 'string' && e && !/^n\/?a$/i.test(e));
+      return {
+        areas_risco: [...porLocal.values()],
+        municipio_todo_em_risco: partes.some((p) => /^sim$/i.test(String(p.municipio_todo_em_risco ?? ''))) ? 'sim' : 'nao',
+        populacao_total: partes.map((p) => p.populacao_total).find((v) => paraNumero(v) !== null) ?? 'N/A',
+        evidencia: evid.slice(0, 3).join(' … ') || 'N/A',
+        confianca: 'media',
+        partes_lidas: partes.length,
+      };
     },
-    derivar: (c) => ({ percentual_pop_risco: razao(c.populacao_area_risco, c.populacao_total, 100) }),
+    ancoras: /[áa]reas? de risco|CLASSIFICA[ÇC][ÃA]O DO RISCO|N[º°o]\.? de afetados|Local\s*\|?\s*Risco|setor(es)? de risco/i,
+    complementar: (municipio) => {
+      const s = sgbDoMunicipio(municipio);
+      return s
+        ? { sgb_setores: Number(s.setores), sgb_pessoas: Number(s.pessoas), sgb_percentual_pop: Number(s.percentual_pop), sgb_ano: s.ano }
+        : { sgb_setores: 0, sgb_pessoas: 'N/A', sgb_percentual_pop: 'N/A', sgb_ano: 'N/A' };
+    },
+    derivar: (c) => {
+      const areas = areasDeRisco(c.areas_risco);
+      return { n_areas: areas.length, n_areas_com_populacao: areas.filter(temPopulacao).length, cor_plano: corDoPlano(c) };
+    },
+    // S5: setorização do SGB → verde; senão, a cor do plano.
+    calcular: (c) => ((paraNumero(c.sgb_setores) ?? 0) > 0 ? 'verde' : corDoPlano(c)),
+    evidencia: resumoP1,
   },
   {
     id: 'P2',

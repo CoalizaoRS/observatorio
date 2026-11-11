@@ -31,7 +31,10 @@ ETAPAS=${ETAPAS:-texto+indice+extrair}; ETAPAS=${ETAPAS//+/,}
 LISTA=${LISTA:?defina LISTA=<arquivo com um município por linha>}
 
 RAG=$HOME/observatorio-rag
-TMP=/tmp/rag-$USER-$SLURM_JOB_ID
+# /tmp do nó às vezes está cheio (outros usuários): com menos de 20 GB livres, usa /dev/shm (RAM, conta na --mem).
+BASE_TMP=/tmp
+[ "$(df --output=avail -BG /tmp | tail -1 | tr -dc 0-9)" -lt 20 ] && BASE_TMP=/dev/shm
+TMP=$BASE_TMP/rag-$USER-$SLURM_JOB_ID
 CACHE=$TMP/cache
 PY=$RAG/venv/bin/python
 SYNC="$PY $RAG/rag-local/s3sync.py"

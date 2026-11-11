@@ -41,7 +41,7 @@ import json, os, sys, glob
 d = sys.argv[1]
 desc = {
  '_resumo.csv':'Matriz município × valor de cada indicador (P1..P7)',
- 'P1.csv':'P1 — % população em área de risco (semáforo verde/vermelho)',
+ 'P1.csv':'P1 — Mapeamento de áreas de risco (semáforo)',
  'P2.csv':'P2 — Capacidade de abrigamento (semáforo)',
  'P3.csv':'P3 — Simulados de evacuação (semáforo)',
  'P4.csv':'P4 — Rotas de evacuação (semáforo)',

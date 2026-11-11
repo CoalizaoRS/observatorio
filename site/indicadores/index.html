@@ -431,9 +431,9 @@
         // Configurações Globais dos Indicadores
         const INDICATORS_METADATA = {
             'P1': {
-                title: "1: Quantidade de pessoas em áreas de risco",
-                desc: "O município sabe quantas pessoas vivem em área de risco?",
-                criterio: "VERDE: declara nº específico de RESIDENTES em áreas de risco (mapeamento/estimativa). VERMELHO: não declara — inclui só população total ou nº de afetados por evento."
+                title: "1: Mapeamento de áreas de risco",
+                desc: "O município conhece suas áreas de risco e quantas pessoas vivem nelas?",
+                criterio: "VERDE: o PlanCon identifica as áreas de risco e informa a população de todas elas, OU o município tem setorização de risco do Serviço Geológico do Brasil (SGB). AMARELO: o PlanCon identifica áreas de risco (ou trata o município inteiro como em risco), sem a população de todas. VERMELHO: o PlanCon não identifica áreas de risco e não há setorização do SGB. Verde indica que a informação existe, não que o risco é baixo."
             },
             'P2': {
                 title: "2: Disponibilidade estrutural de abrigos",
@@ -468,7 +468,7 @@
             'consolidado': {
                 title: "Indicadores: Consolidado",
                 desc: "Visão consolidada frente aos 7 indicadores.",
-                criterio: "Cada município é classificado em verde, amarelo ou vermelho por indicador, conforme a análise do PlanCon municipal. Selecione um indicador para ver seu critério."
+                criterio: "Cada município é classificado em verde, amarelo ou vermelho por indicador, conforme a análise do PlanCon municipal (no P1, também a setorização de risco do SGB). Selecione um indicador para ver seu critério."
             }
         };
 

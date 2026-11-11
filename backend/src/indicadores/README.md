@@ -76,6 +76,22 @@ Cada arquivo registra `regras_versao` e `indicadores_reprocessados_neste_passe`.
 npm run extrair -- --force --indicador P1,P3,P4,P5,P6
 ```
 
+### P1 — critério S5 (plano OU setorização do SGB)
+
+Desde 2026-11 o P1 ("Mapeamento de áreas de risco") segue o critério S5 aprovado pelo comitê:
+
+- **Plano:** o modelo lista as áreas de risco citadas no PLANCON (`local | ameaça | população | trecho`),
+  lendo o plano inteiro em partes no LAD (`varredura`). A cor do plano (`cor_plano`) é determinística:
+  todas as áreas com população → verde; áreas sem a população de todas (ou o município inteiro em
+  risco) → amarelo; nenhuma área → vermelho.
+- **SGB:** `complementar` soma os dados de `backend/fontes/sgb_areas_risco.csv` (setores de risco
+  alto/muito alto do Serviço Geológico do Brasil; pessoas e % da população são estimativas do SGB).
+  Município com setorização → verde.
+- O valor final é o melhor dos dois. A evidência é montada a partir das áreas e do SGB (`evidencia`).
+
+Mudou a tabela do SGB? Basta `npm run recalcular -- --indicadores P1 --gravar` e `npm run consolidar`
+(não precisa reextrair). Mudou o plano? Reextraia o P1 no LAD.
+
 ## Configuração (variáveis de ambiente)
 
 Herdadas do backend, com defaults do serviço do Observatório:

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Observatório da Resiliência RS</title>
+    <meta name="description" content="Notícias, métodos e publicações do Observatório da Resiliência RS.">
+
+    <link rel="icon" type="image/png" href="../assets/logo-icone-colorida.png">
+    <link rel="apple-touch-icon" href="../assets/logo-icone-colorida.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            terracotta: '#C85A32',
+                            rust: '#A83E22',
+                            amber: '#E09F3E',
+                            dark: '#2D1517',
+                            deepDark: '#190A0C',
+                            cream: '#FAF7F2',
+                            softBg: '#F3EDE2'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-color: #2D1517;
+            background-image: radial-gradient(#C85A32 0.75px, transparent 0.75px), radial-gradient(#C85A32 0.75px, #2D1517 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-gray-900 font-sans antialiased selection:bg-brand-amber selection:text-brand-dark">
+
+    <header class="sticky top-0 z-50 bg-brand-cream/90 backdrop-blur-md border-b border-brand-terracotta/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="../" class="flex items-center gap-3 group">
+                <img src="../assets/logo-icone-colorida.png" alt="Observatório da Resiliência RS" class="w-11 h-11 object-contain group-hover:scale-105 transition-transform">
+                <div class="flex flex-col">
+                    <span class="font-display font-bold text-lg text-brand-dark leading-none tracking-tight">OBSERVATÓRIO</span>
+                    <span class="font-bold text-xs text-brand-terracotta tracking-widest">DA RESILIÊNCIA RS</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-700">
+                <a href="../#sobre" class="hover:text-brand-terracotta transition-colors">O Observatório</a>
+                <a href="../#irm" class="hover:text-brand-terracotta transition-colors">Metodologia IRM</a>
+                <a href="./" class="text-brand-terracotta">Blog</a>
+            </nav>
+            <a href="../indicadores/" class="px-4 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-terracotta text-white hover:bg-brand-rust transition-all shadow-md flex items-center gap-2">
+                <i class="fa-solid fa-chart-line"></i>
+                <span class="hidden sm:inline">Consultar Indicadores</span><span class="sm:hidden">Painel</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="hero-pattern text-white py-14">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-amber">Blog</span>
+            <h1 class="font-display text-3xl sm:text-4xl font-bold mt-2">Notícias, métodos e publicações</h1>
+        </div>
+    </section>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+        <!-- Posts: o mais recente primeiro -->
+        <div class="grid gap-6">
+            <a href="criterio-p1-areas-de-risco/" class="group block rounded-3xl bg-white border border-brand-terracotta/15 p-6 sm:p-8 shadow-sm hover:shadow-md transition-all">
+                <p class="text-xs font-bold uppercase tracking-widest text-brand-terracotta">Indicadores · 11 de novembro de 2026</p>
+                <h2 class="font-display text-2xl font-bold text-brand-dark mt-2 group-hover:text-brand-terracotta transition-colors">Novo critério do P1: quem conhece suas áreas de risco</h2>
+                <p class="text-gray-600 mt-3 leading-relaxed">O indicador passa a mostrar se a informação sobre áreas de risco e população exposta existe, no plano de contingência ou na setorização do Serviço Geológico do Brasil. Com relatório técnico para download.</p>
+                <span class="inline-flex items-center gap-2 mt-4 text-sm font-bold text-brand-rust">Ler o post <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-brand-deepDark text-gray-400 py-10 border-t border-white/10 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <img src="../assets/logo-icone-branca.png" alt="Observatório da Resiliência RS" class="w-9 h-9 object-contain">
+                <div>
+                    <span class="font-display font-bold text-white text-sm block">OBSERVATÓRIO DA RESILIÊNCIA RS</span>
+                    <span class="text-[10px] text-gray-500">CoalizãoRS · PUCRS · MPRS</span>
+                </div>
+            </div>
+            <p class="text-[11px] text-gray-500">© 2026 Observatório da Resiliência RS.</p>
+        </div>
+    </footer>
+</body>
+</html>

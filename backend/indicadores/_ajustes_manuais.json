@@ -81,17 +81,6 @@
     "data": "2026-10-27"
   },
   {
-    "municipio": "Barra do Ribeiro",
-    "indicador": "P1",
-    "valor": "vermelho",
-    "fonte_plano": "Site Municipal",
-    "evidencia": "Nome: Município de Barra do Ribeiro — População: 12.225 habitantes",
-    "pagina": 1,
-    "justificativa": "o número usado é a população total do município (critério exclui); o plano descreve áreas de risco junto aos arroios sem quantificar moradores.",
-    "revisado_por": "Fausto Vanin",
-    "data": "2026-10-27"
-  },
-  {
     "municipio": "São Sepé",
     "indicador": "P2",
     "valor": "verde",

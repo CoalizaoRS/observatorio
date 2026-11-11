@@ -69,7 +69,7 @@ function descreveCampo(c: CampoDef): string {
 }
 
 function montaPergunta(ind: IndicadorDef): string {
-  const linhas = [...ind.campos.map(descreveCampo)];
+  const linhas = [...ind.campos.filter((c) => !c.calculado).map(descreveCampo)];
   linhas.push('  "evidencia": "<citação curta e LITERAL do documento que fundamenta a resposta, ou \\"N/A\\">"');
   linhas.push('  "confianca": <"alta" | "media" | "baixa">');
   const criterio = ind.criterio ? `Critério de classificação: ${ind.criterio}\n\n` : '';
@@ -159,7 +159,8 @@ async function extraiIndicador(
       return { ...base, valor: semNA('N/A'), componentes: {}, evidencia: text.slice(0, 300), confianca: 'baixa', tokens, erro: 'JSON não parseável' };
     }
 
-    // Componentes = campos declarados extraídos do documento (+ derivados).
+    // Componentes = campos declarados extraídos do documento (+ dados de fora do plano + derivados).
+    Object.assign(json, ind.complementar ? ind.complementar(municipio) : {});
     const componentes: Record<string, any> = {};
     for (const c of ind.campos) if (c.nome !== 'valor') componentes[c.nome] = json[c.nome] ?? 'N/A';
     if (ind.derivar) Object.assign(componentes, ind.derivar(json));
@@ -168,7 +169,7 @@ async function extraiIndicador(
     // Valor final: razão calculada em TS, ou o `valor` retornado pelo modelo.
     let valor: number | string;
     if (ind.calcular) {
-      const v = ind.calcular(json);
+      const v = ind.calcular({ ...json, ...componentes });
       valor = v === null ? (json.valor ?? 'N/A') : v;
     } else {
       valor = json.valor ?? 'N/A';
@@ -182,7 +183,7 @@ async function extraiIndicador(
       ...base,
       valor,
       componentes,
-      evidencia: typeof json.evidencia === 'string' ? json.evidencia : 'N/A',
+      evidencia: ind.evidencia ? ind.evidencia(componentes) : typeof json.evidencia === 'string' ? json.evidencia : 'N/A',
       confianca: typeof json.confianca === 'string' ? json.confianca : 'baixa',
       tokens,
     };

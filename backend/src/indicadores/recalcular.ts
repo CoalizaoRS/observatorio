@@ -2,6 +2,8 @@
  * Reaplica as regras `calcular` de definicoes.ts aos arquivos já gerados, SEM chamar modelo:
  * usa os `componentes` gravados e o `valor` gravado no lugar do semáforo do modelo. Serve para
  * mudanças de regra (ex.: P2 determinístico) valerem também para resultados já publicados.
+ * Também refaz os dados de fora do plano (`complementar`, ex.: setorização do SGB no P1), os
+ * componentes derivados e a evidência montada (`evidencia`), quando o indicador os tem.
  *
  * Uso:
  *   npm run recalcular -- --indicadores P2              # só mostra o que mudaria
@@ -44,18 +46,24 @@ async function main() {
       const r = dados.indicadores?.[d.id];
       if (!r || r.erro) continue;
       // resultado gerado antes de a regra ganhar campos novos: não dá para recalcular, só reextrair
-      const faltando = d.campos.filter((k) => k.nome !== 'valor' && !(k.nome in (r.componentes ?? {})));
+      const faltando = d.campos.filter((k) => k.nome !== 'valor' && !k.calculado && !(k.nome in (r.componentes ?? {})));
       if (faltando.length) {
         semCampos[d.id] = (semCampos[d.id] || 0) + 1;
         continue;
       }
-      const novo = d.calcular!({ ...r.componentes, valor: r.valor, evidencia: r.evidencia });
-      if (novo === null || novo === r.valor) continue;
-      const chave = `${d.id}: ${r.valor} → ${novo}`;
-      mudancas[chave] = (mudancas[chave] || 0) + 1;
-      console.log(`  ${dados.municipio} · ${chave}`);
-      r.valor = novo;
-      mudou = true;
+      const antes = JSON.stringify(r);
+      const comp = { ...r.componentes, ...(d.complementar ? d.complementar(dados.municipio) : {}) };
+      if (d.derivar) Object.assign(comp, d.derivar(comp));
+      r.componentes = comp;
+      if (d.evidencia) r.evidencia = d.evidencia(comp);
+      const novo = d.calcular!({ ...comp, valor: r.valor, evidencia: r.evidencia });
+      if (novo !== null && novo !== r.valor) {
+        const chave = `${d.id}: ${r.valor} → ${novo}`;
+        mudancas[chave] = (mudancas[chave] || 0) + 1;
+        console.log(`  ${dados.municipio} · ${chave}`);
+        r.valor = novo;
+      }
+      if (JSON.stringify(r) !== antes) mudou = true;
     }
     if (mudou) {
       alterados++;

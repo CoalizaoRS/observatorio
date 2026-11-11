@@ -5,7 +5,8 @@
   "scripts": {
     "extrair": "ts-node src/indicadores/extrair.ts",
     "consolidar": "ts-node src/indicadores/consolidar.ts",
-    "recalcular": "ts-node src/indicadores/recalcular.ts"
+    "recalcular": "ts-node src/indicadores/recalcular.ts",
+    "p9": "ts-node src/indicadores/p9.ts"
   },
   "keywords": [],
   "author": "",

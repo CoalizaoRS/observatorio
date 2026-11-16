@@ -63,6 +63,18 @@ if [ "$USO" -gt 500 ]; then
   nvidia-smi; exit 2
 fi
 
+# --- medição de energia da GPU ------------------------------------------------
+# Potência, uso e memória a cada 5 s em logs/gpu-<job>.csv; o total em kWh sai no fim do log.
+# (A GPU só é usada se estiver livre — ver checagem acima —, então a medição é deste job.)
+mkdir -p "$RAG/logs"
+GPU_CSV=$RAG/logs/gpu-$SLURM_JOB_ID.csv
+nvidia-smi --query-gpu=timestamp,power.draw,utilization.gpu,memory.used --format=csv,noheader,nounits -lms 5000 >"$GPU_CSV" &
+PIDS+=($!)
+energia() {
+  awk -F', *' '{w+=$2; n++} END {if (n) printf "GPU: %d amostras, potência média %.1f W, energia %.3f kWh\n", n, w/n, w*5/3600/1000}' "$GPU_CSV"
+}
+trap 'energia; encerrar' EXIT
+
 # --- texto (CPU) -------------------------------------------------------------
 $SYNC pull rag-cache texto "$CACHE/texto"
 if etapa texto; then

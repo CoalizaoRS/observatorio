@@ -122,6 +122,7 @@ interface IndicadorResultado {
   confianca: string;
   tokens: number;
   erro?: string;
+  valor_modelo?: string;       // semáforo proposto pelo próprio modelo, antes das regras de `calcular` (mede o efeito das regras)
 }
 
 async function extraiIndicador(
@@ -167,6 +168,8 @@ async function extraiIndicador(
     for (const k of ['partes_lidas', 'partes_invalidas']) if (json[k] !== undefined) componentes[k] = json[k];
 
     // Valor final: razão calculada em TS, ou o `valor` retornado pelo modelo.
+    // A cor do modelo é guardada à parte (valor_modelo) para medir o efeito das regras.
+    const valorModelo = ehSemaforo && ind.calcular ? String(json.valor ?? 'N/A').trim().toLowerCase() : undefined;
     let valor: number | string;
     if (ind.calcular) {
       const v = ind.calcular({ ...json, ...componentes });
@@ -186,6 +189,7 @@ async function extraiIndicador(
       evidencia: ind.evidencia ? ind.evidencia(componentes) : typeof json.evidencia === 'string' ? json.evidencia : 'N/A',
       confianca: typeof json.confianca === 'string' ? json.confianca : 'baixa',
       tokens,
+      ...(valorModelo !== undefined ? { valor_modelo: valorModelo } : {}),
     };
   } catch (e) {
     return { ...base, valor: semNA('N/A'), componentes: {}, evidencia: 'N/A', confianca: 'baixa', tokens: 0, erro: (e as Error).message };

@@ -10,8 +10,9 @@
  *   npm run recalcular -- --indicadores P2 --gravar     # grava nos <Município>.json
  *   opções: --dir <pasta> (default backend/indicadores)
  *
- * Limitação: o `valor` gravado já passou pela regra antiga; regras que dependem do semáforo
- * original do modelo só são reaplicáveis quando a regra antiga não o alterou.
+ * Limitação: nos resultados sem `valor_modelo` (gerados antes de 11/2026), o `valor` gravado já
+ * passou pela regra antiga; regras que dependem do semáforo original do modelo só são reaplicáveis
+ * quando a regra antiga não o alterou. Com `valor_modelo`, a regra parte da cor do próprio modelo.
  */
 
 import { promises as fs } from 'fs';
@@ -56,7 +57,7 @@ async function main() {
       if (d.derivar) Object.assign(comp, d.derivar(comp));
       r.componentes = comp;
       if (d.evidencia) r.evidencia = d.evidencia(comp);
-      const novo = d.calcular!({ ...comp, valor: r.valor, evidencia: r.evidencia });
+      const novo = d.calcular!({ ...comp, valor: r.valor_modelo ?? r.valor, evidencia: r.evidencia });
       if (novo !== null && novo !== r.valor) {
         const chave = `${d.id}: ${r.valor} → ${novo}`;
         mudancas[chave] = (mudancas[chave] || 0) + 1;

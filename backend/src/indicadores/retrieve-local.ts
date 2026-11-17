@@ -243,11 +243,15 @@ async function consulta(municipio: string, pergunta: string, MAX_CHARS: number, 
 }
 
 /** Trechos escolhidos, na ordem do documento, com arquivo e página. */
+// O nome do arquivo NÃO vai para o modelo: nomes como "PLANCON TAQUARA 2024.pdf" faziam o modelo
+// tirar dele o ano do plano (P6). Cada arquivo vira "documento N" (só quando há mais de um).
 function monta(indice: Indice, escolhidos: number[]): string {
+  const arquivos = [...new Set(indice.trechos.map((t) => t.arquivo))];
   return escolhidos
     .map((i, k) => {
       const t = indice.trechos[i];
-      const origem = `${path.basename(t.arquivo)}${t.pagina ? `, p. ${t.pagina}` : ''}`;
+      const doc = arquivos.length > 1 ? `documento ${arquivos.indexOf(t.arquivo) + 1}` : '';
+      const origem = [doc, t.pagina ? `p. ${t.pagina}` : ''].filter(Boolean).join(', ') || 'plano';
       return `[Trecho ${k + 1} — ${origem}]\n${t.texto}`;
     })
     .join('\n\n');

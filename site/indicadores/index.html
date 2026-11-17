@@ -474,7 +474,8 @@
 
         // CSVs publicados junto com o site (backend/publicar-csv.sh copia para site/indicadores/dados)
         const BASE_CSV_URL = 'dados';
-        const RS_GEOJSON_URL = 'https://raw.githubusercontent.com/tbrugz/geodata-br/master/geojson/geojs-43-mun.json';
+        // Malha municipal do IBGE (API de malhas, qualidade intermediária) com nomes da API de localidades: 497 municípios
+        const RS_GEOJSON_URL = 'rs-municipios.geojson';
         // Chave pública do CARTO Basemaps, restrita ao domínio observatoriodaresiliencia.org
         // (restrição configurada no painel do CARTO — não protege se usada em outro domínio).
         const CARTO_API_KEY = 'cb1_43we_1_67a1ec24ec723f0e9cd65fb1';

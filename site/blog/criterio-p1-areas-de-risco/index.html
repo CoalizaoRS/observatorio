@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicador P1 adota novo critério para medir a população em áreas de risco | Observatório da Resiliência RS</title>
+    <meta name="description" content="O indicador P1 do Observatório da Resiliência RS passa a considerar o plano de contingência de cada município e o mapeamento de áreas de risco do Serviço Geológico do Brasil. Relatório técnico disponível.">
+    <meta property="og:title" content="Indicador P1 adota novo critério para medir a população em áreas de risco">
+    <meta property="og:description" content="O P1 passa a considerar o plano de contingência e o mapeamento de áreas de risco do Serviço Geológico do Brasil. Relatório técnico disponível.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://observatoriodaresiliencia.org/blog/criterio-p1-areas-de-risco/">
+
+    <link rel="icon" type="image/png" href="../../assets/logo-icone-colorida.png">
+    <link rel="apple-touch-icon" href="../../assets/logo-icone-colorida.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            terracotta: '#C85A32',
+                            rust: '#A83E22',
+                            amber: '#E09F3E',
+                            dark: '#2D1517',
+                            deepDark: '#190A0C',
+                            cream: '#FAF7F2',
+                            softBg: '#F3EDE2',
+                            teal: '#2A9D8F',
+                            green: '#386641'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-color: #2D1517;
+            background-image: radial-gradient(#C85A32 0.75px, transparent 0.75px), radial-gradient(#C85A32 0.75px, #2D1517 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+        .artigo > h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem; color: #2D1517; margin: 2.5rem 0 1rem; line-height: 1.25; }
+        .artigo > p { margin: 0 0 1.1rem; line-height: 1.75; color: #374151; }
+        .artigo > ul { margin: 0 0 1.1rem; padding-left: 1.25rem; list-style: disc; color: #374151; }
+        .artigo > ul li { margin-bottom: .5rem; line-height: 1.7; }
+        .artigo > p strong, .artigo > ul strong { color: #2D1517; }
+        .artigo > p a { color: #A83E22; text-decoration: underline; text-underline-offset: 3px; }
+        .barra { height: 10px; border-radius: 999px; overflow: hidden; display: flex; background: #e5e7eb; }
+        .barra span { display: block; height: 100%; }
+    </style>
+</head>
+<body class="bg-brand-cream text-gray-900 font-sans antialiased selection:bg-brand-amber selection:text-brand-dark">
+
+    <header class="sticky top-0 z-50 bg-brand-cream/90 backdrop-blur-md border-b border-brand-terracotta/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="../../" class="flex items-center gap-3 group">
+                <img src="../../assets/logo-icone-colorida.png" alt="Observatório da Resiliência RS" class="w-11 h-11 object-contain group-hover:scale-105 transition-transform">
+                <div class="flex flex-col">
+                    <span class="font-display font-bold text-lg text-brand-dark leading-none tracking-tight">OBSERVATÓRIO</span>
+                    <span class="font-bold text-xs text-brand-terracotta tracking-widest">DA RESILIÊNCIA RS</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-700">
+                <a href="../../#sobre" class="hover:text-brand-terracotta transition-colors">O Observatório</a>
+                <a href="../../#irm" class="hover:text-brand-terracotta transition-colors">Metodologia IRM</a>
+                <a href="../" class="text-brand-terracotta">Blog</a>
+            </nav>
+            <a href="../../indicadores/" class="px-4 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-terracotta text-white hover:bg-brand-rust transition-all shadow-md flex items-center gap-2">
+                <i class="fa-solid fa-chart-line"></i>
+                <span class="hidden sm:inline">Consultar Indicadores</span><span class="sm:hidden">Painel</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="hero-pattern text-white py-16 lg:py-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <a href="../" class="text-xs font-bold uppercase tracking-widest text-brand-amber hover:underline"><i class="fa-solid fa-arrow-left mr-1"></i> Blog</a>
+            <p class="mt-6 text-xs font-bold uppercase tracking-widest text-white/60">Indicadores · 11 de novembro de 2026</p>
+            <h1 class="font-display text-3xl sm:text-5xl break-words font-bold leading-tight mt-3">Indicador P1 adota novo critério para medir a população em áreas de risco</h1>
+            <p class="mt-5 text-lg text-white/80 leading-relaxed">O indicador passa a considerar o plano de contingência de cada município e também o mapeamento de áreas de risco feito pelo Serviço Geológico do Brasil.</p>
+        </div>
+    </section>
+
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
+        <article class="artigo text-[17px]">
+
+            <p>O P1 integra o grupo Pessoas e Equidade, na fase de Preparação do Índice de Resiliência dos Municípios. O indicador avalia se é conhecido o número de pessoas que vivem em áreas de risco em cada município. Essa informação é a base para planejar alertas, a retirada de moradores e os abrigos.</p>
+
+            <p>Até agora, o P1 considerava apenas o Plano de Contingência (PLANCON), documento em que o município organiza a resposta da Defesa Civil a desastres. O indicador ficava verde somente quando o plano informava o número de moradores em área de risco. Dos 496 planos analisados, 25 (5%) atendiam a esse critério e 471 ficavam vermelhos.</p>
+
+            <p>Para entender esse resultado, o Observatório revisou uma amostra dos planos e comparou seis critérios de cálculo. Com base no relatório técnico, o Comitê de Dados e Transparência escolheu um novo critério em novembro de 2026, que já está em uso no painel.</p>
+
+            <h2>O que a revisão dos planos mostrou</h2>
+            <ul>
+                <li>Em 96% dos planos há áreas de risco identificadas. Em uma amostra de 25 planos que não seguem o formulário padrão da Defesa Civil, porém, nenhum informava quantas pessoas, famílias ou imóveis estão nessas áreas. Os documentos citam bairros e ruas, sem quantificar a população.</li>
+                <li>O critério anterior atribuía a mesma cor, vermelho, a planos que identificavam suas áreas de risco e a planos que não identificavam nenhuma.</li>
+                <li>Em muitos casos, a informação já existe fora do plano. O <a href="https://www.sgb.gov.br/" target="_blank" rel="noopener">Serviço Geológico do Brasil (SGB)</a> mapeou 2.413 áreas de risco alto e muito alto em 133 municípios gaúchos, com estimativa de moradores em cada uma. É uma informação oficial e pública. Segundo essas estimativas, entre 384 mil e 741 mil pessoas vivem nessas áreas. A variação depende do número médio de moradores considerado por domicílio.</li>
+                <li>Em 116 municípios, o SGB tem a estimativa de população em risco, mas o plano de contingência não traz esse número.</li>
+            </ul>
+
+            <h2>Os seis critérios comparados</h2>
+            <p>O relatório compara o critério anterior com cinco alternativas. Algumas consideram apenas o plano de contingência, e outras incluem também o mapeamento do SGB. A tabela mostra quantos municípios ficariam em cada cor, em cada critério.</p>
+
+            <div class="not-prose my-6 rounded-2xl border border-brand-terracotta/15 bg-white overflow-hidden">
+                <div class="grid grid-cols-[3.5rem_1fr] sm:grid-cols-[3.5rem_1fr_11rem] gap-x-3 gap-y-1 px-4 py-3 text-[11px] font-bold uppercase tracking-wider text-gray-500 border-b border-gray-100">
+                    <span>Cód.</span><span>Critério</span><span class="hidden sm:block">Verde · amarelo · vermelho</span>
+                </div>
+                <div id="criterios"></div>
+            </div>
+
+            <h2>O critério adotado: S5</h2>
+            <p>O S5 combina as duas fontes. Ele considera o quanto cada plano avançou na identificação das áreas de risco e reconhece a informação oficial já disponível no SGB. As cores seguem esta regra:</p>
+            <div class="not-prose my-6 space-y-3">
+                <div class="flex gap-3 items-start p-4 rounded-2xl bg-white border border-gray-200"><span class="mt-1 w-3.5 h-3.5 rounded-full bg-[#10B981] shrink-0"></span><p class="text-[15px] text-gray-700 leading-relaxed m-0"><strong class="text-brand-dark">Verde</strong> quando o plano identifica as áreas de risco e informa a população de todas elas, ou quando o SGB já estimou a população em risco no município.</p></div>
+                <div class="flex gap-3 items-start p-4 rounded-2xl bg-white border border-gray-200"><span class="mt-1 w-3.5 h-3.5 rounded-full bg-[#F59E0B] shrink-0"></span><p class="text-[15px] text-gray-700 leading-relaxed m-0"><strong class="text-brand-dark">Amarelo</strong> quando o plano identifica áreas de risco, mas não informa a população de todas elas. O município inteiro, ou toda a zona urbana ou rural, pode ser considerado uma área.</p></div>
+                <div class="flex gap-3 items-start p-4 rounded-2xl bg-white border border-gray-200"><span class="mt-1 w-3.5 h-3.5 rounded-full bg-[#EF4444] shrink-0"></span><p class="text-[15px] text-gray-700 leading-relaxed m-0"><strong class="text-brand-dark">Vermelho</strong> quando o plano não identifica áreas de risco e o SGB não tem estimativa de população em risco para o município.</p></div>
+            </div>
+            <p>Com o S5, os municípios verdes passam de 5% para 43% do total. A distribuição no painel fica assim:</p>
+
+            <div class="not-prose my-6 grid grid-cols-3 gap-3 text-center">
+                <div class="rounded-2xl bg-white border border-gray-200 p-4"><div class="font-display text-3xl font-bold text-[#047857]">211</div><div class="text-xs text-gray-500 mt-1">verdes</div></div>
+                <div class="rounded-2xl bg-white border border-gray-200 p-4"><div class="font-display text-3xl font-bold text-[#B45309]">271</div><div class="text-xs text-gray-500 mt-1">amarelos</div></div>
+                <div class="rounded-2xl bg-white border border-gray-200 p-4"><div class="font-display text-3xl font-bold text-[#B91C1C]">14</div><div class="text-xs text-gray-500 mt-1">vermelhos</div></div>
+            </div>
+
+            <div class="not-prose my-8 rounded-2xl bg-brand-dark text-white p-6">
+                <p class="font-display text-xl font-bold m-0">O verde indica que a população em risco é conhecida</p>
+                <p class="mt-2 text-white/80 leading-relaxed m-0">Os municípios verdes pelo SGB têm moradores em áreas de risco alto e muito alto. O P1 mostra se o número de pessoas expostas foi levantado. Ele não mede se o risco é alto ou baixo.</p>
+            </div>
+
+            <h2>Como o resultado é calculado</h2>
+            <p>A leitura dos planos é feita com uma ferramenta de inteligência artificial, o modelo Gemma 3, processado no LAD/PUCRS. Em cada plano, a ferramenta identifica as áreas de risco citadas, o tipo de ameaça, a população informada e o trecho do documento que comprova cada dado.</p>
+            <p>A cor é definida por uma regra fixa, aplicada da mesma forma a todos os municípios, o que permite verificar cada resultado. As revisões feitas manualmente pela equipe são registradas com o trecho, a página e a justificativa.</p>
+            <p>Na página de cada município, o painel mostra as áreas de risco encontradas no plano e os números do SGB.</p>
+
+            <h2>Próximos passos</h2>
+            <ul>
+                <li>Encaminhar às Coordenadorias Regionais de Proteção e Defesa Civil (CREPDECs) a lista dos 116 municípios em que o SGB tem a estimativa de população em risco e o plano não tem. Segundo o SGB, cerca de 467 mil pessoas vivem em áreas de risco nesses municípios.</li>
+                <li>Orientar os municípios, por meio das CREPDECs, a preencher no formulário padrão o campo "Nº de afetados" de cada área de risco.</li>
+                <li>Priorizar os 42 municípios em que as áreas mapeadas pelo SGB concentram 20% ou mais da população. Esses municípios também estão na lista de contato do Observatório.</li>
+                <li>Revisar manualmente os casos sinalizados, como Bom Princípio e Porto Xavier, e uma amostra de municípios verdes e amarelos.</li>
+                <li>No próximo ciclo, verificar se o número de pessoas informado em cada plano é compatível com a estimativa do SGB.</li>
+                <li>Atualizar o painel sempre que um município publicar um novo plano.</li>
+            </ul>
+
+            <div class="not-prose mt-10 rounded-3xl border border-brand-terracotta/20 bg-brand-softBg p-6 sm:p-8 flex flex-col sm:flex-row gap-6 sm:items-center">
+                <div class="w-14 h-14 rounded-2xl bg-brand-terracotta text-white flex items-center justify-center text-2xl shrink-0"><i class="fa-solid fa-file-pdf"></i></div>
+                <div class="flex-1">
+                    <p class="text-xs font-bold uppercase tracking-widest text-brand-terracotta m-0">Relatório técnico · PDF · 5 páginas</p>
+                    <p class="font-display text-xl font-bold text-brand-dark mt-1 mb-1">Quem mora em área de risco? Comparação de critérios para o indicador P1</p>
+                    <p class="text-sm text-gray-600 m-0">O que o P1 mede, os resultados da revisão dos planos, o detalhamento de cada critério e os próximos passos.</p>
+                </div>
+                <a href="../../publicacoes/P1-criterios-relatorio.pdf" download class="px-5 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-terracotta text-white hover:bg-brand-rust transition-all shadow-md flex items-center justify-center gap-2 shrink-0">
+                    <i class="fa-solid fa-download"></i> Baixar relatório
+                </a>
+            </div>
+
+            <p class="mt-8"><a href="../../indicadores/">Veja o P1 de cada município no painel</a>.</p>
+        </article>
+    </main>
+
+    <footer class="bg-brand-deepDark text-gray-400 py-10 border-t border-white/10 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <img src="../../assets/logo-icone-branca.png" alt="Observatório da Resiliência RS" class="w-9 h-9 object-contain">
+                <div>
+                    <span class="font-display font-bold text-white text-sm block">OBSERVATÓRIO DA RESILIÊNCIA RS</span>
+                    <span class="text-[10px] text-gray-500">CoalizãoRS · PUCRS · MPRS</span>
+                </div>
+            </div>
+            <p class="text-[11px] text-gray-500">© 2026 Observatório da Resiliência RS.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Critérios do relatório (496 municípios): verde, amarelo, vermelho
+        const CRITERIOS = [
+            ['Atual', 'O plano informa quantas pessoas vivem em área de risco', 25, 0, 471],
+            ['S1', 'Só os dados do SGB', 133, 0, 363],
+            ['S2', 'Critério atual, com amarelo quando só o SGB tem o número', 25, 116, 355],
+            ['S3', 'Critério atual ou SGB', 141, 0, 355],
+            ['S4', 'O plano identifica as áreas e informa a população de cada uma', 88, 388, 20],
+            ['S5', 'S4 ou SGB (escolhido)', 211, 271, 14],
+        ];
+        const cores = ['#10B981', '#F59E0B', '#EF4444'];
+        document.getElementById('criterios').innerHTML = CRITERIOS.map(([cod, nome, ...v]) => {
+            const total = v.reduce((a, b) => a + b, 0);
+            const destaque = cod === 'S5';
+            const nums = v.map((n, i) => (i === 1 && n === 0) ? null : n).filter((n) => n !== null).join(' · ');
+            return `<div class="grid grid-cols-[3.5rem_1fr] sm:grid-cols-[3.5rem_1fr_11rem] gap-x-3 gap-y-2 items-center px-4 py-3 border-b border-gray-100 last:border-0 ${destaque ? 'bg-amber-50' : ''}">
+                <span class="font-display font-bold ${destaque ? 'text-brand-terracotta' : 'text-brand-dark'}">${cod}</span>
+                <span class="text-sm text-gray-700 ${destaque ? 'font-semibold' : ''}">${nome}</span>
+                <div class="col-span-2 sm:col-span-1">
+                    <div class="barra">${v.map((n, i) => `<span style="width:${(100 * n / total).toFixed(1)}%;background:${cores[i]}"></span>`).join('')}</div>
+                    <div class="text-[11px] text-gray-500 mt-1 tabular-nums">${nums}</div>
+                </div>
+            </div>`;
+        }).join('');
+    </script>
+</body>
+</html>

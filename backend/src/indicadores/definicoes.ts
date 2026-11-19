@@ -1,5 +1,5 @@
 /**
- * Definição dos 8 indicadores da Fase de Preparação, conforme a aba "simplificado"
+ * Definição dos indicadores da Fase de Preparação, conforme a aba "simplificado"
  * da planilha do Observatório:
  *   https://docs.google.com/spreadsheets/d/1ck5WJv7X2ifg9cwEp299d1Een-LmjzvVYTHiyKZVOt8/
  *
@@ -54,6 +54,11 @@ export interface IndicadorDef {
   varredura?: (partes: Record<string, any>[]) => Record<string, any>;
   /** Componentes numéricos derivados (ex.: razões de apoio) mesclados aos extraídos. */
   derivar?: (campos: Record<string, any>) => Record<string, any>;
+  /**
+   * Indicador que NÃO vem do texto do PLANCON: os campos são gravados por uma coleta externa
+   * (o valor indica o script). O extrator do modelo o ignora; a cor sai de `calcular`.
+   */
+  coleta?: string;
   /** Dados de fora do plano (ex.: setorização do SGB) somados aos campos antes de `derivar`/`calcular`. */
   complementar?: (municipio: string) => Record<string, any>;
   /** Texto de evidência montado a partir dos componentes, no lugar da citação devolvida pelo modelo. */
@@ -533,5 +538,69 @@ export const INDICADORES: IndicadorDef[] = [
     },
   },
   // P8 (Investimento em Defesa Civil) REMOVIDO na revisão de 23/07/26: não é extraível do
-  // PLANCON em V1 (sem dados). Fica para V2 com fonte SICONFI. São 7 indicadores (P1–P7).
+  // PLANCON em V1 (sem dados). Fica para V2 com fonte SICONFI.
+  {
+    id: 'P9',
+    grupo: 'G4 · Governança e Capacidade Institucional',
+    nome: 'Plano de Contingência público e acessível',
+    mede: 'Se a população encontra o Plano de Contingência no site da prefeitura',
+    unidade: 'semáforo (verde/amarelo/vermelho; cinza = site inacessível, fora do indicador)',
+    formula: 'cliques da página inicial do site oficial da prefeitura até o arquivo do plano, que precisa abrir (coleta automática)',
+    criterio:
+      'VERDE: Plano de Contingência localizado no site oficial da prefeitura em até 3 cliques a partir da página inicial, com o arquivo abrindo. ' +
+      'AMARELO: plano localizado e acessível, com mais de 3 cliques a partir da página inicial (inclui o plano achado só pela busca interna ' +
+      'do site ou pelo índice do site, sem caminho de navegação). ' +
+      'VERMELHO: plano não localizado no site, link quebrado ou acesso apenas mediante pedido. ' +
+      'CINZA: não foi possível acessar o site (fora do ar, recusa acesso automatizado ou robots.txt veta robôs); o município fica fora do indicador.',
+    pergunta: '',
+    coleta: 'monitor/acessibilidade.py → npm run p9',
+    campos: [
+      { nome: 'situacao_site', tipo: 'enum', descricao: 'acesso ao site na coleta', opcoes: ['ok', 'inacessivel', 'acesso_recusado', 'robots_veta'] },
+      { nome: 'via', tipo: 'enum', descricao: 'como o plano foi encontrado', opcoes: ['navegacao', 'busca_interna', 'sitemap', 'nao_encontrado'] },
+      { nome: 'cliques', tipo: 'numero', descricao: 'cliques da página inicial até o documento (navegação)' },
+      { nome: 'url_documento', tipo: 'texto', descricao: 'endereço do plano no site' },
+      { nome: 'caminho', tipo: 'texto', descricao: 'links clicados a partir da página inicial' },
+      { nome: 'conferencia', tipo: 'texto', descricao: 'por que o site não pôde ser avaliado (ou vazio)' },
+    ],
+    // O plano só conta como achado se o arquivo abriu e é o plano de Defesa Civil do município
+    // (acessibilidade.py baixa e valida o documento). Site que não pôde ser lido fica cinza (N/A).
+    calcular: (c) => {
+      if (c.via === 'navegacao') {
+        const n = paraNumero(c.cliques);
+        return n !== null && n <= 3 ? 'verde' : 'amarelo';
+      }
+      if (c.via === 'busca_interna' || c.via === 'sitemap') return 'amarelo';
+      return c.situacao_site === 'ok' && !c.conferencia ? 'vermelho' : 'N/A';
+    },
+  },
+  {
+    id: 'P10',
+    grupo: 'G4 · Governança e Capacidade Institucional',
+    nome: 'Canal de cadastro de voluntários',
+    mede: 'Se o site da prefeitura oferece um canal para a população se cadastrar como voluntária em emergências',
+    unidade: 'semáforo (verde/amarelo/vermelho; cinza = site inacessível, fora do indicador)',
+    formula: 'busca no site oficial da prefeitura por canal de cadastro de voluntários de Defesa Civil e emergências (coleta automática + revisão)',
+    criterio:
+      'VERDE: canal municipal de cadastro de voluntários ativo no site oficial da prefeitura (formulário ou página com inscrição aberta). ' +
+      'Indica a existência do canal, sem informar se há voluntários preparados. ' +
+      'AMARELO: o site apenas remete ao cadastro estadual de voluntários da Defesa Civil RS. ' +
+      'VERMELHO: nenhum canal de cadastro de voluntários no site oficial da prefeitura, ou canal encerrado. ' +
+      'CINZA: não foi possível acessar o site; o município fica fora do indicador. ' +
+      'Escopo: emergências e Defesa Civil (inclui bombeiros voluntários e abrigos).',
+    pergunta: '',
+    coleta: 'monitor/voluntarios.py → monitor/voluntarios_revisao.py → npm run p10',
+    campos: [
+      { nome: 'situacao_site', tipo: 'enum', descricao: 'acesso ao site na coleta', opcoes: ['ok', 'inacessivel', 'acesso_recusado', 'robots_veta'] },
+      { nome: 'canal', tipo: 'enum', descricao: 'canal de cadastro encontrado', opcoes: ['municipal_ativo', 'estadual', 'encerrado', 'nenhum'] },
+      { nome: 'url_canal', tipo: 'texto', descricao: 'endereço do canal (formulário ou página)' },
+      { nome: 'paginas_lidas', tipo: 'numero', descricao: 'páginas do site lidas na coleta' },
+      { nome: 'conferencia', tipo: 'texto', descricao: 'por que o site não pôde ser avaliado (ou vazio)' },
+    ],
+    calcular: (c) => {
+      if (c.situacao_site !== 'ok' || c.conferencia) return 'N/A';
+      if (c.canal === 'municipal_ativo') return 'verde';
+      if (c.canal === 'estadual') return 'amarelo';
+      return 'vermelho';
+    },
+  },
 ];

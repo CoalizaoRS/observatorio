@@ -1,12 +1,17 @@
 {
   "base_url": "https://observatoriodaresiliencia.org/indicadores/dados",
   "regras_versao": "planilha IRM · aba simplificado (semáforo)",
-  "count": 10,
+  "count": 12,
   "arquivos": [
     {
       "nome": "P1.csv",
       "descricao": "P1 — Mapeamento de áreas de risco (semáforo)",
       "url": "https://observatoriodaresiliencia.org/indicadores/dados/P1.csv"
+    },
+    {
+      "nome": "P10.csv",
+      "descricao": "P10 — Canal de cadastro de voluntários (semáforo; N/A = site inacessível)",
+      "url": "https://observatoriodaresiliencia.org/indicadores/dados/P10.csv"
     },
     {
       "nome": "P2.csv",
@@ -39,8 +44,13 @@
       "url": "https://observatoriodaresiliencia.org/indicadores/dados/P7.csv"
     },
     {
+      "nome": "P9.csv",
+      "descricao": "P9 — Plano de contingência público e acessível (semáforo; N/A = site inacessível)",
+      "url": "https://observatoriodaresiliencia.org/indicadores/dados/P9.csv"
+    },
+    {
       "nome": "_resumo.csv",
-      "descricao": "Matriz município × valor de cada indicador (P1..P7)",
+      "descricao": "Matriz município × valor de cada indicador (P1..P7, P9, P10)",
       "url": "https://observatoriodaresiliencia.org/indicadores/dados/_resumo.csv"
     },
     {

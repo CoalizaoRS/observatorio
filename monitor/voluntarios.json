@@ -1,0 +1,3215 @@
+{
+ "Agudo": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Alecrim": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 1,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (1 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Almirante Tamandaré do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Alto Feliz": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Alvorada": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Amaral Ferrador": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Ametista do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "André da Rocha": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Arambaré": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Araricá": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Arroio Grande": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 22,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (22 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Arroio do Meio": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Arroio do Padre": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Arroio do Sal": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Arroio do Tigre": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Augusto Pestana": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Bagé": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Balneário Pinhal": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Barra Funda": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Barra do Quaraí": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Barra do Ribeiro": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Barracão": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Barão de Cotegipe": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Benjamin Constant do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Bento Gonçalves": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Boa Vista das Missões": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Boa Vista do Buricá": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Boa Vista do Cadeado": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Boa Vista do Incra": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Bom Jesus": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Bom Princípio": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Bom Progresso": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 1,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (1 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Bom Retiro do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Boqueirão do Leão": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 1,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (1 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Bossoroca": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Braga": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Brochier": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Butiá": {
+  "situacao_site": "ok",
+  "canal": "municipal_ativo",
+  "url_canal": "https://butia.rs.gov.br/defesa-civil-de-butia/",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Página da Defesa Civil com cadastro de voluntários aberto (formulário por QR-code).",
+  "coletado_em": "2026-11-19"
+ },
+ "Cacequi": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Cachoeirinha": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Cacique Doble": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Caibaté": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Camaquã": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Campestre da Serra": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Campina das Missões": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 30,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (30 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Campo Bom": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Campo Novo": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Campos Borges": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 1,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (1 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Candelária": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Candiota": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 39,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (39 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Canela": {
+  "situacao_site": "ok",
+  "canal": "municipal_ativo",
+  "url_canal": "https://canela.rs.gov.br/sitenovo/sgg/defesa-civil/",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Formulário \"Cadastro de Voluntários\" na página da Defesa Civil.",
+  "coletado_em": "2026-11-19"
+ },
+ "Canguçu": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Canoas": {
+  "situacao_site": "ok",
+  "canal": "encerrado",
+  "url_canal": "https://canoas.rs.gov.br/voluntariado/",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Página \"Quer ser voluntário?\" aponta para formulário que não existe mais.",
+  "coletado_em": "2026-11-19"
+ },
+ "Canudos do Vale": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 1,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (1 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Capela de Santana": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Capitão": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Capão Bonito do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Capão da Canoa": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Capão do Cipó": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Capão do Leão": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Carazinho": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 1,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (1 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Caraá": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Carlos Barbosa": {
+  "situacao_site": "ok",
+  "canal": "municipal_ativo",
+  "url_canal": "https://www.carlosbarbosa.rs.gov.br/noticias/assistencia-social-realiza-cadastro-municipal-de-voluntarios-para-apoio-em-situacoes-emergenciais",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Cadastro municipal de voluntários para apoio emergencial e abrigos (formulário online aberto, 12/11/2026).",
+  "coletado_em": "2026-11-19"
+ },
+ "Carlos Gomes": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Casca": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Caseiros": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Caçapava do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Centenário": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Cerro Grande": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Cerro Grande do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Cerro Largo": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Chapada": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Charqueadas": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 1,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (1 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Charrua": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Chiapetta": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Chuvisca": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Chuí": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 26,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (26 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Cidreira": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Ciríaco": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 23,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (23 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Colinas": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Colorado": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Condor": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Constantina": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Coqueiro Baixo": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Coqueiros do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 35,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (35 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Coronel Bicaco": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Cotiporã": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Cristal": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Cristal do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 1,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (1 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Cândido Godói": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "David Canabarro": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 35,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (35 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Dezesseis de Novembro": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Dilermando de Aguiar": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Dois Irmãos das Missões": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Dois Lajeados": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Dom Feliciano": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Dom Pedro de Alcântara": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Dona Francisca": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 1,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (1 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Doutor Ricardo": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Encantado": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Encruzilhada do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Engenho Velho": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Entre Rios do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 35,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (35 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Erebango": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Ernestina": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Erval Grande": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Erval Seco": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Esmeralda": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 30,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (30 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Esperança do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Espumoso": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Esteio": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Estrela": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Estrela Velha": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Estância Velha": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Farroupilha": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 1,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (1 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Faxinal do Soturno": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Faxinalzinho": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Fazenda Vilanova": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Flores da Cunha": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Floriano Peixoto": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 29,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (29 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Fontoura Xavier": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Forquetinha": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Frederico Westphalen": {
+  "situacao_site": "ok",
+  "canal": "encerrado",
+  "url_canal": "https://www.fredericowestphalen-rs.com.br/noticia/view/3291",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Plataforma de voluntários de maio de 2024 (enchentes); nenhum canal ativo encontrado.",
+  "coletado_em": "2026-11-19"
+ },
+ "Garibaldi": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Gaurama": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "General Câmara": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Giruá": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Glorinha": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Gramado": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 1,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (1 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Gramado dos Loureiros": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 24,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (24 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Guabiju": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Guaíba": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Harmonia": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Herval": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Herveiras": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Hulha Negra": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Humaitá": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Ibarama": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Ibiaçá": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Ibiraiaras": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Ibirapuitã": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Ibirubá": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Igrejinha": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Imbé": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Independência": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Ipiranga do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Itaara": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Itacurubi": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Itapuca": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Itaqui": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Itatiba do Sul": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Ivorá": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Ivoti": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Jacuizinho": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 3,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (3 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Jacutinga": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Jaguarão": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Jari": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Jóia": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Júlio de Castilhos": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Lagoa Vermelha": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Lagoão": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Lajeado": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Lajeado do Bugre": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Lavras do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Lindolfo Collor": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Linha Nova": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Machadinho": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Mampituba": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Maquiné": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Mariana Pimentel": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Mariano Moro": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Marques de Souza": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 39,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (39 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Mata": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 39,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (39 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Mato Castelhano": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Mato Leitão": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Maximiliano de Almeida": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Minas do Leão": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Monte Alegre dos Campos": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 39,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (39 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Monte Belo do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Mormaço": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Morrinhos do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Morro Redondo": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Mostardas": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Muitos Capões": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Muliterno": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Muçum": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 23,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (23 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Nicolau Vergueiro": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 28,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (28 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Nonoai": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Nova Alvorada": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Nova Araçá": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Nova Bassano": {
+  "situacao_site": "ok",
+  "canal": "municipal_ativo",
+  "url_canal": "https://www.novabassano.rs.gov.br/servico/view/5/defesa-civil",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Página da Defesa Civil convida a se cadastrar como voluntário por formulário.",
+  "coletado_em": "2026-11-19"
+ },
+ "Nova Bréscia": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Nova Candelária": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Nova Esperança do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Nova Hartz": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Nova Palma": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Nova Petrópolis": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Nova Prata": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Nova Pádua": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Nova Ramada": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Nova Santa Rita": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Novo Barreiro": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Novo Hamburgo": {
+  "situacao_site": "ok",
+  "canal": "encerrado",
+  "url_canal": "https://www.novohamburgo.rs.gov.br/noticia/inscricoes-abertas-capacitacao-forca-voluntaria-defesa-civil",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Formulário da Força Voluntária de Defesa Civil não aceita mais respostas.",
+  "coletado_em": "2026-11-19"
+ },
+ "Novo Machado": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Novo Tiradentes": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Novo Xingu": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 22,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (22 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Não-Me-Toque": {
+  "situacao_site": "ok",
+  "canal": "municipal_ativo",
+  "url_canal": "https://naometoque.rs.gov.br/servicos/servicos-secretarias/gabinete/defesa-civil-de-nao-me-toque/",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Link \"Cadastro de Voluntários – Defesa Civil\" para formulário aberto.",
+  "coletado_em": "2026-11-19"
+ },
+ "Paim Filho": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Palmares do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Pantano Grande": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Paraí": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 32,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (32 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Pareci Novo": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Passa Sete": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Passo do Sobrado": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Paulo Bento": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Paverama": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Pedras Altas": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Pelotas": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Pinhal": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Pinhal Grande": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 1,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (1 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Pinhal da Serra": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Pinheirinho do Vale": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Pinheiro Machado": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Pirapó": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Planalto": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 38,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (38 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Ponte Preta": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Pontão": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 23,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (23 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Porto Alegre": {
+  "situacao_site": "ok",
+  "canal": "encerrado",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Só notícias de 2024 sobre cadastro de voluntários, encerrado; nenhum canal ativo encontrado.",
+  "coletado_em": "2026-11-19"
+ },
+ "Porto Lucena": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Porto Mauá": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Porto Vera Cruz": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Porto Xavier": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Portão": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Pouso Novo": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Poço das Antas": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Presidente Lucena": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Progresso": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Protásio Alves": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 36,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (36 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Putinga": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Quatro Irmãos": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Quevedos": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Quinze de Novembro": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Redentora": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Relvado": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Restinga Sêca": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Rio Grande": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Riozinho": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Roca Sales": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Rolador": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Rolante": {
+  "situacao_site": "ok",
+  "canal": "municipal_ativo",
+  "url_canal": "https://www.rolante.rs.gov.br/site/",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Menu \"Defesa Civil - Cadastro de Voluntários\" com formulário aberto.",
+  "coletado_em": "2026-11-19"
+ },
+ "Ronda Alta": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Rondinha": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Roque Gonzales": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Rosário do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Sagrada Família": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Saldanha Marinho": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Salto do Jacuí": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 11,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (11 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Salvador das Missões": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 24,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (24 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Salvador do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Sant'Ana do Livramento": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Santa Bárbara do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Santa Clara do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Santa Margarida do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Santa Maria": {
+  "situacao_site": "ok",
+  "canal": "municipal_ativo",
+  "url_canal": "https://www.santamaria.rs.gov.br/cadastro-voluntarios-defesa-civil",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Formulário de cadastro de voluntários da Defesa Civil no site.",
+  "coletado_em": "2026-11-19"
+ },
+ "Santa Maria do Herval": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Santa Rosa": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Santa Tereza": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Santana da Boa Vista": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Santiago": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Santo Antônio da Patrulha": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Santo Antônio das Missões": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Santo Antônio do Planalto": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Santo Augusto": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Santo Cristo": {
+  "situacao_site": "ok",
+  "canal": "municipal_ativo",
+  "url_canal": "https://www.santocristo.rs.gov.br/site/noticias/bombeiros-voluntarios/86591-novos-voluntarios",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Bombeiros Voluntários com inscrições \"a qualquer tempo\" divulgadas no site (contato por telefone ou na sede).",
+  "coletado_em": "2026-11-19"
+ },
+ "Santo Ângelo": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 11,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (11 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Sapiranga": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Sapucaia do Sul": {
+  "situacao_site": "ok",
+  "canal": "encerrado",
+  "url_canal": "https://www.sapucaiadosul.rs.gov.br/noticias/inscricoes-para-voluntarios-encerradas/",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Inscrições de voluntários encerradas (2024).",
+  "coletado_em": "2026-11-19"
+ },
+ "Sarandi": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Seberi": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Selbach": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Senador Salgado Filho": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Sentinela do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 39,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (39 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Sertão": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Sete de Setembro": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Severiano de Almeida": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Sinimbu": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Sobradinho": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Borja": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Francisco de Assis": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Gabriel": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Jerônimo": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São José das Missões": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São José do Herval": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 1,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (1 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São José do Hortêncio": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São José do Inhacorá": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São José do Norte": {
+  "situacao_site": "ok",
+  "canal": "municipal_ativo",
+  "url_canal": "https://www.saojosedonorte.rs.gov.br/noticias/defesa-civil-nortense-abre-cadastro-de-voluntarios-para-fortalecer-a-protecao-da-comunidade-em-situacoes",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Defesa Civil abriu cadastro de voluntários (18/06/2026).",
+  "coletado_em": "2026-11-19"
+ },
+ "São José do Sul": {
+  "situacao_site": "ok",
+  "canal": "municipal_ativo",
+  "url_canal": "https://www.saojosedosul.rs.gov.br/web/noticias/2206/seja-voluntario-da-defesa-civil",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "\"Seja voluntário da Defesa Civil\": cadastro aberto pelo telefone indicado (13/10/2026).",
+  "coletado_em": "2026-11-19"
+ },
+ "São José dos Ausentes": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São João do Polêsine": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Leopoldo": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Luiz Gonzaga": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Marcos": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Martinho": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Nicolau": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Paulo das Missões": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Pedro da Serra": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Pedro das Missões": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 37,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (37 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Pedro do Butiá": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Sepé": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Valentim": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Valentim do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 29,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (29 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Valério do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "São Vicente do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Tabaí": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Tapejara": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Taquara": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Taquari": {
+  "situacao_site": "ok",
+  "canal": "municipal_ativo",
+  "url_canal": "https://www.taquari.rs.gov.br/pagina/id/1095/?cartilha-de-orientacao-de-voluntarios.html",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Termo de adesão ao corpo de voluntários da Defesa Civil (formulário aberto).",
+  "coletado_em": "2026-11-19"
+ },
+ "Taquaruçu do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Tavares": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Terra de Areia": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Teutônia": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Tio Hugo": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Tiradentes do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Toropi": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Tramandaí": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Travesseiro": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Trindade do Sul": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Triunfo": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Três Arroios": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Três Cachoeiras": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Três Coroas": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Três Forquilhas": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Três Palmeiras": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 21,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (21 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Três Passos": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Três de Maio": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Tucunduva": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Tunas": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 1,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (1 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Tupandi": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Tuparendi": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Turuçu": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Ubiretama": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "União da Serra": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 29,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (29 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Uruguaiana": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Vale Real": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Vale do Sol": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Venâncio Aires": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Vera Cruz": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Veranópolis": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Vespasiano Corrêa": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Viadutos": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Vicente Dutra": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 33,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (33 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Victor Graeff": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Vila Flores": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Westfália": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Xangri-lá": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ },
+ "Água Santa": {
+  "situacao_site": "inacessivel",
+  "canal": "N/A",
+  "url_canal": "",
+  "paginas_lidas": 0,
+  "conferencia": "site não respondeu na coleta do P10",
+  "evidencia": "Fora do indicador (site não pôde ser avaliado): site não respondeu na coleta do P10.",
+  "coletado_em": "2026-11-19"
+ },
+ "Áurea": {
+  "situacao_site": "ok",
+  "canal": "nenhum",
+  "url_canal": "",
+  "paginas_lidas": 40,
+  "conferencia": "",
+  "evidencia": "Nenhum canal de cadastro de voluntários (emergência/Defesa Civil) encontrado no site. (40 páginas lidas.)",
+  "coletado_em": "2026-11-19"
+ }
+}

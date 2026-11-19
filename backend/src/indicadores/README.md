@@ -7,7 +7,9 @@ os 8 indicadores da Fase de Preparação.
 > **Fonte das regras:** aba **"simplificado"** da planilha do Observatório
 > (<https://docs.google.com/spreadsheets/d/1ck5WJv7X2ifg9cwEp299d1Een-LmjzvVYTHiyKZVOt8/>).
 > Nessa aba, a saída de P1–P7 é um **semáforo** (`verde`/`amarelo`/`vermelho`) baseado
-> no que o PLANCON menciona; **P8** é numérico (R$/hab). A **ausência** do dado no
+> no que o PLANCON menciona; **P8** é numérico (R$/hab) e fica para a V2. **P9** (plano
+> público e acessível) não vem do PLANCON: sai da navegação no site da prefeitura
+> (`monitor/acessibilidade.py` → `npm run p9`). A **ausência** do dado no
 > PLANCON é, por definição, o próprio sinal **vermelho** (não é "N/A"). Números de apoio
 > (população em risco, vagas, canais de alerta, ano do plano, NUPDECs, despesa) ficam em
 > `componentes`, com razões derivadas quando cabe (`percentual_pop_risco`,
@@ -25,6 +27,7 @@ de dados entre cidades e mantém o contexto pequeno, **reduzindo o consumo de to
 | `retrieve.ts`   | Cliente do endpoint `retrieve` do Azure (config por env; injeta o município no prompt como o proxy faz; retry com backoff). |
 | `extrair.ts`    | Runner principal: para cada cidade × indicador, consulta o RAG, faz o parse do JSON e grava `indicadores/<Município>.json`. |
 | `consolidar.ts` | Agrega os arquivos por cidade em CSVs (`indicadores/_consolidado/`). |
+| `p9.ts`         | Grava o P9 nos `<Município>.json` a partir de `monitor/acessibilidade.json` (sem modelo). Site inacessível, que recusa acesso automatizado ou veta robôs fica `N/A` até a conferência manual (`_ajustes_manuais.json`). |
 
 ## Como rodar
 

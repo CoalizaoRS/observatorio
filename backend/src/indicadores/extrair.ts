@@ -236,9 +236,11 @@ async function main() {
   const args = parseArgs(process.argv.slice(2));
   await fs.mkdir(OUT_DIR, { recursive: true });
 
+  // indicadores de coleta externa (ex.: P9) não passam pelo modelo; o merge abaixo os preserva
+  const extraiveis = INDICADORES.filter((i) => !i.coleta);
   const indicadores = args.indicadores
-    ? [...INDICADORES, ...EXPERIMENTAIS].filter((i) => args.indicadores!.includes(i.id))
-    : INDICADORES; // experimentais (cenários) só quando pedidos por --indicadores
+    ? [...extraiveis, ...EXPERIMENTAIS].filter((i) => args.indicadores!.includes(i.id))
+    : extraiveis; // experimentais (cenários) só quando pedidos por --indicadores
   if (indicadores.length === 0) throw new Error(`Nenhum indicador corresponde a: ${args.indicadores}`);
 
   let cidades = Object.keys(DOCUMENTOS).sort();

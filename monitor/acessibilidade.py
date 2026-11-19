@@ -49,7 +49,7 @@ from pypdf import PdfReader
 
 from monitor import (
     MUNICIPIOS_FILE, OVERRIDES_FILE, TESSERACT_DISPONIVEL, SITE_URL_CANDIDATES_TEMPLATE,
-    load_json, normalizar_texto, ocr_pdf_texto,
+    eh_plancon_defesa_civil, load_json, normalizar_texto, ocr_pdf_texto,
 )
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -249,24 +249,6 @@ def texto_pdf(dados: bytes) -> tuple[str, dict]:
         txt = ocr_pdf_texto(dados)
         meta["ocr"] = True
     return txt, meta
-
-
-# "Plano de contingência" também nomeia planos da COVID-19, da dengue, de energia, decretos de
-# contingenciamento de gastos etc. O PLANCON de Defesa Civil fala de desastres naturais.
-OUTRO_PLANO = re.compile(r"covid|coronav|pandemi|dengue|influenza|energia eletrica|contingenciamento|racionamento|vacina")
-# no nome do arquivo: documentos que citam o plano sem sê-lo (contratação de assessoria, edital…)
-OUTRO_NOME = re.compile(r"covid|corona|dengue|energia|contingenciamento|racionamento|cartilha|\bata\b|protocolo|vacina|"
-                        r"assessoria|edital|licitac|contrat|termo de referencia|pregao|\bprd\b")
-DESASTRE = re.compile(r"inundac|enchente|enxurrad|alagament|deslizament|moviment\w* de massa|estiagem|seca|vendava|granizo|"
-                      r"tempestade|desastre|area de risco|defesa civil|desabrigad|desalojad|cobrade|ciclone")
-
-
-def eh_plancon_defesa_civil(texto: str, nome: str) -> bool:
-    if OUTRO_NOME.search(nome):
-        return False
-    outro = len(OUTRO_PLANO.findall(texto))
-    desastre = len(DESASTRE.findall(texto))
-    return desastre >= 5 and outro * 2 < desastre
 
 
 def valida_documento(site: Site, url: str, municipio: str) -> dict | None:

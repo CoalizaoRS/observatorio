@@ -7,10 +7,8 @@
  *   npm run p9              # só mostra a distribuição
  *   npm run p9 -- --gravar  # grava o P9 nos <Município>.json
  *
- * Versão: "mesma" quando o PDF do site é o mesmo arquivo (sha256) já registrado em
- * rag-local/fontes_site_municipal.json. Nos demais casos compara o ano do PDF do site (nome do
- * arquivo/título; na falta, data de criação do PDF) com o ano do plano analisado (P6.ano_plano).
- * Sem um dos anos fica "indeterminada", que não rebaixa a cor.
+ * Site que não pôde ser lido (fora do ar, acesso recusado, robots.txt, página inicial sem links,
+ * navegação interrompida) fica cinza (N/A): o município sai do indicador.
  */
 
 import { promises as fs } from 'fs';
@@ -19,7 +17,6 @@ import { INDICADORES } from './definicoes';
 
 const OUT_DIR = path.resolve(__dirname, '../../indicadores');
 const MONITOR = path.resolve(__dirname, '../../../monitor');
-const FONTES_SITE = path.resolve(__dirname, '../../../rag-local/fontes_site_municipal.json');
 const P9 = INDICADORES.find((i) => i.id === 'P9')!;
 
 const norm = (s: string) => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
@@ -44,28 +41,10 @@ function caminhoTexto(c: { texto: string; url: string }[], via: string): string 
   return [via === 'busca_interna' ? 'Início (busca interna)' : 'Início', ...passos.slice(via === 'busca_interna' ? 1 : 0)].join(' → ');
 }
 
-/** Ano do documento do site: o maior ano no nome do arquivo/título; senão, o da data de criação. */
-function anoDocumento(doc: any): number | null {
-  const nome = decodeURIComponent(String(doc.url ?? '').split('/').pop() ?? '') + ' ' + (doc.title ?? '');
-  const anos = [...nome.matchAll(/(?<!\d)(20[0-3]\d)(?!\d)/g)].map((m) => Number(m[1]));
-  if (anos.length) return Math.max(...anos);
-  const m = String(doc.creationdate ?? doc.moddate ?? '').match(/D:(20\d\d)/);
-  return m ? Number(m[1]) : null;
-}
-
-function comparaVersao(doc: any, anoPlano: any): string {
-  const a = anoDocumento(doc);
-  const b = Number(anoPlano);
-  if (!a || !Number.isFinite(b) || !b) return 'indeterminada';
-  return a < b ? 'mais_antiga' : a > b ? 'mais_recente' : 'mesma';
-}
-
 async function main() {
   const gravar = process.argv.includes('--gravar');
   const coleta: Record<string, any> = await lerJson(path.join(MONITOR, 'acessibilidade.json'), {});
-  const fontesSite: Record<string, { sha256?: string }> = await lerJson(FONTES_SITE, {});
   const porNome = new Map(Object.entries(coleta).map(([k, v]) => [norm(k), v]));
-  const shaSite = new Map(Object.entries(fontesSite).map(([k, v]) => [norm(k), v.sha256]));
 
   const arquivos = (await fs.readdir(OUT_DIR)).filter((f) => f.endsWith('.json') && !f.startsWith('_')).sort();
   const dist: Record<string, number> = {};
@@ -79,10 +58,6 @@ async function main() {
       continue;
     }
     const doc = r.documento ?? {};
-    const versao =
-      doc.sha256 && doc.sha256 === shaSite.get(norm(dados.municipio))
-        ? 'mesma'
-        : comparaVersao(doc, dados.indicadores?.P6?.componentes?.ano_plano);
 
     const conferencia = [
       MOTIVO[r.site_status] ?? '',
@@ -98,7 +73,6 @@ async function main() {
       situacao_site: r.site_status ?? 'inacessivel',
       via,
       cliques: r.cliques ?? 'N/A',
-      versao: via === 'nao_encontrado' ? 'N/A' : versao,
       url_documento: doc.url ?? '',
       caminho: r.caminho ? caminhoTexto(r.caminho, via) : '',
       conferencia,
@@ -109,7 +83,7 @@ async function main() {
     const evidencia =
       via === 'nao_encontrado'
         ? conferencia
-          ? `Não avaliado: ${conferencia}.`
+          ? `Fora do indicador (site não pôde ser avaliado): ${conferencia}.`
           : `Plano não encontrado no site ${r.home ?? r.site_base} (navegação até ${8} cliques e busca interna).`
         : via === 'sitemap'
           ? `Plano publicado no site, mas sem caminho de navegação a partir da página inicial (localizado pelo índice do site: ${r.sitemap?.fonte ?? 'sitemap'}). Documento: ${doc.url}`

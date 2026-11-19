@@ -31,7 +31,10 @@ ETAPAS=${ETAPAS:-texto+indice+extrair}; ETAPAS=${ETAPAS//+/,}
 LISTA=${LISTA:?defina LISTA=<arquivo com um município por linha>}
 
 RAG=$HOME/observatorio-rag
-TMP=/tmp/rag-$USER-$SLURM_JOB_ID
+# /tmp do nó às vezes está cheio (outros usuários): com menos de 20 GB livres, usa /dev/shm (RAM, conta na --mem).
+BASE_TMP=/tmp
+[ "$(df --output=avail -BG /tmp | tail -1 | tr -dc 0-9)" -lt 20 ] && BASE_TMP=/dev/shm
+TMP=$BASE_TMP/rag-$USER-$SLURM_JOB_ID
 CACHE=$TMP/cache
 PY=$RAG/venv/bin/python
 SYNC="$PY $RAG/rag-local/s3sync.py"
@@ -59,6 +62,18 @@ if [ "$USO" -gt 500 ]; then
   echo "GPU já em uso por outro processo (${USO} MiB) — abortando para não disputar a M40."
   nvidia-smi; exit 2
 fi
+
+# --- medição de energia da GPU ------------------------------------------------
+# Potência, uso e memória a cada 5 s em logs/gpu-<job>.csv; o total em kWh sai no fim do log.
+# (A GPU só é usada se estiver livre — ver checagem acima —, então a medição é deste job.)
+mkdir -p "$RAG/logs"
+GPU_CSV=$RAG/logs/gpu-$SLURM_JOB_ID.csv
+nvidia-smi --query-gpu=timestamp,power.draw,utilization.gpu,memory.used --format=csv,noheader,nounits -lms 5000 >"$GPU_CSV" &
+PIDS+=($!)
+energia() {
+  awk -F', *' '{w+=$2; n++} END {if (n) printf "GPU: %d amostras, potência média %.1f W, energia %.3f kWh\n", n, w/n, w*5/3600/1000}' "$GPU_CSV"
+}
+trap 'energia; encerrar' EXIT
 
 # --- texto (CPU) -------------------------------------------------------------
 $SYNC pull rag-cache texto "$CACHE/texto"

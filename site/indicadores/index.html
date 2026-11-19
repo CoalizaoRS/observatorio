@@ -259,6 +259,7 @@
                             <option value="P6">6 - Atualização do PlanCon</option>
                             <option value="P7">7 - Mobilização Comunitária</option>
                             <option value="P9">9 - Plano Público e Acessível</option>
+                            <option value="P10">10 - Cadastro de Voluntários</option>
                         </select>
                         <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2.5 text-gray-400">
                             <i class="fa-solid fa-chevron-down text-[10px]"></i>
@@ -416,7 +417,7 @@
                         <span class="w-4 h-4 rounded-full bg-gray-600 text-gray-300 flex items-center justify-center text-[9px] font-bold">
                             <i class="fa-solid fa-minus"></i>
                         </span>
-                        <span class="text-xs text-gray-400">Dado Indisponível</span>
+                        <span class="text-xs text-gray-400" id="legend-na">Dado Indisponível</span>
                     </div>
                 </div>
             </div>
@@ -432,9 +433,9 @@
         // Configurações Globais dos Indicadores
         const INDICATORS_METADATA = {
             'P1': {
-                title: "1: Quantidade de pessoas em áreas de risco",
-                desc: "O município sabe quantas pessoas vivem em área de risco?",
-                criterio: "VERDE: declara nº específico de RESIDENTES em áreas de risco (mapeamento/estimativa). VERMELHO: não declara — inclui só população total ou nº de afetados por evento."
+                title: "1: Mapeamento de áreas de risco",
+                desc: "O município conhece suas áreas de risco e quantas pessoas vivem nelas?",
+                criterio: "VERDE: o PlanCon identifica as áreas de risco e informa a população de todas elas, OU o município tem setorização de risco do Serviço Geológico do Brasil (SGB). AMARELO: o PlanCon identifica áreas de risco (ou trata o município inteiro como em risco), sem a população de todas. VERMELHO: o PlanCon não identifica áreas de risco e não há setorização do SGB. Verde indica que a informação existe, não que o risco é baixo."
             },
             'P2': {
                 title: "2: Disponibilidade estrutural de abrigos",
@@ -469,18 +470,24 @@
             'P9': {
                 title: "9: Plano de contingência público e acessível",
                 desc: "A população encontra o plano de contingência no site da prefeitura?",
-                criterio: "VERDE: plano no site da prefeitura em até 5 cliques a partir da página inicial. AMARELO: mais de 5 cliques, só pela busca interna do site, publicado sem caminho a partir da página inicial, ou versão mais antiga que a do Prepara RS. VERMELHO: plano disponível apenas no Prepara RS."
+                criterio: "VERDE: Plano de Contingência localizado no site oficial da prefeitura em até 3 cliques a partir da página inicial, com o arquivo abrindo. AMARELO: plano localizado e acessível, com mais de 3 cliques a partir da página inicial. VERMELHO: plano não localizado no site, link quebrado ou acesso apenas mediante pedido. CINZA: não foi possível acessar o site; o município fica fora do indicador."
+            },
+            'P10': {
+                title: "10: Canal de cadastro de voluntários",
+                desc: "O site da prefeitura oferece um canal para a população se cadastrar como voluntária em emergências?",
+                criterio: "VERDE: canal municipal de cadastro de voluntários ativo no site oficial da prefeitura (formulário ou página com inscrição aberta); indica a existência do canal, sem informar se há voluntários preparados. AMARELO: o site apenas remete ao cadastro estadual da Defesa Civil RS. VERMELHO: nenhum canal de cadastro de voluntários no site oficial da prefeitura, ou canal encerrado. CINZA: não foi possível acessar o site; o município fica fora do indicador."
             },
             'consolidado': {
                 title: "Indicadores: Consolidado",
-                desc: "Visão consolidada frente aos 8 indicadores.",
-                criterio: "Cada município é classificado em verde, amarelo ou vermelho por indicador, conforme a análise do PlanCon municipal. Selecione um indicador para ver seu critério."
+                desc: "Visão consolidada frente aos 9 indicadores.",
+                criterio: "Cada município é classificado em verde, amarelo ou vermelho por indicador, conforme a análise do PlanCon municipal (no P1, também a setorização de risco do SGB; no P9 e no P10, a consulta ao site da prefeitura). Selecione um indicador para ver seu critério."
             }
         };
 
         // CSVs publicados junto com o site (backend/publicar-csv.sh copia para site/indicadores/dados)
         const BASE_CSV_URL = 'dados';
-        const RS_GEOJSON_URL = 'https://raw.githubusercontent.com/tbrugz/geodata-br/master/geojson/geojs-43-mun.json';
+        // Malha municipal do IBGE (API de malhas, qualidade intermediária) com nomes da API de localidades: 497 municípios
+        const RS_GEOJSON_URL = 'rs-municipios.geojson';
         // Chave pública do CARTO Basemaps, restrita ao domínio observatoriodaresiliencia.org
         // (restrição configurada no painel do CARTO — não protege se usada em outro domínio).
         const CARTO_API_KEY = 'cb1_43we_1_67a1ec24ec723f0e9cd65fb1';
@@ -491,7 +498,12 @@
         let currentMobileView = 'indicators'; // 'indicators' ou 'map'
         
         // P8 (investimento em Defesa Civil) fica para a V2; a numeração segue a planilha do Índice.
-        const INDICATOR_IDS = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P9'];
+        const INDICATOR_IDS = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P9', 'P10'];
+        // P9 e P10 vêm da consulta ao site da prefeitura: sem cor = site inacessível (cinza, fora do indicador)
+        const INDICADORES_SITE = ['P9', 'P10'];
+        const rotuloNA = (id, longo = false) => INDICADORES_SITE.includes(id)
+            ? (longo ? 'CINZA (site inacessível, fora do indicador)' : 'CINZA')
+            : (longo ? 'N/A (Dado Indisponível)' : 'N/A');
 
         let csvData = { consolidado: {} };
         INDICATOR_IDS.forEach((id) => { csvData[id] = {}; });
@@ -754,7 +766,7 @@
         function onEachFeature(feature, layer) {
             const indicator = feature.properties.indicator;
             const valKey = indicator.valor ? indicator.valor.toLowerCase() : 'n/a';
-            const displayValue = (valKey === 'default' || valKey === 'n/a') ? 'N/A (Dado Indisponível)' : indicator.valor.toUpperCase();
+            const displayValue = (valKey === 'default' || valKey === 'n/a') ? rotuloNA(activeIndicator, true) : indicator.valor.toUpperCase();
             
             layer.bindTooltip(`
                 <div class="text-xs">
@@ -869,7 +881,7 @@
                     selectMunicipality(item, targetLayer);
                 };
 
-                const displayTag = (valKey === 'default' || valKey === 'n/a') ? 'N/A' : item.valor.toUpperCase();
+                const displayTag = (valKey === 'default' || valKey === 'n/a') ? rotuloNA(activeIndicator) : item.valor.toUpperCase();
 
                 div.innerHTML = `
                     <div class="space-y-1 pr-4 overflow-hidden">
@@ -920,7 +932,7 @@
             const badge = document.getElementById('detail-badge');
             const valKey = indicator.valor ? indicator.valor.toLowerCase() : 'n/a';
             const badgeColor = COLORS[valKey] || COLORS['n/a'];
-            badge.textContent = (valKey === 'default' || valKey === 'n/a') ? 'N/A' : indicator.valor.toUpperCase();
+            badge.textContent = (valKey === 'default' || valKey === 'n/a') ? rotuloNA(activeIndicator) : indicator.valor.toUpperCase();
             badge.style.color = badgeColor;
             badge.style.backgroundColor = `${badgeColor}15`;
             badge.style.border = `1px solid ${badgeColor}30`;
@@ -934,7 +946,7 @@
                 const val = indData && indData.valor ? indData.valor.toLowerCase() : 'n/a';
                 const color = COLORS[val] || COLORS['n/a'];
                 const meta = INDICATORS_METADATA[id];
-                const displayVal = (val === 'default' || val === 'n/a') ? 'N/A' : val.toUpperCase();
+                const displayVal = (val === 'default' || val === 'n/a') ? rotuloNA(id) : val.toUpperCase();
                 
                 const row = document.createElement('div');
                 const isActive = activeIndicator === id;
@@ -987,6 +999,8 @@
 
         function switchIndicator(indicatorId, keepDetailsOpen = false) {
             activeIndicator = indicatorId;
+            const legendaNA = document.getElementById('legend-na');
+            if (legendaNA) legendaNA.textContent = INDICADORES_SITE.includes(indicatorId) ? 'Cinza: site inacessível (fora do indicador)' : 'Dado Indisponível';
             
             const selectEl = document.getElementById('indicator-select');
             if (selectEl && selectEl.value !== indicatorId) {

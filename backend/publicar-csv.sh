@@ -40,15 +40,16 @@ python3 - "$DESTINO" > "$DESTINO/manifest.json" <<'PY'
 import json, os, sys, glob
 d = sys.argv[1]
 desc = {
- '_resumo.csv':'Matriz município × valor de cada indicador (P1..P7, P9)',
- 'P1.csv':'P1 — % população em área de risco (semáforo verde/vermelho)',
+ '_resumo.csv':'Matriz município × valor de cada indicador (P1..P7, P9, P10)',
+ 'P1.csv':'P1 — Mapeamento de áreas de risco (semáforo)',
  'P2.csv':'P2 — Capacidade de abrigamento (semáforo)',
  'P3.csv':'P3 — Simulados de evacuação (semáforo)',
  'P4.csv':'P4 — Rotas de evacuação (semáforo)',
  'P5.csv':'P5 — Cobertura de sistemas de alerta (semáforo)',
  'P6.csv':'P6 — Plano de contingência atualizado (semáforo)',
  'P7.csv':'P7 — NUPDECs ativos (semáforo)',
- 'P9.csv':'P9 — Plano de contingência público e acessível (semáforo)',
+ 'P9.csv':'P9 — Plano de contingência público e acessível (semáforo; N/A = site inacessível)',
+ 'P10.csv':'P10 — Canal de cadastro de voluntários (semáforo; N/A = site inacessível)',
  'familias.csv':'Estimativa de famílias em áreas de risco (legado)',
  'vagas_abrigos.csv':'Vagas em abrigos (dados de apoio)',
 }

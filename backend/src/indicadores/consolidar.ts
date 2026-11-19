@@ -135,7 +135,9 @@ async function main() {
 
   // 2) Um CSV por indicador com detalhe e componentes
   for (const ind of INDICADORES) {
-    const compKeys = ind.campos.filter((k) => k.nome !== 'valor').map((k) => k.nome);
+    const comp = ind.campos.filter((k) => k.nome !== 'valor');
+    const compKeys = comp.map((k) => k.nome);
+    const celula = (k: (typeof comp)[number], v: any) => (v === undefined ? '' : k.paraCsv ? k.paraCsv(v) : v);
     const cab = ['municipio', 'valor', 'unidade', ...compKeys, 'evidencia', 'confianca', 'erro', 'origem', 'fonte_plano', 'url_plano'];
     const linhas = [cab.map(csv).join(',')];
     for (const c of cidades) {
@@ -145,7 +147,7 @@ async function main() {
         c.municipio,
         r.valor,
         r.unidade,
-        ...compKeys.map((k) => r.componentes?.[k] ?? ''),
+        ...comp.map((k) => celula(k, r.componentes?.[k.nome])),
         r.evidencia,
         r.confianca,
         r.erro ?? '',

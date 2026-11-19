@@ -211,7 +211,7 @@ prefeitura, ele passa por triagem antes de entrar nos indicadores:
    `state.json` ainda sem triagem — novos ou com hash diferente do registrado.
 2. A triagem fica em `rag-local/fontes_site_municipal.json`, por município:
    `atualizacao` (versão mais nova que a do Prepara RS — substitui os documentos do município),
-   `mesma_versao` (nada muda), `versao_anterior` (o site publica uma versão mais antiga que a do Prepara RS; nada muda) ou `descartado` (não é o PLANCON: plano de COVID, cartilha etc.).
+   `mesma_versao` (nada muda), `versao_anterior` (o site publica uma versão mais antiga que a do Prepara RS: os planos não mudam, mas o P9 fica vermelho; registrar `versao_site`, `versao_vigente` e `fonte_vigente`, que aparecem no card do painel) ou `descartado` (não é o PLANCON: plano de COVID, cartilha etc.).
 3. Os PDFs de `atualizacao` sobem para o bucket `plancon` em `site-municipal/<Município>/<sha256[:12]>.pdf`;
    `python rag-local/site_municipal.py aplicar` atualiza `rag-local/municipios.json`.
 4. Reextração dos municípios no LAD/PUCRS (`rodar.sbatch` com `FORCE=1`) e `npm run consolidar`.

@@ -119,6 +119,14 @@ e [#27](https://github.com/CoalizaoRS/observatorio/pull/27).
   PLANCON. P9 passa de amarelo para vermelho.
 
 **Pendências conhecidas**
-- Arroio do Meio · P4: o ajuste manual feito sobre o plano do Prepara RS deixou de valer com o plano
-  novo e precisa ser revisto.
-- Alvorada: plano do site ainda sem triagem.
+- Alvorada: plano do site (08/2026) ainda sem triagem, porque o site da prefeitura não responde.
+
+**Revisão posterior**
+- P9: o vermelho passa a incluir o site que publica versão anterior à vigente localizada em outra
+  fonte oficial (ex.: Prepara RS). O card mostra as duas datas. Arambaré e Doutor Ricardo passam de
+  verde para vermelho, e Pinheirinho do Vale de amarelo para vermelho. Nova distribuição: verde 40,
+  amarelo 8, vermelho 308, cinza 140.
+- Arroio do Meio · P4: verde confirmado no plano novo (seção 13.4, rotas de fuga por bairro com
+  ponto de encontro). O ajuste manual feito sobre o plano do Prepara RS foi removido.
+- Capitão · P4: removido o ajuste antigo, feito sobre o plano do Prepara RS. Fica o ajuste feito
+  sobre o plano do site.

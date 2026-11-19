@@ -550,7 +550,8 @@ export const INDICADORES: IndicadorDef[] = [
       'VERDE: Plano de Contingência localizado no site oficial da prefeitura em até 3 cliques a partir da página inicial, com o arquivo abrindo. ' +
       'AMARELO: plano localizado e acessível, com mais de 3 cliques a partir da página inicial (inclui o plano achado só pela busca interna ' +
       'do site ou pelo índice do site, sem caminho de navegação). ' +
-      'VERMELHO: plano não localizado no site, link quebrado ou acesso apenas mediante pedido. ' +
+      'VERMELHO: plano não localizado no site, link quebrado, acesso apenas mediante pedido, ou versão publicada anterior à versão ' +
+      'vigente localizada em outra fonte oficial (ex.: Prepara RS). "Plano" significa a versão vigente. ' +
       'CINZA: não foi possível acessar o site (fora do ar, recusa acesso automatizado ou robots.txt veta robôs); o município fica fora do indicador.',
     pergunta: '',
     coleta: 'monitor/acessibilidade.py → npm run p9',
@@ -561,10 +562,14 @@ export const INDICADORES: IndicadorDef[] = [
       { nome: 'url_documento', tipo: 'texto', descricao: 'endereço do plano no site' },
       { nome: 'caminho', tipo: 'texto', descricao: 'links clicados a partir da página inicial' },
       { nome: 'conferencia', tipo: 'texto', descricao: 'por que o site não pôde ser avaliado (ou vazio)' },
+      { nome: 'versao_site', tipo: 'texto', descricao: 'data da versão publicada no site, quando anterior à vigente (triagem)' },
+      { nome: 'versao_vigente', tipo: 'texto', descricao: 'data e fonte da versão vigente, quando o site traz versão anterior (ou vazio)' },
     ],
     // O plano só conta como achado se o arquivo abriu e é o plano de Defesa Civil do município
     // (acessibilidade.py baixa e valida o documento). Site que não pôde ser lido fica cinza (N/A).
     calcular: (c) => {
+      // versão no site anterior à vigente (triagem em rag-local/fontes_site_municipal.json): o plano vigente não está no site
+      if (c.versao_vigente && c.via !== 'nao_encontrado') return 'vermelho';
       if (c.via === 'navegacao') {
         const n = paraNumero(c.cliques);
         return n !== null && n <= 3 ? 'verde' : 'amarelo';

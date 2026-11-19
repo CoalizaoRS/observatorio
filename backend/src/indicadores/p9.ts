@@ -17,6 +17,8 @@ import { INDICADORES } from './definicoes';
 
 const OUT_DIR = path.resolve(__dirname, '../../indicadores');
 const MONITOR = path.resolve(__dirname, '../../../monitor');
+// triagem dos planos do site: versao_anterior = o site publica versão mais antiga que a vigente
+const TRIAGEM = path.resolve(__dirname, '../../../rag-local/fontes_site_municipal.json');
 const P9 = INDICADORES.find((i) => i.id === 'P9')!;
 
 const norm = (s: string) => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
@@ -45,6 +47,8 @@ async function main() {
   const gravar = process.argv.includes('--gravar');
   const coleta: Record<string, any> = await lerJson(path.join(MONITOR, 'acessibilidade.json'), {});
   const porNome = new Map(Object.entries(coleta).map(([k, v]) => [norm(k), v]));
+  const triagem: Record<string, any> = await lerJson(TRIAGEM, {});
+  const triagemPorNome = new Map(Object.entries(triagem).map(([k, v]) => [norm(k), v]));
 
   const arquivos = (await fs.readdir(OUT_DIR)).filter((f) => f.endsWith('.json') && !f.startsWith('_')).sort();
   const dist: Record<string, number> = {};
@@ -69,6 +73,11 @@ async function main() {
     ].filter(Boolean).join('; ');
 
     const via = r.via === 'erro' ? 'nao_encontrado' : r.via;
+    // só vale para o mesmo arquivo que a triagem comparou (mesmo hash)
+    const t = triagemPorNome.get(norm(dados.municipio));
+    const anterior = via !== 'nao_encontrado' && t?.situacao === 'versao_anterior' && t.sha256 === doc.sha256;
+    if (via !== 'nao_encontrado' && t?.situacao === 'versao_anterior' && !anterior)
+      console.warn(`[P9] ${dados.municipio}: triagem versao_anterior é de outro arquivo; refazer a triagem`);
     const componentes = {
       situacao_site: r.site_status ?? 'inacessivel',
       via,
@@ -76,6 +85,8 @@ async function main() {
       url_documento: doc.url ?? '',
       caminho: r.caminho ? caminhoTexto(r.caminho, via) : '',
       conferencia,
+      versao_site: anterior ? t.versao_site ?? '' : '',
+      versao_vigente: anterior ? `${t.versao_vigente}, ${t.fonte_vigente}` : '',
     };
     const valor = P9.calcular!(componentes);
     dist[String(valor)] = (dist[String(valor)] || 0) + 1;
@@ -91,6 +102,9 @@ async function main() {
         : via === 'sitemap'
           ? `Plano publicado no site, mas sem caminho de navegação a partir da página inicial (localizado pelo índice do site: ${r.sitemap?.fonte ?? 'sitemap'}). Documento: ${doc.url}`
           : `${componentes.caminho} (${via === 'navegacao' ? `${r.cliques} clique(s)` : 'busca interna'}). Documento: ${doc.url}`;
+    const evidenciaFinal = anterior
+      ? `Versão no site: ${componentes.versao_site}; versão vigente: ${componentes.versao_vigente}. O site publica uma versão anterior à vigente. ${evidencia}`
+      : evidencia;
 
     dados.indicadores[P9.id] = {
       grupo: P9.grupo,
@@ -100,7 +114,7 @@ async function main() {
       formula: P9.formula,
       valor,
       componentes,
-      evidencia,
+      evidencia: evidenciaFinal,
       confianca: conferencia ? 'baixa' : 'alta',
       tokens: 0,
       metodo: `coleta no site da prefeitura (monitor/acessibilidade.py, ${r.coletado_em})`,

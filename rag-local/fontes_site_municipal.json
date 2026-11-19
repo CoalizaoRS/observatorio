@@ -28,6 +28,9 @@
   "detectado_em": "2026-11-19",
   "situacao": "versao_anterior",
   "versao_plano": "09/2024 (Prepara RS: 2025) — versão mais antiga que a do Prepara RS",
+  "versao_site": "09/2024",
+  "versao_vigente": "2025",
+  "fonte_vigente": "Prepara RS",
   "revisado_por": "Claude (comparação de datas e texto com o Prepara RS)",
   "data_revisao": "2026-11-19"
  },
@@ -151,6 +154,9 @@
   "detectado_em": "2026-11-10",
   "situacao": "versao_anterior",
   "versao_plano": "PDF de 11/2023 (Prepara RS: 24/10/2025) — versão mais antiga que a do Prepara RS",
+  "versao_site": "11/2023",
+  "versao_vigente": "24/10/2025",
+  "fonte_vigente": "Prepara RS",
   "revisado_por": "Claude (comparação de datas e texto com o Prepara RS)",
   "data_revisao": "2026-11-19"
  },
@@ -319,6 +325,9 @@
   "detectado_em": "2026-11-19",
   "situacao": "versao_anterior",
   "versao_plano": "2013 (Prepara RS: SEGIRD 29/11/2023) — versão mais antiga que a do Prepara RS",
+  "versao_site": "2013",
+  "versao_vigente": "29/11/2023",
+  "fonte_vigente": "Prepara RS",
   "revisado_por": "Claude (comparação de datas e texto com o Prepara RS)",
   "data_revisao": "2026-11-19"
  },

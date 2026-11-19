@@ -84,7 +84,10 @@ async function main() {
       via === 'nao_encontrado'
         ? conferencia
           ? `Fora do indicador (site não pôde ser avaliado): ${conferencia}.`
-          : `Plano não encontrado no site ${r.home ?? r.site_base} (navegação até ${8} cliques e busca interna).`
+          : `Plano não encontrado no site ${r.home ?? r.site_base} (navegação até ${8} cliques e busca interna).` +
+            (r.documento_rejeitado
+              ? ` O documento achado (${r.documento_rejeitado.url}) foi rejeitado na revisão manual: ${r.documento_rejeitado.motivo}.`
+              : '')
         : via === 'sitemap'
           ? `Plano publicado no site, mas sem caminho de navegação a partir da página inicial (localizado pelo índice do site: ${r.sitemap?.fonte ?? 'sitemap'}). Documento: ${doc.url}`
           : `${componentes.caminho} (${via === 'navegacao' ? `${r.cliques} clique(s)` : 'busca interna'}). Documento: ${doc.url}`;

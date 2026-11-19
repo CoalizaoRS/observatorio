@@ -5,6 +5,7 @@ monitor (monitor/state.json) e a triagem feita sobre ele:
   situacao  atualizacao   versão mais nova que a do Prepara RS → SUBSTITUI os documentos do
                           município em municipios.json (chave no bucket `plancon`: site-municipal/…)
             mesma_versao  mesmo plano já recebido via Prepara RS → nada muda
+            versao_anterior  versão mais antiga que a do Prepara RS → nada muda
             descartado    não é o PLANCON (falso positivo do monitor)
 Os indicadores levam a fonte adiante: fonte_documentos com prefixo site-municipal/ ⇒ "Site Municipal"
 (consolidar.ts gera as colunas fonte_plano e url_plano).

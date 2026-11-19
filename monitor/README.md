@@ -112,10 +112,21 @@ Por isso o monitor também pode ser executado de uma máquina no país, publican
 `state.json` na `main` como o workflow faz:
 
 ```bash
-monitor/rodar-local.sh               # rodada completa + commit/push do state.json
-monitor/rodar-local.sh --dry-run     # sem enviar e-mail
-SEM_PUSH=1 monitor/rodar-local.sh    # roda, mas não publica
+monitor/rodar-local.sh                 # rodada completa + commit/push do state.json
+monitor/rodar-local.sh --profundo      # + navegação profunda nos sites sem plano (lenta; semanal)
+monitor/rodar-local.sh --sem-publicar  # roda, mas não publica o state.json
+monitor/rodar-local.sh --dry-run       # só não envia e-mail — o state.json é publicado
 ```
+
+- `--profundo` usa a navegação do coletor do P9 (`acessibilidade.py`) nos sites em que a
+  busca rasa não acha o plano: vários cliques, grafia "contigencia", portais de fornecedor,
+  páginas iniciais em JavaScript (instala o Playwright na primeira vez). Leva horas; o
+  workflow do GitHub continua só com a busca rasa.
+- Validação do documento (nas duas buscas): além do termo "Plano de Contingência", o texto
+  tem de tratar de desastres, citar o município e não ser plano da COVID-19, da dengue,
+  edital, cartilha etc. Planos validados pela regra antiga são revalidados uma vez.
+- Um plano já conhecido continua sendo conferido pelo link registrado, mesmo que a busca
+  rasa não o encontre de novo.
 
 - O script usa uma worktree temporária da `origin/main` (não mexe na sua cópia de
   trabalho) e cria um ambiente Python em `monitor/.venv` na primeira vez.
@@ -200,7 +211,7 @@ prefeitura, ele passa por triagem antes de entrar nos indicadores:
    `state.json` ainda sem triagem — novos ou com hash diferente do registrado.
 2. A triagem fica em `rag-local/fontes_site_municipal.json`, por município:
    `atualizacao` (versão mais nova que a do Prepara RS — substitui os documentos do município),
-   `mesma_versao` (nada muda) ou `descartado` (não é o PLANCON: plano de COVID, cartilha etc.).
+   `mesma_versao` (nada muda), `versao_anterior` (o site publica uma versão mais antiga que a do Prepara RS; nada muda) ou `descartado` (não é o PLANCON: plano de COVID, cartilha etc.).
 3. Os PDFs de `atualizacao` sobem para o bucket `plancon` em `site-municipal/<Município>/<sha256[:12]>.pdf`;
    `python rag-local/site_municipal.py aplicar` atualiza `rag-local/municipios.json`.
 4. Reextração dos municípios no LAD/PUCRS (`rodar.sbatch` com `FORCE=1`) e `npm run consolidar`.

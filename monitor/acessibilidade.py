@@ -49,7 +49,7 @@ from pypdf import PdfReader
 
 from monitor import (
     MUNICIPIOS_FILE, OVERRIDES_FILE, TESSERACT_DISPONIVEL, SITE_URL_CANDIDATES_TEMPLATE,
-    eh_plancon_defesa_civil, load_json, normalizar_texto, ocr_pdf_texto,
+    documentos_rejeitados, eh_plancon_defesa_civil, load_json, normalizar_texto, ocr_pdf_texto,
 )
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -253,6 +253,8 @@ def texto_pdf(dados: bytes) -> tuple[str, dict]:
 
 def valida_documento(site: Site, url: str, municipio: str) -> dict | None:
     """Baixa o candidato; devolve metadados se for o plano de contingência do município."""
+    if url in documentos_rejeitados():
+        return None  # rejeitado na revisão manual (documentos_rejeitados.json)
     r = site.get(url_drive(url), stream=True)
     if r is None or r.status_code >= 400:
         return None

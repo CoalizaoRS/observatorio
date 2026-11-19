@@ -66,6 +66,10 @@ STATE_FILE = BASE_DIR / "state.json"
 CHANGED_PDFS_DIR = BASE_DIR / "changed_pdfs"
 FALSOS_POSITIVOS_DIR = BASE_DIR / "changed_pdfs" / "falsos_positivos"
 NAO_ENCONTRADOS_FILE = BASE_DIR / "changed_pdfs" / "municipios_sem_plano.txt"
+# documentos que a validação automática aceita, mas a revisão manual rejeitou (vale para o monitor e o P9)
+REJEITADOS_FILE = BASE_DIR / "documentos_rejeitados.json"
+# coleta do P9: documento e caminho de navegação já conhecidos, usados como ponto de partida
+ACESSIBILIDADE_FILE = BASE_DIR / "acessibilidade.json"
 
 HEADERS = {
     "User-Agent": (
@@ -124,6 +128,8 @@ class MunicipioResult:
     chars_extraidos: int | None = None
     ocr_usado: bool = False
     error: str | None = None
+    caminho: list | None = None  # passos da página inicial até o documento
+    origem_caminho: str | None = None  # busca_rasa | plano_conhecido | coleta_p9 | navegacao_profunda
     pdf_bytes: bytes | None = field(default=None, repr=False)
 
 
@@ -374,58 +380,59 @@ def metadata_suggests_change(prev: dict, meta_resp: requests.Response) -> bool:
     return True
 
 
-def find_plan_link_profundo(m: dict, overrides: dict) -> str | None:
+def find_plan_link_profundo(m: dict, overrides: dict) -> tuple[str, list] | None:
     """Navegação do coletor do P9 (acessibilidade.py): resolve o site como ele (páginas iniciais
     em JavaScript ou que só redirecionam são abertas com navegador), segue menus até vários
     cliques, aceita a grafia "contigencia", portais de fornecedor e PDFs sem extensão, e valida
-    o documento. Bem mais lenta que a busca rasa — usada com --profundo."""
+    o documento. Bem mais lenta que a busca rasa — usada com --profundo. Devolve (url, caminho)."""
     from acessibilidade import navega, resolve_site  # import tardio: acessibilidade importa este módulo
     site, home, _ = resolve_site(m, overrides)
     if site is None:
         return None
     try:
         nav = navega(site, home.url, home.text, m["nome"])
-        return nav["melhor"]["documento"]["url"] if nav["melhor"] else None
+        if not nav["melhor"]:
+            return None
+        return nav["melhor"]["documento"]["url"], nav["melhor"]["caminho"]
     finally:
         site.fecha()
 
 
-def process_municipio(m: dict, overrides: dict, state: dict, profundo: bool = False) -> MunicipioResult:
-    nome = m["nome"]
-    slug = m["slug"]
-    override = overrides.get(nome, {})
-    if override.get("skip"):
-        return MunicipioResult(nome=nome, codigo_ibge=m["codigo_ibge"], site_status="skipped")
+_CACHE: dict = {}
 
-    override_base = override.get("site_base")
-    prev = state.get(nome, {})
 
-    result = MunicipioResult(nome=nome, codigo_ibge=m["codigo_ibge"])
+def documentos_rejeitados() -> dict:
+    if "rejeitados" not in _CACHE:
+        _CACHE["rejeitados"] = load_json(REJEITADOS_FILE, {})
+    return _CACHE["rejeitados"]
 
-    base_url, home_resp = probe_site(nome, slug, override_base)
-    if not base_url:
-        result.error = "site inacessível (home não respondeu em nenhuma variante testada)"
-        return result
 
-    result.site_base = base_url
-    result.site_status = "ok"
+def documento_p9(nome: str) -> tuple[str, list] | None:
+    """Documento e caminho que a coleta do P9 (acessibilidade.json) achou para o município.
+    Por ora o P9 é a coleta mais recente; no futuro o caminho deve nascer aqui no monitor."""
+    if "p9" not in _CACHE:
+        _CACHE["p9"] = load_json(ACESSIBILIDADE_FILE, {})
+    r = _CACHE["p9"].get(nome) or {}
+    url = (r.get("documento") or {}).get("url")
+    if not url or url in documentos_rejeitados():
+        return None
+    return url, r.get("caminho") or []
 
-    plano_url = find_plan_link(base_url, home_resp)
-    if not plano_url and (prev.get("plano") or {}).get("url"):
-        plano_url = prev["plano"]["url"]  # o link conhecido segue valendo se o PDF ainda existe
-    if not plano_url and profundo:
-        plano_url = find_plan_link_profundo(m, overrides)
-    if not plano_url:
-        result.plano_status = "not_found"
-        return result
 
+def avalia_candidato(nome: str, plano_url: str, prev_plano: dict, result: MunicipioResult) -> bool:
+    """Confere um link candidato e preenche `result`. True se for o plano válido do município."""
     result.plano_url = plano_url
+    result.error = None
+    rejeitado = documentos_rejeitados().get(plano_url)
+    if rejeitado:
+        result.plano_status = "false_positive"
+        result.error = f"rejeitado na revisão manual ({rejeitado.get('revisado_em', '')}): {rejeitado['motivo']}"
+        return False
 
+    mesmo_link = prev_plano.get("url") == plano_url
     meta_resp = fetch_pdf_metadata(plano_url)
-    prev_plano = prev.get("plano") or {}
-
     suspeita_mudanca = True
-    if meta_resp is not None:
+    if meta_resp is not None and mesmo_link:
         suspeita_mudanca = metadata_suggests_change(prev_plano, meta_resp)
     if prev_plano.get("validacao", 1) < VALIDACAO_VERSAO:
         suspeita_mudanca = True  # validado por regra antiga: baixa e revalida uma vez
@@ -436,13 +443,13 @@ def process_municipio(m: dict, overrides: dict, state: dict, profundo: bool = Fa
         result.content_length = prev_plano.get("content_length")
         result.last_modified_header = prev_plano.get("last_modified_header")
         result.etag = prev_plano.get("etag")
-        return result
+        return True
 
     pdf_resp = download_pdf(plano_url)
     if pdf_resp is None or pdf_resp.status_code >= 400 or not pdf_resp.content:
         result.error = "link de plano encontrado, mas download falhou"
         result.plano_status = "not_found"
-        return result
+        return False
 
     sha256 = hashlib.sha256(pdf_resp.content).hexdigest()
     result.sha256 = sha256
@@ -459,8 +466,9 @@ def process_municipio(m: dict, overrides: dict, state: dict, profundo: bool = Fa
         result.plano_status = "false_positive"
         result.pdf_bytes = pdf_resp.content
         result.error = motivo_falso_positivo(validacao)
-        return result
+        return False
 
+    result.pdf_bytes = None
     if not prev_plano.get("sha256"):
         result.plano_status = "new"
         result.pdf_bytes = pdf_resp.content
@@ -469,7 +477,69 @@ def process_municipio(m: dict, overrides: dict, state: dict, profundo: bool = Fa
         result.pdf_bytes = pdf_resp.content
     else:
         result.plano_status = "unchanged"
+    return True
 
+
+def process_municipio(m: dict, overrides: dict, state: dict, profundo: bool = False) -> MunicipioResult:
+    nome = m["nome"]
+    slug = m["slug"]
+    override = overrides.get(nome, {})
+    if override.get("skip"):
+        return MunicipioResult(nome=nome, codigo_ibge=m["codigo_ibge"], site_status="skipped")
+
+    override_base = override.get("site_base")
+    prev = state.get(nome, {})
+    prev_plano = prev.get("plano") or {}
+
+    result = MunicipioResult(nome=nome, codigo_ibge=m["codigo_ibge"])
+
+    base_url, home_resp = probe_site(nome, slug, override_base)
+    if not base_url:
+        result.error = "site inacessível (home não respondeu em nenhuma variante testada)"
+        return result
+
+    result.site_base = base_url
+    result.site_status = "ok"
+
+    # Candidatos em ordem; um link que não passa na validação não encerra a busca: o próximo é testado.
+    candidatos = []
+    url_rasa = find_plan_link(base_url, home_resp)
+    if url_rasa:
+        candidatos.append((url_rasa, [{"texto": "busca rasa (página inicial e subpáginas)", "url": url_rasa}], "busca_rasa"))
+    if prev_plano.get("url"):
+        # o link conhecido segue valendo se o PDF ainda existe
+        candidatos.append((prev_plano["url"], prev_plano.get("caminho") or [], prev_plano.get("origem_caminho") or "plano_conhecido"))
+    p9 = documento_p9(nome)
+    if p9:
+        candidatos.append((p9[0], p9[1], "coleta_p9"))
+
+    testados = set()
+    falha = None  # primeiro candidato recusado, para o relatório quando nenhum servir
+    for url, caminho, origem in candidatos:
+        if url in testados:
+            continue
+        testados.add(url)
+        if avalia_candidato(nome, url, prev_plano, result):
+            result.caminho, result.origem_caminho = caminho, origem
+            return result
+        falha = falha or (result.plano_url, result.plano_status, result.error, result.pdf_bytes,
+                          result.chars_extraidos, result.ocr_usado)
+
+    if profundo:
+        prof = find_plan_link_profundo(m, overrides)
+        if prof and prof[0] not in testados:
+            if avalia_candidato(nome, prof[0], prev_plano, result):
+                result.caminho, result.origem_caminho = prof[1], "navegacao_profunda"
+                return result
+            falha = falha or (result.plano_url, result.plano_status, result.error, result.pdf_bytes,
+                              result.chars_extraidos, result.ocr_usado)
+
+    if falha:
+        (result.plano_url, result.plano_status, result.error, result.pdf_bytes,
+         result.chars_extraidos, result.ocr_usado) = falha
+    else:
+        result.plano_url = None
+        result.plano_status = "not_found"
     return result
 
 
@@ -528,6 +598,8 @@ def build_new_state_entry(prev: dict, r: MunicipioResult) -> dict:
             "termo_confirmado": True,
             "validacao": VALIDACAO_VERSAO,
             "validado_via_ocr": r.ocr_usado,
+            "caminho": r.caminho if r.caminho else prev_plano.get("caminho", []),
+            "origem_caminho": r.origem_caminho or prev_plano.get("origem_caminho"),
             "first_seen": first_seen or now_iso(),
             "last_changed": last_changed or now_iso(),
         }

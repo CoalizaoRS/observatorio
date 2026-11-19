@@ -3175,32 +3175,8 @@
       "achou": true,
       "formulario": "https://www.girua.rs.gov.br/site/Pesquisa/Index"
     },
-    "caminho": [
-      {
-        "texto": "busca interna: plano de contingência",
-        "url": "https://www.girua.rs.gov.br/site/Pesquisa/Index?q=plano+de+conting%C3%AAncia"
-      },
-      {
-        "texto": "DECRETO Nº 1605-20 PLANO DE CONTINGÊNCIA APOIO PRODUTOR RURAL",
-        "url": "https://www.girua.rs.gov.br/site/leis/69303-decreto-n-1605-20-plano-de-contingencia-apoio-produtor-rural"
-      },
-      {
-        "texto": "DECRETO N 1605-20 PLANO DE CONTINGENCIA APOIO PRODUTOR RURAL (PDF)",
-        "url": "https://sp1-object.adentro.com.br/sites/110/Leis/69857/8u75wc2eqx3rb04ggm3k_DECRETO_N_1605-20_PLANO_DE_CONTINGENCIA_APOIO_PRODUTOR_RURAL_316J..pdf"
-      }
-    ],
     "codigo_ibge": 4309001,
     "coletado_em": "2026-11-10T03:35:05Z",
-    "documento": {
-      "content_type": "application/pdf",
-      "creationdate": "D:20200512083440-03'00'",
-      "last_modified": "Tue, 22 Sep 2026 23:14:41 GMT",
-      "nome_municipio_no_texto": true,
-      "paginas": 3,
-      "sha256": "fd83da2e83f10b1c6c8defd97eaf04112a052f4b55a248904832651b2ff02d42",
-      "tamanho": 114242,
-      "url": "https://sp1-object.adentro.com.br/sites/110/Leis/69857/8u75wc2eqx3rb04ggm3k_DECRETO_N_1605-20_PLANO_DE_CONTINGENCIA_APOIO_PRODUTOR_RURAL_316J..pdf"
-    },
     "documentos_testados": 0,
     "home": "https://www.girua.rs.gov.br/site",
     "paginas_visitadas": 80,
@@ -3208,7 +3184,27 @@
     "segundos": 89.9,
     "site_base": "https://www.girua.rs.gov.br",
     "site_status": "ok",
-    "via": "busca_interna"
+    "via": "nao_encontrado",
+    "documento_rejeitado": {
+      "url": "https://sp1-object.adentro.com.br/sites/110/Leis/69857/8u75wc2eqx3rb04ggm3k_DECRETO_N_1605-20_PLANO_DE_CONTINGENCIA_APOIO_PRODUTOR_RURAL_316J..pdf",
+      "caminho": [
+        {
+          "texto": "busca interna: plano de contingência",
+          "url": "https://www.girua.rs.gov.br/site/Pesquisa/Index?q=plano+de+conting%C3%AAncia"
+        },
+        {
+          "texto": "DECRETO Nº 1605-20 PLANO DE CONTINGÊNCIA APOIO PRODUTOR RURAL",
+          "url": "https://www.girua.rs.gov.br/site/leis/69303-decreto-n-1605-20-plano-de-contingencia-apoio-produtor-rural"
+        },
+        {
+          "texto": "DECRETO N 1605-20 PLANO DE CONTINGENCIA APOIO PRODUTOR RURAL (PDF)",
+          "url": "https://sp1-object.adentro.com.br/sites/110/Leis/69857/8u75wc2eqx3rb04ggm3k_DECRETO_N_1605-20_PLANO_DE_CONTINGENCIA_APOIO_PRODUTOR_RURAL_316J..pdf"
+        }
+      ],
+      "motivo": "Decreto 1605/2020: autoriza o Plano de Contingência de Apoio ao Produtor Rural (estiagem); não é o PLANCON de Defesa Civil",
+      "revisado_em": "2026-11-19"
+    },
+    "cliques": null
   },
   "Glorinha": {
     "busca_interna": {
